@@ -1,0 +1,41 @@
+{
+  "format": "qbridge-public-release-v1",
+  "version": "5.2",
+  "repository": "https://github.com/yzd2002/Q-BRIDGE-ICDE2027",
+  "release": "https://github.com/yzd2002/Q-BRIDGE-ICDE2027/releases/tag/artifact-v5.2",
+  "archive": {
+    "name": "Q-BRIDGE-ICDE2027-v5.2.zip",
+    "bytes": 7137344444,
+    "sha256": "59c7e0d034577bc3b9bb45e55ec29f836e58fb5e2cecc70d570de11f84e96cac"
+  },
+  "parts": [
+    {
+      "name": "Q-BRIDGE-ICDE2027-v5.2.zip.part01",
+      "bytes": 1610612736,
+      "sha256": "7e5957d5915a16039088ab70303fb24110d07091d835dd009760775ccaf45514"
+    },
+    {
+      "name": "Q-BRIDGE-ICDE2027-v5.2.zip.part02",
+      "bytes": 1610612736,
+      "sha256": "bc83e7b43e372e5a21fc10b3e370ecf253e27ae18ab949e3c6602198e40c4aee"
+    },
+    {
+      "name": "Q-BRIDGE-ICDE2027-v5.2.zip.part03",
+      "bytes": 1610612736,
+      "sha256": "742d8ee3a11ae1ad78f411f952e366e36a2e90455e67cd14d0b82800daed49c2"
+    },
+    {
+      "name": "Q-BRIDGE-ICDE2027-v5.2.zip.part04",
+      "bytes": 1610612736,
+      "sha256": "b445b8aa2fdd4619bb7c5a942650117872d7ade81ce26431833e13533ce895a4"
+    },
+    {
+      "name": "Q-BRIDGE-ICDE2027-v5.2.zip.part05",
+      "bytes": 694893500,
+      "sha256": "2d1cb1f12b7cd3a57208f9dcc9dda03e6ff8f619ed4ec36426c6fe9cbb97a6b3"
+    }
+  ],
+  "extracted_root": "Q-BRIDGE-ICDE2027",
+  "file_manifest_sha256": "1db991a78913747184b8450e7c29e045951d81acd7a8bf9a49670d5625c15f32",
+  "scope": "Complete saved scientific inputs, outputs and reproducibility instructions. Public prose derivatives are explicitly registered; scientific results are unchanged."
+}

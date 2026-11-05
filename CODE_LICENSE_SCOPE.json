@@ -10,6 +10,11 @@
   ],
   "files": [
     {
+      "path": "download_artifact.py",
+      "bytes": 7148,
+      "sha256": "4af135f4d7fc74f5a51d74f83fc2f68414d0c3fc2c4d5e41c4417a63f415e970"
+    },
+    {
       "path": "icde2027/__init__.py",
       "sha256": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
       "bytes": 71

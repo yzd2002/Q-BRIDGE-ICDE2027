@@ -60,5 +60,5 @@ This repository contains a lightweight runnable source subset. Its own
 `SOURCE_MANIFEST.json` and `CODE_LICENSE_SCOPE.json` refer to files actually
 present here. The complete release archive retains the full provenance, all
 scientific results, historical source and its separate exhaustive manifests.
-The root README will provide download and verification instructions when that archive is published. No private
+The root README provides download and verification instructions for that release. No private
 paper-review or submission-contact directory is distributed here.
