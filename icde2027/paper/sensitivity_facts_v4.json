@@ -1,0 +1,235 @@
+{
+  "status": "complete",
+  "schema": "sensitivity-paper-assets-v4",
+  "sources_sha256": {
+    "runs/icde2027/analysis/sensitivity_budget_v4_results.json": "fbe5adf901c398dcfeb1e8861e1c79f29d8cab49731c7d7d5648cd88fe95b60a",
+    "runs/icde2027/analysis/sensitivity_budget_v4_loss_witnesses.json": "da67c0671950ce5a30eef3c07f964d410f8d131dfe7beed10857c965d0aa2b07",
+    "runs/icde2027/analysis/sensitivity_budget_v4_figure_data.json": "09b40592a46439f34a108abfd3c8248b8d1ce1614a644ff5c56b126c63c98a16",
+    "runs/icde2027/reviews/sensitivity_budget_v4_independent_verify.json": "665b558643c618b23f83674a91d25c3577caefaf79456ec9e7b5a9b45c6d5dbc",
+    "runs/icde2027/reviews/fusion_geometry_v4_independent.json": "b383e474d6114e0315c3cdf3b6b34aae3baee540e2b546ac9770f96f0f1159ad",
+    "runs/icde2027/analysis/fusion_geometry_v4_results.json": "b2c8687899de7f088da017f249aeb2eaf84267eb11ec43723d7260a5af89c380",
+    "runs/icde2027/analysis/sensitivity_budget_v4.pdf": "4435708c72fa92f48a81c45ab1652a2513027bb4ca523b63ec080b21f3962c97",
+    "runs/icde2027/analysis/sensitivity_budget_v4.png": "ff0e40562506525ef7f883ebd2b8d337cf1be92bae71e2761450a4e70200bbeb"
+  },
+  "generator_sha256": "e7c7e3a9608e20fb6de1ad26577f754afacc18dcf3925fe9c1a501bce0c12e3d",
+  "conditions": [
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "observation_certified": 6,
+      "randomized_certified": 0,
+      "fusion_certified": 12,
+      "fusion_extra_vs_obs": 6,
+      "fusion_lost_vs_obs": 0,
+      "mean_added_moment_dual_gain": 0.00580477381449861,
+      "mean_obs_confidence_budget_penalty": 0.0008592070222271493,
+      "mean_saved_dual_minus_full_obs": 0.0049455667922714604,
+      "nonpositive_added_gain_queries": 24,
+      "max_claimed_downward_gap": 2.063387418503796e-17
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "observation_certified": 6,
+      "randomized_certified": 0,
+      "fusion_certified": 15,
+      "fusion_extra_vs_obs": 9,
+      "fusion_lost_vs_obs": 0,
+      "mean_added_moment_dual_gain": 0.015469703194090188,
+      "mean_obs_confidence_budget_penalty": 0.0008592070222271493,
+      "mean_saved_dual_minus_full_obs": 0.01461049617186304,
+      "nonpositive_added_gain_queries": 8,
+      "max_claimed_downward_gap": 2.0801950278493412e-17
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "observation_certified": 191,
+      "randomized_certified": 0,
+      "fusion_certified": 189,
+      "fusion_extra_vs_obs": 0,
+      "fusion_lost_vs_obs": 2,
+      "mean_added_moment_dual_gain": 0.0001142122108668603,
+      "mean_obs_confidence_budget_penalty": 0.000913460532944571,
+      "mean_saved_dual_minus_full_obs": -0.0007992483220777107,
+      "nonpositive_added_gain_queries": 193,
+      "max_claimed_downward_gap": 2.0701355236588826e-17
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "observation_certified": 191,
+      "randomized_certified": 0,
+      "fusion_certified": 193,
+      "fusion_extra_vs_obs": 3,
+      "fusion_lost_vs_obs": 1,
+      "mean_added_moment_dual_gain": 0.0017317551998790222,
+      "mean_obs_confidence_budget_penalty": 0.000913460532944571,
+      "mean_saved_dual_minus_full_obs": 0.0008182946669344513,
+      "nonpositive_added_gain_queries": 36,
+      "max_claimed_downward_gap": 2.0701355236588826e-17
+    }
+  ],
+  "independent_worlds": 48,
+  "scope": "Retrospective saved-bound arithmetic; no new simulation, policy fitting, optimization or confirmatory test.",
+  "low_budget_loss_optimality_witnesses": 2,
+  "minimizing_face_groups": [
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 216,
+        "zero_optimal_constraint_gain": 24
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 232,
+        "zero_optimal_constraint_gain": 8
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "zero_optimal_constraint_gain": 193,
+        "strict_positive_optimal_constraint_gain": 47
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 204,
+        "zero_optimal_constraint_gain": 36
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 230,
+        "zero_optimal_constraint_gain": 10
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 240
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "zero_optimal_constraint_gain": 186,
+        "strict_positive_optimal_constraint_gain": 54
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 220,
+        "zero_optimal_constraint_gain": 20
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "zero_optimal_constraint_gain": 238,
+        "strict_positive_optimal_constraint_gain": 2
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "zero_optimal_constraint_gain": 238,
+        "strict_positive_optimal_constraint_gain": 2
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "zero_optimal_constraint_gain": 222,
+        "strict_positive_optimal_constraint_gain": 18
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "categories": {
+        "strict_positive_optimal_constraint_gain": 106,
+        "zero_optimal_constraint_gain": 134
+      },
+      "zero_gain_saved_dual_not_tight": 0
+    }
+  ],
+  "all_zero_objectives_in_geometry_diagnostic": 674,
+  "all_losses_have_exact_box_optimum_witness": false
+}

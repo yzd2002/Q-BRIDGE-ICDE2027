@@ -1,0 +1,573 @@
+{
+  "status": "complete",
+  "conditions": [
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 6,
+        "randomized_projected": 0,
+        "fusion_projected": 12
+      },
+      "categories": {
+        "finite_sample_certified": 12,
+        "population_and_finite_relaxation_limit": 195,
+        "finite_relaxation_limit": 33
+      },
+      "fusion_extra_vs_standalone_union": 6,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.005804773814498552,
+        "budget_cost": 0.0008592070222272288,
+        "saved_net": 0.004945566792271323,
+        "optimal_gain": 0.005804773814498552
+      },
+      "face": {
+        "strict_positive": 216,
+        "zero": 24
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 6,
+        "randomized_projected": 0,
+        "fusion_projected": 15
+      },
+      "categories": {
+        "finite_sample_certified": 15,
+        "population_and_finite_relaxation_limit": 195,
+        "finite_relaxation_limit": 30
+      },
+      "fusion_extra_vs_standalone_union": 9,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.015469703194090153,
+        "budget_cost": 0.0008592070222272288,
+        "saved_net": 0.014610496171862926,
+        "optimal_gain": 0.015469703194090155
+      },
+      "face": {
+        "strict_positive": 232,
+        "zero": 8
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 191,
+        "randomized_projected": 0,
+        "fusion_projected": 189
+      },
+      "categories": {
+        "finite_sample_certified": 189,
+        "finite_relaxation_limit": 46,
+        "population_and_finite_relaxation_limit": 5
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 2,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.00011421221086685699,
+        "budget_cost": 0.0009134605329446619,
+        "saved_net": -0.0007992483220778049,
+        "optimal_gain": 0.00011421221086685701
+      },
+      "face": {
+        "zero": 193,
+        "strict_positive": 47
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 191,
+        "randomized_projected": 0,
+        "fusion_projected": 193
+      },
+      "categories": {
+        "finite_sample_certified": 193,
+        "finite_relaxation_limit": 42,
+        "population_and_finite_relaxation_limit": 5
+      },
+      "fusion_extra_vs_standalone_union": 3,
+      "fusion_lost_vs_standalone_union": 1,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.0017317551998790271,
+        "budget_cost": 0.0009134605329446619,
+        "saved_net": 0.0008182946669343653,
+        "optimal_gain": 0.0017317551998790274
+      },
+      "face": {
+        "strict_positive": 204,
+        "zero": 36
+      },
+      "all_zero_objectives": 0
+    }
+  ],
+  "all_groups": [
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 6,
+        "randomized_projected": 0,
+        "fusion_projected": 12
+      },
+      "categories": {
+        "finite_sample_certified": 12,
+        "population_and_finite_relaxation_limit": 195,
+        "finite_relaxation_limit": 33
+      },
+      "fusion_extra_vs_standalone_union": 6,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.005804773814498552,
+        "budget_cost": 0.0008592070222272288,
+        "saved_net": 0.004945566792271323,
+        "optimal_gain": 0.005804773814498552
+      },
+      "face": {
+        "strict_positive": 216,
+        "zero": 24
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 6,
+        "randomized_projected": 0,
+        "fusion_projected": 15
+      },
+      "categories": {
+        "finite_sample_certified": 15,
+        "population_and_finite_relaxation_limit": 195,
+        "finite_relaxation_limit": 30
+      },
+      "fusion_extra_vs_standalone_union": 9,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.015469703194090153,
+        "budget_cost": 0.0008592070222272288,
+        "saved_net": 0.014610496171862926,
+        "optimal_gain": 0.015469703194090155
+      },
+      "face": {
+        "strict_positive": 232,
+        "zero": 8
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 191,
+        "randomized_projected": 0,
+        "fusion_projected": 189
+      },
+      "categories": {
+        "finite_sample_certified": 189,
+        "finite_relaxation_limit": 46,
+        "population_and_finite_relaxation_limit": 5
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 2,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.00011421221086685699,
+        "budget_cost": 0.0009134605329446619,
+        "saved_net": -0.0007992483220778049,
+        "optimal_gain": 0.00011421221086685701
+      },
+      "face": {
+        "zero": 193,
+        "strict_positive": 47
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "metadata",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 191,
+        "randomized_projected": 0,
+        "fusion_projected": 193
+      },
+      "categories": {
+        "finite_sample_certified": 193,
+        "finite_relaxation_limit": 42,
+        "population_and_finite_relaxation_limit": 5
+      },
+      "fusion_extra_vs_standalone_union": 3,
+      "fusion_lost_vs_standalone_union": 1,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.0017317551998790271,
+        "budget_cost": 0.0009134605329446619,
+        "saved_net": 0.0008182946669343653,
+        "optimal_gain": 0.0017317551998790274
+      },
+      "face": {
+        "strict_positive": 204,
+        "zero": 36
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 2,
+        "randomized_projected": 0,
+        "fusion_projected": 4
+      },
+      "categories": {
+        "finite_relaxation_limit": 43,
+        "finite_sample_certified": 4,
+        "population_and_finite_relaxation_limit": 190,
+        "true_effect_not_above_margin": 3
+      },
+      "fusion_extra_vs_standalone_union": 2,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.008451625130679614,
+        "budget_cost": 0.0010835120164904906,
+        "saved_net": 0.007368113114189123,
+        "optimal_gain": 0.008451625130679616
+      },
+      "face": {
+        "strict_positive": 230,
+        "zero": 10
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 2,
+        "randomized_projected": 2,
+        "fusion_projected": 16
+      },
+      "categories": {
+        "finite_sample_certified": 16,
+        "population_and_finite_relaxation_limit": 190,
+        "true_effect_not_above_margin": 3,
+        "finite_relaxation_limit": 31
+      },
+      "fusion_extra_vs_standalone_union": 12,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.02143300932122376,
+        "budget_cost": 0.0010835120164904906,
+        "saved_net": 0.020349497304733268,
+        "optimal_gain": 0.02143300932122376
+      },
+      "face": {
+        "strict_positive": 240
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 183,
+        "randomized_projected": 0,
+        "fusion_projected": 182
+      },
+      "categories": {
+        "finite_sample_certified": 182,
+        "finite_relaxation_limit": 47,
+        "population_and_finite_relaxation_limit": 8,
+        "true_effect_not_above_margin": 3
+      },
+      "fusion_extra_vs_standalone_union": 1,
+      "fusion_lost_vs_standalone_union": 2,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.00017381160378055318,
+        "budget_cost": 0.0011556422087450164,
+        "saved_net": -0.0009818306049644632,
+        "optimal_gain": 0.0001738116037805532
+      },
+      "face": {
+        "zero": 186,
+        "strict_positive": 54
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "randomized_heuristic",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 183,
+        "randomized_projected": 2,
+        "fusion_projected": 187
+      },
+      "categories": {
+        "finite_sample_certified": 187,
+        "finite_relaxation_limit": 42,
+        "population_and_finite_relaxation_limit": 8,
+        "true_effect_not_above_margin": 3
+      },
+      "fusion_extra_vs_standalone_union": 4,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.0025768197837217574,
+        "budget_cost": 0.0011556422087450164,
+        "saved_net": 0.0014211775749767412,
+        "optimal_gain": 0.002576819783721758
+      },
+      "face": {
+        "strict_positive": 220,
+        "zero": 20
+      },
+      "all_zero_objectives": 0
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 2,
+        "randomized_projected": 0,
+        "fusion_projected": 2
+      },
+      "categories": {
+        "true_effect_not_above_margin": 238,
+        "finite_sample_certified": 2
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 6.468364528951703e-05,
+        "budget_cost": 1.5598924168520745e-05,
+        "saved_net": 4.9084721120996283e-05,
+        "optimal_gain": 6.468364528951703e-05
+      },
+      "face": {
+        "zero": 238,
+        "strict_positive": 2
+      },
+      "all_zero_objectives": 238
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "conservative",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 2,
+        "randomized_projected": 0,
+        "fusion_projected": 2
+      },
+      "categories": {
+        "true_effect_not_above_margin": 238,
+        "finite_sample_certified": 2
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.00016740063330384389,
+        "budget_cost": 1.5598924168520745e-05,
+        "saved_net": 0.00015180170913532315,
+        "optimal_gain": 0.0001674006333038439
+      },
+      "face": {
+        "zero": 238,
+        "strict_positive": 2
+      },
+      "all_zero_objectives": 238
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 141,
+        "randomized_projected": 0,
+        "fusion_projected": 141
+      },
+      "categories": {
+        "finite_sample_certified": 141,
+        "true_effect_not_above_margin": 99
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 5.77355043749117e-05,
+        "budget_cost": 0.0007124107718937234,
+        "saved_net": -0.0006546752675188118,
+        "optimal_gain": 5.7735504374911704e-05
+      },
+      "face": {
+        "zero": 222,
+        "strict_positive": 18
+      },
+      "all_zero_objectives": 99
+    },
+    {
+      "family": "robust_design_selection",
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "queries": 240,
+      "worlds": 48,
+      "certified": {
+        "observation_consistency": 141,
+        "randomized_projected": 0,
+        "fusion_projected": 141
+      },
+      "categories": {
+        "finite_sample_certified": 141,
+        "true_effect_not_above_margin": 99
+      },
+      "fusion_extra_vs_standalone_union": 0,
+      "fusion_lost_vs_standalone_union": 0,
+      "budget_available": 240,
+      "mean_budget": {
+        "achieved_gain": 0.0011175401965980991,
+        "budget_cost": 0.0007124107718937234,
+        "saved_net": 0.00040512942470437573,
+        "optimal_gain": 0.0011175401965980993
+      },
+      "face": {
+        "strict_positive": 106,
+        "zero": 134
+      },
+      "all_zero_objectives": 99
+    }
+  ],
+  "metadata_losses": [
+    {
+      "world_id": 8,
+      "rep": 3,
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "face": "zero",
+      "exact_optimum_fails": true,
+      "obs_box_passes": true,
+      "gain_below_budget_cost": true,
+      "optimal_gain": 0.0,
+      "budget_cost": 0.001135646233391896,
+      "optimal_net": -0.001135646233391896,
+      "saved_dual_equals_optimum": true
+    },
+    {
+      "world_id": 18,
+      "rep": 0,
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 100,
+      "face": "zero",
+      "exact_optimum_fails": true,
+      "obs_box_passes": true,
+      "gain_below_budget_cost": true,
+      "optimal_gain": 0.0,
+      "budget_cost": 0.0008913528552304577,
+      "optimal_net": -0.0008913528552304577,
+      "saved_dual_equals_optimum": true
+    },
+    {
+      "world_id": 18,
+      "rep": 0,
+      "sensitivity": "true_boundary",
+      "r_events_per_cell": 1000,
+      "face": "strict_positive",
+      "exact_optimum_fails": true,
+      "obs_box_passes": true,
+      "gain_below_budget_cost": true,
+      "optimal_gain": 0.0003440593205540065,
+      "budget_cost": 0.0008913528552304577,
+      "optimal_net": -0.0005472935346764512,
+      "saved_dual_equals_optimum": true
+    }
+  ],
+  "robust_primary_zero_objectives": 238,
+  "robust_radius_paired_changes": 278,
+  "primary_extra_worlds": 2,
+  "primary_extras_population_fusion_only": 2,
+  "primary_extras_population_standalone": 4,
+  "primary_population_fusion_only_queries": 35,
+  "primary_population_fusion_only_worlds": 7,
+  "oracle_radius_minmax": [
+    1.0317965041122616,
+    1.388051165294258
+  ],
+  "strict_population_subset_finite_pairs": 960,
+  "face_all": {
+    "zero": 1309,
+    "strict_positive": 1571
+  },
+  "all_zero_objectives": 674,
+  "old_categories_changed": 0,
+  "old_face_changed": 0,
+  "fusion_numerically_missed_certifications": 0,
+  "unavailable_entries": 0,
+  "sources_sha256": {
+    "runs/icde2027/analysis/repaired_information_v4_results.json": "b86636ec9bafbb41d39a1b12b9bb3454d10aa19fec4aa2c2977032ad5ab54c17",
+    "runs/icde2027/reviews/repaired_information_v4_result_audit.json": "791b1678d6dc583c3d4ae90c8174cbe2faada26624627c41d076cbe2c2af5efd"
+  },
+  "generator_sha256": "be479a4e3199ecf6860ab18660443ad77e8bfc028919e10463188aec02c2c9e1",
+  "scope": "Retrospective repaired-program analysis: 48 worlds, five count samples each. Oracle radius uses truth. No new confirmation."
+}

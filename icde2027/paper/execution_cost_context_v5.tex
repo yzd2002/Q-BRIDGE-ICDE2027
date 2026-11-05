@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\small
+\caption{Absolute checking costs on the three primary streams. In each round, joint time and uncompressed response bytes are divided by 3,000 requests; receiver share is receiver time divided by joint time. Entries are medians of three rounds. Joint cost includes the persistent receiver; 1 KiB is 1,024 bytes.}
+\label{tab:absolute-checking}
+\begin{tabular}{lrrr}
+\toprule
+Plan & Joint ms/request & Receiver & KiB/request \\
+\midrule
+$S_0P_0$ & 30.45 & 27.5\% & 30.39 \\
+$S_0P_1$ & 18.26 & 45.9\% & 30.39 \\
+$S_1P_0$ & 27.36 & 30.9\% & 30.39 \\
+$S_1P_1$ & 20.41 & 40.9\% & 30.39 \\
+\bottomrule
+\end{tabular}
+\end{table}

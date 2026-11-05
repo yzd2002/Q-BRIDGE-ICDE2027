@@ -1,0 +1,22 @@
+% Suggested Related Work replacement; parent owns integration into revision3.tex.
+% Evidence: runs/icde2027/literature/capability_comparison_v3.{md,json}.
+% Five data rows, four columns. Uses existing booktabs/array packages and BibTeX keys.
+\begin{table*}[t]
+\centering
+\caption{Documented task scopes and reuse layers; entries are not impossibility claims. O/R denotes observational/randomized data.}
+\label{tab:capability-comparison}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}p{.27\textwidth}>{\raggedright\arraybackslash}p{.28\textwidth}>{\raggedright\arraybackslash}p{.26\textwidth}@{}}
+\toprule
+Work & Input / assumptions & Task / reuse layer & Guarantee / checked object \\
+\midrule
+Du et al.~\cite{du2026feasible} & O/R; recoverable non-overlap; known randomization and moment feasibility & Response estimation; joint representation fitting & Experimental moments; observational excess-risk bound \\
+Lanners et al.~\cite{lanners2025fusion} & O/R; positivity; confounding and study sensitivity & Sensitivity frontiers; reused nuisance fits & (C)ATE bounds; asymptotic inference \\
+Deza et al.~\cite{Deza2026MIPSensitivity} & LP/MILP with finite variable bounds & Changed objective, RHS, matrix; cached duals/tree & Valid lower bounds; conditional gap bound \\
+SemViews~\cite{Hassanzadeh2026SemanticViews} & Relation, oracle labels, catalog & New predicates; historical features, fresh certification draws & Per-query precision/recall probability \\
+VIPR~\cite{Cheung2017VIPR} & Rational MILP and derivation log & Independent replay of instance-specific derivations & Exact bounds/infeasibility verification \\
+\bottomrule
+\end{tabular}
+\end{table*}

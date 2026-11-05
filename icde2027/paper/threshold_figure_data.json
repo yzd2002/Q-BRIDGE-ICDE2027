@@ -1,0 +1,1311 @@
+{
+  "summary_sha256": "2999cee2102aa8e37721efc333be29d11be7cee8ad07ddd7824afaa0b65d67f8",
+  "manifest_sha256": "9fb21bf74ff5d8207ede3b1cf56128dd76714d9a68ff193a0b79b1ab8ed88006",
+  "protocol_sha256": "6d0f7ae51b7ab099a9028358fe5d8c896e19b02ac668d5861b05d87e0b753697",
+  "complete_conditions": 60,
+  "responses": 36000,
+  "proof_totals": {
+    "valid": 36000,
+    "missing": 0
+  },
+  "primary": {
+    "threshold_hot": {
+      "ratios": [
+        0.995654076469072,
+        0.9999262830440668,
+        1.0005480482596414
+      ],
+      "median": 0.9999262830440668,
+      "lost_decided_answers": 0,
+      "gained_decided_answers": 2,
+      "engineering_target_supported": false
+    },
+    "threshold_hot_auto": {
+      "ratios": [
+        0.9934089852346155,
+        0.9999296500189101,
+        0.9993958597440517
+      ],
+      "median": 0.9993958597440517,
+      "lost_decided_answers": 2,
+      "gained_decided_answers": 16,
+      "engineering_target_supported": false
+    }
+  },
+  "both_comparisons_supported": false,
+  "grid": [
+    {
+      "dimension": 64,
+      "structure": "connected",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9981674433959025,
+          "minimum": 0.9910811472159172,
+          "maximum": 1.0079025049788106,
+          "repeats": [
+            1.0079025049788106,
+            0.9910811472159172,
+            0.9981674433959025
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0101766156361733,
+          "minimum": 0.9911130452008989,
+          "maximum": 1.012749517370069,
+          "repeats": [
+            1.0101766156361733,
+            1.012749517370069,
+            0.9911130452008989
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 64,
+      "structure": "connected",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0370974780063766,
+          "minimum": 0.9852106948697501,
+          "maximum": 1.0418324624137083,
+          "repeats": [
+            0.9852106948697501,
+            1.0418324624137083,
+            1.0370974780063766
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0257312942414103,
+          "minimum": 1.0222465516693435,
+          "maximum": 1.033666222493379,
+          "repeats": [
+            1.0257312942414103,
+            1.033666222493379,
+            1.0222465516693435
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 64,
+      "structure": "disjoint",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0045606887017768,
+          "minimum": 0.9969572344805974,
+          "maximum": 1.0100313693471756,
+          "repeats": [
+            1.0045606887017768,
+            1.0100313693471756,
+            0.9969572344805974
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0021040105713181,
+          "minimum": 1.0001396114833252,
+          "maximum": 1.0117611304563914,
+          "repeats": [
+            1.0001396114833252,
+            1.0117611304563914,
+            1.0021040105713181
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 64,
+      "structure": "disjoint",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9087490699395668,
+          "minimum": 0.8883764500035812,
+          "maximum": 0.9165817117817503,
+          "repeats": [
+            0.9087490699395668,
+            0.9165817117817503,
+            0.8883764500035812
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9065745578153328,
+          "minimum": 0.8943816652886059,
+          "maximum": 0.9145170139516671,
+          "repeats": [
+            0.9065745578153328,
+            0.9145170139516671,
+            0.8943816652886059
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 64,
+      "structure": "mixed",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0032932919617652,
+          "minimum": 0.9952219075175198,
+          "maximum": 1.0051373663166698,
+          "repeats": [
+            0.9952219075175198,
+            1.0051373663166698,
+            1.0032932919617652
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0016576873263134,
+          "minimum": 0.9903759813390343,
+          "maximum": 1.0116376846815436,
+          "repeats": [
+            0.9903759813390343,
+            1.0116376846815436,
+            1.0016576873263134
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 64,
+      "structure": "mixed",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0469025209311906,
+          "minimum": 1.0172133643198007,
+          "maximum": 1.0974045002825927,
+          "repeats": [
+            1.0469025209311906,
+            1.0172133643198007,
+            1.0974045002825927
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9873283243560256,
+          "minimum": 0.9836510600461082,
+          "maximum": 1.0938918576616867,
+          "repeats": [
+            0.9836510600461082,
+            0.9873283243560256,
+            1.0938918576616867
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "connected",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0082022933019303,
+          "minimum": 0.9898727502481598,
+          "maximum": 1.0124042763316587,
+          "repeats": [
+            1.0082022933019303,
+            1.0124042763316587,
+            0.9898727502481598
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0104013081038095,
+          "minimum": 1.0015125221239938,
+          "maximum": 1.011900690664392,
+          "repeats": [
+            1.0104013081038095,
+            1.011900690664392,
+            1.0015125221239938
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "connected",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.007728793693177,
+          "minimum": 0.9988171688136592,
+          "maximum": 1.0087325649323262,
+          "repeats": [
+            0.9988171688136592,
+            1.0087325649323262,
+            1.007728793693177
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9953548588533355,
+          "minimum": 0.9887900722363341,
+          "maximum": 1.0008818729271272,
+          "repeats": [
+            0.9887900722363341,
+            1.0008818729271272,
+            0.9953548588533355
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "disjoint",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0022792729430012,
+          "minimum": 1.0006345342075598,
+          "maximum": 1.003874706294389,
+          "repeats": [
+            1.0022792729430012,
+            1.0006345342075598,
+            1.003874706294389
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0043578999321203,
+          "minimum": 0.999985162725348,
+          "maximum": 1.00894056263729,
+          "repeats": [
+            1.00894056263729,
+            0.999985162725348,
+            1.0043578999321203
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "disjoint",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9917180990715037,
+          "minimum": 0.9779366952992533,
+          "maximum": 1.0039117807587734,
+          "repeats": [
+            0.9779366952992533,
+            0.9917180990715037,
+            1.0039117807587734
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.000168759694813,
+          "minimum": 0.9756407592163225,
+          "maximum": 1.0024379553244132,
+          "repeats": [
+            0.9756407592163225,
+            1.0024379553244132,
+            1.000168759694813
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "mixed",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9974723499247353,
+          "minimum": 0.9974213271986208,
+          "maximum": 1.0058300438553582,
+          "repeats": [
+            0.9974213271986208,
+            0.9974723499247353,
+            1.0058300438553582
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0009719428499695,
+          "minimum": 0.9957223337516818,
+          "maximum": 1.0049843087260215,
+          "repeats": [
+            0.9957223337516818,
+            1.0009719428499695,
+            1.0049843087260215
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 512,
+      "structure": "mixed",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0079340996315678,
+          "minimum": 1.004281356855346,
+          "maximum": 1.019112527620996,
+          "repeats": [
+            1.004281356855346,
+            1.019112527620996,
+            1.0079340996315678
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0029972551571145,
+          "minimum": 0.9999958104472875,
+          "maximum": 1.0201893229777057,
+          "repeats": [
+            0.9999958104472875,
+            1.0201893229777057,
+            1.0029972551571145
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "connected",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9956834525102323,
+          "minimum": 0.9955191073648597,
+          "maximum": 1.000416139142688,
+          "repeats": [
+            0.9956834525102323,
+            0.9955191073648597,
+            1.000416139142688
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9930375590420846,
+          "minimum": 0.9897137233086668,
+          "maximum": 1.0005004069476293,
+          "repeats": [
+            0.9897137233086668,
+            1.0005004069476293,
+            0.9930375590420846
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "connected",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.002814997270528,
+          "minimum": 0.9992968185989787,
+          "maximum": 1.0057557001924429,
+          "repeats": [
+            1.0057557001924429,
+            1.002814997270528,
+            0.9992968185989787
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0010366129942756,
+          "minimum": 0.994588624363572,
+          "maximum": 1.0038090929385555,
+          "repeats": [
+            1.0010366129942756,
+            0.994588624363572,
+            1.0038090929385555
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "disjoint",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.993216595422499,
+          "minimum": 0.9920862295304326,
+          "maximum": 0.9992894346658666,
+          "repeats": [
+            0.9992894346658666,
+            0.9920862295304326,
+            0.993216595422499
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0009660571645427,
+          "minimum": 0.9934243598174882,
+          "maximum": 1.0017025209691874,
+          "repeats": [
+            1.0017025209691874,
+            1.0009660571645427,
+            0.9934243598174882
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "disjoint",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 1.0020505382301852,
+          "minimum": 0.9958291538532975,
+          "maximum": 1.0023444485029291,
+          "repeats": [
+            0.9958291538532975,
+            1.0023444485029291,
+            1.0020505382301852
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0022625066693598,
+          "minimum": 0.9987521038394936,
+          "maximum": 1.0031414276811417,
+          "repeats": [
+            0.9987521038394936,
+            1.0031414276811417,
+            1.0022625066693598
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "mixed",
+      "stream": "nearby_nonproportional",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9963223482833211,
+          "minimum": 0.9944700034077437,
+          "maximum": 0.9999070650676902,
+          "repeats": [
+            0.9963223482833211,
+            0.9999070650676902,
+            0.9944700034077437
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9963645703583555,
+          "minimum": 0.996093940759165,
+          "maximum": 1.0012723284345824,
+          "repeats": [
+            1.0012723284345824,
+            0.996093940759165,
+            0.9963645703583555
+          ]
+        }
+      }
+    },
+    {
+      "dimension": 2048,
+      "structure": "mixed",
+      "stream": "unrelated",
+      "comparisons": {
+        "threshold_hot": {
+          "median": 0.9972443375087231,
+          "minimum": 0.9920568897609183,
+          "maximum": 0.9992171329721585,
+          "repeats": [
+            0.9972443375087231,
+            0.9992171329721585,
+            0.9920568897609183
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9980931779489763,
+          "minimum": 0.9960039784303578,
+          "maximum": 1.0004474071855807,
+          "repeats": [
+            0.9980931779489763,
+            1.0004474071855807,
+            0.9960039784303578
+          ]
+        }
+      }
+    }
+  ],
+  "methods": [
+    {
+      "method": "full_hot",
+      "label": "Full Hot",
+      "engine": {
+        "threshold_hot": {
+          "median": 1.4280515930016169,
+          "minimum": 1.4179973090165867,
+          "maximum": 1.4361677883650013,
+          "repeats": [
+            1.4361677883650013,
+            1.4179973090165867,
+            1.4280515930016169
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.42640710961275,
+          "minimum": 1.4180020837298315,
+          "maximum": 1.4329293868065989,
+          "repeats": [
+            1.4329293868065989,
+            1.4180020837298315,
+            1.42640710961275
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.345599040389061,
+            "minimum": 0.34391558170318604,
+            "maximum": 0.4475667327642441,
+            "repeats": [
+              0.34391558170318604,
+              0.345599040389061,
+              0.4475667327642441
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.2028798907995224,
+            "minimum": 0.20117437839508057,
+            "maximum": 0.27727702260017395,
+            "repeats": [
+              0.20117437839508057,
+              0.2028798907995224,
+              0.27727702260017395
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 0.697655080893696,
+              "minimum": 0.6883772380746326,
+              "maximum": 1.397512824390187,
+              "repeats": [
+                0.6883772380746326,
+                0.697655080893696,
+                1.397512824390187
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 0.7008400104904992,
+              "minimum": 0.6953459170430096,
+              "maximum": 1.4089110919570558,
+              "repeats": [
+                0.6953459170430096,
+                0.7008400104904992,
+                1.4089110919570558
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.4442228674888611,
+            "minimum": 0.3955952227115631,
+            "maximum": 0.4463265389204025,
+            "repeats": [
+              0.4442228674888611,
+              0.4463265389204025,
+              0.3955952227115631
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.27457958459854126,
+            "minimum": 0.2376617193222046,
+            "maximum": 0.27551034092903137,
+            "repeats": [
+              0.27457958459854126,
+              0.27551034092903137,
+              0.2376617193222046
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.4309023071363467,
+              "minimum": 0.9935684389207163,
+              "maximum": 1.4327946079657428,
+              "repeats": [
+                1.4327946079657428,
+                1.4309023071363467,
+                0.9935684389207163
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.4268299605415573,
+              "minimum": 0.9937459161556433,
+              "maximum": 1.4281280676000594,
+              "repeats": [
+                1.4268299605415573,
+                1.4281280676000594,
+                0.9937459161556433
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2768,
+        "unknown": 275
+      },
+      "routes": {
+        "solver": 5725,
+        "solver_unknown": 275
+      },
+      "max_exact_state_python_bytes": 525064,
+      "uncompressed_response_bytes": 334965514
+    },
+    {
+      "method": "threshold_hot",
+      "label": "Threshold Hot",
+      "engine": {
+        "threshold_hot": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "repeats": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9988484425934427,
+          "minimum": 0.9977451091824799,
+          "maximum": 1.0000033672230648,
+          "repeats": [
+            0.9977451091824799,
+            1.0000033672230648,
+            0.9988484425934427
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.49537235498428345,
+            "minimum": 0.3202594816684723,
+            "maximum": 0.49960336089134216,
+            "repeats": [
+              0.49960336089134216,
+              0.49537235498428345,
+              0.3202594816684723
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.35239139199256897,
+            "minimum": 0.20310930907726288,
+            "maximum": 0.35604362189769745,
+            "repeats": [
+              0.35604362189769745,
+              0.35239139199256897,
+              0.20310930907726288
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0,
+              "minimum": 1.0,
+              "maximum": 1.0,
+              "repeats": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0081561094595626,
+              "minimum": 1.0045651922906134,
+              "maximum": 1.0101233431074337,
+              "repeats": [
+                1.0101233431074337,
+                1.0045651922906134,
+                1.0081561094595626
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.3119196444749832,
+            "minimum": 0.3100394606590271,
+            "maximum": 0.39815598726272583,
+            "repeats": [
+              0.3100394606590271,
+              0.3119196444749832,
+              0.39815598726272583
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.19475586712360382,
+            "minimum": 0.19393916428089142,
+            "maximum": 0.2664692550897598,
+            "repeats": [
+              0.19393916428089142,
+              0.19475586712360382,
+              0.2664692550897598
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0,
+              "minimum": 1.0,
+              "maximum": 1.0,
+              "repeats": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 0.9980611957067569,
+              "minimum": 0.9958370534122445,
+              "maximum": 1.0001786260794674,
+              "repeats": [
+                0.9958370534122445,
+                0.9980611957067569,
+                1.0001786260794674
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2792,
+        "unknown": 251
+      },
+      "routes": {
+        "solver": 367,
+        "last_dual": 2673,
+        "initial_primal": 2305,
+        "last_primal": 397,
+        "solver_unknown": 251,
+        "solver_cutoff": 7
+      },
+      "max_exact_state_python_bytes": 875080,
+      "uncompressed_response_bytes": 308994406
+    },
+    {
+      "method": "primal_pool",
+      "label": "Primal History",
+      "engine": {
+        "threshold_hot": {
+          "median": 0.9921958945678196,
+          "minimum": 0.9918433833484223,
+          "maximum": 0.9923388663002065,
+          "repeats": [
+            0.9918433833484223,
+            0.9923388663002065,
+            0.9921958945678196
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9910533240366743,
+          "minimum": 0.9896068848108919,
+          "maximum": 0.9923422077265251,
+          "repeats": [
+            0.9896068848108919,
+            0.9923422077265251,
+            0.9910533240366743
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.4972101300954819,
+            "minimum": 0.3220124691724777,
+            "maximum": 0.49860793352127075,
+            "repeats": [
+              0.49860793352127075,
+              0.4972101300954819,
+              0.3220124691724777
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.35421672463417053,
+            "minimum": 0.20361609756946564,
+            "maximum": 0.3556707501411438,
+            "repeats": [
+              0.3556707501411438,
+              0.35421672463417053,
+              0.20361609756946564
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0037098862960505,
+              "minimum": 0.9980075647043377,
+              "maximum": 1.0054736474775792,
+              "repeats": [
+                0.9980075647043377,
+                1.0037098862960505,
+                1.0054736474775792
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0082920149309815,
+              "minimum": 1.008110737705654,
+              "maximum": 1.0136744006051117,
+              "repeats": [
+                1.008110737705654,
+                1.0082920149309815,
+                1.0136744006051117
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.315225750207901,
+            "minimum": 0.31247401237487793,
+            "maximum": 0.3974085748195648,
+            "repeats": [
+              0.315225750207901,
+              0.31247401237487793,
+              0.3974085748195648
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.19819438457489014,
+            "minimum": 0.19582930207252502,
+            "maximum": 0.2661992162466049,
+            "repeats": [
+              0.19819438457489014,
+              0.19582930207252502,
+              0.2661992162466049
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0017772779294738,
+              "minimum": 0.9981228150095158,
+              "maximum": 1.0167278369593657,
+              "repeats": [
+                1.0167278369593657,
+                1.0017772779294738,
+                0.9981228150095158
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 0.9998350278421508,
+              "minimum": 0.998301105774788,
+              "maximum": 1.0124952532798197,
+              "repeats": [
+                1.0124952532798197,
+                0.9998350278421508,
+                0.998301105774788
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2794,
+        "unknown": 249
+      },
+      "routes": {
+        "solver": 330,
+        "last_dual": 2673,
+        "initial_primal": 2305,
+        "last_primal": 395,
+        "historical_primal": 41,
+        "solver_unknown": 249,
+        "solver_cutoff": 7
+      },
+      "max_exact_state_python_bytes": 875080,
+      "uncompressed_response_bytes": 308951615
+    },
+    {
+      "method": "dual_pool",
+      "label": "Dual History",
+      "engine": {
+        "threshold_hot": {
+          "median": 1.0063407103527917,
+          "minimum": 1.0033038548445266,
+          "maximum": 1.009614285231503,
+          "repeats": [
+            1.0033038548445266,
+            1.009614285231503,
+            1.0063407103527917
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.005181851254265,
+          "minimum": 1.0010415141950553,
+          "maximum": 1.009617684828011,
+          "repeats": [
+            1.0010415141950553,
+            1.009617684828011,
+            1.005181851254265
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.5108846724033356,
+            "minimum": 0.31818096339702606,
+            "maximum": 0.5130225270986557,
+            "repeats": [
+              0.5108846724033356,
+              0.5130225270986557,
+              0.31818096339702606
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.36747507750988007,
+            "minimum": 0.20048947632312775,
+            "maximum": 0.36962030827999115,
+            "repeats": [
+              0.36747507750988007,
+              0.36962030827999115,
+              0.20048947632312775
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.02258053567107,
+              "minimum": 0.9935098931010016,
+              "maximum": 1.0356301112421427,
+              "repeats": [
+                1.02258053567107,
+                1.0356301112421427,
+                0.9935098931010016
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0329324692886515,
+              "minimum": 1.0016130685382916,
+              "maximum": 1.0403579618419123,
+              "repeats": [
+                1.0329324692886515,
+                1.0403579618419123,
+                1.0016130685382916
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.31277574598789215,
+            "minimum": 0.3115772008895874,
+            "maximum": 0.41381534934043884,
+            "repeats": [
+              0.3115772008895874,
+              0.31277574598789215,
+              0.41381534934043884
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.19638504087924957,
+            "minimum": 0.19487494230270386,
+            "maximum": 0.28197143971920013,
+            "repeats": [
+              0.19487494230270386,
+              0.19638504087924957,
+              0.28197143971920013
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.004959821008886,
+              "minimum": 1.0027446219822091,
+              "maximum": 1.039329716439452,
+              "repeats": [
+                1.004959821008886,
+                1.0027446219822091,
+                1.039329716439452
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0008004964040838,
+              "minimum": 1.0007762269511855,
+              "maximum": 1.0395153678319735,
+              "repeats": [
+                1.0007762269511855,
+                1.0008004964040838,
+                1.0395153678319735
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2792,
+        "unknown": 251
+      },
+      "routes": {
+        "solver": 367,
+        "last_dual": 2673,
+        "initial_primal": 2305,
+        "last_primal": 397,
+        "solver_unknown": 251,
+        "solver_cutoff": 7
+      },
+      "max_exact_state_python_bytes": 1450428,
+      "uncompressed_response_bytes": 309000459
+    },
+    {
+      "method": "both_pools",
+      "label": "Both Histories",
+      "engine": {
+        "threshold_hot": {
+          "median": 0.9999262830440668,
+          "minimum": 0.995654076469072,
+          "maximum": 1.0005480482596414,
+          "repeats": [
+            0.995654076469072,
+            0.9999262830440668,
+            1.0005480482596414
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 0.9993958597440517,
+          "minimum": 0.9934089852346155,
+          "maximum": 0.9999296500189101,
+          "repeats": [
+            0.9934089852346155,
+            0.9999296500189101,
+            0.9993958597440517
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.5120146125555038,
+            "minimum": 0.31889888644218445,
+            "maximum": 0.5253272205591202,
+            "repeats": [
+              0.5120146125555038,
+              0.5253272205591202,
+              0.31889888644218445
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.3669496476650238,
+            "minimum": 0.20188473165035248,
+            "maximum": 0.3689119517803192,
+            "repeats": [
+              0.3689119517803192,
+              0.3669496476650238,
+              0.20188473165035248
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0248422101124757,
+              "minimum": 0.9957515848736173,
+              "maximum": 1.060469392919165,
+              "repeats": [
+                1.0248422101124757,
+                1.060469392919165,
+                0.9957515848736173
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0352170394364246,
+              "minimum": 1.0038730437943792,
+              "maximum": 1.065310639616151,
+              "repeats": [
+                1.0352170394364246,
+                1.065310639616151,
+                1.0038730437943792
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.3133569657802582,
+            "minimum": 0.3127904385328293,
+            "maximum": 0.41181333363056183,
+            "repeats": [
+              0.3133569657802582,
+              0.3127904385328293,
+              0.41181333363056183
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.19682352244853973,
+            "minimum": 0.19591981172561646,
+            "maximum": 0.2807822674512863,
+            "repeats": [
+              0.19682352244853973,
+              0.19591981172561646,
+              0.2807822674512863
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0107002673600944,
+              "minimum": 1.002791725603919,
+              "maximum": 1.034301496912626,
+              "repeats": [
+                1.0107002673600944,
+                1.002791725603919,
+                1.034301496912626
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0064927761308442,
+              "minimum": 1.0008475087010893,
+              "maximum": 1.034486250134007,
+              "repeats": [
+                1.0064927761308442,
+                1.0008475087010893,
+                1.034486250134007
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2794,
+        "unknown": 249
+      },
+      "routes": {
+        "solver": 330,
+        "last_dual": 2673,
+        "initial_primal": 2305,
+        "last_primal": 395,
+        "historical_primal": 41,
+        "solver_unknown": 249,
+        "solver_cutoff": 7
+      },
+      "max_exact_state_python_bytes": 1450428,
+      "uncompressed_response_bytes": 308957143
+    },
+    {
+      "method": "threshold_hot_auto",
+      "label": "Threshold Hot Auto",
+      "engine": {
+        "threshold_hot": {
+          "median": 1.0011528850198408,
+          "minimum": 0.9999966327882733,
+          "maximum": 1.0022599868410957,
+          "repeats": [
+            1.0022599868410957,
+            0.9999966327882733,
+            1.0011528850198408
+          ]
+        },
+        "threshold_hot_auto": {
+          "median": 1.0,
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "repeats": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "source_to_answer": {
+        "uniform": {
+          "joint_seconds": {
+            "median": 0.4931211620569229,
+            "minimum": 0.31766854226589203,
+            "maximum": 0.494596391916275,
+            "repeats": [
+              0.494596391916275,
+              0.4931211620569229,
+              0.31766854226589203
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.3507835865020752,
+            "minimum": 0.20083528757095337,
+            "maximum": 0.35091814398765564,
+            "repeats": [
+              0.35091814398765564,
+              0.3507835865020752,
+              0.20083528757095337
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 0.9919098744896416,
+              "minimum": 0.989978111904343,
+              "maximum": 0.9954555539793254,
+              "repeats": [
+                0.989978111904343,
+                0.9954555539793254,
+                0.9919098744896416
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0,
+              "minimum": 1.0,
+              "maximum": 1.0,
+              "repeats": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          }
+        },
+        "skew": {
+          "joint_seconds": {
+            "median": 0.31252557039260864,
+            "minimum": 0.3113355338573456,
+            "maximum": 0.3980848789215088,
+            "repeats": [
+              0.3113355338573456,
+              0.31252557039260864,
+              0.3980848789215088
+            ]
+          },
+          "producer_seconds": {
+            "median": 0.19605652987957,
+            "minimum": 0.19490376114845276,
+            "maximum": 0.26687702536582947,
+            "repeats": [
+              0.19490376114845276,
+              0.19605652987957,
+              0.26687702536582947
+            ]
+          },
+          "ratios": {
+            "threshold_hot": {
+              "median": 1.0019425705573797,
+              "minimum": 0.9998214058221103,
+              "maximum": 1.0041803491580186,
+              "repeats": [
+                1.0041803491580186,
+                1.0019425705573797,
+                0.9998214058221103
+              ]
+            },
+            "threshold_hot_auto": {
+              "median": 1.0,
+              "minimum": 1.0,
+              "maximum": 1.0,
+              "repeats": [
+                1.0,
+                1.0,
+                1.0
+              ]
+            }
+          }
+        }
+      },
+      "decisions": {
+        "true": 2957,
+        "false": 2780,
+        "unknown": 263
+      },
+      "routes": {
+        "solver": 371,
+        "last_dual": 2673,
+        "initial_primal": 2305,
+        "last_primal": 385,
+        "solver_unknown": 263,
+        "solver_cutoff": 3
+      },
+      "max_exact_state_python_bytes": 875080,
+      "uncompressed_response_bytes": 309005498
+    }
+  ],
+  "scope": "Measurement reconciliation; independent numerical audit is separate. Median and min/max over three paired repeats, not confidence intervals."
+}

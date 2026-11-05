@@ -1,0 +1,20 @@
+{
+  "format": "qbridge-dual-proof-v1",
+  "view_digest": "9dd3f83c27e1c242b2ae6e520d5dee4d6b5136a9658d7107e2823fb52fbff09f",
+  "objective": [
+    -0.1,
+    -0.1,
+    0.09999999999999998,
+    0.09999999999999998
+  ],
+  "lower_multipliers": [
+    0.19999999999999996,
+    0.19999999999999996
+  ],
+  "upper_multipliers": [
+    0.0,
+    0.0
+  ],
+  "claimed_lower": 0.009999999999999969,
+  "decision_threshold": 0.001
+}

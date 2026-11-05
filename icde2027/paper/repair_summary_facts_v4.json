@@ -1,0 +1,500 @@
+{
+  "status": "complete",
+  "generator_sha256": "f00e5e32bd0f4e04eb31dd52279d93627e7c7136ada826eca9bf9ba4bb4c273a",
+  "sources_sha256": {
+    "runs/icde2027/fresh_worlds_v1/worlds/world_000.json": "22442cd10e0888aaef076bd3c7396188b57d0bbc7883937ad0f4482a5a7ebd44",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_001.json": "eb6c7b81d5258d9ce60897c3b59511238872072c2c486774561c042347f9b0d7",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_002.json": "f05c72a82b1d034abd0e130bd30e83d643f3e288219477a5f30ddd23985a7dc4",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_003.json": "d034faafc8130d64373e831999659428d44e5e239776a38e141aa657b5c3a298",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_004.json": "9b2ef61e5615a4bde1bf29ae8d548a26871f86088e7f1653488b5c762de2ec03",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_005.json": "1c3397e0c119bf7c5f7d6403e64cd8cecb6705c3c08a9bf60b459f726dbac5fd",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_006.json": "fcc2a77104109e5400f29ef7e7374d72d81f04414e8430e4534c2c39a2bf8336",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_007.json": "d2e4ff6678f58a3c9deb18b4ec3fe882cab1f85276e8dedb651f1ded550d1349",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_008.json": "1d4b3f8f26696be11f3c490b5b11e05b054e85806d533b1672539cc63b33d9ff",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_009.json": "c93ec76c6c0c972464b1e27e14dce399db79e622a5f824f6d182f1df18ca5781",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_010.json": "3b4cecbfeb94552639cfe9d643240b9220bf453b7504e8972e5f8be11c8e2bc7",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_011.json": "f93be0dfd6ac446f8dce8e23a070d91562b503e6de790ca9411fb0e8300ab1d1",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_012.json": "482c0c2c7c171777aa98ef718f0d62b7384c07bafd2948e6f648f8fc15481bbc",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_013.json": "46a054f962ad69ae96a9094ec5a01b7804035b17f359b2ca4d600219eec1ac1b",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_014.json": "8d870c8803b60d55e50715deef370bfbe82b9ee3de0ad2d4f925235cdec74585",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_015.json": "3e084842f2cabefbc6433ab6ff15aa4a5fde940ea5abc9a3a84638f19eba450f",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_016.json": "5016b95e03394726e7ff24000d7be8924149aea1369b80878cee721a372e1fcc",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_017.json": "51dab003632e20795947fa6739c028db4a741ed1011642ef1d0bea8bd6ef3e74",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_018.json": "20b2499ee7cfb7ff574d784b60acfbadec07e27937433e762587c0cbbc5bec36",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_019.json": "7f90e22a703d6931e962cfd567841f1d501b2584274d72aa0ba7ef33fc7ca9f7",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_020.json": "7a460e6e4d9e53e01e6fb198a08dfc43f4cf24e9f74d49ecef29e2bae77c13f6",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_021.json": "c98bf21080b49929d7728a64f32f3bd7e0699091cea111f8eeb48a618d800aca",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_022.json": "cd88edf4925d74cbb940a0613f7871c1e83e6bcc2534b1128499eb7cafb19732",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_023.json": "e84af3f50eece71fbbf6fcfa477b036f96ffa9e6714d1d25e479f3328a250be0",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_024.json": "415cec390abcfa3f967906f7cae42b61a5bb51033d136dbe6add0898d607e617",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_025.json": "88f788ac98069cffa94e90293cbe1dca7432da72fe57e3ca4d4e6c1b65f30ef9",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_026.json": "02b597b3a146ae7c6730657dbec6040ea02db968dfc73ae65b42c56522bc0bf6",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_027.json": "1c15eb772942a3fac29383b58ceec96588c531e65cdc4b04a5746a4a3a1a3117",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_028.json": "0db3807db7d07726ccc760772b51b67c3496cee68588d663f9c5408feaf36568",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_029.json": "a41143fdd71503d2700e0a98456c20e4dd635b83c1fc7be2f65933c1035c8102",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_030.json": "0f61408441fe22e828777e9c6b7f7cf8f647572ee4fb6bd43bc915e41237bc5e",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_031.json": "fe33a8573d3f1f8e9c60c4af3e1f49bfa12cd2a30df55c02cd5c0a501eccd38a",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_032.json": "80d38a64db725058d98d1decc1f4a87d31f6d40155fddbcd8cd1f72d6ea992ca",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_033.json": "ee62943464a5b70a092cb0427f208a008830db64a873d73125cabff04468c456",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_034.json": "21eb636b9f05be8d68108efe4dccf8cda60ce0c77576d99dd06493d7a2fdfa7b",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_035.json": "79ab4c72afd2e1c991161cd8f3b56c16ab418f78776897fc929816a18b2536cf",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_036.json": "a6a44f3b1043ba843554513f75ac0111bc8555c8fa7a9fb4520a3db9dba5a900",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_037.json": "34489ffb43a0fd14e2ee514e7b7938233525b72ee592acffd18c7c699afd5dfc",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_038.json": "64d245b5c40cd7081dc8e3f0e83b93519fb4c85d8243bebb45dca0803fd945fa",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_039.json": "38467708ecce0803bee70dc311d64c6375d4f9ce4921c5f53d33d3f9a838f38c",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_040.json": "9d31dffd0b310c2c448326704c8fe820c2912258fe8aac8f57be566c8bee5d5d",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_041.json": "c606ef1341291a6d95904ff3da6b2cbbebf0e1bd8b2a72c08dc2033a262c75c8",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_042.json": "9126b58ed9511ae20c770462145a1df76035cd9f475935995586ab502938c868",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_043.json": "56723ac27fbf8273cd819bee0e7c91c7d54eca969e5b4d0b3a2c634c3bdfad9a",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_044.json": "ed0a89643f2db8100b0621fcfbd39d886359fd64d644a63794272bbad0dfee41",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_045.json": "7b805045fd498867f62fc2c463152dd6111062b33c9742f94d084a54d7c726e8",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_046.json": "3784e538fd3405e093687cf55f2e30c79825c6b1a836212afc645c7b4d2a2650",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_047.json": "f699d31988a760010c6b045ffcf4dda6d5d99619e4b29684148307bc4ca9a217",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_048.json": "ce28560b903abd49b9791e134504d75fa74e075f53e2a4aa0257f144d8179553",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_049.json": "e1102e1dc7e41784051a98c21ed050a8fc2e2aff077122350e30c1c4bbf8d200",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_050.json": "e1e53779c9920a87abe43238fc1d3287d7ddb7945c043ced44f5721c52c74870",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_051.json": "474eb52ca3dafbb9127ee97eb67b750fa044106e98effe417913a81cf2265976",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_052.json": "f8b59b8d3514bc1ac77bd2241bc244cd696a8b48c9fc3e1cc8e5cee93a8d52ca",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_053.json": "3aed0f00034b338a1a990576aa08715030a71ccdb340bd29a5949e90447f3bda",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_054.json": "4a6dbd950d091d0bf2e35c333ca24419fe9a99653ec9c8fa032aa762f1163882",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_055.json": "d5c1d05f07e9cfcb08d5a7b86cc35de0d6fe959bfefa549cd568b1e934647332",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_056.json": "b0be1f4a056ee063f85a8c9c46f5ff058e6c1254b361c1e6827a9a8bfdd0edc6",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_057.json": "3ce04c2cacffdfa410e0f74834cb3859abc416f074f74f89a231221eca8fd19a",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_058.json": "ccc522995a320cacccf9e2f4384f3f30cd63f1dff2c4b7c9f02417073203e03a",
+    "runs/icde2027/fresh_worlds_v1/worlds/world_059.json": "73ce93d866acf595afcb2cc83c8f004d454eb6e159259e79870c8e3e64a3942e",
+    "runs/icde2027/fresh_worlds_v1/protocol.json": "7705c4bdb7643d1480b34f1d1c674a99e29d00216ce360f1fbf979a9164a31a9",
+    "runs/icde2027/fresh_worlds_v1/manifest.json": "653ea1094b975655e39cc4a1ef9d7508e013d11d470b0df9aaf6fc3da40294f0",
+    "runs/icde2027/coat_case_v1/protocol.json": "0ec4b309db59f316bda29791f1cd311a88ab52edc176a15cd1029a629ab3e26a",
+    "runs/icde2027/coat_case_v1/manifest.json": "3652b71d2a4ce8b6ea18888097d094c0c4259f60672474479e876221928d52f3",
+    "runs/icde2027/coat_case_v1/counts.json": "8640c3a482ef6ece013e19d5c829c090c76745b4eead588f57cd7e679fae9e81",
+    "runs/icde2027/coat_case_v1/queries.json": "bc258d4e7e2f9d221a88d168c073d76814b36fc13693c490028fec1338bf7a49",
+    "runs/icde2027/coat_case_v1/results.json": "87e7a502dec3a47708bb8b53f6c7cdf8a5abd6fa47eb340a098477d165c4adce",
+    "runs/icde2027/coat_case_v1/data_provenance.json": "d3dd1a9727fb3f21b9a0f361f590ae15b118046be6f13ecd64eb1a75ab29cc73",
+    "runs/icde2027/coat_case_v1/observational_selected_events.csv": "3c00eded5e431548df70a741aca02557827835e8ffd5c5359629c852a365decb",
+    "runs/icde2027/coat_case_v1/randomized_selected_events.csv": "d61f40ac41c5d45ab145e8d89631859e64162adf638bc17e06ece4440b52c7c2",
+    "runs/icde2027/coat_full_block_v1/manifest.json": "172aa16892bc67bea7932082c6b7748870e56f46dbac6f7963ed0136a8b5b563",
+    "runs/icde2027/coat_full_block_v1/base_intervals.json": "52f29a4253fe378b5bf0b4a43be69aab8952cf00179047c583c033327cef713b",
+    "runs/icde2027/coat_full_block_v1/mapped_moments.json": "95103080a13a5efdc294d8af7b22cf447b2778f466c0443bf3d42d5af81f5217",
+    "runs/icde2027/coat_full_block_v1/moment_rows.json": "70c6a36f3536874fa418c40a8e3676bb115d9b50fca2f3adf372036276684a49",
+    "runs/icde2027/fresh_worlds_v1/source_snapshot/experiment.py": "7ba6a85100b277b12d98fb0889010617cef7672239493c62d8456713ada9009f",
+    "runs/icde2027/fresh_worlds_v1/source_snapshot/fresh_worlds.py": "641642f12143d498c244cf52eaca40af6e8b23972ca16ce02bbc871d021e562e",
+    "runs/icde2027/fresh_worlds_v1/source_snapshot/aggregate.py": "db6ebf2ce556bfcfa9f04ddbb97bb6a2b670607d73211ff3828738b3e98f4a52",
+    "runs/icde2027/fresh_worlds_v1/source_snapshot/source_intervals.py": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+    "runs/icde2027/fresh_worlds_v1/source_snapshot/confidence_view.py": "8b6325e40e5a39f25dfc88cc2d0201f0f79057685e35dfe3b39e0acbbffe14fb",
+    "icde2027/represented_intervals_v4.py": "80ddd31a8b95b38308688722174bc8b5820d97c378e562b5f155ae3ff866db43",
+    "icde2027/confidence_view.py": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+    "icde2027/aggregate.py": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+    "icde2027/source_intervals.py": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+    "icde2027/proof_check.py": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+    ".deployment/requirements-installed.txt": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9",
+    "runs/icde2027/analysis/represented_law_repair_v4_entry.py": "00424ca38561b39ded94c64595e3f488e0ebc822d9e47080e72babe45caf3c04",
+    "runs/icde2027/analysis/represented_law_repair_v4_test.py": "a98d79fe32a9065d9ac4a63bc863d705411cc86223fb3d4c6d3f0808ef1978e4",
+    "runs/icde2027/analysis/represented_law_repair_v4_plan.md": "810e61beccf5b67fd4d48714e109568ff6d285f107aa3855d2a1a480495b1d34",
+    "runs/icde2027/analysis/represented_intervals_v4_rematerialize.py": "952e363e29e64ce3ac3a1baab2ea444b57538dff2859294dc44c0f0954b07114",
+    "runs/icde2027/analysis/represented_intervals_v4_rematerialization_inputs.json": "cdff2c2f7408f7493861768e63f9bbf101dc8ac3b02ba7dec0d40bb38284e623",
+    "runs/icde2027/analysis/represented_intervals_v4_rematerialized_approved/preflight.json": "6c05a97005f3a5a76a644f57c874dc85a53ff12757baf4f1250da73edf6caab5",
+    "runs/icde2027/reviews/represented_intervals_v4_gate.json": "aa668ae72e1fa0e82818b7fe3c2af32b518d3891b53d6fdd5135ef0297d90d1b",
+    "icde2027/__init__.py": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation.json": "474e22aa6f19f7514915f970c23d9dc6100e7804437d0eeddbb1fe70cd41b00c",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation.md": "f1480616fa41838526bbfc69e96b7decfdc2d0e0ee9d97330dbbba154ae9136f",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation_verification.json": "fbce46c239b2733a5ddb959800c9181e90fae9d0c8438667a2d26bd5a767ce66",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation_verify.py": "b755cae5e14c94c8b6f156b72c86f6a6acc4624fc25accd56f1e8c1b51271edd",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation_verify.log": "bf71a7c0827336354aa79e7981d67f7df014b3ac818b15e153e8df080b3a76d0",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation_tests.py": "0f87197bf9ce57bacad7250cfdaf740af572f60be8b8acf3d60e5902a710349d",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_implementation_tests.log": "926f83ed8fb4ce2cb5e022743bbc92f45caa47b7648a234137f4f7e0eae77706",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight.json": "21676d503db949e4588d26d0bf07cf221d45146903e49660d9351d06c50e75b8",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight.md": "1856b4fe0109786ee9c5bb62c614f14121cfef166ae32dc8b15dd8133dbf3e61",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight_verification.json": "45c741edf80684cc471e9010f282459a425c16a36e29aa9d7da1661b0dd46d70",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight_verify.py": "3058d08a15ad143aab7b24d7c3cf954b3594e1ab1ca785c9dd4052fea42a84a4",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight_verify.log": "3ac2983508813eb3bdb93620201ffd00c696b6cd498294e7c38e197c7776847a",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight_tests.py": "61397a9fe5fdc8ef37552e7696bcfa6468a023b7bb7de55412a2ff6734953d0c",
+    "runs/icde2027/reviews/represented_law_repair_v4_gate_preflight_tests.log": "d1b49b4e145b440820b1067e499d65d1ec1b66f0397e579dace0ae4a69ba20d8",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/preflight.json": "c635136a42fab2bfb5add94d81c7b0ba70fb4fb9158b35884aaf8861b4fb8410",
+    "runs/icde2027/analysis/represented_law_repair_v4_inputs.json": "f6c62a7659a608e927a34ad496a62a315574f3324f92697f236e2507e00a44b8",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/.deployment/requirements-installed.txt": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/__init__.py": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/aggregate.py": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/confidence_view.py": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/proof_check.py": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/represented_intervals_v4.py": "80ddd31a8b95b38308688722174bc8b5820d97c378e562b5f155ae3ff866db43",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/icde2027/source_intervals.py": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/implementation_gate.json": "474e22aa6f19f7514915f970c23d9dc6100e7804437d0eeddbb1fe70cd41b00c",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_intervals_v4_rematerialize.py": "952e363e29e64ce3ac3a1baab2ea444b57538dff2859294dc44c0f0954b07114",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_intervals_v4_rematerialized_approved/preflight.json": "6c05a97005f3a5a76a644f57c874dc85a53ff12757baf4f1250da73edf6caab5",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_law_repair_v4_entry.py": "00424ca38561b39ded94c64595e3f488e0ebc822d9e47080e72babe45caf3c04",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_law_repair_v4_inputs.json": "f6c62a7659a608e927a34ad496a62a315574f3324f92697f236e2507e00a44b8",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_law_repair_v4_plan.md": "810e61beccf5b67fd4d48714e109568ff6d285f107aa3855d2a1a480495b1d34",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/source_snapshot/runs/icde2027/analysis/represented_law_repair_v4_test.py": "a98d79fe32a9065d9ac4a63bc863d705411cc86223fb3d4c6d3f0808ef1978e4",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/preflight_started.json": "5d1d12bff9122a5291d64d42c0b397ef4e961ce0cd3c6528b8703f0ce9619b85",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/run_started.json": "66feaa07088133dba08ec7403c5694637ac20c57b0d9182fabff33adf6389bc7",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/partial_method_records.jsonl": "b875d37c5b9f9c79dbc55a26b34cda6be998bc23753024c8e5a0d798a6142046",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/population_preflight_gate.json": "21676d503db949e4588d26d0bf07cf221d45146903e49660d9351d06c50e75b8",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_036.json": "95a01e0437c71fe4d3bf2b50bde4f4892004edab0569271265a95fbed5146062",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_053.json": "188ca3111fba33c78f1368cfec3f94db5bf2722fa9a5a928af888a57d37387bb",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_055.json": "3887b234a71541623317f90048277714abde27775961c5b3d7ad7b7f2731d3ed",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_004.json": "cf0e07c447192db095d99663c2a7a516e9366aa1ae47b701c02ce3c9e9a446fa",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_030.json": "e90867b7e92b000f88a15039ffea20ec5b4107adc6500e26c3e4f944127f7fc5",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_033.json": "92509ea7ad06fe7a8de56e7f2d73cf5d76621537e62cfee45c2b2eb348c4c25f",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_029.json": "8575a06bf01f25a4f796bf130f6336616663aa0f1bef1263736a7b67c06e771f",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_035.json": "8d26c05142548758565d6419214efa6d23b0f39096a20b67ce70c4c58fefb747",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_054.json": "ba86df3eba114e173dac4986a879b55a8e9d5fe464aa26b95ab234b44ba444f5",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_041.json": "c2a8c4dc0dfe4c38c417ab875f20c85f0666a63cc1cb73b78f18632eca6c2121",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_056.json": "daddeb894c6da5b32438f84ce033d43bda438e96d879b1aaaf30deff7754422a",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_006.json": "73daf00ca33efa35397f30d49610dba4f3e7da9a9ef43ea4686ec5b389fcf089",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_012.json": "5e5990038b2829767bfb58e4be65fb9ca2f8f1a1baa971b913a9703416dd11d3",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_002.json": "9afd1f5477755cba66bc63d01383d1d7fc3120b40d6533e825d4ed5a502f1d6e",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_032.json": "d646b138ca2d30d4913405d0f006df196e3d4db5eeec286427d5c417298ab423",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_039.json": "eca4d671309f97d0f678e9139ae84db3958605fd8c5dc014e5a88aeebe4b4ada",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_005.json": "18267ad4a92be1f2918ed38af3116dd28aff440bae67b1c71f09afb70c9339f1",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_050.json": "9e261c8476fe343b08c896133107b7b25bc53795ad566073e1ee87e4d3cd0e90",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_049.json": "94e4c22333d464a575c4f1c1b2293a7435ae58711844aa3f73c7952e087be465",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_018.json": "d75e5f0c70cb4e800eb02ea36f7e6527ef037a1ec60c341d939976a3c75b3342",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_022.json": "c5e4997215cdb0e6aec67b220b62f106a197e23e1e74975d2e9ee56abed6b94d",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_027.json": "496e5de208e84121cf5db57e78778a607dc35c493fff7d1a14a7ce8c08047a8e",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_007.json": "600a64d83afd032891366d0707a7477edbe9863f5ab4bba9ce3b13909c6ef167",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_000.json": "9aa30a40e966fc808ce6e4666cce21f75c034d023651680f0817d43fc0558fdc",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_038.json": "2de63068fb646e5998cacec6cb45fb2dc144dc587e4567e05a1eb19e2e2eaf9f",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_058.json": "b69e98702baee9c15fced92347398e77224b758408b9ee4f9743cbd6eb134b55",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_059.json": "0c3912bbfeb82a40b9ba66d35454a4ac9fe4605c91446713be65589c7d613dd7",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_040.json": "d7d65a9ffcacea6b07df373c37e4788751627b30adb2cf09250bbecf2522abbf",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_024.json": "b9928bbab4e3b3a1c464a6dfc30002e45c015934d238e1684d3975d95b7fe664",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_042.json": "491ee8558f3235334aae8578567173b10d3d0467115861ee9d6dcb7ca6e30202",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_017.json": "3e9e7a84a4518457b01866b1c1d0e4d915b034afd10b0ca3fefd6f9929264db2",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_014.json": "ed1f96a79f9574ab3b67d1996a34dc8cf3da01973b26cf6e39f7f42bf1129e02",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_020.json": "f4474c2ac07a8811024f35be68bd7a68c1e2ed8e316de2e82e645ba65acc3092",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_016.json": "f564fc6676f9b2df8a6d44b5151e1f8cad6233e9bf6256b4aa5e921c63189667",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_003.json": "52a5fefd8d8e389b5ac9d9b6f90a8fcd8d11c9ea81febc336be342bb806224da",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_010.json": "699f1d3352374aa862a4f3d50e78871b13d4c680926cdb16f110b02140ec4232",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_021.json": "f5d0ef753cdb5181394d685b69137ecf15942db61448aaa8ae4673a8018c3d56",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_057.json": "f2214ee5b092f61c638dc8de02d87b45a1b2d4b69005cea0b065676977f8cb2f",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_015.json": "ff07e33e286371b7a41ca3dc07454eed1d89505446ce931e72fef3a80c3ffbe3",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_025.json": "26f81e4ccd04c3128e27c6760a93586ab6051c2e5f730d9f3ef3aca0c5dc26d7",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_048.json": "20a52bab79e5ff5e02ec1b36bb1e2f6ff926ede9628ab69ae8a64d4d90d0735a",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_047.json": "95481cde0728a464a22f7863a1ddbaec8e656a6483a65fe5be4cd435b112e2ba",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_011.json": "ee435247c9726dbb9694fae6ef40baa1ea384c89c1c599286f3f12378db02440",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_044.json": "113b967246e4cd628f2649a6e5fee9a0fa850f851018ff385c2653c0f4d98694",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_001.json": "4e69383a0e423389adbb8c8a79155eac3f87bb04daa0ad5ef22cb4ddecaee7fc",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_026.json": "eabb0c5478de94a7c314c977cbf1e50129e8edd040a1b837ce95452fa8b639ae",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_052.json": "8142c800196a1e20bee1a5dfe108925134e2ea1f321ba5aa52471e84cf1d6dab",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_034.json": "0c57a0c4e35a623a46900614d2c65cdb4e0307573fba51b017297857b5633fc5",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_028.json": "627f2b289508709887d7efe8aecb5c41788d9b81c2bf5526afe0db93f9f91260",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_051.json": "18a3fca2a332bfbf946c38e298ed69447a4ab14304fa1ea9ca61ef3cc75c5bf6",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_009.json": "bf730fab4f3709483ca5cf9b63d428887bd6236574e976a83f21aaa4e545b9b7",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_043.json": "0f8f750f409018aecc3662d0b7824f47b695e6318738d44d4cccf475f4136416",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/coat_thinned.json": "d148aa295b9a5a3100ef9ca26328918ddc6bc0a65c81386c39884816b069ae51",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_008.json": "bab2b2700a1e848dfb7655956e11be531d5683a6fa72632fd21e64e2f76e7335",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_037.json": "ad11467e6ccadbac88434f95415905161ed9b357e791cb1db4c8288e1eaef36c",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_045.json": "c38965fda4c70ef8ec9e93eea67e23d5825a3131cb3acb330bf2d71a1dedb6ee",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_019.json": "8df953f0b1a88ff0c699c7aa72fd66f39cead4aa77ea9e8a00fbe9d9740d5465",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_046.json": "4738214ca12e339f216ec5f315a815e175bf82c82f5f9a784aa9d99d689f317f",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_031.json": "5ad847926b472c1aef386d11ece1ac5992feed4b5e9aca6bba187a699ba84435",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_013.json": "d8677901561d2b8e75c9f9ba8e96f0f1a2b5bacf2dcff8884343bdb8e65efd87",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/results/fresh_world_023.json": "8d8040b92eb663104aa86dfb2c2e730bb3968a74d926e83b1dfb3977c2a4e2cd",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/manifest.json": "d76d38e60b3baf0ce9cb942ae502044d36a058077bbbc8e5dabaef5173c9cd05",
+    "runs/icde2027/analysis/represented_law_repair_v4_run/summary.json": "29ce6a79759d5ceefe5acba45627b0b58bb78d7841587598c8d29e0a7aee5626",
+    "runs/icde2027/audit/represented_law_repair_v4_result_audit.py": "ddad522db2f69e2111d164e86ac44fa70aaa8bbdd7465a3c040d40e5fbb93042",
+    "runs/icde2027/audit/represented_law_repair_v4_result_tests.py": "d1275f93c5987d0403e6b765dc8480040d6808a8900cef0bcf12932ed5860038",
+    "runs/icde2027/audit/represented_law_repair_v4_result_tests.log": "c4c2e58ec98890e7cb71ae350a3253dbdb0b02e5a127965c8b5457fe46ea013c",
+    "runs/icde2027/audit/represented_law_repair_v4_result_plan.md": "d169d1e6e3c72e459480274bf7328852d30795c83c84146ce810bc164c2570fb",
+    "runs/icde2027/audit/represented_law_repair_v4_result_records.json": "7fbe38ab474a17afc60def16736069a3ecb9a66334c4cd8194790487e937ac07",
+    "runs/icde2027/audit/represented_law_repair_v4_result_audit.json": "d40f6ecfe7bef2359843396db3c6949c084f7206f0d5466fb44b64bb918c6a97",
+    "icde2027/make_coat_block_assets.py": "4ec049199286455b2ae7953f5f7278eb52f3d1f17d328ed33442dd77958af448",
+    "runs/icde2027/coat_case_v1/summary.json": "8b39e0a5ab1cb019debeed96dfc6f278b32fc141d8333489901b8cd567a84e2a",
+    "runs/icde2027/coat_case_v1/full_cell_control.json": "17344cd5ed43e1625b1a0ed81fa13cc7f19d7a7d8b7f059e89636fdc38f0296f",
+    "runs/icde2027/audit/coat_full_block_result_audit.json": "bbf98ffe3b75e7df36b9d83f6d2e1696cef2cf3643e6ab99da3ff811e6601a5e",
+    "runs/icde2027/coat_full_block_v1/protocol.json": "b4495c4d92b9135121f4bf35cc6c8b0360c8d60abd9469c19846c3d0fdcd16ed",
+    "runs/icde2027/coat_full_block_v1/results.json": "16779a02ad44676a4c83c6e124c2ac1a7fac2c554ea0cc505187b8c8b2bb751b",
+    "runs/icde2027/coat_full_block_v1/full_cell_control.json": "f580ed1552a41dad8da5ad77c4f792d11a80d59aa7b6fccea3e014828b2032b9",
+    "runs/icde2027/coat_full_block_v1/retained_direct_controls.json": "9b6b669b01d21df9546dc722a7495b8590621dea54bb573d91a2dee6be13efec"
+  },
+  "coverage": [
+    {
+      "method": "observation_consistency",
+      "label": "OBS",
+      "views": 1200,
+      "misses": 2,
+      "refused": 0,
+      "coverage_unavailable": 0,
+      "queries": 3600,
+      "false_certificates": 0,
+      "query_violations": 0
+    },
+    {
+      "method": "randomized_projected",
+      "label": "R projected",
+      "views": 1200,
+      "misses": 0,
+      "refused": 0,
+      "coverage_unavailable": 0,
+      "queries": 3600,
+      "false_certificates": 0,
+      "query_violations": 0
+    },
+    {
+      "method": "fusion_projected",
+      "label": "Fused projected",
+      "views": 1200,
+      "misses": 2,
+      "refused": 0,
+      "coverage_unavailable": 0,
+      "queries": 3600,
+      "false_certificates": 0,
+      "query_violations": 0
+    },
+    {
+      "method": "randomized_group_score",
+      "label": "R group score",
+      "views": 1200,
+      "misses": 4,
+      "refused": 0,
+      "coverage_unavailable": 0,
+      "queries": 3600,
+      "false_certificates": 0,
+      "query_violations": 0
+    },
+    {
+      "method": "fusion_group_score",
+      "label": "Fused group score",
+      "views": 1200,
+      "misses": 6,
+      "refused": 0,
+      "coverage_unavailable": 0,
+      "queries": 3600,
+      "false_certificates": 0,
+      "query_violations": 0
+    }
+  ],
+  "all_query_statuses": {
+    "certified": 4307,
+    "unresolved": 14593
+  },
+  "lower_bound_change_directions": {
+    "negative": 12278,
+    "zero": 6225,
+    "positive": 397
+  },
+  "status_changes": [
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_000.json",
+        14,
+        "fusion_group_score"
+      ],
+      "family": "randomized_heuristic",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_018.json",
+        5,
+        "fusion_group_score"
+      ],
+      "family": "metadata",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_018.json",
+        16,
+        "fusion_group_score"
+      ],
+      "family": "randomized_heuristic",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_035.json",
+        5,
+        "fusion_group_score"
+      ],
+      "family": "metadata",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_035.json",
+        5,
+        "fusion_group_score"
+      ],
+      "family": "randomized_heuristic",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_037.json",
+        4,
+        "fusion_group_score"
+      ],
+      "family": "randomized_heuristic",
+      "old": "certified",
+      "new": "unresolved"
+    },
+    {
+      "key": [
+        "runs/icde2027/fresh_worlds_v1/worlds/world_037.json",
+        16,
+        "fusion_group_score"
+      ],
+      "family": "randomized_heuristic",
+      "old": "certified",
+      "new": "unresolved"
+    }
+  ],
+  "coat_repaired_query_statuses": {
+    "unresolved": 900
+  },
+  "coat_comparison": {
+    "run": "runs/icde2027/coat_full_block_v1",
+    "manifest_sha256": "172aa16892bc67bea7932082c6b7748870e56f46dbac6f7963ed0136a8b5b563",
+    "protocol_sha256": "b4495c4d92b9135121f4bf35cc6c8b0360c8d60abd9469c19846c3d0fdcd16ed",
+    "audit_sha256": "bbf98ffe3b75e7df36b9d83f6d2e1696cef2cf3643e6ab99da3ff811e6601a5e",
+    "summary_sha256": "742572e0f20ca4fa539bc5eac2e00744388196f4a0b4c3e24d3c653a3a197e93",
+    "independent_users": 290,
+    "view_documents": 61,
+    "query_responses": 915,
+    "proofs_valid": 915,
+    "refused_view_documents": 0,
+    "answer_status_counts": {
+      "unresolved": 915
+    },
+    "primary_query_index": 2,
+    "primary_descriptive_hypothesis_observed": false,
+    "primary_comparisons": [
+      {
+        "method": "observation",
+        "label": "OBS",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.04784060331300175,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.037287789278870415,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel_all_declarations_statuses": {
+          "unresolved": 180
+        },
+        "thinned_provenance": "Complete represented-law repair with normalized exact q and kappa endpoint mapping."
+      },
+      {
+        "method": "randomized_group_score",
+        "label": "R group",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.012607280771806409,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.015015412365452147,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel_all_declarations_statuses": {
+          "unresolved": 180
+        },
+        "thinned_provenance": "Complete represented-law repair with normalized exact q and kappa endpoint mapping."
+      },
+      {
+        "method": "randomized_cell_projection",
+        "label": "R projected",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.04787234606373872,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.03401648164231339,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel_all_declarations_statuses": {
+          "unresolved": 180
+        },
+        "thinned_provenance": "Complete represented-law repair with normalized exact q and kappa endpoint mapping."
+      },
+      {
+        "method": "fusion_group_score",
+        "label": "Fusion group",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.012954996759511494,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.011925277383986403,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel_all_declarations_statuses": {
+          "unresolved": 180
+        },
+        "thinned_provenance": "Complete represented-law repair with normalized exact q and kappa endpoint mapping."
+      },
+      {
+        "method": "fusion_cell_projection",
+        "label": "Fusion projected",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.04782071733084188,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.03131567587905479,
+          "route": "solver",
+          "reason": null
+        },
+        "full_panel_all_declarations_statuses": {
+          "unresolved": 180
+        },
+        "thinned_provenance": "Complete represented-law repair with normalized exact q and kappa endpoint mapping."
+      },
+      {
+        "method": "full_cell_control",
+        "label": "R full-cell control",
+        "thinned": {
+          "status": "unresolved",
+          "lower_bound": -0.04767658304340715
+        },
+        "full_panel": {
+          "status": "unresolved",
+          "lower_bound": -0.030770215868677026,
+          "route": "solver",
+          "reason": null
+        },
+        "thinned_provenance": "Original full-cell-transport randomized box, retained separately; not part of the 900 repaired queries."
+      }
+    ],
+    "retained_all16_direct_control": {
+      "n_independent_user_blocks": 290,
+      "estimate": 0.003710170231340013,
+      "sd_across_user_scores": 0.026278794245793845,
+      "range": [
+        -0.05063291139240514,
+        0.8987341772151898
+      ],
+      "hoeffding_radius": 0.06822941920389915,
+      "lower_bound": -0.06451924897255913,
+      "full_cell_static_transport_required": true,
+      "per_query_alpha": 0.05
+    },
+    "scope": "Retrospective diagnostic on the same users, with explicit SRSWOR, iid, static-rating, sensitivity and transport conditions. No known population truth or measured coverage."
+  },
+  "scope": "Current repaired inference only. Original design views/confirmation and full-cell control remain historical. Bound changes are new minus old, not signs of the new bounds."
+}

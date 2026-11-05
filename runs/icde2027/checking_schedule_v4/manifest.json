@@ -1,0 +1,214 @@
+{
+  "protocol_sha256": "c58f5c2e26f589a49270793468bcc118b76a0c7b499697b7259382ea1605c8c5",
+  "design_sha256": "97d8f80c178d8323569449cd66abf49c9d375aa17d7c4eb70ae83632bbcceaa8",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.2",
+    "scipy": "1.18.0",
+    "highspy": "1.15.1",
+    "scipy_highs": "1.12.0",
+    "requirements_sha256": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9"
+  },
+  "runtime_sha256": {
+    "icde2027/__init__.py": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+    "icde2027/aggregate.py": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+    "icde2027/checking_schedule_v4.py": "b500849ffddc8fd98f09056159a76df59d50369c412eae6ed09358af2bf81899",
+    "icde2027/confidence_view.py": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+    "icde2027/experiment.py": "7ba6a85100b277b12d98fb0889010617cef7672239493c62d8456713ada9009f",
+    "icde2027/highs_reopt.py": "d64809ceb1a4de406684fb765f4be9baa5d5cde994e0c52deeccf236a3b0f7cf",
+    "icde2027/primary_aligned.py": "d691f6cf9a85ba6632c915a145800ebf466dea37ad070609998dfe3a85cafe02",
+    "icde2027/proof_check.py": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+    "icde2027/query_workload.py": "e11a6ae0d8b3be2f6c50b491f063720bebf541fd7ec91e39b2ea8b2e66c411f6",
+    "icde2027/research_io.py": "e881af7921d99568de660204e734a3d9d0df6b2e491acf9e4a717945240290b9",
+    "icde2027/source_intervals.py": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+    "icde2027/test_checking_schedule_v4.py": "62593459704b7621c80f0b94b8d40545480e023954bbf0cc40a47552ac09f927",
+    "icde2027/threshold_extension/__init__.py": "d84e0357ca585b28525a5866c8fdf0207fb7e8628e874197811584e9b9077ed3",
+    "icde2027/threshold_extension/engine.py": "d5cd1ad0516b5423929ab1acef0c5c6670765a1c15ab933d2b2f094288486f17",
+    "icde2027/threshold_extension/proofs.py": "deb23098c6c9da06e200ede25f76fcf6c199e64585edbad858be1575fdb18322",
+    "icde2027/threshold_extension/workload.py": "f30078a8370b071edced6f0a6c186142c7fb20e32043b584c6f11ff068156e82"
+  },
+  "gate": {
+    "protocol_sha256": "c58f5c2e26f589a49270793468bcc118b76a0c7b499697b7259382ea1605c8c5",
+    "design_sha256": "97d8f80c178d8323569449cd66abf49c9d375aa17d7c4eb70ae83632bbcceaa8",
+    "environment": {
+      "python": "3.12.3",
+      "numpy": "2.3.2",
+      "scipy": "1.18.0",
+      "highspy": "1.15.1",
+      "scipy_highs": "1.12.0",
+      "requirements_sha256": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9"
+    },
+    "runtime_sha256": {
+      "icde2027/__init__.py": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+      "icde2027/aggregate.py": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+      "icde2027/checking_schedule_v4.py": "b500849ffddc8fd98f09056159a76df59d50369c412eae6ed09358af2bf81899",
+      "icde2027/confidence_view.py": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+      "icde2027/experiment.py": "7ba6a85100b277b12d98fb0889010617cef7672239493c62d8456713ada9009f",
+      "icde2027/highs_reopt.py": "d64809ceb1a4de406684fb765f4be9baa5d5cde994e0c52deeccf236a3b0f7cf",
+      "icde2027/primary_aligned.py": "d691f6cf9a85ba6632c915a145800ebf466dea37ad070609998dfe3a85cafe02",
+      "icde2027/proof_check.py": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+      "icde2027/query_workload.py": "e11a6ae0d8b3be2f6c50b491f063720bebf541fd7ec91e39b2ea8b2e66c411f6",
+      "icde2027/research_io.py": "e881af7921d99568de660204e734a3d9d0df6b2e491acf9e4a717945240290b9",
+      "icde2027/source_intervals.py": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+      "icde2027/test_checking_schedule_v4.py": "62593459704b7621c80f0b94b8d40545480e023954bbf0cc40a47552ac09f927",
+      "icde2027/threshold_extension/__init__.py": "d84e0357ca585b28525a5866c8fdf0207fb7e8628e874197811584e9b9077ed3",
+      "icde2027/threshold_extension/engine.py": "d5cd1ad0516b5423929ab1acef0c5c6670765a1c15ab933d2b2f094288486f17",
+      "icde2027/threshold_extension/proofs.py": "deb23098c6c9da06e200ede25f76fcf6c199e64585edbad858be1575fdb18322",
+      "icde2027/threshold_extension/workload.py": "f30078a8370b071edced6f0a6c186142c7fb20e32043b584c6f11ff068156e82"
+    },
+    "status": "approved",
+    "reviewer": "Codex independent subagent /root/cold_v3_overall",
+    "reviewed_at_utc": "2026-11-05T03:47:52.127007+00:00",
+    "approval_scope": "Pre-execution code/design gate for the exact registered M2 bytes; parent final review remains required. No approval of experimental outcomes or scientific novelty.",
+    "review_scope": {
+      "core_2x2_identification": true,
+      "safe_screening_and_complete_fallback": true,
+      "p0_no_retained_exact_state": true,
+      "common_candidates_outputs_native_paths": true,
+      "producer_receiver_cost_boundaries": true,
+      "snapshot_terminal_manifest_and_gate": true,
+      "fixed_input_files_checked": 189,
+      "fixed_input_streams_checked": 63,
+      "planned_responses": 162000,
+      "formal_workload_query_calls": 0,
+      "formal_performance_runs": 0,
+      "synthetic_regression_tests_passed": 216,
+      "independent_adversarial_rejections": 79,
+      "legacy_runtime_files_unchanged": 14,
+      "cpu_affinity": [
+        6
+      ],
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "resolved_findings": [
+      {
+        "finding": "Missing native stream length/index validation allowed an empty baseline log to pass same-path checking.",
+        "resolution": "Require planned positive query count; validate lengths and strict position indices for all six service/native streams; original counterexample and expanded corruption cases now reject."
+      }
+    ],
+    "unresolved_blockers": [],
+    "limitations": [
+      "Synthetic coverage cannot certify every future formal response; runtime exact replay and same-path checks remain mandatory.",
+      "Factor claims apply to the new last-only schedule; legacy Prepared and screened Auto are bridges.",
+      "No formal input query or performance measurement was run by this reviewer.",
+      "Source-derived inputs are fixed-view serving; no source materialization or end-to-end speed claim is authorized."
+    ],
+    "independent_audit_artifacts_sha256": {
+      "runs/icde2027/reviews/checking_schedule_v4_gate.md": "41703f058028fd3608b4d7a55efe50b9ab095881a41b9902cac1866456c6cb03",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_final_pytest.log": "0ae55aa191c0e8fb1905bc67983d6c5dee4c4f656268bf88c4cd738f85789ba4",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_input_audit.json": "d23174a3662f2da591306ca28fda381230d5df4a11f3568ca25a25912978695c",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_cache_probe.json": "8049dc8f172643bef6e37157df298475be980efbcf83bd21c8e005b8e82fb326",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_legacy_hashes.json": "4bdc213a9546a769b950bcb307bdeac911b4d253732e8fec095ed4972baaa338",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_adversarial_results.json": "83d1c32b80fb691927aa3f325418a85f6ca9ec247d1b6112e6241d7741959145",
+      "runs/icde2027/reviews/checking_schedule_v4_gate_truncated_native_probe.json": "0c88350aa3915372d3de49ffe9cd21ce53accfe5a0f68f4ce25334461511fdd2"
+    }
+  },
+  "gate_file_sha256": "6d0870506f82202195034d3bb7ce8b062e832803b88512642c65ee32ee8313e4",
+  "started_at_utc": "2026-11-05T03:50:01.997011+00:00",
+  "affinity": [
+    4
+  ],
+  "host": "fnsu7",
+  "python": "3.12.3",
+  "numpy": "2.3.2",
+  "scipy": "1.18.0",
+  "highspy": "1.15.1",
+  "scipy_highs": "1.12.0",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "status": "complete",
+  "formal_scope": "retrospective fixed-view serving",
+  "snapshot_files": {
+    "source_snapshot/icde2027/__init__.py": {
+      "sha256": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+      "bytes": 71
+    },
+    "source_snapshot/icde2027/aggregate.py": {
+      "sha256": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+      "bytes": 21469
+    },
+    "source_snapshot/icde2027/checking_schedule_v4.py": {
+      "sha256": "b500849ffddc8fd98f09056159a76df59d50369c412eae6ed09358af2bf81899",
+      "bytes": 44223
+    },
+    "source_snapshot/icde2027/confidence_view.py": {
+      "sha256": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+      "bytes": 18070
+    },
+    "source_snapshot/icde2027/experiment.py": {
+      "sha256": "7ba6a85100b277b12d98fb0889010617cef7672239493c62d8456713ada9009f",
+      "bytes": 9896
+    },
+    "source_snapshot/icde2027/highs_reopt.py": {
+      "sha256": "d64809ceb1a4de406684fb765f4be9baa5d5cde994e0c52deeccf236a3b0f7cf",
+      "bytes": 4489
+    },
+    "source_snapshot/icde2027/primary_aligned.py": {
+      "sha256": "d691f6cf9a85ba6632c915a145800ebf466dea37ad070609998dfe3a85cafe02",
+      "bytes": 21306
+    },
+    "source_snapshot/icde2027/proof_check.py": {
+      "sha256": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+      "bytes": 11055
+    },
+    "source_snapshot/icde2027/query_workload.py": {
+      "sha256": "e11a6ae0d8b3be2f6c50b491f063720bebf541fd7ec91e39b2ea8b2e66c411f6",
+      "bytes": 21224
+    },
+    "source_snapshot/icde2027/research_io.py": {
+      "sha256": "e881af7921d99568de660204e734a3d9d0df6b2e491acf9e4a717945240290b9",
+      "bytes": 2352
+    },
+    "source_snapshot/icde2027/source_intervals.py": {
+      "sha256": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+      "bytes": 4641
+    },
+    "source_snapshot/icde2027/test_checking_schedule_v4.py": {
+      "sha256": "62593459704b7621c80f0b94b8d40545480e023954bbf0cc40a47552ac09f927",
+      "bytes": 26882
+    },
+    "source_snapshot/icde2027/threshold_extension/__init__.py": {
+      "sha256": "d84e0357ca585b28525a5866c8fdf0207fb7e8628e874197811584e9b9077ed3",
+      "bytes": 214
+    },
+    "source_snapshot/icde2027/threshold_extension/engine.py": {
+      "sha256": "d5cd1ad0516b5423929ab1acef0c5c6670765a1c15ab933d2b2f094288486f17",
+      "bytes": 25330
+    },
+    "source_snapshot/icde2027/threshold_extension/proofs.py": {
+      "sha256": "deb23098c6c9da06e200ede25f76fcf6c199e64585edbad858be1575fdb18322",
+      "bytes": 15932
+    },
+    "source_snapshot/icde2027/threshold_extension/workload.py": {
+      "sha256": "f30078a8370b071edced6f0a6c186142c7fb20e32043b584c6f11ff068156e82",
+      "bytes": 20967
+    },
+    "protocol.json": {
+      "sha256": "c58f5c2e26f589a49270793468bcc118b76a0c7b499697b7259382ea1605c8c5",
+      "bytes": 38421
+    },
+    "design.md": {
+      "sha256": "97d8f80c178d8323569449cd66abf49c9d375aa17d7c4eb70ae83632bbcceaa8",
+      "bytes": 11469
+    },
+    "gate.json": {
+      "sha256": "6d0870506f82202195034d3bb7ce8b062e832803b88512642c65ee32ee8313e4",
+      "bytes": 5138
+    },
+    "source_snapshot/.deployment/requirements-installed.txt": {
+      "sha256": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9",
+      "bytes": 1204
+    }
+  },
+  "finished_at_utc": "2026-11-05T08:30:30.672642+00:00",
+  "arm_streams": 1134,
+  "responses": 162000,
+  "final_integrity_check": "passed"
+}

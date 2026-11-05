@@ -1,0 +1,187 @@
+{
+  "study": "Coat retrospective full-user-block diagnostic",
+  "status_at_registration": "planned before new full-block intervals, views or query outcomes; original data and thinned case already inspected",
+  "origin": "Retrospective diagnostic; not fresh confirmation, no new data or random seed.",
+  "dataset": "amber/data/processed/coat/coat",
+  "source_files_sha256": {
+    "amber/data/processed/coat/coat/train.ascii": "a87bd9e7eaf3b89f976df3f25d4aa5d5d871be8a00b58947df9e6e015559bd37",
+    "amber/data/processed/coat/coat/test.ascii": "de6714ab105a5e0be8166be7fd313901b29f9a09c3bea307901457d1d71847e6",
+    "amber/data/processed/coat/coat/user_item_features/item_features.ascii": "edea8217ec5606779b4d3bf819f7591dc63bcd5194d619e8048c2322d07630b1",
+    "amber/data/processed/coat/coat/user_item_features/item_features_map.txt": "2675dfaa38b89a9cbb1997f0cfcd46ed7e0e366dc515d12d95508d1f356e5d25"
+  },
+  "original_case": "runs/icde2027/coat_case_v1",
+  "original_protocol_sha256": "0ec4b309db59f316bda29791f1cd311a88ab52edc176a15cd1029a629ab3e26a",
+  "original_queries_file_sha256": "bc258d4e7e2f9d221a88d168c073d76814b36fc13693c490028fec1338bf7a49",
+  "query_core_sha256": "86e9cdf2c569a080525d82cd2f83c86fedd8fbb379adff282c313d8d1dead7fb",
+  "original_matrix_canonical_sha256": "c1632bd723a37fcf892e0477ba4632ccf3210fd1fef08791519368e4d7992d28",
+  "canonical_hash_encoding": "UTF-8 json.dumps(sort_keys=True,separators=(comma,colon),allow_nan=False)",
+  "unit": {
+    "n_independent_users": 290,
+    "n_items": 300,
+    "observational_items_per_user": 24,
+    "randomized_items_per_user": 16,
+    "matrix_shape": [
+      290,
+      300
+    ],
+    "ratings": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "zero_is_missing": true,
+    "no_user_or_item_removal": true,
+    "no_thinning": true
+  },
+  "endpoint": "1[rating>=4] for observed ratings only",
+  "target": "Study-user-generating distribution under iid user blocks, not a general consumer population",
+  "assumptions": [
+    "Users are iid study-user blocks; within-user items, sources and groups may be dependent.",
+    "Each source has a static binary potential rating vector; no panel-composition or order interference within source.",
+    "R selects a uniformly random 16-subset without replacement from all 300 items independently of its potential rating vector and independently across user blocks. This SRSWOR condition is declared, not established by released collector code.",
+    "O item-inclusion propensity is positive conditional on latent U and renders potential rating independent of inclusion given U; only outcome-conditional expected inverse inclusion weights are bounded by Lambda.",
+    "Fixed O24 independent uniform thinning preserves p and the outcome-conditional weight ratio, so original Lambda keeps its meaning. Full inclusion consistency is stronger than thinned consistency.",
+    "Group-only methods transport only ideal uniform group means within rho; full-cell controls additionally require static full-cell transport."
+  ],
+  "groups": [
+    "gender",
+    "jackettype",
+    "color"
+  ],
+  "group_weights": "uniform over the concrete items in each metadata category; overlapping partitions",
+  "reference": "uniform over all 300 items",
+  "queries": {
+    "primary": {
+      "feature": "onfrontpage:yes",
+      "multiplier": 2.0
+    },
+    "features": [
+      "onfrontpage:yes",
+      "gender:men",
+      "jackettype:fleece",
+      "jackettype:waterproof",
+      "color:black"
+    ],
+    "multipliers": [
+      0.5,
+      1.5,
+      2.0
+    ]
+  },
+  "alpha": 0.05,
+  "threshold": 0.001,
+  "sensitivity_radii": [
+    1.0,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "transport_tolerances": [
+    0.0,
+    0.02,
+    0.05
+  ],
+  "primary_radius": 2.0,
+  "primary_transport_tolerance": 0.0,
+  "primary_randomized_intervals": "group_score",
+  "observation_intervals": {
+    "conditional_two_sided_cp_failure_per_item": "alpha_O/(2*d)",
+    "joint_success_one_sided_cp_failure": "alpha_O/(4*d)",
+    "joint_failure_one_sided_cp_failure": "alpha_O/(4*d)",
+    "joint_denominator": "N independent user blocks, not total events",
+    "empty_item_interval": [
+      0,
+      1
+    ]
+  },
+  "randomized_group_intervals": {
+    "score": "Z_uj = sum of 1[rating>=4] among observed selected group items / M_uj, restricted to M_uj>0; zero ratings are missing, not successes or failures",
+    "independent_n": "number of active users for the group",
+    "range": [
+      0,
+      1
+    ],
+    "branch": "CP if and only if fixed group size g=1, otherwise empirical Bernstein regardless of observed binary scores",
+    "failure_per_group": "alpha_R/J with J=31",
+    "eb": "two-sided Maurer-Pontil: unbiased n-1 variance, log(4/delta), n<2 returns [0,1]",
+    "empty_singleton": [
+      0,
+      1
+    ],
+    "retained_statistics": [
+      "M_by_user",
+      "successes_by_user",
+      "active_user_indices",
+      "active_scores",
+      "n_active",
+      "sum_Z",
+      "sum_Z_squared"
+    ]
+  },
+  "randomized_cell_intervals": {
+    "construction": "Two-sided CP per item from included users; all 300 fixed items",
+    "failure_per_cell": "alpha_R/300",
+    "projection": "Only selected moments are transported; cell intervals are not placed on O in group-only methods"
+  },
+  "representation": {
+    "matrix": "Original 31x300 CSR matrix with exact same stored float entries",
+    "kappa": "g * Fraction.from_float(stored row coefficient w), without floating-point intermediate multiplication",
+    "rho_units": "ideal normalized uniform group mean",
+    "number_semantics": "Registered rho and statistical CI endpoint floats interpreted as their exact binary64 rational values",
+    "group_rhs": "outward_binary64(kappa * (ideal_CI +/- rho))",
+    "projected_rhs": "outward_binary64(w * exact_sum(cell_endpoint) +/- kappa*rho)",
+    "trusted_numerics": "SciPy CP quantiles and empirical-Bernstein floating arithmetic are not made exact by the downstream proof checker"
+  },
+  "methods": [
+    "observation",
+    "randomized_group_score",
+    "randomized_cell_projection",
+    "fusion_group_score",
+    "fusion_cell_projection"
+  ],
+  "source_alpha": {
+    "standalone": 0.05,
+    "fusion_observation": 0.025,
+    "fusion_randomized": 0.025
+  },
+  "stronger_transport_controls": [
+    "Full-panel R full-cell simultaneous CP once, alpha=.05/300 per item; static full-cell transport",
+    "Original all-16 direct R per-query Hoeffding control retained without change; N remains 290; not jointly calibrated for selected queries"
+  ],
+  "hypothesis": {
+    "descriptive_question": "Does full-panel group fusion certify the original primary query at Lambda=2,rho=0,delta=.001 while both full-panel OBS and R-group standalones remain unresolved?",
+    "effect_threshold": "a strictly positive verified lower bound above delta=.001 and neither standalone above delta; all other outcomes retained",
+    "confirmatory": false,
+    "statistical_test": "No confirmatory hypothesis test or power claim. One reused real dataset has no known population truth. The 95% confidence-set statement is conditional on stated assumptions, not a measured coverage estimate."
+  },
+  "stopping_rule": "Exactly 12 declarations x 5 methods x 15 responses plus 15 full-cell controls. Retain all unresolved/refused outcomes. No feature, seed, radius, score or method selection based on results. Stop only on invalid input, unexpected exception or invalid proof, retaining partial record.",
+  "prohibited_entry_points": [
+    "observation_intervals(... consistency=True) with full-event counts",
+    "randomized_intervals on full-event pooled counts",
+    "materialize_counts on full-event counts"
+  ],
+  "gate": "Independent implementation PASS bound to this protocol and all imported local runtime source hashes before formal outcomes.",
+  "output_dir": "runs/icde2027/coat_full_block_v1",
+  "expected_view_documents": 61,
+  "expected_query_responses": 915,
+  "compute": {
+    "gpu": false,
+    "cpu_affinity": [
+      0
+    ],
+    "native_threads": 1,
+    "max_planned_wall_minutes": 30,
+    "no_timing_superiority_claim": true
+  },
+  "license": "CC BY-NC 4.0 per author project page; preserve attribution and transformations; no author code reused.",
+  "query_core_fields": [
+    "feature",
+    "multiplier",
+    "policy",
+    "reference",
+    "objective"
+  ]
+}

@@ -1,0 +1,14 @@
+\begingroup\fontsize{8}{9.4}\selectfont\setlength{\tabcolsep}{3.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\toprule
+Workload & Plan & Producer & Checker init. & JSON decode & Verify & Joint & Joint / Hot\\
+\midrule
+Primary, 1,000 queries & Hot LP & 7.76 & 0.00924 & 0.29 & 8.24 & 16.2 & 1.000\\
+ & Prepared reuse & 4.37 & 0.00932 & 0.286 & 10.1 & 14.7 & 0.906\\
+Uniform, 100 queries & Hot LP & 0.15 & 0.00114 & 0.00466 & 0.0833 & 0.238 & 1.000\\
+ & Prepared reuse & 0.289 & 0.00104 & 0.00445 & 0.0828 & 0.377 & 1.580\\
+Skew, 100 queries & Hot LP & 0.14 & 0.00116 & 0.00458 & 0.0832 & 0.229 & 1.000\\
+ & Prepared reuse & 0.284 & 0.00107 & 0.00448 & 0.0831 & 0.372 & 1.619\\
+\bottomrule
+\end{tabular*}
+\endgroup

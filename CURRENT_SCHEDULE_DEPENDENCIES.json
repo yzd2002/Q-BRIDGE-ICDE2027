@@ -1,0 +1,25 @@
+{
+  "schema": "current-schedule-dependencies-v1",
+  "study": "checking_schedule_v4",
+  "config": "icde2027/configs/checking_schedule_v4.json",
+  "config_sha256": "c58f5c2e26f589a49270793468bcc118b76a0c7b499697b7259382ea1605c8c5",
+  "run_manifest": "runs/icde2027/checking_schedule_v4/manifest.json",
+  "run_manifest_sha256": "5442835561c6a29344471d179289f7b9ff7bfc94955df4711b3c8181b4914d59",
+  "files": [
+    {
+      "destination": "runs/icde2027/CHECKING_SCHEDULE_V4_DESIGN.md",
+      "copy_source": "runs/icde2027/checking_schedule_v4/design.md",
+      "historical_source": "runs/icde2027/checking_schedule_v4/design.md",
+      "sha256": "97d8f80c178d8323569449cd66abf49c9d375aa17d7c4eb70ae83632bbcceaa8",
+      "bytes": 11469
+    },
+    {
+      "destination": ".deployment/requirements-installed.txt",
+      "copy_source": ".deployment/requirements-installed.txt",
+      "historical_source": "runs/icde2027/checking_schedule_v4/source_snapshot/.deployment/requirements-installed.txt",
+      "sha256": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9",
+      "bytes": 1204
+    }
+  ],
+  "scope": "Current scientific tests and gate-payload inputs. Exact copies of already public historical design/environment inputs; no experiment executed and no scientific gate or registration changed."
+}

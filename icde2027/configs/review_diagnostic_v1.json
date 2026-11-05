@@ -1,0 +1,15 @@
+{
+  "study": "Reviewer-triggered stronger-baseline reanalysis of inspected original confirmation counts",
+  "status_at_registration": "planned",
+  "scope": "Retrospective diagnostic, not a fresh confirmatory test. All original 400 primary trials retained.",
+  "input": "runs/icde2027/aggregate_primary_v1/trials.jsonl",
+  "alpha": 0.05,
+  "threshold": 0.001,
+  "observational_allocation": "Within alpha_O: half to d two-sided conditional intervals, half to 2d one-sided joint-event lower intervals. Frozen before this reanalysis.",
+  "methods": ["observation_consistency", "randomized_group_standalone", "randomized_projected_standalone", "fusion_consistency_group", "fusion_consistency_projected"],
+  "fusion_allocation": "Half to each source; all standalone sources receive full alpha independently. No data-dependent selection among views is authorized.",
+  "analyses": ["mean lower bound and SD with deterministic fallback on no-bound", "certification counts", "extra certification over all three separately full-alpha baselines as a comparison only", "whole-set coverage", "exact feasible-witness rate", "query no-false-assertion", "comparison with unchanged original outputs"],
+  "significance_tests": "None: method adapted after inspection. Describe all four conditions without new confirmatory p-values.",
+  "stopping_rule": "Exactly the 400 existing trials once after implementation review; preserve all outcomes and source snapshot. No outcome-dependent exclusions.",
+  "independence_scope": "iid simulation events; fixed worlds and declared source conditions from original registration. Does not establish practical transport validity."
+}

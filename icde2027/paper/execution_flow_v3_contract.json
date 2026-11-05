@@ -1,0 +1,8 @@
+{
+  "kind": "original explanatory diagram, not an empirical result",
+  "true": "checked lower > requested margin",
+  "false": "checked globally feasible primal upper <= requested margin",
+  "unknown": "neither side has been established, including explicit numerical no-bound/refusal",
+  "scope": "the robust minimum over the caller-trusted represented confidence view",
+  "false_does_not_imply": "the true policy effect is nonpositive or below the margin"
+}

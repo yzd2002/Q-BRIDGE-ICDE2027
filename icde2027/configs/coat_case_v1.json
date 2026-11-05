@@ -1,0 +1,32 @@
+{
+  "study": "Coat current-interface case, prespecified metadata queries",
+  "status_at_registration": "planned before inspecting new case outcomes",
+  "dataset": "amber/data/processed/coat/coat",
+  "master_seed": 2027110402,
+  "unit": "290 user blocks, at most one uniformly chosen observed item per user per source",
+  "endpoint": "1[rating>=4], defined only for observed ratings",
+  "target": "Study-user-generating distribution under iid user blocks, not a general consumer population",
+  "actions": "All 300 published items, including empty thinned cells",
+  "q": "Uniform 1/300, from published random-16 assignment followed by independent uniform thinning",
+  "groups": ["gender","jackettype","color"],
+  "group_weights": "uniform over the concrete items in each metadata category; overlapping partitions",
+  "reference": "uniform over all 300 items",
+  "queries": {
+    "primary": {"feature":"onfrontpage:yes","multiplier":2.0},
+    "features": ["onfrontpage:yes","gender:men","jackettype:fleece","jackettype:waterproof","color:black"],
+    "multipliers": [0.5,1.5,2.0]
+  },
+  "alpha": 0.05,
+  "threshold": 0.001,
+  "sensitivity_radii": [1.0,1.5,2.0,3.0],
+  "transport_tolerances": [0.0,0.02,0.05],
+  "primary_radius": 2.0,
+  "primary_transport_tolerance": 0.0,
+  "primary_randomized_intervals": "group_score",
+  "methods": ["OBS full alpha","R group moments full alpha","R projected cells full alpha","fusion group score half alpha per source","fusion projected cells half alpha per source"],
+  "stronger_transport_controls": ["direct R score, one event per user, one-sided Hoeffding","direct R score, all 16 ratings averaged within user, one-sided Hoeffding; n remains 290","R full-cell simultaneous CP, static full-cell transport"],
+  "interpretation": "Group-source comparisons require declared sensitivity, selected-group transport and iid study-user blocks. Direct R/full-cell controls additionally use static full-cell rating transport; do not claim a group-only advantage against a handicap. A single real dataset cannot validate coverage or transport.",
+  "uncertainty": "Each fixed query's direct score has a 95% one-sided Hoeffding bound under independent users/assignments and static ratings; no multiple-query selection based on these individual score bounds. Confidence-view bounds already share the fixed-view simultaneous event.",
+  "stopping_rule": "One thinning seed, all 15 prespecified metadata queries, all 12 sensitivity declarations, no seed or feature selection based on results. Retain no-certificate and refusal results.",
+  "license": "CC BY-NC 4.0 per author project page; preserve attribution and transformations; no author code reused."
+}

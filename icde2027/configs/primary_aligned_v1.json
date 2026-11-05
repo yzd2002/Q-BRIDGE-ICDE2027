@@ -1,0 +1,97 @@
+{
+  "study": "Matched original primary stream: prepared proofs against last-solution threshold controls",
+  "created_utc": "2026-11-05T02:02:15.258479+00:00",
+  "status_at_registration": "registered_before_new_timing_outcomes",
+  "scope": "Reviewer-triggered retrospective matched repeat. All three original sequences and their old results were already observed. No new external workload, confidence-coverage experiment or independent replication claim.",
+  "source_run": "runs/icde2027/query_engine_v1",
+  "source_manifest_sha256": "d1fcbcf5a11f2bfd1cebe0f88f3ebdaa1a2affeaf78e47272dfbee3c7c4b224f",
+  "conditions": [
+    {
+      "name": "d512_connected_nearby_nonproportional_r0",
+      "input_sha256": {
+        "queries.npy": "989c6fc1e5e6031fdaefa8a4e283b019158539acb7f5cc29a964a8a83df39080",
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "condition.json": "5e5441097f45e412b571537a3c40a508c2e438b7356b0a9987612e9be5d43951"
+      },
+      "view_digest": "deff7cb059c1993a827c7cc08d29fdee3de468798087c8f9531df8fd102842eb"
+    },
+    {
+      "name": "d512_connected_nearby_nonproportional_r1",
+      "input_sha256": {
+        "queries.npy": "d6431dc4f3d6418a81a02b1a3eba286a5246612c4305a8aaff62e1baf6b1c73b",
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "condition.json": "6e94afd876505eb69996525bf783aae6ce122507f021fb536dbace39ce4026a1"
+      },
+      "view_digest": "deff7cb059c1993a827c7cc08d29fdee3de468798087c8f9531df8fd102842eb"
+    },
+    {
+      "name": "d512_connected_nearby_nonproportional_r2",
+      "input_sha256": {
+        "queries.npy": "12f419647f83ddfa00c386e5cc4a5d0779a1b161930a35173cee7ef2fac386a3",
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "condition.json": "3235e66eccd4c0123beaa778b7863604aff293ff926175380ac57555ec50e477"
+      },
+      "view_digest": "deff7cb059c1993a827c7cc08d29fdee3de468798087c8f9531df8fd102842eb"
+    }
+  ],
+  "queries": 1000,
+  "repetitions": 3,
+  "query_prefixes": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "threshold": 0.001,
+  "bank_size": 16,
+  "order_seed": 2026110501,
+  "methods": [
+    "original_prepared",
+    "original_hot",
+    "threshold_hot",
+    "threshold_hot_auto",
+    "both_histories"
+  ],
+  "executors": {
+    "original_prepared": "Unchanged QueryEngine(components, reuse=True, compiled_reuse=True, bank_size=16, highs_threads=1), via original engine_for(prepared_cache).",
+    "original_hot": "Unchanged HighsReoptimization(retain_basis=True), via original engine_for(highs_warm). This is not ThresholdEngine(full_hot).",
+    "threshold_hot": "Unchanged ThresholdEngine(threshold_hot, simplex_strategy=1, bank_size=16), no earlier history, common initial/last primal and last dual.",
+    "threshold_hot_auto": "Same threshold plan with public simplex_strategy=0 (native choice).",
+    "both_histories": "Unchanged ThresholdEngine(both_pools, simplex_strategy=1, bank_size=16 including last) from completed threshold follow-up."
+  },
+  "primary": {
+    "method": "original_prepared",
+    "baselines": [
+      "threshold_hot",
+      "threshold_hot_auto"
+    ],
+    "metric": "Per repetition Q=1000 producer cumulative plus independently initialized persistent receiver cost.",
+    "maximum_ratio": 0.8,
+    "support_rule": "At most .8 joint ratio for all three repeated original sequences against BOTH baselines, no invalid proof, no opposite proved decision, and no loss of any baseline-decided answer. This retains the original 20% engineering target against the stronger controls. No p-value or query-level significance.",
+    "bridges": "Original Hot LP and Both Histories are descriptive bridges to the two completed studies, not additional significance searches."
+  },
+  "answer_contract": "Every finite lower bound is checked by the unchanged executor. Original lower-only responses are wrapped with bundle_proof, without inventing upper evidence or using primal_diagnostic as a counterexample: true if L>delta, otherwise unknown. Strong controls may additionally return false when exact feasible U<=delta. Numerical no-bound responses remain unknown with reason. false concerns the represented robust minimum, not the true policy effect.",
+  "common_construction": "Once per repetition, remeasure fixture_view(512,connected), require the whole represented view and digest equal the original saved view, then give every method that original saved view and charge the same newly measured construction cost. Do not splice historical construction timings.",
+  "receiver": "Same ThresholdChecker FIFO16 after independent initialization per method/view. Export original checked lower proofs inside the common threshold envelope; external checker binds view/objective/threshold. Also replay statelessly as a secondary measure, never substitute it for the primary persistent receiver.",
+  "producer_payload": "Same seven service fields for every executor: status, route, lower_bound, upper_bound, robust_threshold_decision, certificate, reason. reason preserves native reason, else decision_reason, else null. Adapter/envelope work and their full JSON serialization count in primary cost. Complete unchanged native answers are separately archived after timed queries/replay, with diagnostic serialization and gzip costs reported separately; query-internal diagnostic generation is not subtracted.",
+  "costs": "Include freshly remeasured common construction, per-plan fresh view JSON decode/validation, initialization, execution, all failed checks and fallback, lower-proof adapter/common service projection, JSON serialization, receiver fresh-view JSON decode/initialization and per-response JSON decode/exact arithmetic. Record gzip write and complete native diagnostic export separately. Exclude original-query loading, compressed-file read/decompression, network and source-table ingestion; no source-to-answer claim.",
+  "backends": "Preserve original SciPy-bundled HiGHS component proposals and public highspy persistent reoptimization. Do not attribute backend differences to structural decomposition. Threshold controls share highspy; actual versions and environment are recorded.",
+  "secondary": [
+    "all three paired producer/joint ratios and all prefixes",
+    "all status/refusal/route counts and paired gains/losses",
+    "actual proof and response bytes",
+    "initialization and independent receiver costs",
+    "all slower plans and undecided answers"
+  ],
+  "execution": "CPU0 within allowed affinity, all native/BLAS threads=1; fresh engines and receivers per plan/view. One seed-2026110501 random five-plan order, rotated left by 0/2/4 for original repetitions r0/r1/r2 so every plan has three distinct positions. These are three different original query streams, not three timings of one identical stream. No GPU, dependency installation or new raw-data generation.",
+  "gate": "Before any full primary query sequence is executed or timed, independent review must bind this protocol and all transitive project runtime modules including the new adapter/driver. Toy and saved-proof compatibility checks are separate development evidence.",
+  "stopping_rule": "Complete 3 original sequences x 5 plans x 1000 queries =15000 responses. Do not stop for loss, unknowns or slow timings. Stop on invalid proofs, opposite proved answers, changed input/view identities or code exception; retain partial evidence and use a new version after corrections.",
+  "interpretation": "Answers are conditional on constructed programs. This resolves alignment of one old headline workload only; it does not establish deployability, real-world workload prevalence, statistical significance or research acceptance.",
+  "order_scheme": "one_seeded_permutation_rotated_left_0_2_4",
+  "runtime_scope": "Gate binds current audited runtime. Original QueryEngine, HighsReoptimization and engine_for numerical paths are checked against the original snapshot; pre-existing create_view empty-interval refusal and _validate_program endpoint-validation changes mean entire runtime files are not byte-identical. No numerical algorithm is changed for this matched benchmark. Fresh fixture must reproduce the entire original view; both HiGHS versions are recorded.",
+  "pre_outcome_design_refinement": {
+    "superseded_unexecuted_draft": "runs/icde2027/primary_aligned_protocol_draft_full_response.json",
+    "sha256": "bdaf372e088ca30adef041d9c6e97c7986953656c7cfd66e010dee335e63365b",
+    "changes": "Independent pre-run design review standardized wire payload, fresh view decoding and balanced order; native diagnostics stay intact as separate evidence. No formal new timing had begun."
+  }
+}

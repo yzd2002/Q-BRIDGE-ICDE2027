@@ -1,0 +1,142 @@
+{
+  "run": "runs/icde2027/coat_full_block_v1",
+  "manifest_sha256": "172aa16892bc67bea7932082c6b7748870e56f46dbac6f7963ed0136a8b5b563",
+  "protocol_sha256": "b4495c4d92b9135121f4bf35cc6c8b0360c8d60abd9469c19846c3d0fdcd16ed",
+  "audit_sha256": "bbf98ffe3b75e7df36b9d83f6d2e1696cef2cf3643e6ab99da3ff811e6601a5e",
+  "summary_sha256": "742572e0f20ca4fa539bc5eac2e00744388196f4a0b4c3e24d3c653a3a197e93",
+  "independent_users": 290,
+  "view_documents": 61,
+  "query_responses": 915,
+  "proofs_valid": 915,
+  "refused_view_documents": 0,
+  "answer_status_counts": {
+    "unresolved": 915
+  },
+  "primary_query_index": 2,
+  "primary_descriptive_hypothesis_observed": false,
+  "primary_comparisons": [
+    {
+      "method": "observation",
+      "label": "OBS",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.0478406033130017,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.037287789278870415,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel_all_declarations_statuses": {
+        "unresolved": 180
+      }
+    },
+    {
+      "method": "randomized_group_score",
+      "label": "R group",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.01917721505726532,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.015015412365452147,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel_all_declarations_statuses": {
+        "unresolved": 180
+      }
+    },
+    {
+      "method": "randomized_cell_projection",
+      "label": "R projected",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.04787234606373872,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.03401648164231339,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel_all_declarations_statuses": {
+        "unresolved": 180
+      }
+    },
+    {
+      "method": "fusion_group_score",
+      "label": "Fusion group",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.019962278447687873,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.011925277383986403,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel_all_declarations_statuses": {
+        "unresolved": 180
+      }
+    },
+    {
+      "method": "fusion_cell_projection",
+      "label": "Fusion projected",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.047820717330841776,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.03131567587905479,
+        "route": "solver",
+        "reason": null
+      },
+      "full_panel_all_declarations_statuses": {
+        "unresolved": 180
+      }
+    },
+    {
+      "method": "full_cell_control",
+      "label": "R full-cell control",
+      "thinned": {
+        "status": "unresolved",
+        "lower_bound": -0.04767658304340715
+      },
+      "full_panel": {
+        "status": "unresolved",
+        "lower_bound": -0.030770215868677026,
+        "route": "solver",
+        "reason": null
+      }
+    }
+  ],
+  "retained_all16_direct_control": {
+    "n_independent_user_blocks": 290,
+    "estimate": 0.003710170231340013,
+    "sd_across_user_scores": 0.026278794245793845,
+    "range": [
+      -0.05063291139240514,
+      0.8987341772151898
+    ],
+    "hoeffding_radius": 0.06822941920389915,
+    "lower_bound": -0.06451924897255913,
+    "full_cell_static_transport_required": true,
+    "per_query_alpha": 0.05
+  },
+  "scope": "Retrospective diagnostic on the same users, with explicit SRSWOR, iid, static-rating, sensitivity and transport conditions. No known population truth or measured coverage."
+}

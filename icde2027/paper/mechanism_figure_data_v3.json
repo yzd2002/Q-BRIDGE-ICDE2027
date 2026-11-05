@@ -1,0 +1,595 @@
+{
+  "schema": "mechanism-figure-v3",
+  "sources_sha256": {
+    "runs/icde2027/analysis/fresh_mechanism_results.json": "e277400c0065932ebadaf32d1c9c53f1824bcd689675248c0ce6f5d148b954cb",
+    "runs/icde2027/analysis/fresh_mechanism_finite_gap_results.json": "c15573ad917739e5956052f71d37a5f502127eb095f810b75c82a576e475bedc",
+    "runs/icde2027/reviews/fresh_mechanism_independent_review.json": "dc9da7fd1f47d27f37d1f268190211b41f563b81d5e3cec121ae97c58736d45d",
+    "runs/icde2027/analysis/fresh_mechanism_replay.json": "bef21526a94c639dc5cdb2bdb0544c6c99c4fd1f0fb61c59636aedbb64ccb9b1",
+    "runs/icde2027/analysis/fresh_mechanism_finite_gap_replay.json": "e6d48b4cfdbdb943b15db6f962ae0cf03f85af4cbacedc9bf0e0d31702af0499"
+  },
+  "scope": "retrospective; same declared relaxation, conservative radius, low randomized budget",
+  "threshold": 0.001,
+  "independent_worlds": 48,
+  "count_repetitions_per_world": 5,
+  "policy_counts": [
+    {
+      "policy": "metadata",
+      "n": 240,
+      "counts": {
+        "finite_sample_certified": 12,
+        "finite_relaxation_limit": 33,
+        "population_and_finite_relaxation_limit": 195,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "n": 240,
+      "counts": {
+        "finite_sample_certified": 4,
+        "finite_relaxation_limit": 43,
+        "population_and_finite_relaxation_limit": 190,
+        "true_effect_not_above_margin": 3
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "n": 240,
+      "counts": {
+        "finite_sample_certified": 2,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 238
+      }
+    }
+  ],
+  "metadata_size_drift_counts": [
+    {
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 7,
+        "finite_relaxation_limit": 3,
+        "population_and_finite_relaxation_limit": 30,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 5,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 30,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 20,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 35,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 40,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "n": 40,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 40,
+        "true_effect_not_above_margin": 0
+      }
+    }
+  ],
+  "complete_joint_strata": [
+    {
+      "policy": "metadata",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 5,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 2,
+        "finite_relaxation_limit": 3,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 5,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 10,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 15,
+        "population_and_finite_relaxation_limit": 5,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "metadata",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 1,
+        "finite_relaxation_limit": 4,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 6,
+        "population_and_finite_relaxation_limit": 11,
+        "true_effect_not_above_margin": 3
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 3,
+        "finite_relaxation_limit": 9,
+        "population_and_finite_relaxation_limit": 8,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 4,
+        "population_and_finite_relaxation_limit": 16,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 10,
+        "population_and_finite_relaxation_limit": 10,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 20,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "randomized_heuristic",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 5,
+        "population_and_finite_relaxation_limit": 15,
+        "true_effect_not_above_margin": 0
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "2x4",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "2x4",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 2,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 18
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "8x8",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "8x8",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "16x16",
+      "nominal_drift": 0.0,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "uniform",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    },
+    {
+      "policy": "robust_design_selection",
+      "size": "16x16",
+      "nominal_drift": 0.02,
+      "randomization": "skew",
+      "n": 20,
+      "counts": {
+        "finite_sample_certified": 0,
+        "finite_relaxation_limit": 0,
+        "population_and_finite_relaxation_limit": 0,
+        "true_effect_not_above_margin": 20
+      }
+    }
+  ],
+  "finite_extra_population_regimes": {
+    "standalone_sufficient": 4,
+    "fusion_only": 2
+  },
+  "finite_extra_worlds": [
+    0,
+    10
+  ],
+  "finite_gap_maximum_metadata": 2.1242528765738424e-17,
+  "interpretation": "The partition diagnoses the stated relaxation, not all causal models; strata are descriptive, not factorial interventions.",
+  "numerical_admission": "Exact finite optima and population-subset-finite certificates rule out a loose computational bound in all 720 queries."
+}

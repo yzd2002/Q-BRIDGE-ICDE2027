@@ -1,0 +1,48 @@
+{
+  "study": "Follow-up: exact two-sided threshold answers against threshold-aware hot LP",
+  "status_at_registration": "registered_before_new_outcomes",
+  "master_seed": 2027110404,
+  "repetitions": 3,
+  "queries": 100,
+  "query_prefixes": [1, 10, 100],
+  "threshold": 0.001,
+  "bank_size": 16,
+  "source_input_run": "runs/icde2027/query_end_to_end_v1",
+  "methods": [
+    {"name": "full_hot", "plan": "full_hot", "simplex_strategy": 1},
+    {"name": "threshold_hot", "plan": "threshold_hot", "simplex_strategy": 1},
+    {"name": "primal_pool", "plan": "primal_pool", "simplex_strategy": 1},
+    {"name": "dual_pool", "plan": "dual_pool", "simplex_strategy": 1},
+    {"name": "both_pools", "plan": "both_pools", "simplex_strategy": 1},
+    {"name": "threshold_hot_auto", "plan": "threshold_hot", "simplex_strategy": 0}
+  ],
+  "query_engine": {
+    "dimensions": [64, 512, 2048],
+    "structures": ["disjoint", "mixed", "connected"],
+    "streams": ["nearby_nonproportional", "unrelated"],
+    "scope": "Same constructed finite-table execution family as the original registered study, with independent newly seeded query streams. This is a reviewer-motivated follow-up, not a new external workload or statistical-coverage experiment."
+  },
+  "end_to_end": {
+    "randomized_designs": ["uniform", "skew"],
+    "scope": "Reuse all six completed original 5-million-event encoded input sets without changing bytes. Each plan reads, validates, counts and materializes once before 100 newly seeded queries. All input work and receiver costs are measured; these are warm-filesystem encoded-column costs, not SQL or production deployment measurements."
+  },
+  "primary": {
+    "method": "both_pools",
+    "baselines": ["threshold_hot", "threshold_hot_auto"],
+    "metric": "producer cumulative seconds plus persistent receiver initialization, JSON decoding and exact verification, at Q=100",
+    "aggregation": "For each of three repetitions and each baseline separately, take the equal-weight geometric mean of the 18 paired engine-condition cost ratios. No selection of faster/slower baseline by condition and no pooled independent-query inference.",
+    "maximum_ratio": 0.8,
+    "support_rule": "All three geometric-mean ratios must be at most 0.8 against BOTH baselines; every proof must be valid, with no opposite decided answer and no loss of any answer decided by either baseline. Otherwise the broad engineering target is not supported. Unknowns and failures remain explicit.",
+    "p_value": null,
+    "rationale": "20% is a prespecified engineering improvement target. Three paired timing repetitions are a compute-budget choice; they do not establish statistical significance or population-wide speedup."
+  },
+  "answer_contract": "Every finite answer includes a checked lower bound. true requires lower>margin. false requires an exact-feasible primal point proving the represented robust minimum V(c)<=margin; this does not imply the true policy effect<=margin. Otherwise the threshold decision is null. Equality belongs to the proved-false threshold side. A merely nonpositive lower bound is never a negative proof.",
+  "reuse": "FIFO capacity 16, dual checks before primal checks, no pool-size or screening-order tuning on formal outcomes. Threshold baselines receive the same initial view witness and retain the previous exact-feasible primal point. The five fixed-strategy plans share public HiGHS simplex_strategy=1; the sixth uses strategy=0, whose native chooser can use primal or dual. objective_bound may stop dual simplex; objective_target is not an LP cutoff.",
+  "numerical_rules": "Global exact feasibility before a point can authorize a negative threshold decision. Solver flags and floating screening do not authorize either side. A cutoff proposal that fails exact decision checks resumes full optimization with the cutoff cleared; undecided brackets remain null. No feasibility-tolerance relaxation or unregistered primal repair.",
+  "receiver": "One independently initialized receiver per method/view, FIFO 16 for trusted points/prepared duals; first verification of each item is fully charged. Complete witnesses and multipliers are exported. Every proof is also checked statelessly with fresh view initialization per response; that separate cost is descriptive and not substituted for the primary persistent-receiver metric.",
+  "timing": "Run only after the original chain completes; one permitted CPU, threads=1 and BLAS=1. Randomize all six plan orders within each paired condition using fixed new substreams. Include common view construction, per-plan initialization, all misses/fallbacks, proof construction and JSON serialization. Compression and compressed-file I/O/decompression remain separately measured or explicitly excluded; no network-latency claim.",
+  "secondary": ["all condition and prefix timings", "producer-only and stateless-receiver costs", "true/false/unknown/refusal counts", "loss of decided answers relative to each strong baseline", "initial/last/historical/dual/fallback routes", "native status, basis and iterations", "lower-bound differences", "pool size and proof bytes", "all slow conditions"],
+  "multiple_comparisons": "Two co-required engineering contrasts, not statistical hypothesis tests; every other result is descriptive. Both prespecified comparisons must pass for the broad target.",
+  "stopping_rule": "Complete all 54 engine and six source-to-answer conditions, six plans and 100 queries each: 36,000 responses. Stop only for an invalid proof, inconsistent input, opposite proved decisions or code exception; retain partial records and start a separately versioned run after correction. Do not stop for speed or unknown decisions.",
+  "gate": "Before any formal query generation, an independent implementation and accounting review must bind the exact protocol and executable hashes. Toy correctness checks are separate development evidence and never enter performance summaries."
+}

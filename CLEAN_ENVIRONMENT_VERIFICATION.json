@@ -1,0 +1,127 @@
+{
+  "schema": "public-dependency-closure-verification-v1",
+  "status": "PASS_PUBLIC_CLOSURE_FOLLOWUP",
+  "completed_utc": "2026-11-05T19:34:54.778354+00:00",
+  "scope": "Independent check of a repaired public dependency subset on the same host in a separate Python virtual environment.",
+  "environment": {
+    "same_host": true,
+    "python": "3.12.3",
+    "pins": 17,
+    "new_install_this_followup": false,
+    "prior_public_wheel_install_reused": true,
+    "system_site_packages": false,
+    "user_site": false,
+    "gpu_used": false,
+    "threads": 1,
+    "bytecode_disabled": true,
+    "requirements_lock_sha256": "af1e35c28bb4a690b9a0b81be42d7c886d3dac29f06d1324e8f48da6b2f78458",
+    "pip_check_passed": true
+  },
+  "full_shipped_scientific_suite": {
+    "tests": 576,
+    "passed": 576,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "failure_details": [],
+    "previously_failing_tests": [
+      {
+        "classname": "icde2027.test_checking_schedule_v4",
+        "name": "test_gate_hashes_and_refuses_unsigned_or_modified_runtime",
+        "status": "passed"
+      },
+      {
+        "classname": "icde2027.test_checking_schedule_v4",
+        "name": "test_synthetic_execute_snapshot_and_terminal_manifest[False]",
+        "status": "passed"
+      },
+      {
+        "classname": "icde2027.test_checking_schedule_v4",
+        "name": "test_synthetic_execute_snapshot_and_terminal_manifest[True]",
+        "status": "passed"
+      }
+    ]
+  },
+  "prior_public_subset_result": {
+    "tests": 576,
+    "passed": 573,
+    "failed": 3,
+    "errors": 0,
+    "skipped": 0,
+    "cause": "The canonical runs/icde2027/CHECKING_SCHEDULE_V4_DESIGN.md path was absent.",
+    "original_failure_records_preserved_unchanged": true
+  },
+  "input_integrity": {
+    "bound_inputs": 200,
+    "bytes": 5394519,
+    "unchanged_inputs_from_prior_check": 193,
+    "ordinary_copies_no_hardlinks": true,
+    "no_private_04_subtree": true,
+    "source_and_copied_inputs_unchanged_before_after": true,
+    "original_public_source_files_rehashed": 197,
+    "prior_sealed_records_rehashed": 231,
+    "entire_original_submission_archive_rehashed": false,
+    "dependency_bindings": [
+      {
+        "destination": "runs/icde2027/CHECKING_SCHEDULE_V4_DESIGN.md",
+        "public_historical_source": "runs/icde2027/checking_schedule_v4/design.md",
+        "sha256": "97d8f80c178d8323569449cd66abf49c9d375aa17d7c4eb70ae83632bbcceaa8",
+        "byte_identical": true
+      },
+      {
+        "destination": ".deployment/requirements-installed.txt",
+        "public_historical_source": "runs/icde2027/checking_schedule_v4/source_snapshot/.deployment/requirements-installed.txt",
+        "sha256": "171890211c1678800bc5803fa0a909ddd26cf4d330fd66a2832a053801a8f4b9",
+        "byte_identical": true
+      }
+    ],
+    "owner_input_manifest_sha256": "c897ce737d77658440cf8ee355933435fc060ca893674cde7d84a3f6afa9e091",
+    "dependency_manifest_sha256": "e2a3bc1b21b920d55c92dc9507343eca0d3c92f6b62daa1329f80ab3f90a0d18"
+  },
+  "earlier_checks_linked_by_identical_inputs_not_rerun": {
+    "stdlib_example": "passed; verifies represented LP arithmetic and declared query/threshold binding, not scientific assumptions",
+    "constructed_example": {
+      "queries": 5,
+      "proofs_valid": 5,
+      "empirical_evidence": false
+    },
+    "paper": {
+      "dependency_count": 23,
+      "pages": 13,
+      "pdf_sha256": "33fe4c7b5fdd6ecae4b944ae69e4bad8f5ffa78e6cdd6698b0e18ba08c0ba834",
+      "byte_identical_to_reviewed_pdf": true,
+      "source_date_epoch": 1793895060,
+      "existing_same_host_tinytex_reused": true,
+      "new_tex_installation": false
+    },
+    "prior_result_sha256": "b6888c13d4ca72f521c63001c9552082b9c104fcf47df5c520e5fb9351563a5b",
+    "prior_manifest_sha256": "cd5cc60f38698ce9344bd2aeea75faa858d793750952265d52b660d6ec55f171"
+  },
+  "verifier_attempt_history": {
+    "first_followup_environment_check": "failed before scientific tests due to verifier import spelling fonttools instead of fontTools",
+    "failure_retained": true,
+    "correction_scope": "independent verifier only; tested code, tests, expectations, fixed versions and inputs unchanged",
+    "subsequent_environment_check": "all 17 exact versions imported from the independent venv",
+    "pip_check": "No broken requirements found."
+  },
+  "evidence_sha256": {
+    "results.json": "60188a7bb5348e415d50d5443de9ba99a2254e8ac8ed4f39755f4e2cbee2b7b3",
+    "scientific_suite.xml": "52b8fddf35250aca26ce78886855358199b7ec0663c1261c15ff957098694b1c",
+    "scientific_suite.log": "1922a1980d0661c34918344f505e60744aff388f2a232adddcee1acb2bf9fe3a",
+    "copied_inputs.json": "5e4e4b8b60e82c90267f80e597a14c0c10081d79990ddc28dabfc70308c4275f",
+    "sealed_inputs.json": "997ea4143f5b39cf6b1da5207121b0ef4810cc965fb29a2ea0976098b5a7164b",
+    "environment_versions_v2.log": "a1d359975f4eb4a9548050afcd7b835ecc3dd625c17c4153be2863729a51891c",
+    "pip_check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "checks_started.json": "6f1e2f48c0d6020c3fdf6a0bd49eff29490b59f07db4752a1601a872073a084f",
+    "continuation_started.json": "dc02d92dde23f95223039e043e24777c2105a678c0920cdd55140bc3c52aed83",
+    "unexpected_failure.json": "1b480264ec76a8f7835d81552de36fe92aa2b9229a295bab09cb6b2603e9c677",
+    "environment_versions.log": "afb8dd0d137c69084e129c4f518f2d8c448bf74d42b7c99e4cd202774afbf0fc"
+  },
+  "limitations": [
+    "Same host and existing base Python in an independent venv; not a new-machine reproduction.",
+    "Prior paper result reused the installed TinyTeX, and is linked by identical inputs; no new TeX build.",
+    "No formal scientific or timing grids rerun, no new real-data experiment.",
+    "A verified public dependency subset, not a new complete submission archive.",
+    "No paper acceptance conclusion."
+  ]
+}

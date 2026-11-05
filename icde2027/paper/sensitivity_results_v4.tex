@@ -1,0 +1,17 @@
+% Generated from all four metadata conditions and independently checked exact arithmetic.
+\textbf{The radius changes what the same evidence supports.}
+Across the 48 confounded worlds, $\Lambda^\star$ ranges from 1.0318 to 1.3881; the registered conservative rule therefore uses $\Lambda=2$ throughout. With identical metadata policies and counts at each budget, the low-budget oracle comparison certifies 191 queries from OBS and 189 from fusion, versus 6 and 12 under $\Lambda=2$ (Fig.~\ref{fig:sensitivity}). This is an oracle sensitivity diagnostic: truth supplies $\Lambda^\star$. It does not identify a usable radius from observed data. The 240 query instances still represent 48 independent worlds.
+
+\textbf{Added constraints compete with confidence allocation.}
+Let $B_{O,\alpha}$ be the exact box minimum for full-budget OBS, $B_{O,\alpha/2}$ its half-budget counterpart inside fusion, and $D_F$ the exact value of the saved fusion dual. Every saved record satisfies
+\begin{align}
+ D_F-B_{O,\alpha}
+ &=\underbrace{D_F-B_{O,\alpha/2}}_{\text{achieved constraint gain}}
+ -\underbrace{(B_{O,\alpha}-B_{O,\alpha/2})}_{\text{budget cost}}.\label{eq:budget-diagnostic}
+\end{align}
+At the lower budget and oracle radius, the mean gain is 0.0114~pp and the mean cost 0.0913~pp, leaving -0.0799~pp. These are changes in bounds, not true policy effects. The saved dual need not attain the fused optimum. For the two lost certifications, however, the half-budget box minimizer satisfies every group constraint and exactly matches the dual. Their loss is therefore due to the budget split, with no missed optimization gain. The third loss at the larger budget lacks this particular optimality witness; all three remain reported.
+
+\textbf{Why a tighter radius can make groups redundant.}
+For the lower-budget metadata queries, Proposition~\ref{prop:box-face} proves zero optimal constraint gain in 193/240 oracle-radius views, versus 24/240 at $\Lambda=2$. The corresponding larger-budget counts are 36 and 8. Thus many narrow observational boxes already satisfy the transferred group information at their worst point for the query. The other views have strictly positive optimal constraint gain, but that alone proves neither $G>P$ nor certification above $\delta$. This exact geometric diagnosis concerns these saved programs, without estimating how often it occurs in a new population.
+
+The randomized budgets use different sampled streams, not nested extensions. All three policy families and complete strata are retained. The robust-design objective itself changes in 278 of 480 radius-paired records, so its radius comparison cannot isolate the declaration alone. For metadata queries, exact projection verifies a nonzero component outside the group row space in every world; this describes missing directions without attributing a causal share of failure to geometry.

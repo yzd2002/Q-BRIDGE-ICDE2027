@@ -1,0 +1,41 @@
+{
+  "study": "Repeated policy queries with checked dual reuse and persistent LP baselines",
+  "status_at_registration": "planned before any timed workload result",
+  "master_seed": 2027110403,
+  "repetitions": 3,
+  "threshold": 0.001,
+  "bank_size": 16,
+  "query_prefixes": [1,10,100,1000],
+  "query_engine": {
+    "dimensions": [64,512,2048],
+    "max_queries_by_dimension": {"64":1000,"512":1000,"2048":100},
+    "structures": ["disjoint","mixed","connected"],
+    "streams": ["nearby_nonproportional","unrelated"],
+    "methods": ["highs_cold","highs_warm","disjoint_or_global","components","box_shortcut","dual_cache","prepared_cache"],
+    "scope": "Controlled execution programs with known feasible witnesses, not sampled confidence sets or empirical coverage trials. Include the common view construction and plan/checker initialization in cumulative query totals.",
+    "primary_timing_cell": {"dimension":512,"structure":"connected","stream":"nearby_nonproportional","queries":1000},
+    "hypothesis": "Prepared checked reuse takes at most 80% of persistent HiGHS basis-hot-start time including common view construction, initialization, query execution, proof creation and serialization, with no invalid proof. Report all repeats and median paired ratio; no p-value with only three timing repeats.",
+    "support_rule": "The timing target is supported only if all three primary paired time ratios are <=0.8; no timing-result-based configuration filtering."
+  },
+  "end_to_end": {
+    "contexts":1,
+    "actions":64,
+    "observational_events":1000000,
+    "randomized_events":4000000,
+    "randomized_designs":["uniform","skew"],
+    "queries":100,
+    "stream":"nearby_nonproportional",
+    "methods":["rebuild_highs_cold","materialized_highs_cold","materialized_highs_warm","materialized_components","materialized_prepared_cache"],
+    "radius":2.0,
+    "rho":0.0,
+    "alpha":0.05,
+    "randomized_intervals":"group_score",
+    "scope":"Actual encoded event columns read from .npy files, validated and counted; source intervals, feasible witness, plan/checker initialization, queries and proof serialization timed. Event generation and saved audit replay are outside serving latency and reported separately. No claim about SQL engine performance or cold disk I/O."
+  },
+  "query_definition": "Uniform reference; nearby queries independently perturb both within-block contrast directions, not only their scale. Unrelated queries are centered normal vectors rescaled so every policy probability remains >=0.2/d. First query, all cache misses, and all unresolved outputs retained.",
+  "comparison": "All methods receive exactly the same represented view and ordered query objectives and use the same exact arithmetic acceptance rule. A cache bound can be looser; compare decisions and bound differences separately. Full-alpha/source-statistical comparisons belong to separate studies.",
+  "timing": "Pin the entire timed process to the first CPU in its inherited allowed affinity, single native solver thread and BLAS=1; randomize method order within each paired repeat using fixed substreams. Record hardware, versions, affinity and load. Prefix totals retain first-use costs; never extrapolate the rebuild baseline or the 2048-cell stress grid to unmeasured query counts.",
+  "replay": "Save compressed JSONL proofs and query results for every method and query. Replay every proof outside the timed serving path with a fresh checker per trusted view; reuse that checker across its queries. Save interval/source-count/view digests and all numerical failures.",
+  "versions": "Public highspy 1.15.1 for cold and basis-hot-start comparators; SciPy 1.18.0 bundled HiGHS 1.12.0 for component/global-fallback proposals. Both are pre-existing project dependencies; record actual versions.",
+  "stopping_rule": "Complete the entire declared grid and all three repeats; no positive-speedup stopping. Stop only for invalid proofs, data mismatch or code exceptions, preserving partial results and recording corrections."
+}

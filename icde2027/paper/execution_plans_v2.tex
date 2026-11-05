@@ -1,0 +1,13 @@
+\begin{tabular}{lll}
+\toprule
+Plan & State retained between queries & Comparison purpose\\
+\midrule
+Cold LP & Model, no solver state & Repeated optimization\\
+Hot LP & Model and simplex basis & Strong reoptimization baseline\\
+Disjoint/global & View and matrix structure & Single-row specialization or whole LP\\
+Components & View and component partition & Localize overlapping subprograms\\
+Box shortcut & Components; no dual bank & Try the interval-only bound first\\
+Dual reuse & Components and normalized dual bank & Skip solving after a checked hit\\
+Prepared reuse & Dual bank and exact prepared terms & Reduce repeated dual-checking work\\
+\bottomrule
+\end{tabular}

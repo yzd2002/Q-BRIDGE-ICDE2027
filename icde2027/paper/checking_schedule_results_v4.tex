@@ -1,0 +1,22 @@
+% Generated after the complete independent 162,000-response audit.
+\begin{figure*}[t]
+\centering\includegraphics[width=\textwidth]{figures/checking_schedule_v4.pdf}
+\caption{Isolating checking costs while preserving the same evidence and solver paths. Each dot is one timing round's equal-weight geometric-mean joint-cost ratio over all inputs in that group; the line shows its three-round range. Screening is compared at each fixed exact-term retention setting, and retention at each fixed screening setting. The $.8$ reference applies to the two registered primary contrasts only. Values below one indicate less total producer-and-receiver work; no interval is a statistical confidence interval.}
+\label{fig:checking-factors}
+\end{figure*}
+\begin{table*}[t]
+\centering\small
+\caption{All registered factor and bridge comparisons. Entries are median [minimum, maximum] of the three round-wise geometric-mean joint-cost ratios. Original Prepared is lower-only and cannot prove false; Auto changes the simplex strategy. Their cost ratios are descriptive. Source-derived serving starts from saved views, excluding source ingestion.}
+\label{tab:checking-factors}\input{checking_schedule_table_v4}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\caption{Bridge answer capabilities on the same fixed inputs. Each cell is the observed range over three timing rounds, or one count when unchanged. ``Both'' means $S_1P_1$; gained/lost counts are decided answers relative to the listed bridge. No-proof refusals are included in unknown. These are repeated executions, not additional independent queries. Full per-input differences are retained.}
+\label{tab:checking-bridge-answers}\input{checking_schedule_bridge_answers_v4}
+\end{table*}
+
+All 1,134 plan-streams and 162,000 responses complete, with independent numerical replay and complete source bindings. The four core plans return identical evidence, decisions, routes and native-solver paths. Figure~\ref{fig:checking-factors} therefore isolates checking work rather than a change in which queries get answered. On the primary streams, screening with retained terms has round-wise ratios $1.120$, $1.118$, $1.138$; retaining exact terms with screening has ratios $0.753$, $0.746$, $0.756$. The joint requirement that both factors meet the registered primary engineering target is not supported. Table~\ref{tab:checking-factors} retains all six contrasts and both broader groups. The artifact includes every per-input ratio, prefix, factor interaction and decision comparison, including slow inputs and bridge losses. These are fixed-workload timing observations, not a significance or deployment-generalization claim.
+
+\textbf{Caching changes whether screening pays.} Without retained exact terms, screening has primary ratios $0.889$--$0.899$; after retention, the same screening loses (Fig.~\ref{fig:checking-factors}). Retention without screening gives ratios $0.597$--$0.600$. Across the three primary inputs in each round, screening reduces exact dual checks from 6000 to 3003. With retained terms it saves 11.04--11.41\,s of producer verification, but screening itself costs 17.93--18.35\,s. These component timers explain the observed tradeoff; they are not added again to joint cost. A filter that avoids checks can therefore become uneconomic after those checks have been made cheaper. The broader groups also lose from screening under both retention settings; the evidence does not support screening every workload by default.
+
+The bridges do not guarantee identical answer capabilities (Table~\ref{tab:checking-bridge-answers}). Original Prepared retains its older proposal/history path as well as its lower-only interface; cost comparisons must be read alongside its unknown answers. Auto changes the simplex strategy. Neither bridge isolates a factorial effect.

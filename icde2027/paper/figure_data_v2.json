@@ -1,0 +1,234 @@
+{
+  "source_paths": [
+    "runs/icde2027/stronger_baseline_diagnostic_v1/summary.json",
+    "runs/icde2027/fresh_worlds_v1/summary.json"
+  ],
+  "fresh_counts": [
+    {
+      "r_per_cell": 100,
+      "policy": "metadata",
+      "method": "fusion_group_score",
+      "certified": 10,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "metadata",
+      "method": "fusion_projected",
+      "certified": 12,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "metadata",
+      "method": "observation_consistency",
+      "certified": 6,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "metadata",
+      "method": "randomized_group_score",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "metadata",
+      "method": "randomized_projected",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "randomized_heuristic",
+      "method": "fusion_group_score",
+      "certified": 3,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "randomized_heuristic",
+      "method": "fusion_projected",
+      "certified": 4,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "randomized_heuristic",
+      "method": "observation_consistency",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "randomized_heuristic",
+      "method": "randomized_group_score",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "randomized_heuristic",
+      "method": "randomized_projected",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "robust_design_selection",
+      "method": "fusion_group_score",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "robust_design_selection",
+      "method": "fusion_projected",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "robust_design_selection",
+      "method": "observation_consistency",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "robust_design_selection",
+      "method": "randomized_group_score",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 100,
+      "policy": "robust_design_selection",
+      "method": "randomized_projected",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "metadata",
+      "method": "fusion_group_score",
+      "certified": 15,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "metadata",
+      "method": "fusion_projected",
+      "certified": 15,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "metadata",
+      "method": "observation_consistency",
+      "certified": 6,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "metadata",
+      "method": "randomized_group_score",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "metadata",
+      "method": "randomized_projected",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "randomized_heuristic",
+      "method": "fusion_group_score",
+      "certified": 15,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "randomized_heuristic",
+      "method": "fusion_projected",
+      "certified": 16,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "randomized_heuristic",
+      "method": "observation_consistency",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "randomized_heuristic",
+      "method": "randomized_group_score",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "randomized_heuristic",
+      "method": "randomized_projected",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "robust_design_selection",
+      "method": "fusion_group_score",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "robust_design_selection",
+      "method": "fusion_projected",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "robust_design_selection",
+      "method": "observation_consistency",
+      "certified": 2,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "robust_design_selection",
+      "method": "randomized_group_score",
+      "certified": 0,
+      "denominator": 240
+    },
+    {
+      "r_per_cell": 1000,
+      "policy": "robust_design_selection",
+      "method": "randomized_projected",
+      "certified": 0,
+      "denominator": 240
+    }
+  ],
+  "primary": {
+    "independent_worlds": 48,
+    "sampling_repetitions_per_world": 5,
+    "estimate": 0.025000000000000005,
+    "one_sided_95pct_hoeffding_lower": -0.32830182290040566,
+    "hoeffding_deduction": 0.3533018229004057,
+    "effect_target": 0.05,
+    "effect_target_supported": false,
+    "approximate_stratified_t_95pct_interval": [
+      -0.024886184241795773,
+      0.07488618424179579
+    ],
+    "approximate_t_df": 4.411764705882353,
+    "stratified_standard_error": 0.01863389981249825,
+    "interpretation": "Only the Hoeffding lower endpoint governs the registered decision; t interval is descriptive and approximate."
+  }
+}

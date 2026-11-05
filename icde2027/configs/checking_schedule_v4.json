@@ -1,0 +1,1027 @@
+{
+  "study": "M2 checking schedule 2x2, retrospective controlled timing",
+  "status_at_registration": "registered_before_new_timing_outcomes",
+  "design": "runs/icde2027/CHECKING_SCHEDULE_V4_DESIGN.md",
+  "order_seed": 2026110504,
+  "timing_rounds": 3,
+  "cpu": 4,
+  "threads": 1,
+  "bank_size": 16,
+  "threshold": 0.001,
+  "core_methods": [
+    "s0_p0",
+    "s0_p1",
+    "s1_p0",
+    "s1_p1"
+  ],
+  "methods": [
+    "s0_p0",
+    "s0_p1",
+    "s1_p0",
+    "s1_p1",
+    "screened_auto",
+    "original_prepared"
+  ],
+  "query_prefixes": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "input_counts": {
+    "original_main": 3,
+    "threshold_engine": 54,
+    "source_derived": 6
+  },
+  "expected_responses": 162000,
+  "primary": {
+    "group": "original_main",
+    "contrasts": [
+      [
+        "s1_p1",
+        "s0_p1"
+      ],
+      [
+        "s1_p1",
+        "s1_p0"
+      ]
+    ],
+    "maximum_ratio": 0.8,
+    "rule": "All two contrasts in all three new timing rounds, plus complete correctness gates; no p-value."
+  },
+  "factor_contrasts": [
+    [
+      "s1_p0",
+      "s0_p0"
+    ],
+    [
+      "s1_p1",
+      "s0_p1"
+    ],
+    [
+      "s0_p1",
+      "s0_p0"
+    ],
+    [
+      "s1_p1",
+      "s1_p0"
+    ]
+  ],
+  "bridge_contrasts": [
+    [
+      "s1_p1",
+      "original_prepared"
+    ],
+    [
+      "s1_p1",
+      "screened_auto"
+    ]
+  ],
+  "inputs": [
+    {
+      "id": "original_main/d512_connected_nearby_nonproportional_r0",
+      "group": "original_main",
+      "directory": "runs/icde2027/primary_aligned_v1/d512_connected_nearby_nonproportional_r0",
+      "query_shape": [
+        1000,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "989c6fc1e5e6031fdaefa8a4e283b019158539acb7f5cc29a964a8a83df39080",
+        "condition.json": "835a783198a51496db8d795239f859169cb21c1f117cb719b74dda0ae2b6a7c5"
+      }
+    },
+    {
+      "id": "original_main/d512_connected_nearby_nonproportional_r1",
+      "group": "original_main",
+      "directory": "runs/icde2027/primary_aligned_v1/d512_connected_nearby_nonproportional_r1",
+      "query_shape": [
+        1000,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "d6431dc4f3d6418a81a02b1a3eba286a5246612c4305a8aaff62e1baf6b1c73b",
+        "condition.json": "12abf131b0599f2787e07feccc6022f1e5a22b1e85a875f6e61e25ec530825e2"
+      }
+    },
+    {
+      "id": "original_main/d512_connected_nearby_nonproportional_r2",
+      "group": "original_main",
+      "directory": "runs/icde2027/primary_aligned_v1/d512_connected_nearby_nonproportional_r2",
+      "query_shape": [
+        1000,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "12f419647f83ddfa00c386e5cc4a5d0779a1b161930a35173cee7ef2fac386a3",
+        "condition.json": "6601c181c17224cd8aa29eb478fe680964cc9f8d61670dd404190b0adabbc590"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "34908b565bf020e47546c23102fbbba16a35d50aec497973797f7f25acebddd0",
+        "condition.json": "f7e915368aa68748172c74c99803f7cbdc4abdcb1ad82f455343b292d7ac9d18"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "bf5bf98c6d36a32aaaac7f565d3edd2602551567477f361ac85632f199b88aa3",
+        "condition.json": "5f4698c7ae3d1865c05ac11c412c2d4d7072398d1f4d4c6dfbc5d19a7b17033c"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "4ca12ccda83536e674f08010597fe3901fd43df263da00685e55202425d9343e",
+        "condition.json": "6c6eb5a8f9b6609fad5f0997526178f59a69fe2539acdb818ff6d6568cff6473"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_unrelated_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "02d0723925f82b7bc121c008b79aaef767ad92665d69cf4b850b2fec077c8a50",
+        "condition.json": "25cc6eed5433e3d084786e525edc795b3c974ff72920d6a3f9492058ce968a59"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_unrelated_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "a4277188d58a56288a0b2453b52db7c66c086ee6bb0bf583cd1fa951f5b5806c",
+        "condition.json": "a6acc74d5fc9605c2c639abbf2d42ca26eb6a72cc58eaaea041b83e6982ab43b"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_connected_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_connected_unrelated_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "281209ba7b94e32a1e92f066065cd141c97c84a2e1e5b4299fdf7a67b7af0ee5",
+        "queries.npy": "0b7047b01006e394de2bb9b2602426d684cdd0d8081aafae09a15fbb154b47f9",
+        "condition.json": "7e844423e106b3eeb6071e8a618db678ac9a4c19d7623bc680cd507b16062107"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "ac0fd3d847cf84460d62b0a4f0acdb3d217b07d3af1c215ba0c3afc2c87c7866",
+        "condition.json": "95f1e91321e198a98d0428747cb44824a18ef0da5e462ce6c0b59cba3054dcf1"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "8f55b10057f2b07b2434a7bdd8d02851c147c89d39391b7fbdfc007e11675ee6",
+        "condition.json": "8c6c924ca63eaae9a26783cc998b41af999fc3532e1c41b9e742030e6e48b7e1"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "51ccbe1a8989461200e46d0396a364238a9bdfa3a6f7e2091140be4d09275fc4",
+        "condition.json": "d0396f64e1ee29d181ae36b42319b5f14c698cb882232f8a3d06f027c1f288b0"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_unrelated_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "e07dcb0734a61675f4fe081c46ba2b7f425ad5d9a79b8e69f5d4ea800d38b3dd",
+        "condition.json": "ee1979f1255a2eb4d866315a9d5d23ccec9576bbe2b6722e3e1f195fc3504516"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_unrelated_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "66cf0cd0137facfb25aeeadd1aa27a655252026aa2e5583e5fb8130e17d4487e",
+        "condition.json": "a616e90749b9957f770762d1318b621fb6c9e2b4169cc57c14fa605cadde1bd6"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_disjoint_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_disjoint_unrelated_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "2718f6f773a24a7471f55909b53d8744ffb6fb0e1ea3670e1056bdc8726b82bf",
+        "queries.npy": "a57caa08dbe3a1c95e9521ee8db03972c35bdfdca87fdb6712e8a00232e96451",
+        "condition.json": "fcba994c3ac9243139cf2809b3e1e1edaa430efab92149f33c9ac5f4f9788b67"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "c4c63e17ed6965d1de39e1ef6eb5b5749bdba40e4a0cae81b53e4e6886ec1577",
+        "condition.json": "6748ad45d2582867293a9617c839a12322596824cdb6859db2d642605b32f4f4"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "ccffb0790935511549fb227d41e5c0319f6940398ee005887e5ee62e68d9aa4a",
+        "condition.json": "30145a69802a0d133a03a97bb4ecb19cec1bb095d6d4c41aacf78d33032a325a"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "42ae2759d1cd9212b73de3140d4a7a1016aa42f2464401779855ffa9a5848405",
+        "condition.json": "fe0c655c608015b9f04cdaaff1f5c72c9eef5a7e5e4477cefd4415fa8303a856"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_unrelated_r0",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "49a16dfcd117551e4a571fa2d8a17305ce7d9acff20e8f14c58650f014900c48",
+        "condition.json": "c776f463d5562cb59ad70e31f9c231f8e33e9c911cc3393bc6510787954148c4"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_unrelated_r1",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "111fbd3cb0a8bb79358278b94c0b6fc769847293f269088bb3381dca979f762f",
+        "condition.json": "f191ab23940826cb515d15c65232ab4f3b53360a3fb345c86405bd4ddd2f6cc6"
+      }
+    },
+    {
+      "id": "threshold_engine/d2048_mixed_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d2048_mixed_unrelated_r2",
+      "query_shape": [
+        100,
+        2048
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "33a4b0f076ad7ad812642f0b0f69eeb591c8f625151f06e359902b4abab8bc27",
+        "queries.npy": "2231b76d0b1ca9ba8da4ead08c12781d673f74f06ed5ff3589b12e2b67ad5d0e",
+        "condition.json": "5a593f2f71379ce5844ea31e3d25bb86c74e5df66b00d5a85691dc03ffc390c2"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "8764be2436f6f7ebb1936387cbe3f696766b0669a2b810f09e16c1b82805be4c",
+        "condition.json": "acb94e4faf873ed7425347a9c24b0d46e344137261eff68fb082280ed4e2dbfa"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "d9a963ab4b0970a0c0d858730c1787dfd1f6a78a0c7ebfb106f60b8b361bb677",
+        "condition.json": "05891b0215819f185f5c5e306a056da1c9ec7353244d0c488a32615e8b77eb94"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "8e8b1203f2fa01f32ace94c023ca0568917a75e0098f0c588a51b7aa33eafd9a",
+        "condition.json": "8a6b0e80106d6305d21bec675c353fe368d8e9e20beafe424fdf695b5fdf71d4"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_unrelated_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "2d130e61330c2250dc649d041a135452566bf9a6eecd7280677602d9f93bc6ed",
+        "condition.json": "a76b70f278dcce2b60642a76c842ec1b188f6d7e87e0f35f2cfcaf4dbe23e859"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_unrelated_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "d6b45b1ed8f7fef8da8de2d6da3df241b55994e620ff5a07dc92943923e8252d",
+        "condition.json": "1212987b141c9292159d48313ab764859e70904113edfbd1c236adb6a548e91d"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_connected_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_connected_unrelated_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "e24a666f02246720685934fb86d785446c9ddbb829fa895bdad8ba69cd80a523",
+        "queries.npy": "a7b30133a579aa837188883cc7e0752ee70065afb3a65a53f558a111c23d1f9a",
+        "condition.json": "299cf56da301bbcc0491fa796b0ff58748da075ee3dc89a17bea82f1534bbdd4"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "2541a00539cac50d20b39b5f3e8420d811cc292d63f1a05c55e9c30b9958df90",
+        "condition.json": "c6c2e2e852b28a967dcc2387753e51646ae13d36b288f96a405b0e12c4288a55"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "eeb49e86e7423a9af1b4b0b135be04fc10feef57f029d8fcf16f187d2599e96b",
+        "condition.json": "6955e4601a254cf07671165020de7741e031d9d4eebd74929faa2381c576752b"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "be9e4a9c40bc46809fd8cd4e895f4e2cc3b700857cbcec143d84ebf0c99bdb69",
+        "condition.json": "71f23d74b786aedafe95e528bbb097192430a88b4301c39fc431264bb1d52b14"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_unrelated_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "fe45f79dd679547ed89e61a25251fe3fb3d6eecc8ee58e66950d8c7fc1c1aad8",
+        "condition.json": "af857981dc8522ce789471bb63b6f0fa2b8ea02162e63ea8c16f606ba2cb261f"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_unrelated_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "73a04cfa4fcbe29d96213c32a5eea6b8c82c974b2d99e93ed8dc4568e518aaa9",
+        "condition.json": "21f6d10f1ea0f3ff47adca768f3013452ab218afa7c11462bbce8338361ccb81"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_disjoint_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_disjoint_unrelated_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "260cbd0acb9cf1f7c9d0147ff7d444d631b523a5f48dfdac141e16f3e470acee",
+        "queries.npy": "08d7ee9ae4a57e1f3afb1f6c359e5869f6d7a1cfccc5b4fd006c05b3228fc308",
+        "condition.json": "5cb8e0aaf8e38696edf1a7c4fa7b9e660d9a7a1c36ac6e1f7e691b666cb9ffe1"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "d689f74ee63040a38583479a52f7244e3c589a701628995421132bc699895a38",
+        "condition.json": "7075b79d9f7331f8af9ef758b9f89f3c4142ff1def4976f910e3e9f54c69d852"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "6ab7320d507919d8d672490f1baf1cefbe65e6d45c13531050f19055f7ed8a44",
+        "condition.json": "4ce870d2f383c9023f375da9e8c83619c2e902b280c4497afc88c81bbe48dc10"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "311af87cdee57aa8b3e34936b0ad3f46176f9959b32d8f9b966f9ad89fb590fd",
+        "condition.json": "939047d59f5c844636e3753befec3cb9f3de24a77e23ecc8d185275877e8f4d9"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_unrelated_r0",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "a17fc637c0430a2dad94b14407becd90adb26533d1a49d73310154a9b79aa738",
+        "condition.json": "3e0a7e04565522909265a1aebeb505573040e7ecb7cd5dffaa892ef41f1fc35e"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_unrelated_r1",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "ead76a6e37d6c6d1b99582737aa3053bb036bce97ac12d7584c4474291e3f6ff",
+        "condition.json": "de527f410183f201843169eabf772964a6d416eed9b7a6884e61ec7811f2e310"
+      }
+    },
+    {
+      "id": "threshold_engine/d512_mixed_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d512_mixed_unrelated_r2",
+      "query_shape": [
+        100,
+        512
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "c842f921aa66242101f24a582b4f88e0757ad0aafa910203bc8885fef11b849f",
+        "queries.npy": "320dbccef28495d5132cc1238e79212d7875aeddd765c7b26c388d67fd4b1dc0",
+        "condition.json": "bda11d02c59324645dbb2d5729ff6fcb7ceaa5240d230020a4cc12bb02b55e1f"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "16e96bd5d163d54dc44b94bbf42dc6ba9a6f35ddb8efb9d5e8a518ebc3ad7db4",
+        "condition.json": "61969c6d4dfaacf74faacbb8d55e38684b479a222e76522ae37c14aa2b853bd2"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "832dcb446a48a25a6abe7a8b9453df924b3d5654777eb6e1825d9ad4983ebfff",
+        "condition.json": "14dd83e17bec3213f0eb884dd2cabd08925843c93a6c54a594134a8348d90f2b"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "9c71f42c180560a843e7fddaa2b3885991a69dd928acf1048ce1e4d1e11f8c9d",
+        "condition.json": "f3caf43e29e9f60cca00300d54ff7155fc64285905acebc3b10f56d60001ab36"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_unrelated_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "3d8ef0a3bfe605ed8f1a3f9fe572febeea42727557029a6c5e2e28a2078f8290",
+        "condition.json": "c26c8af7ab68ede47f81e4d3c3268f3dd0cff90e0cae046fbc14c7cb9ec5048f"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_unrelated_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "13e725cd7c8c4e017b006c0841e2e510cd9861c7cf0c089c50d828ff05a63131",
+        "condition.json": "2c4cf124a02b58a1ebfc5952bded5e13fe957111e7de89f9961f2a892269569a"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_connected_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_connected_unrelated_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "85469fedfc1a78844147d8582f80beac40cad10bb7d19cf25984eb5c39703ae3",
+        "queries.npy": "f01abcfe23e517ad2f1d3714069611e1d16a0634245ee3af3f286f93912c24fa",
+        "condition.json": "3b546c53d33403c035391b9f672e0edec40c393ff82a94e89b45e17fe01cca83"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "6394bee121c02e2e12f97f8a1982361fecae91e33c3a34fb13fdb72163d00e6b",
+        "condition.json": "92c32567b5a722633a00981a70c54a134860892658b07fa4873ee0be8cf0377a"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "c643ca0fa4f80734f6a88428270c466b025172a1fcf5f955a117a3a715acffc8",
+        "condition.json": "946ebca8d1bcbcc0f7dfd56268e2a52a790791003e2816f917fc821a7c409f4a"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "83a954140055086cd70c1dbc1a1827285ab760f7c70d8f18145077af9a88fd7a",
+        "condition.json": "a8d7b4e8d4141d26f37b544374ae7e823b8813cd90f36b140972e315e27c3eef"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_unrelated_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "fe842fc74f13d2fb2c588489baa2ec45ef3c9b1a4d3fc1cd332d95b688dc39a3",
+        "condition.json": "d427cfd127b688988e55fa1b8b6eff366da4e112d705a448e728959844859e1e"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_unrelated_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "1eeb32cec896251dc3c166d4f88b0fe814f9d40608542a87cdefaab25e05c4f9",
+        "condition.json": "4010e39b03a11d98444bc8ec1bdab627c301bc0702135ebc2d0ad424839f60b1"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_disjoint_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_disjoint_unrelated_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "972794e15013c8a31016929778160a1913feae10b844810294e4ef2ea3ac7f68",
+        "queries.npy": "41444cfb595d8b33b42dd104192186c47076ac03e058f4c74463b7b0e10fba12",
+        "condition.json": "424996ef976e74834b11ee4c5d9692a6324f2d43972e13732c1d66d80dc409b7"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_nearby_nonproportional_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_nearby_nonproportional_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "f2d525122369c9949b443e860d8f623ff38c7d254ca148c0e48c5008aa8f3aa3",
+        "condition.json": "f8980a86151682b877aec9a6e163065cc05be47ae9986b9d0d7d45ac8a0ea29a"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_nearby_nonproportional_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_nearby_nonproportional_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "4fb273908f7c2e036b9b765302de52c9ab6ef3793b324e820e953fc26c37be7d",
+        "condition.json": "b34145e26c4bc5f9a0702415628725f7987db4c9ef5ce26c1df5de2791e18bed"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_nearby_nonproportional_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_nearby_nonproportional_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "3c4b975cf0b19a8d476b876a49d1e8151cb42d52979565e29001668741e3f883",
+        "condition.json": "6b9449a1516318a13cf252d63a791a3f7525c81183c20aeb9f3b1dc5173984f4"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_unrelated_r0",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_unrelated_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "22a8043a07a02327bc9c8690dcdf21c681c047c05c4067ff6e6ff0aaf7598878",
+        "condition.json": "c3eb2101e1b552327160ec2c42710f9e47f3e4e5e34a82ac1f6aa1a0e1ca1457"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_unrelated_r1",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_unrelated_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "6bcef5feeb37517c701c966a107cc496770addfd570e1822d159cab2b56674f8",
+        "condition.json": "bf731be541fc8cbda7159ae5dffcee0ba48d1fb21501916b002c5897792e8925"
+      }
+    },
+    {
+      "id": "threshold_engine/d64_mixed_unrelated_r2",
+      "group": "threshold_engine",
+      "directory": "runs/icde2027/threshold_workload_v2/engine/d64_mixed_unrelated_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "f15614053b885fbc84f86fe0a3fe747aa3841c8837f4f6556907c6ce84068a76",
+        "queries.npy": "d7fff7e7dabab4843a38ed3d68a1b42efae0a00bc6a7ab9d88acb3ce7f27ca74",
+        "condition.json": "778a8f3c04753bad1310d9a9dd575997e67f29aea94c9b85976cb1a3216af500"
+      }
+    },
+    {
+      "id": "source_derived/skew_r0",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/skew_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "9ef25a78089e3bf44afd26e440872d853cdf74bc86490163184c1fc829fae04f",
+        "queries.npy": "7e957322e78fc5778dd71237c672c101c2c67e6b6dcb0de069bf9fc5a35b1856",
+        "condition.json": "32efced8eecebdb5085b24e8584b09cfb0521a421695dbf62ee18ae2d8a9528e"
+      }
+    },
+    {
+      "id": "source_derived/skew_r1",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/skew_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "553be2d9e875598f705160be2c355409217b8f2291995627f8ff34fea587b802",
+        "queries.npy": "8b1663b152890bcd3d1d3247fe3cba6d37b5a989685cee040eb6dd391379ed68",
+        "condition.json": "8c8be7a3e39235628eae98246f93b8c4149ba391cf4ef9215b458bbe7fec74c1"
+      }
+    },
+    {
+      "id": "source_derived/skew_r2",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/skew_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "a5af30be76b3886a0f34359a01a3dcac3c55c37b5edba8ea317d4fe0e6cd9b40",
+        "queries.npy": "db85dacb77c1f52fd0915a84dea97b6a5dd6bc7c9ec4816a95a84bb9de8b8049",
+        "condition.json": "79b3e8ad09c94c6a30f9b7d608372941d85348a2334a4014a2e71bdfbda2763b"
+      }
+    },
+    {
+      "id": "source_derived/uniform_r0",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/uniform_r0",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "6423af3b51024767cfcfeb1bbcd00641f566d5b931d2feb9b4f9b38984b9aadd",
+        "queries.npy": "66fb0c38f92a129681e65cb4bb4a619f1f65d0be470e4a6fecd8cac17b44dfa9",
+        "condition.json": "86fb932d979d833554f021b38d318dc9d768476e05995e11a5b3b901ff34e913"
+      }
+    },
+    {
+      "id": "source_derived/uniform_r1",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/uniform_r1",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "a24ce94803052b8b8cfdb5814fe00de6cd6b597aab60ad4f221ca5614d0ba520",
+        "queries.npy": "4ddd5cb3a0098bfb4f0b0b3fe9519fec036efa90e2160d57a2afb3613bba563e",
+        "condition.json": "1ca0d0214dc84e7b4aa8e4d39576f4398c6deb36586caefeadaeee9b19c340d7"
+      }
+    },
+    {
+      "id": "source_derived/uniform_r2",
+      "group": "source_derived",
+      "directory": "runs/icde2027/threshold_workload_v2/end_to_end/uniform_r2",
+      "query_shape": [
+        100,
+        64
+      ],
+      "threshold": 0.001,
+      "sha256": {
+        "view.json": "183c74860a48cfef0143a2ff3bab28bdd5e71e0a114fbf2e8a2db9ad04ed78b8",
+        "queries.npy": "f4effb2e610791b4086eb56b97a4e27251fd2dc0462c3e84cb606ecb9113cae4",
+        "condition.json": "5b646c5e6bc91f18a2c9352b836eae142321dce29dc08cfeb9d4b184e7bdbe57"
+      }
+    }
+  ]
+}

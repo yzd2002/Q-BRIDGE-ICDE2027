@@ -1,0 +1,308 @@
+{
+  "schema": "qbridge-repository-code-license-scope-v1",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Q-BRIDGE authors",
+  "scope": "Only the Q-BRIDGE-owned Python and shell files listed below in this source repository. The complete archive has a separate historical-source inventory.",
+  "excluded": [
+    "data and data-derived records",
+    "third-party material including IEEEtran",
+    "paper text, tables, figures and manuscript files"
+  ],
+  "files": [
+    {
+      "path": "icde2027/__init__.py",
+      "sha256": "c9a5d230910a8668a311d1f707c1e73231bfedc995715be445dd322af1d1a879",
+      "bytes": 71
+    },
+    {
+      "path": "icde2027/aggregate.py",
+      "sha256": "6c7e312e2d3d76432f682f950a2dd332d478775102364058996b722b9b5394e7",
+      "bytes": 21469
+    },
+    {
+      "path": "icde2027/checking_schedule_v4.py",
+      "sha256": "b500849ffddc8fd98f09056159a76df59d50369c412eae6ed09358af2bf81899",
+      "bytes": 44223
+    },
+    {
+      "path": "icde2027/coat_case.py",
+      "sha256": "65f2281ba4fb616dbd3159f8884d3a2d270ca8b76fbc5b1ce7e4f38f6bd18ed9",
+      "bytes": 10771
+    },
+    {
+      "path": "icde2027/coat_full_block.py",
+      "sha256": "083635b064230f5e5b6c521bccdb125fca4587fa7777df97d84dcf414ee3d916",
+      "bytes": 33433
+    },
+    {
+      "path": "icde2027/coat_policy_workflow_v5.py",
+      "sha256": "053ddab9900bed43afe485b8b997ee08d9b0da2fe1c5b21c591149045e6cc2b8",
+      "bytes": 13998
+    },
+    {
+      "path": "icde2027/coat_representation_v5.py",
+      "sha256": "f7bf6a34b72f93d6ce67930bac1b95318e6f39429233e3927103a0d412cb93f3",
+      "bytes": 11351
+    },
+    {
+      "path": "icde2027/confidence_view.py",
+      "sha256": "f1fbaba482286b8a139160d6fe27bcf6f565279cd5a229acce35fbf07087ce35",
+      "bytes": 18070
+    },
+    {
+      "path": "icde2027/conftest.py",
+      "sha256": "fac26c978518c24905f4f9445aebafb3d8bf198602a4b9fc8e27a0a07186cc98",
+      "bytes": 1157
+    },
+    {
+      "path": "icde2027/experiment.py",
+      "sha256": "7ba6a85100b277b12d98fb0889010617cef7672239493c62d8456713ada9009f",
+      "bytes": 9896
+    },
+    {
+      "path": "icde2027/fresh_worlds.py",
+      "sha256": "641642f12143d498c244cf52eaca40af6e8b23972ca16ce02bbc871d021e562e",
+      "bytes": 16703
+    },
+    {
+      "path": "icde2027/highs_reopt.py",
+      "sha256": "d64809ceb1a4de406684fb765f4be9baa5d5cde994e0c52deeccf236a3b0f7cf",
+      "bytes": 4489
+    },
+    {
+      "path": "icde2027/make_checking_schedule_assets_v4.py",
+      "sha256": "d2e79892b6944658b3666ab623649505425e9e2c1c8cc772b7a9910c4cb6d6cc",
+      "bytes": 24418
+    },
+    {
+      "path": "icde2027/make_coat_assets_v5.py",
+      "sha256": "0050773e13b56632e29baffa0f2899f8891d04eb91148b1435a103d1ddc2b3cf",
+      "bytes": 7690
+    },
+    {
+      "path": "icde2027/make_coat_block_assets.py",
+      "sha256": "4ec049199286455b2ae7953f5f7278eb52f3d1f17d328ed33442dd77958af448",
+      "bytes": 10829
+    },
+    {
+      "path": "icde2027/make_coat_workflow_assets_v5.py",
+      "sha256": "1b7c9456107800c49bf63d97c49d9ef37d3a0d35103318fe637a0f2c25f5e3df",
+      "bytes": 13666
+    },
+    {
+      "path": "icde2027/make_execution_context_v5.py",
+      "sha256": "cbbe376d10a9ede4fff503a350bbb55d8a90d99c7179d8712a721a1e7723273e",
+      "bytes": 5376
+    },
+    {
+      "path": "icde2027/make_mechanism_assets_v3.py",
+      "sha256": "39693f9256a6cc103acf0e7b04ea3fbf59c11557448864641b061007d337dfae",
+      "bytes": 10990
+    },
+    {
+      "path": "icde2027/make_primary_aligned_assets_v3.py",
+      "sha256": "ea9e7ecd71aef013f37f5a770088d99ba55076bab7acf5667ed5cfd82825c110",
+      "bytes": 12780
+    },
+    {
+      "path": "icde2027/make_query_assets.py",
+      "sha256": "d6437d00488b08b9c41476149e8ac02885ee3df75384fa09ca98bcc67bb03b81",
+      "bytes": 38743
+    },
+    {
+      "path": "icde2027/make_repair_summary_assets_v4.py",
+      "sha256": "f00e5e32bd0f4e04eb31dd52279d93627e7c7136ada826eca9bf9ba4bb4c273a",
+      "bytes": 10583
+    },
+    {
+      "path": "icde2027/make_repaired_information_assets_v4.py",
+      "sha256": "be479a4e3199ecf6860ab18660443ad77e8bfc028919e10463188aec02c2c9e1",
+      "bytes": 19245
+    },
+    {
+      "path": "icde2027/make_revision2_assets.py",
+      "sha256": "d8b97c815255b9c9c9e91c551bdcf2f3083a777cad141d77b0c2423d6d48c9b8",
+      "bytes": 10726
+    },
+    {
+      "path": "icde2027/make_revision3_assets.py",
+      "sha256": "8fd1531e077d4d8c74ddf99e5d52e395b05911d6e4bc63b77a723f3fc9ab187d",
+      "bytes": 4765
+    },
+    {
+      "path": "icde2027/make_sensitivity_assets_v4.py",
+      "sha256": "e7c7e3a9608e20fb6de1ad26577f754afacc18dcf3925fe9c1a501bce0c12e3d",
+      "bytes": 10670
+    },
+    {
+      "path": "icde2027/make_threshold_assets.py",
+      "sha256": "af75ac03e4601b41eab6ab19cd319c659727c038c13c56b78042339f819c4e7c",
+      "bytes": 17911
+    },
+    {
+      "path": "icde2027/optimized_exact_v5.py",
+      "sha256": "c79c60568ec17c0ddcbb008379ab3f46c366dc00e6fac42190993574a9272158",
+      "bytes": 24699
+    },
+    {
+      "path": "icde2027/primary_aligned.py",
+      "sha256": "d691f6cf9a85ba6632c915a145800ebf466dea37ad070609998dfe3a85cafe02",
+      "bytes": 21306
+    },
+    {
+      "path": "icde2027/proof_check.py",
+      "sha256": "54865b700e301c6229ccadaf14316f40930ba9210abf2456ea08311d0038a94c",
+      "bytes": 11055
+    },
+    {
+      "path": "icde2027/query_workload.py",
+      "sha256": "e11a6ae0d8b3be2f6c50b491f063720bebf541fd7ec91e39b2ea8b2e66c411f6",
+      "bytes": 21224
+    },
+    {
+      "path": "icde2027/represented_intervals_v4.py",
+      "sha256": "80ddd31a8b95b38308688722174bc8b5820d97c378e562b5f155ae3ff866db43",
+      "bytes": 21189
+    },
+    {
+      "path": "icde2027/research_io.py",
+      "sha256": "e881af7921d99568de660204e734a3d9d0df6b2e491acf9e4a717945240290b9",
+      "bytes": 2352
+    },
+    {
+      "path": "icde2027/review_diagnostic.py",
+      "sha256": "692b50e5f7523f3c7b00ddde780325b0bdd59ccdb6cd828dcb847b7100d14917",
+      "bytes": 6837
+    },
+    {
+      "path": "icde2027/source_intervals.py",
+      "sha256": "8d1abb62a7481c6eaa985da1979f2ced5d0a0ef09ca31c2d0e50361849658a7d",
+      "bytes": 4641
+    },
+    {
+      "path": "icde2027/summarize_fresh.py",
+      "sha256": "282964b3964f8100c5f2d4a72ffc4fcf11672f7a855c16b0aaf9460af7e97646",
+      "bytes": 8502
+    },
+    {
+      "path": "icde2027/summarize_query_workload.py",
+      "sha256": "52cd21a73f4ebdbf7dcf2af05f65a5e96209b67faf98c0933babfceb6f470597",
+      "bytes": 11533
+    },
+    {
+      "path": "icde2027/test_aggregate.py",
+      "sha256": "a7dbbc31f95179c6f915bff8bfd6deebbe1891512fd03e7d80d3a04bcf5441d5",
+      "bytes": 7530
+    },
+    {
+      "path": "icde2027/test_checking_schedule_v4.py",
+      "sha256": "62593459704b7621c80f0b94b8d40545480e023954bbf0cc40a47552ac09f927",
+      "bytes": 26882
+    },
+    {
+      "path": "icde2027/test_coat_case.py",
+      "sha256": "fce317d202d33eaf3632b5126077692d8675b616ba5cd7b25bdd82c5a5fb875c",
+      "bytes": 1626
+    },
+    {
+      "path": "icde2027/test_coat_full_block.py",
+      "sha256": "8e51119960cc3ababe0f6aa07d35156b256c94ac76e710c3bfdaf196c0d6c250",
+      "bytes": 25532
+    },
+    {
+      "path": "icde2027/test_coat_policy_workflow_v5.py",
+      "sha256": "e42a872f10473c2c3dd9bde07f36a08d568f18f4240dc58a31b06b078abb346c",
+      "bytes": 7126
+    },
+    {
+      "path": "icde2027/test_coat_representation_v5.py",
+      "sha256": "3113d5aa139d6cd91825e4c228daf96a4fff5080b7ed7039c540aa07815d31ce",
+      "bytes": 6336
+    },
+    {
+      "path": "icde2027/test_confidence_view.py",
+      "sha256": "7e50b3fe41ab9044ab75599598441e9d77a36cb70cdc98b69b0787a4f4995090",
+      "bytes": 9399
+    },
+    {
+      "path": "icde2027/test_fresh_worlds.py",
+      "sha256": "ad9fea4747ba62e6c8e0b3b758206ba29568e01ca5eed3c51842fd41e0d32920",
+      "bytes": 3325
+    },
+    {
+      "path": "icde2027/test_highs_reopt.py",
+      "sha256": "ae854ce21ec84e67e655f69941dc02e4f1452382dbffef3d820bfb790a6694f4",
+      "bytes": 1271
+    },
+    {
+      "path": "icde2027/test_optimized_exact_v5.py",
+      "sha256": "0ac1b1e2c5d6a9a2d7651de32c0ca4c59cbbda766e87a1334288f71d382a88c2",
+      "bytes": 22951
+    },
+    {
+      "path": "icde2027/test_prepared_dual.py",
+      "sha256": "0f8fb15a1f55c5e4c5344b19a6fd7e2cb2f03e1f353473c0d459f053251951b0",
+      "bytes": 4404
+    },
+    {
+      "path": "icde2027/test_primary_aligned.py",
+      "sha256": "be9ea59224604e7c33b628bcfdd23a229f1fedd9979613653c0328dcaaf51109",
+      "bytes": 8662
+    },
+    {
+      "path": "icde2027/test_query_workload.py",
+      "sha256": "d34ebc6fd7f074ac29ed6e9ecfe433032b2f45d1d2512a1e1426278bd95d87f2",
+      "bytes": 2688
+    },
+    {
+      "path": "icde2027/test_represented_intervals_v4.py",
+      "sha256": "cc2b39a5c6b342b43d7fbde4063cdf57c9603e08669cbe753edf7c56e34b72cc",
+      "bytes": 14502
+    },
+    {
+      "path": "icde2027/test_source_intervals.py",
+      "sha256": "69e83a87837cc8286fd49d5cb87aecffed4520f66f568717b084dd42b7460a9f",
+      "bytes": 2781
+    },
+    {
+      "path": "icde2027/threshold_extension/__init__.py",
+      "sha256": "d84e0357ca585b28525a5866c8fdf0207fb7e8628e874197811584e9b9077ed3",
+      "bytes": 214
+    },
+    {
+      "path": "icde2027/threshold_extension/engine.py",
+      "sha256": "d5cd1ad0516b5423929ab1acef0c5c6670765a1c15ab933d2b2f094288486f17",
+      "bytes": 25330
+    },
+    {
+      "path": "icde2027/threshold_extension/proofs.py",
+      "sha256": "deb23098c6c9da06e200ede25f76fcf6c199e64585edbad858be1575fdb18322",
+      "bytes": 15932
+    },
+    {
+      "path": "icde2027/threshold_extension/summarize.py",
+      "sha256": "313c68c50894f6cb9d0b6a6080bda0ca50333f97169277ba0167780c5f80a0a4",
+      "bytes": 8977
+    },
+    {
+      "path": "icde2027/threshold_extension/test_threshold.py",
+      "sha256": "cb6db9e17384ca04f4bd34145134469677c4f11e31b78dff7229cceaa45d1809",
+      "bytes": 30894
+    },
+    {
+      "path": "icde2027/threshold_extension/workload.py",
+      "sha256": "f30078a8370b071edced6f0a6c186142c7fb20e32043b584c6f11ff068156e82",
+      "bytes": 20967
+    },
+    {
+      "path": "run.sh",
+      "sha256": "0582267da8f14c3792546641a16e53cea580cb363d99a630e9eeb4de2652321f",
+      "bytes": 641
+    },
+    {
+      "path": "tools/small_example.py",
+      "sha256": "4e40c563627d6389dc8d148b0c5e64df2fa82a6eb9c97ed00c3da97c71b552a9",
+      "bytes": 859
+    }
+  ]
+}
