@@ -1,13 +1,12 @@
 \paragraph{The cost of family preprocessing}
-This experiment keeps the catalogue unchanged: it tests whether a family
-witness speeds up its existing queries, not whether to adopt the newly found
-policy. A useful policy outside the catalogue and false answers inside it
-can therefore coexist. We repeat the 240 queries on two 16-row jacket-type Fusion
+This experiment tests whether family evidence accelerates the unchanged
+catalogue. A useful policy outside it can coexist with false answers inside it.
+We repeat the 240 queries on two 16-row jacket-type Fusion
 views, $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known
 capacities. Hot-start (Hot), optimized threshold execution (Opt), and Opt with
-partition (Part) or exact-LP (LP) preprocessing share full objective caching, checked
-points, a constant shortcut and a rational receiver. Family certificates add
-only feasible points. The constant-action shortcut skips unnecessary family solves.
+partition (Part) or exact-LP (LP) preprocessing share objective caching, checked
+points and a rational receiver. Family certificates add only feasible points;
+a shared constant-action shortcut skips unnecessary family solves.
 Unresolved represented queries permit one producer attempt per objective--margin
 pair and one complete exact fallback per objective; ideal answers reuse this
 evidence without extra solves.
@@ -26,7 +25,7 @@ All 32 streams complete, each with 240 false answers under both semantics.
 On the nonzero-capacity view, Part adds 5.1--7.7\% to Opt's full cost without
 reducing its two native and two exact calls (Table~\ref{tab:coat-workflow});
 LP likewise saves no calls. The zero-capacity control skips family computation.
-Three rotations describe machine variation, with execution positions not fully
+Three rotations describe machine variation; execution positions are not fully
 balanced. Different optimal points compare complete preprocessing choices.
-The family answer enables redesign beyond this catalogue, without amortizing
-preprocessing cost here.
+Family answers enable redesign beyond the catalogue but do not amortize
+preprocessing here.

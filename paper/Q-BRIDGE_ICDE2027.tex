@@ -24,23 +24,23 @@ policy evaluation, causal data integration, materialized views, sensitivity anal
 \section{Introduction}
 On a fixed production-log snapshot and a smaller randomized experiment, a recommendation analyst asks whether a candidate policy improves over a reference, whether to search further, or whether the evidence excludes the requested guarantee. Unrecorded preferences confound production exposure; experimental information may transfer only for action-group averages.
 
-A policy assigns probabilities to actions. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} stores a \emph{confidence view}: outcome means consistent with the data and fixed confounding and transfer assumptions. A fixed-policy query tests improvement in every allowed case; a family query asks whether any policy can pass. Reusing checked evidence reduces computation without changing this guarantee.
+A policy assigns action probabilities. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} stores a \emph{confidence view}: outcome means allowed by the data and fixed confounding and transfer assumptions. A fixed-policy query tests improvement throughout this view; a family query asks whether any policy can pass. Checked evidence can be reused without changing the guarantee.
 
 \textbf{A running example.} Figure~\ref{fig:example} has one context, four actions and margin $\delta=.001=0.1$\,pp; $m_A$ is success probability under A. The reference is uniform. Q1 uses policy $(.15,.15,.35,.35)$, hence contrast $c=(-.1,-.1,.1,.1)$. Observational information gives the displayed intervals; randomized information transfers only $(m_A+m_C)/2=.65$ and $(m_B+m_D)/2=.70$. Substitution yields
 \[\Delta_1=.27-.2(m_A+m_B)\ge .01.\]
 The vector $(.6,.7,.7,.7)$ attains this one-percentage-point worst-case gain in decimal arithmetic. Interval-only and group-only bounds are $-.075$ and $-.13$; neither certifies improvement. These are constructed teaching inputs, not measured effects.
 
 \begin{figure*}[t]
-\centering\includegraphics[width=\textwidth]{figures/worked_query_family_v6.pdf}
-\caption{One view, two query types. Q1 solves, Q2 reuses evidence, and Q3 solves after reuse fails. Contrasts move action probability; bounds are success-rate gains in percentage points (pp). Panel (c) matches policy lower and family upper bounds. Teaching values are rounded; exported certificates retain exact represented inputs.}
+\centering\includegraphics[width=\textwidth]{figures/qbridge_overview.pdf}
+\caption{One view, two query modes. (a) Intervals and group means jointly constrain four unknown success probabilities. (b) Q2 reuses evidence; Q3 needs a new solve. (c) Matching policy-lower and family-upper bounds certify the optimal robust guarantee, not the actual effect. All certificates are independently checked against original constraints. Teaching values are rounded; exported proofs retain exact represented inputs.}
 \label{fig:example}
 \end{figure*}
 
-For Q2 (Fig.~\ref{fig:example}), a saved certificate proves at least $0.6375$\,pp gain, already above the $0.1$\,pp requested margin; computing the best bound, $1.05$\,pp, is unnecessary. For Q3, reuse gives $-2.25$\,pp and is inconclusive; solving instead proves $0.5$\,pp. A certificate is numerical evidence that a separate checker validates. Failed reuse triggers computation, not a negative policy conclusion (Section~\ref{sec:execution}).
+Q2 uses contrast $(-.105,-.09,.105,.09)$. A reused certificate proves $0.6375$\,pp, exceeding the $0.1$\,pp margin; computing the optimal bound, $1.05$\,pp, is unnecessary. Q3 uses $(-.05,-.15,.15,.05)$. Its reused bound of $-2.25$\,pp is inconclusive, but solving proves $0.5$\,pp. A certificate is numerical evidence validated by an independent checker. Failed reuse triggers a solve, not policy rejection (Section~\ref{sec:execution}).
 
-The family query asks whether \emph{any} policy can do better. The group sums fix the reference payoff at $.675$, and $m_A\le.6$ forces $m_C\ge.7$. Choosing C therefore guarantees $.025=2.5$\,pp. Conversely, the feasible vector $(.6,.7,.7,.7)$ gives no policy more than $.7-.675$. These matching bounds establish optimality of the robust guarantee, not the actual effect. Section~\ref{sec:partition-capacity} constructs them.
+For the family query, the group sums fix reference payoff at $.675$, and $m_A\le.6$ forces $m_C\ge.7$. Choosing C guarantees $.025=2.5$\,pp. Conversely, the feasible vector $(.6,.7,.7,.7)$ gives no policy more than $.7-.675$. Matching bounds establish the optimal robust guarantee, not the actual effect (Section~\ref{sec:partition-capacity}).
 
-The workflow is therefore: build one view, check proposed policies, and search or exclude the full family when needed. Our contributions connect these tasks; the sensitivity bounds, simultaneous inference, minimax and dual-reuse principles are established~\cite{dorn2025dvds,ishikawa2026convex,Berk2013PoSI,Bertsimas2018DataRobust,Neumaier2004SafeBounds,Marcucci2021WarmStart}.
+The workflow builds one view, checks proposed policies, and searches or excludes the full family when needed. Our contributions connect these tasks using established sensitivity bounds, simultaneous inference, minimax and dual reuse~\cite{dorn2025dvds,ishikawa2026convex,Berk2013PoSI,Bertsimas2018DataRobust,Neumaier2004SafeBounds,Marcucci2021WarmStart}.
 
 \textbf{A source-to-proof interface (Sections II--III).} Source assumptions and confidence intervals map into exactly checked constraints. One coverage event---all target means lying in the view---supports new policies and margins. Changing the target, snapshot or assumptions requires a new view.
 
@@ -344,21 +344,20 @@ The broader audit includes 6,000 inference views: 60 worlds, five repetitions, t
 \input{coat_workflow_results_v8}
 
 \section{Related Work and Scope}\label{sec:related}
-Our view combines binary density-ratio and conditional-moment bounds~\cite{dorn2025dvds,ishikawa2026convex}, without latent-model sharpness. Related integration exploits overlap~\cite{jiang2024overlap}, fits responses under experimental moments~\cite{du2026feasible}, or estimates sensitivity frontiers~\cite{lanners2025fusion}. Robust policy learning~\cite{Kallus2018ConfoundingRobust,Hess2026SharpPolicy} uses propensity-odds restrictions, unlike our outcome-conditional weights. Our increment is a direct partition construction and original-constraint certificate recovery within a common query interface.
+Our view combines binary density-ratio and conditional-moment bounds~\cite{dorn2025dvds,ishikawa2026convex}, without latent-model sharpness. Other fusion methods exploit overlap~\cite{jiang2024overlap}, impose experimental moments~\cite{du2026feasible}, or estimate sensitivity frontiers~\cite{lanners2025fusion}. Propensity-odds policy learning~\cite{Kallus2018ConfoundingRobust,Hess2026SharpPolicy} makes different restrictions from our outcome-conditional weights. We add direct partition construction and original-constraint certificate recovery in one query interface.
 \input{family_comparison_v8}
 
-\textbf{Database queries.} HypDB adjusts aggregates~\cite{salimi2018hypdb}, ZaliQL implements matching~\cite{salimi2017zaliql}, CaRL defines causal units~\cite{salimi2020carl}, and CauSumX explains causal patterns~\cite{youngmann2024causumx}. Uncertainty annotations propagate bounds~\cite{Feng2019UADB}; semantic views certify predicates from fresh draws~\cite{Hassanzadeh2026SemanticViews}. Our materialized source-constrained means support new objectives under one coverage event and whole-family stopping certificates.
+\textbf{Database queries.} Causal systems adjust aggregates~\cite{salimi2018hypdb}, implement matching~\cite{salimi2017zaliql}, define units~\cite{salimi2020carl} and explain patterns~\cite{youngmann2024causumx}. Other approaches propagate uncertainty bounds~\cite{Feng2019UADB} or certify semantic-view predicates from fresh draws~\cite{Hassanzadeh2026SemanticViews}. Our source-constrained view supports adaptive objectives under one coverage event and whole-family stopping certificates.
 
-\textbf{Proofs and limits.} Filtering~\cite{Bartels2023Filters}, assignment caching~\cite{Cadar2008KLEE}, safe bounds and reuse are established; VIPR checks exact optimization derivations~\cite{Cheung2017VIPR}. Unlike IntegriDB~\cite{Zhang2015IntegriDB}, our digests authenticate neither data nor freshness. Binary outcomes, known target weights and trusted source/interval routines limit scope. Continuous covariates, estimated weights and dependent interactions need additional methods. Fine partitions can be uninformative; distant objectives favor reoptimization.
+\textbf{Proofs and limits.} Filtering~\cite{Bartels2023Filters}, assignment caching~\cite{Cadar2008KLEE}, safe bounds and reuse are established; VIPR checks exact optimization derivations~\cite{Cheung2017VIPR}. Unlike IntegriDB~\cite{Zhang2015IntegriDB}, our digests authenticate neither data nor freshness. Scope is limited to binary outcomes, known target weights and trusted source/interval routines; continuous covariates, estimated weights and dependent interactions need extensions. Fine partitions can be uninformative; distant objectives favor reoptimization.
 
-\textbf{Data ethics.} This secondary analysis uses public benchmarks under their release terms, without new recruitment or participant interaction. It underwent no institutional ethics review and sought no additional consent.
+\textbf{Data ethics.} We reanalyze public benchmarks under their release terms, without recruiting or contacting participants. No institutional ethics review was undertaken or additional consent sought.
 
 \section{Conclusion}
-An analyst fixes a view, checks a constant-action stopping witness, then
-evaluates candidates or obtains a family certificate for redesign or exclusion.
-The partition construction certifies this decision against original constraints.
-Experiments support broader policy choice and exact-term retention in tested
-settings, with limits to fusion gains, screening and preprocessing.
+One fixed view supports candidate evaluation and family-level redesign or
+exclusion. For disjoint groups, original-constraint certificates establish
+optimality. Experiments support broader policy choice and exact-term retention,
+with limits to fusion, screening and preprocessing in the tested settings.
 
 \clearpage
 \section*{Acknowledgments and AI Usage Declaration}

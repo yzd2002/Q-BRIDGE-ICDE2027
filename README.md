@@ -10,6 +10,10 @@ reusing checked evidence reduces query cost. Its Coat example provides an exact
 policy and matching lower and upper certificates; the original catalogue
 workload also records the cases where preprocessing does not pay.
 
+![One confidence view and two query modes](figure_assets/qbridge_overview.png)
+
+The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [Vector figure, editable SVG and reproducible drawing inputs](figure_assets/README.md) are included.
+
 **Material availability:** the v5.2 release is the published historical artifact.
 The complete expanded archive for the current manuscript, including the later
 family, execution and Coat workflow studies, is prepared locally but is not yet
