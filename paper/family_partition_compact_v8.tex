@@ -1,8 +1,7 @@
-% Revision 8 presentation: explicit theorem for the unchanged reviewed construction.
-% Mathematical domain, formulas and boundary rules are unchanged from build12.
+% Readability revision: the reviewed construction and domain are preserved.
+% Local allocation residual r is renamed xi to distinguish the reuse term.
 \subsection{Certifying a whole policy family}\label{sec:family-capacity}
-Here $\C$ is the fixed materialized view; stars mark exact probability
-representations rather than a previously rounded contrast. The family $\Pi$
+We now optimize over policies. Here $\C$ is the fixed view; $w^*,\pi_0^*$ mark exact input probabilities, while $m^*,\pi^*$ will denote returned optimizers. The family $\Pi$
 contains all randomized policies on the available actions. Its \emph{capacity}
 is the largest worst-case improvement attainable by any policy.
 Fix a nonempty compact convex view $\C\subseteq[0,1]^{KL}$,
@@ -14,11 +13,10 @@ $\pi_0^*\in\Pi$. Define
  F(m)&=\sum_xw_x^*\left[\max_a m_{xa}
              -\sum_a\pi_{0,xa}^*m_{xa}\right].\label{eq:family-upper}
 \end{align}
-The reference belongs to $\Pi$, so $\mathcal R\ge0$. At one allowed mean vector,
-$F(m)$ is the gain of choosing its best action in each context.
+The inner minimum in~\eqref{eq:capacity} gives one policy's worst allowed case; the outer maximum chooses the best such policy. The reference makes $\mathcal R\ge0$. At one allowed $m$, $F(m)$ chooses the best action per context.
 Every checked $m\in\C$ gives $\mathcal R(\C)\le F(m)$: each policy's
 minimum is at most its payoff at this point, whose policy maximum is $F(m)$.
-Thus $F(m)\le\delta$ excludes every robust gain strictly above $\delta$.
+Thus $U(c)$ evaluates one policy, while $F(m)$ maximizes over policies at that point. The latter bounds the best robust guarantee; $F(m)\le\delta$ excludes all guarantees above $\delta$.
 The witness need not equal the true means; it does not bound actual effects.
 
 \begin{proposition}[Zero capacity in a fixed view]\label{prop:zero-capacity}
@@ -56,14 +54,7 @@ and otherwise the family remains unresolved. Equation~\eqref{eq:recovery-decompo
 separates certificate slack from restricted policy choice.
 
 \subsection{Exact capacity for partitioned moments}\label{sec:partition-capacity}
-Minimax turns policy search into minimizing $t-p^\top m$, with $m_i\le t$
-and reference probabilities $p=\pi_{0,x}^*$ in one context. For disjoint
-groups, clipping and repairing means permits the smallest feasible ceiling
-$t_0$ without increasing this gap. We maximize the reference payoff below
-$t_0$, then recover a policy attaining that upper bound. The exported proof
-uses the \emph{original} constraints, not the artificial ceiling.
-Minimax and continuous allocation are classical
-ingredients~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}.
+For one context, $F(m)$ is the largest action mean minus the reference payoff. Minimax therefore asks us to minimize $t-p^\top m$, with $m_i\le t$ and reference probabilities $p=\pi_{0,x}^*$. Our construction has two tasks: find the smallest family upper bound, then recover a policy attaining it. For disjoint groups, the first task reduces to capping means and allocating below that cap. The second recovers a proof using the \emph{original} constraints, so the auxiliary cap cannot silently narrow the guarantee. Minimax and continuous allocation are classical ingredients~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}.
 
 \begin{theorem}[An attaining policy with an original-view certificate]\label{thm:partition-certificate}
 Let $\C$ be a nonempty rational box-and-moment view with
@@ -82,10 +73,9 @@ rational-operation counts, excluding coefficient-dependent bit costs,
 encoding and hashing.
 \end{theorem}
 
-The certificate closes a sandwich:
+The certificate closes the gap between a policy we can achieve and a family bound no policy can exceed:
 $D(c^*;\eta)\le\min_{m\in\C}c^{*\top}m\le\mathcal R\le F(m^*)$.
-Equal checked endpoints prove optimality independently of how the producer
-found them. Check the domain before construction; reject unsupported rows.
+Equal checked endpoints prove optimality independently of how the producer found them. Check the domain before construction; reject unsupported rows.
 Zero rows require $a_j\le0\le b_j$ and receive zero multipliers.
 Ties use index order. The following three steps establish the theorem.
 
@@ -101,23 +91,10 @@ $a_j\le T_jm\le b_j$. Set
  h_i&=\min(u_i,t_0).
  \end{aligned}
 \]
-Here $j$ ranges over nonzero rows. Find lower-bound attainment along the
-rational upper-box breakpoints: each row sum is piecewise linear, and the
-largest required root, or $t_\ell$, determines the cap.
-Only lower moments force the ceiling upward. Nonemptiness gives
-$T_j\ell\le b_j$; each disjoint group can independently choose a mass in
-$[\max(a_j,T_j\ell),\min(b_j,T_jh)]$. Thus $\C\cap[\ell,h]$ is nonempty,
-although not every point of the box is feasible. Every point in this
-intersection has maximum $t_0$, by the cap's minimality.
+For nonzero rows, $g_j$ is piecewise linear between rational upper-box breakpoints. The largest required root, or $t_\ell$, determines $t_0$; only lower moments force it upward. Nonemptiness gives $T_j\ell\le b_j$. Disjoint groups independently choose mass in $[\max(a_j,T_j\ell),\min(b_j,T_jh)]$, so $\C\cap[\ell,h]$ is nonempty. Every point in this intersection has maximum $t_0$ by minimality; the entire box need not be feasible.
 
 \noindent\textit{Minimum-cap sufficiency.}
-For any feasible $m$ with $t=\max_i m_i$, clip to $v_i=\min(m_i,t_0)$.
-This preserves lower boxes and upper moments. Repair violated lower moments
-within $[v,h]$ up to $a_j\le b_j$; the cap definition permits each repair,
-and disjoint supports prevent interference. No repaired row exceeds its upper
-bound, and untouched rows remain feasible. The resulting $v'\ge v$ is
-feasible. Since $p$ is a probability vector,
-$p^\top(m-v)\le t-t_0$, giving
+For feasible $m$ with $t=\max_i m_i$, clipping to $v_i=\min(m_i,t_0)$ preserves lower boxes and upper moments. Restore violated lower moments within $[v,h]$ to $a_j\le b_j$. The cap permits these repairs; disjoint supports prevent interference, giving feasible $v'\ge v$. Since $p$ sums to one, $p^\top(m-v)\le t-t_0$, hence
 \[
  \max_i v_i'-p^\top v'
  \le t_0-p^\top v
@@ -126,42 +103,27 @@ $p^\top(m-v)\le t-t_0$, giving
 Thus maximizing $p^\top m$ within this cap minimizes the original gap.
 
 \textbf{Step 2: Allocate means within the cap.}
-This step maximizes $p^\top m$ under the cap and original moments.
-Increasing $m_i$ by $\epsilon$ consumes $T_{ji}\epsilon$ of group budget and
-gains $p_i\epsilon$ of reference payoff. Starting at $\ell$, fill each nonzero
-row by decreasing this benefit/cost ratio $p_i/T_{ji}$,
-only on $T_{ji}>0$, to total mass $\min(b_j,T_jh)$; uncovered coordinates
-take $h_i$. The additional mass is $\min(b_j,T_jh)-T_j\ell$.
-Nonnegative reference weights make this fill maximize the reference payoff
-within the cap, even when zero-ratio coordinates receive the remaining mass.
-Its total meets the original lower bound.
-For its nonnegative upper price $\lambda_j$, first use zero if
-$b_j\ge T_jh$, including equality. Otherwise use the largest support ratio
-when $b_j-T_j\ell=0$; for positive budget use the last ratio receiving
-strictly positive mass, including exact coordinate-boundary exhaustion.
-These rules include fixed coordinates and zero reference probabilities.
-Writing $r=p-T^\top\lambda$, the allocation satisfies
+With the largest mean fixed at $t_0$, maximizing reference payoff $p^\top m$ minimizes the family upper bound. These are mean values, not policy probabilities. Increasing $m_i$ by $\epsilon$ costs group mass $T_{ji}\epsilon$ and gains $p_i\epsilon$. Starting at $\ell$, fill each nonzero row in decreasing $p_i/T_{ji}$ order on $T_{ji}>0$, to total mass $\min(b_j,T_jh)$; uncovered coordinates take $h_i$. Thus the added mass is $\min(b_j,T_jh)-T_j\ell$. Nonnegative weights justify filling even zero-ratio coordinates, and the total meets the lower bound.
+
+The upper price $\lambda_j$ is zero when $b_j\ge T_jh$, including equality. Otherwise, use the largest support ratio if $b_j=T_j\ell$, or the last ratio receiving positive mass, including exact boundary exhaustion. This covers fixed coordinates and zero probabilities. The residual $\xi=p-T^\top\lambda$ is reference payoff after these group charges. Allocation satisfies
 \[
  \begin{aligned}
- r_i>0&\Rightarrow m_i^*=h_i,&
- r_i<0&\Rightarrow m_i^*=\ell_i,\\
+ \xi_i>0&\Rightarrow m_i^*=h_i,&
+ \xi_i<0&\Rightarrow m_i^*=\ell_i,\\
  \lambda_j(b_j-T_jm^*)&=0.
  \end{aligned}
 \]
 \textbf{Step 3: Recover the policy and original-row prices.}
+Steps 1--2 give a family upper bound, not yet a robust policy. B ties for best at $m^*=(.6,.7,.7,.7)$, yet the allowed vector $(.6,.6,.7,.8)$ gives pure B a $-.075$ gain. Step 3 must match the family bound with an original-constraint policy lower bound.
 We need a probability vector supported on maximizers of $m^*$ and prices
 making the original-box bound~\eqref{eq:dual} tight there. The initial policy
 cancels positive residuals at capped coordinates; a tight original constraint
 supplies missing probability mass. Initialize
 \[
- \widetilde\pi_i=(r_i)_+\mathbf1\{u_i\ge t_0\},\qquad
+ \widetilde\pi_i=(\xi_i)_+\mathbf1\{u_i\ge t_0\},\qquad
  D_\pi=1-\sum_i\widetilde\pi_i\ge0.
 \]
-Here $0\le\widetilde\pi_i\le p_i$, with positive mass only at maximum
-coordinates. The original-box coefficient $z_i^{\rm init}=\widetilde\pi_i-r_i$
-is positive only at $\ell_i$ and negative only at $u_i$:
-when $u_i<t_0$, $h_i=u_i$; otherwise initialized policy mass cancels
-positive reference residuals.
+Here $0\le\widetilde\pi_i\le p_i$, with positive mass only at maximum coordinates. The original-box coefficient $z_i^{\rm init}=\widetilde\pi_i-\xi_i$ is positive only at $\ell_i$ and negative only at $u_i$: below the cap $h_i=u_i$; elsewhere policy mass cancels positive residuals.
 
 If $t_0=t_\ell$, add $D_\pi$ to a coordinate with $\ell_i=t_0$ and set all
 lower prices $\eta$ to zero; its box coefficient increases at this lower endpoint.

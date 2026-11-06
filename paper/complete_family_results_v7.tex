@@ -1,9 +1,4 @@
 \subsection{What complete family optimization adds}
-Both methods agree on all 2,160 unique synthetic requests (5,760 memberships).
-These 4,320 responses, 7,762 fixed-policy optima, 220 Coat calls and 468 timing
-calls all pass independent verification: 12,770/12,770, without timeout or
-incomplete call (Fig.~\ref{fig:complete-family}).
-
 \textbf{Broader policy search changes the fixed-view answer.}
 The 107 previously unresolved primary finite Fusion cases split into 86
 above-threshold and 21 at-most-threshold family answers. Exact reoptimization
@@ -15,22 +10,25 @@ and 121 zero-capacity cases, the totals are 98 and 142 out of 240.
 Across all 86 recovered cases, the attainable gain has median $0.991$\,pp,
 interquartile range $[0.583,1.549]$\,pp and range $[0.105,3.632]$\,pp.
 For every one, the three-policy optimum after including the reference is zero.
-These are robust guarantees under the same view, not measured effects or evidence that adding a data source improves information.
+These are robust guarantees under the same view; the changed input is the policy set, not the information.
 
-\textbf{Equal answers do not imply uniform speed gains.}
+Both methods agree on all 2,160 unique synthetic requests (5,760 memberships).
+Their 4,320 responses, 7,762 fixed-policy optima, 220 Coat calls and 468 timing
+calls pass independent verification: 12,770/12,770, without timeout or
+incomplete call (Fig.~\ref{fig:complete-family}).
+
+\textbf{Exact answers with dimension-dependent cost.}
 All 234 timing pairs succeed. Across three rounds, the construction/SoPlex
 geometric-mean service ratios are $0.808$--$0.835$ at $d=8$,
 $1.066$--$1.129$ at $d=64$, and $1.170$--$1.196$ at $d=256$.
 The construction is slower in 5/78, 55/78 and 54/78 pairs, respectively.
-These compare checked service for a Python rational construction and compiled
-rational LP, without establishing asymptotic advantage. All pair costs,
-certificate sizes, memory observations and failure denominators are archived.
+These compare checked service for a Python rational construction and compiled rational LP. Pair costs, certificate sizes, memory observations and failure denominators are archived.
 Table~\ref{tab:family-absolute} reports absolute costs. At $d=256$, verification
 alone takes median 144.3/144.6\,ms (Part/LP), with about 149.5\,kB per certificate.
 These pooled medians describe evidence cost, not matched-call ratios.
 \input{absolute_family_cost_v8}
 
-\textbf{Better selection does not guarantee a better view.}
+\textbf{Separating policy choice from source information.}
 At the larger conservative budget, projected R passes 223/240 thresholds
 versus Fusion's 218/240; R has greater capacity in 128 pairs, Fusion in 100,
 with 12 ties. At the smaller oracle-boundary budget, OBS and Fusion both pass

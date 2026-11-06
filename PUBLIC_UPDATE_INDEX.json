@@ -1,6 +1,6 @@
 {
   "scope": "Current manuscript/source, reproducible overview drawing, scientific source updates and a small saved-proof case; not the complete expanded experiment archive.",
-  "paper_pdf_sha256": "55c3607884146992d1a1d37dd59f09cdd6344c12289325261ffdf258c561c5db",
+  "paper_pdf_sha256": "75460a64144f0153fed063e6cd86eba2347221a21d0a7bc94c0a6ae967d804fd",
   "files": [
     {
       "path": "CODE_LICENSE_SCOPE_UPDATE.json",
@@ -424,13 +424,13 @@
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.pdf",
-      "bytes": 423994,
-      "sha256": "55c3607884146992d1a1d37dd59f09cdd6344c12289325261ffdf258c561c5db"
+      "bytes": 424685,
+      "sha256": "75460a64144f0153fed063e6cd86eba2347221a21d0a7bc94c0a6ae967d804fd"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.tex",
-      "bytes": 34174,
-      "sha256": "6e36c509d86f59ccb8058304bd555c79568681ede8f285ce93bb6abd3c618ab4"
+      "bytes": 34133,
+      "sha256": "4934308d86fc7f591854f88c54ba92537edcc25713123c81218938807e36a398"
     },
     {
       "path": "paper/README.md",
@@ -454,8 +454,8 @@
     },
     {
       "path": "paper/coat_design_v7.tex",
-      "bytes": 2271,
-      "sha256": "d0aa5d2245c6cb4a70179f98f71ccd47c3bae589778c643634c9659878a7ee9e"
+      "bytes": 2303,
+      "sha256": "e1adf2714bd02c626b8afc79676723086d9c3f4ecf74dd455fde1b601c121aa2"
     },
     {
       "path": "paper/coat_direct_results_v5.tex",
@@ -494,13 +494,13 @@
     },
     {
       "path": "paper/complete_family_results_v7.tex",
-      "bytes": 2798,
-      "sha256": "5ac76016bbe41245217bcb4e12823118b05cafa59bc964a4ed1c4e5c43d85c21"
+      "bytes": 2720,
+      "sha256": "accac8b908e6e608a90028173b8b800723a48e7033e7f1e09dd75b75967a5c7f"
     },
     {
       "path": "paper/complete_solver_protocol_v7.tex",
-      "bytes": 2932,
-      "sha256": "565e23ec3fa88d655a9d38cfdaab2db391738ddf006445ad80249eca38fd16d6"
+      "bytes": 2957,
+      "sha256": "30665d3ba41daef9e23958c1fef2ed1878aec237a2a4dd04a2e2f44de8c61e84"
     },
     {
       "path": "paper/execution_protocol_v7.tex",
@@ -509,13 +509,13 @@
     },
     {
       "path": "paper/family_comparison_v8.tex",
-      "bytes": 542,
-      "sha256": "1ea7cf9d369fc918f70946d59e0ae18d8b123f25b2de0d23c51f1a7dafbdfd6c"
+      "bytes": 468,
+      "sha256": "f9e332b5e3f49919ed96b6c7fc9e5009b4813dcdd66ae64f8b47a4a851299838"
     },
     {
       "path": "paper/family_partition_compact_v8.tex",
-      "bytes": 10895,
-      "sha256": "93e3d72179cb1876c7648898752b6b6dd95273e7403fc92ecc40cdb6eb2db09e"
+      "bytes": 11182,
+      "sha256": "8412e9fa8430df5b77222f70727da1a05b002830e669c0fd409c8268d3a36cb3"
     },
     {
       "path": "paper/figures/optimized_v6_compact_factorial.pdf",

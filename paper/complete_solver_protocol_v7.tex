@@ -1,16 +1,16 @@
 % Protocol text only; numerical conclusions require the completed-run audit.
 \subsection{A complete exact solver and the source of recovery}
-SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner2020ExactLP} solves the epigraph LP on the identical $(\C,w,\pi_0)$:
+SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner2020ExactLP} solves the epigraph LP on identical $(\C,w,\pi_0)$, suppressing exact-input stars:
 \begin{equation}
  \min_{m\in\C,t}\ \sum_xw_x\bigl(t_x-\pi_{0,x}^{\top}m_x\bigr),
  \qquad m_{xa}\le t_x,\quad t_x\text{ free}.
  \label{eq:generic-family-lp}
 \end{equation}
-Its epigraph multipliers $\mu_{xa}\ge0$ sum to $w_x$ in each context. Set $\pi_{xa}=\mu_{xa}/w_x$ when $w_x>0$, and use the reference row when $w_x=0$. Original-row duals and a feasible point complete the same certificate as the partition construction. Exact import/export and independent checking are required; solver status is insufficient. Neither the construction's answer nor a saved point is supplied.
+Stationarity of free $t_x$ gives $\sum_a\mu_{xa}=w_x$ for its nonnegative epigraph multipliers. Thus $\pi_{xa}=\mu_{xa}/w_x$ is a policy when $w_x>0$; use the reference row when $w_x=0$. Original-row duals and a feasible point complete the partition method's certificate contract. Import/export and checking are exact; neither the construction's answer nor a saved point is supplied.
 
 Two lowest hashes per size cell select 78 unique requests (72 cells, 144 memberships) for three paired rounds in alternating order. Service runs from post-initialization transmission through checked certificates, including construction, verification, serialization and transport; startup, diagnostics and batch totals are separate. Fresh models/workers use one CPU, ten-second service and 8\,GiB address-space limits; all phase limits are archived. Failures retain costs and denominators; ratios require complete pairs. Rounds measure machine variation, not independent samples.
 
-Exact optima $L_i^*$ for each occurrence's three normalized contrasts distinguish certificate transfer from policy choice: 7,762 unique $(\C,c)$ requests and 17,280 policy slots. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$; zero is the reference policy. With the unchanged saved lower rule $L_{\rm saved}$,
+Exact optima $L_i^*$ for three normalized contrasts separate certificate transfer from policy choice: 7,762 unique $(\C,c)$ requests and 17,280 slots. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$, with zero from the reference. Here $L_{\rm saved}$ is the maximum of zero and saved lower bounds for these same three policies. Then
 \begin{equation}
  \mathcal R-L_{\rm saved}
  =\underbrace{L_3^+-L_{\rm saved}}_{\text{certificate-transfer gap}}
