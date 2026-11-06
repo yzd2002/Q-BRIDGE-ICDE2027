@@ -24,7 +24,7 @@ policy evaluation, causal data integration, materialized views, sensitivity anal
 \section{Introduction}
 On a fixed production-log snapshot and a smaller randomized experiment, a recommendation analyst asks whether a candidate policy improves over a reference, whether to search further, or whether the evidence excludes the requested guarantee. Unrecorded preferences confound production exposure; experimental information may transfer only for action-group averages.
 
-A policy assigns probabilities to actions. Q-BRIDGE stores a \emph{confidence view}: outcome means consistent with the data and fixed confounding and transfer assumptions. A fixed-policy query tests improvement in every allowed case; a family query asks whether any policy can pass. Reusing checked evidence reduces computation without changing this guarantee.
+A policy assigns probabilities to actions. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} stores a \emph{confidence view}: outcome means consistent with the data and fixed confounding and transfer assumptions. A fixed-policy query tests improvement in every allowed case; a family query asks whether any policy can pass. Reusing checked evidence reduces computation without changing this guarantee.
 
 \textbf{A running example.} Figure~\ref{fig:example} has one context, four actions and margin $\delta=.001=0.1$\,pp; $m_A$ is success probability under A. The reference is uniform. Q1 uses policy $(.15,.15,.35,.35)$, hence contrast $c=(-.1,-.1,.1,.1)$. Observational information gives the displayed intervals; randomized information transfers only $(m_A+m_C)/2=.65$ and $(m_B+m_D)/2=.70$. Substitution yields
 \[\Delta_1=.27-.2(m_A+m_B)\ge .01.\]
@@ -353,8 +353,6 @@ Our view combines binary density-ratio and conditional-moment bounds~\cite{dorn2
 
 \textbf{Data ethics.} This secondary analysis uses public benchmarks under their release terms, without new recruitment or participant interaction. It underwent no institutional ethics review and sought no additional consent.
 
-Code and material access: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.
-
 \section{Conclusion}
 An analyst fixes a view, checks a constant-action stopping witness, then
 evaluates candidates or obtains a family certificate for redesign or exclusion.
@@ -362,6 +360,7 @@ The partition construction certifies this decision against original constraints.
 Experiments support broader policy choice and exact-term retention in tested
 settings, with limits to fusion gains, screening and preprocessing.
 
+\clearpage
 \section*{Acknowledgments and AI Usage Declaration}
 OpenAI Codex assisted with drafting and mathematical exposition (Sections I--VIII), code and experiments (III--VI), figures, source retrieval and editing. Computational claims were checked against saved artifacts and citations against primary sources. The authors remain responsible for correctness, originality and the final submission.
 

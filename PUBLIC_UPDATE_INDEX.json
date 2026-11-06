@@ -1,6 +1,6 @@
 {
   "scope": "Current manuscript/source, scientific source updates and a small saved-proof case; not the complete expanded experiment archive.",
-  "paper_pdf_sha256": "759f7baee467cd868eb34e3e0ca0c179193776dfe8d4ca036e979b76d2bb7415",
+  "paper_pdf_sha256": "495fa932c2152c35665774ec9fd2f248dad4620d315bb49d935aef880355757f",
   "files": [
     {
       "path": "icde2027/coat_workflow_v8/__init__.py",
@@ -544,13 +544,13 @@
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.tex",
-      "bytes": 34354,
-      "sha256": "396b8d07e8d169b55f8c4bf419ed9e36021a2761f30d1c7b1994a6d258167e64"
+      "bytes": 34385,
+      "sha256": "79cb6927803c164fbc399bc6190f2a40597879875dcd80024595df7c431591a6"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.pdf",
-      "bytes": 418458,
-      "sha256": "759f7baee467cd868eb34e3e0ca0c179193776dfe8d4ca036e979b76d2bb7415"
+      "bytes": 418530,
+      "sha256": "495fa932c2152c35665774ec9fd2f248dad4620d315bb49d935aef880355757f"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.bbl",
