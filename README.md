@@ -1,110 +1,47 @@
 # Q-BRIDGE
 
-**Reusable Policy Certificates across Observational and Randomized Logs**
+Verifiable policy queries over joint confidence views.
 
-Q-BRIDGE studies repeated policy-threshold queries over a fixed, uncertainty-aware
-view built from observational and randomized logs. It separates producing a
-candidate answer from checking its arithmetic: the receiver checks a bound or
-feasible witness and returns **true**, **false**, or **unknown** for the represented
-linear program. These answers do not independently validate the scientific
-assumptions used to construct that program.
+[Manuscript](paper/Q-BRIDGE_ICDE2027.pdf) · [Exact Coat policy case](examples/coat_policy_case/README.md) · [Historical artifact v5.2](https://github.com/yzd2002/Q-BRIDGE-ICDE2027/releases/tag/artifact-v5.2)
 
-This repository contains submission materials prepared for ICDE 2027, by
-Zida Yang, Weiqing Zeng, Guquan You, Cong Wang, and Jiexin Zheng. It does not imply
-acceptance or an artifact-evaluation badge.
+The manuscript distinguishes three questions: what the available information
+certifies, whether a better policy exists outside a tested catalogue, and when
+reusing checked evidence reduces query cost. Its Coat example provides an exact
+policy and matching lower and upper certificates; the original catalogue
+workload also records the cases where preprocessing does not pay.
 
-## Start here
+**Material availability:** the v5.2 release is the published historical artifact.
+The complete expanded archive for the current manuscript, including the later
+family, execution and Coat workflow studies, is prepared locally but is not yet
+published as a downloadable release. The repository contains the current manuscript and source, updated scientific code, and a runnable Coat case checking seven saved certificates against six independent requests. See [the source update index](SCIENCE_UPDATE_MANIFEST.json). This subset does not replace the complete archive or reproduce all measured timings.
 
-| Task | Entry point |
-|---|---|
-| Inspect the implementation | [`icde2027/`](icde2027/) |
-| Check one saved certificate without installing scientific packages | The standard-library command below |
-| Run the tests and a five-query example | The Python 3.12 quick start below |
-| Obtain all data, results, configurations and historical source snapshots | [Complete artifact release](https://github.com/yzd2002/Q-BRIDGE-ICDE2027/releases/tag/artifact-v5.2) |
-| Verify the environment-check scope | [`CLEAN_ENVIRONMENT_VERIFICATION.md`](CLEAN_ENVIRONMENT_VERIFICATION.md) |
-| Understand code and data reuse terms | [`LICENSE`](LICENSE), [`CODE_LICENSE_SCOPE.json`](CODE_LICENSE_SCOPE.json), [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) |
+## Check one saved proof
 
-## A certificate check in seconds
-
-After cloning this repository, run from its root:
+With Git and Python 3.11+ installed:
 
 ```bash
+git clone https://github.com/yzd2002/Q-BRIDGE-ICDE2027.git
+cd Q-BRIDGE-ICDE2027
 python3 -B -S icde2027/proof_check.py \
   --view examples/view.json \
   --proof examples/proof.json \
   --query examples/query.json
 ```
 
-This uses Python's standard library only. It checks the saved teaching example's
-view, query, threshold and represented arithmetic. The example is constructed;
-it is not a new empirical result.
+This check uses only the Python standard library and the cloned files. It needs
+no full artifact download, optimizer or GPU. Success reports
+`valid_lp_lower_bound` and `requested_query_checked` as true. The four-action
+example is constructed: it checks a mathematical bound for the independently
+supplied request, not scientific assumptions or the empirical study.
 
-## Quick start
-
-The tested scientific environment is **Linux, Python 3.12.3, CPU only**.
-No GPU, account credential, commercial optimizer or complete legacy installation
-is needed. The exact dependency versions are in `requirements-lock.txt`.
+## Download the historical artifact
 
 ```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements-lock.txt
-.venv/bin/python -m pip check
-./run.sh -m pytest icde2027 -q -p no:cacheprovider
-./run.sh tools/small_example.py --out reruns/small_example
+python3 -B -S download_artifact.py \
+  --output ../qbridge-v5.2-download --extract
 ```
 
-The corresponding independent environment check passed **576 tests**. It used a
-new virtual environment on the same host, with all 17 locked versions installed
-from public PyPI. Its scope and the earlier missing-file failure are recorded in
-the verification files. This check did not rerun the paper's formal statistical
-or timing grids. Use a fresh process and a new output directory for each run.
-
-## Complete reproducibility material
-
-The repository is the lightweight source and quick-start entry. The release
-contains the full artifact: original inputs and attribution, registered
-configurations, complete saved results and certificates, historical source
-snapshots, figure inputs, and reproduction instructions. Successful, unknown,
-refused and unsupported-target results are retained together.
-
-The complete ZIP is approximately 7 GB. GitHub limits individual release assets
-to less than 2 GiB, so the ZIP is supplied as ordered parts. The downloader uses
-**no authentication**, verifies every part's SHA-256, reconstructs the ZIP, and
-checks its complete SHA-256 before optional extraction:
-
-```bash
-python3 download_artifact.py --output downloaded-artifact --extract
-python3 -B -S downloaded-artifact/Q-BRIDGE-ICDE2027/verify_artifact.py
-```
-
-Allow **30 GB of free disk space** if keeping the parts, assembled ZIP and
-extracted files together. Existing files with different hashes are not
-overwritten. Interrupted partial downloads are retained; move those `.partial`
-files aside before retrying. No experimental result is regenerated by downloading
-or extracting the artifact. After extraction, follow its root `README.md` for
-the saved-proof replay and individual-study commands. The runtime of a replay is
-not the measured serving latency reported by the paper.
-
-[`artifact-manifest.json`](artifact-manifest.json) identifies the archive and each
-part by exact size and SHA-256. `SOURCE_MANIFEST.json` binds this repository's
-published files. The full artifact additionally includes an exhaustive file
-manifest and an optimizer-free integrity checker.
-
-## Reading the results
-
-A **false** answer concerns the minimum over a represented view; it is not an
-upper bound on the real-world policy effect. **Unknown** means the supplied
-evidence did not resolve the requested threshold. Retaining and checking
-certificates can save repeated producer work, while filtering also has a cost;
-the artifact retains the comparisons where a proposed engineering target was
-not supported. Source assumptions and statistical-interval kernels remain
-explicit parts of the trust boundary.
-
-## Licenses
-
-Q-BRIDGE-owned Python and shell source is available under the MIT license within
-the scope listed in `CODE_LICENSE_SCOPE.json`. Coat data and data-derived materials
-retain their separate **CC BY-NC 4.0** terms and attribution. The unchanged
-IEEEtran template retains its own LPPL terms. The code license does not relicense
-the datasets, manuscript, figures or third-party material. See the accompanying
-notices before redistributing those materials.
+The downloader checks its pinned metadata, parts and assembled archive before
+extraction. Follow the extracted package's README for its verification and
+reproducibility instructions. This download remains v5.2 and excludes later
+workflow evidence. No reviewer identity or usage tracking is required.

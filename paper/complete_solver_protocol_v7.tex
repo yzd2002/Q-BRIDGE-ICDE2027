@@ -1,0 +1,23 @@
+% Protocol text only; numerical conclusions require the completed-run audit.
+\subsection{A complete exact solver and the source of recovery}
+SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner2020ExactLP} solves the epigraph LP on the identical $(\C,w,\pi_0)$:
+\begin{equation}
+ \min_{m\in\C,t}\ \sum_xw_x\bigl(t_x-\pi_{0,x}^{\top}m_x\bigr),
+ \qquad m_{xa}\le t_x,\quad t_x\text{ free}.
+ \label{eq:generic-family-lp}
+\end{equation}
+Its epigraph multipliers $\mu_{xa}\ge0$ sum to $w_x$ in each context. Set $\pi_{xa}=\mu_{xa}/w_x$ when $w_x>0$, and use the reference row when $w_x=0$. Original-row duals and a feasible point complete the same certificate as the partition construction. Exact import/export and independent checking are required; solver status is insufficient. Neither the construction's answer nor a saved point is supplied.
+
+Two lowest hashes per size cell select 78 unique requests (72 cells, 144 memberships) for three paired rounds in alternating order. Service runs from post-initialization transmission through checked certificates, including construction, verification, serialization and transport; startup, diagnostics and batch totals are separate. Fresh models/workers use one CPU, ten-second service and 8\,GiB address-space limits; all phase limits are archived. Failures retain costs and denominators; ratios require complete pairs. Rounds measure machine variation, not independent samples.
+
+Exact optima $L_i^*$ for each occurrence's three normalized contrasts distinguish certificate transfer from policy choice: 7,762 unique $(\C,c)$ requests and 17,280 policy slots. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$; zero is the reference policy. With the unchanged saved lower rule $L_{\rm saved}$,
+\begin{equation}
+ \mathcal R-L_{\rm saved}
+ =\underbrace{L_3^+-L_{\rm saved}}_{\text{certificate-transfer gap}}
+ +\underbrace{\mathcal R-L_3^+}_{\text{three-policy restriction}}.
+ \label{eq:recovery-decomposition}
+\end{equation}
+Both terms are nonnegative. Saved duals solve their stored objectives, but exact policy normalization can loosen transferred bounds. Missing optima leave the decomposition unknown. The 107-case recovery set and threshold remain unchanged.
+
+\textbf{Natural metadata partitions.}
+Coat gender, jacket type and color each partition 300 items. Separate row families preserve the original 31-row views' exact coefficients, endpoints and confidence allocation. The evaluation includes 144 natural-row subviews, twelve box-only OBS positions, the 60-view grid and one full-cell control: 217 memberships, 125 unique requests. The construction supports 95; the generic LP covers 30 overlapping-row requests too. Subviews relax their parents and cannot increase capacity. Coverage uses each parent's event, without a joint 95\% guarantee over all memberships. A feasible common point may exclude every policy; this is not exclusively a family-optimization benefit.

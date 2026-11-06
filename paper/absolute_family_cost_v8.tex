@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\small
+\caption{Medians over 78 calls per method/dimension. Response: after worker initialization through proof checking; Check: per-call receiver share; Whole: includes startup/cleanup. Part: partition construction; LP: SoPlex. kB: 1,000 bytes.}
+\label{tab:family-absolute}
+\begin{tabular}{@{}rr r r r r@{}}
+\toprule
+$d$ & Method & Response ms & Check \% & Whole ms & kB \\
+\midrule
+8 & Part & 4.66 & 24.4 & 122.2 & 3.47 \\
+8 & LP & 4.99 & 22.1 & 135.2 & 3.47 \\
+64 & Part & 53.58 & 23.2 & 172.2 & 20.93 \\
+64 & LP & 40.85 & 31.6 & 170.0 & 20.91 \\
+256 & Part & 648.13 & 22.8 & 770.3 & 149.51 \\
+256 & LP & 419.97 & 34.6 & 554.0 & 149.44 \\
+\bottomrule
+\end{tabular}
+\end{table}

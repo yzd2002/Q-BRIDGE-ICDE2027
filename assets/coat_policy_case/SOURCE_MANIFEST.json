@@ -1,0 +1,132 @@
+{
+  "schema_version": "coat-case-source-manifest/1",
+  "source_files": {
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_policy_case_v9/analyze_saved_case.py": {
+      "sha256": "b6887bd53168e5a9890087b02bbf8b497604984de372d35761b977f6f73dc947",
+      "bytes": 31808
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_workflow_v8/prepared_study_04/inputs/positive.json": {
+      "sha256": "9b145ba2e04098f35a634ac7a40e9d45f5b4500345d0051a66c4071e31fa21c7",
+      "bytes": 6489988
+    },
+    "/home/chaojin/yzd/ICDE 2027/icde2027/partition_capacity_v6/verify.py": {
+      "sha256": "f9cd8a9b8f67a8794bd4c35b78064dc480bd5a94c1bdf47bf993f0f34f335fd6",
+      "bytes": 15888
+    },
+    "/home/chaojin/yzd/ICDE 2027/icde2027/family_lp_v7/verify_general.py": {
+      "sha256": "dc7ac103796a946a4a481a03b5abad4167d9a8fbc559134ceff1de062697cf79",
+      "bytes": 20269
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_workflow_v8/run_02/stream_02.json": {
+      "sha256": "233d75649223946424e30231c41585064b675e678321413a193c3eb7f19ce8de",
+      "bytes": 49829552
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_workflow_v8/run_02/stream_03.json": {
+      "sha256": "6084cb508ff1be7e49117da4aac49fcc2f2b083c4bc5a263d9d54ee49c501c72",
+      "bytes": 49984212
+    },
+    "/home/chaojin/yzd/ICDE 2027/amber/data/processed/coat/coat/user_item_features/item_features.ascii": {
+      "sha256": "edea8217ec5606779b4d3bf819f7591dc63bcd5194d619e8048c2322d07630b1",
+      "bytes": 20100
+    },
+    "/home/chaojin/yzd/ICDE 2027/amber/data/processed/coat/coat/user_item_features/item_features_map.txt": {
+      "sha256": "2675dfaa38b89a9cbb1997f0cfcd46ed7e0e366dc515d12d95508d1f356e5d25",
+      "bytes": 498
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/input_inventory.json": {
+      "sha256": "9fdd8276c6cf593b286ed4759f46a4cc958a886e149a7e10f2aefe07cb6651f2",
+      "bytes": 10723
+    },
+    "/home/chaojin/yzd/ICDE 2027/amber/data/processed/coat/coat/train.ascii": {
+      "sha256": "a87bd9e7eaf3b89f976df3f25d4aa5d5d871be8a00b58947df9e6e015559bd37",
+      "bytes": 174290
+    },
+    "/home/chaojin/yzd/ICDE 2027/amber/data/processed/coat/coat/test.ascii": {
+      "sha256": "de6714ab105a5e0be8166be7fd313901b29f9a09c3bea307901457d1d71847e6",
+      "bytes": 174290
+    },
+    "/home/chaojin/yzd/ICDE 2027/amber/data/processed/coat/coat/README.txt": {
+      "sha256": "cda6f0f12aa148f5391561ef95a5f2dd6f7e3838ec17e84fcb615bc11a7ffae0",
+      "bytes": 184
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/moment_rows.json": {
+      "sha256": "70c6a36f3536874fa418c40a8e3676bb115d9b50fca2f3adf372036276684a49",
+      "bytes": 52946
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/method_018.json": {
+      "sha256": "c595ce28a8401384376beeef714b3336753e564c9681c453cd80336345e1d1cf",
+      "bytes": 391605
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/base_intervals.json": {
+      "sha256": "d9bd501f879d3084729ff2c434e1712ac7bc5b6eae2ea89f556b1d06ee1fafaf",
+      "bytes": 2772586
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/mapped_moments.json": {
+      "sha256": "9bc6e9efa118e7e5466a17a045a7e34a0e2a5bbaca35652b6aee95745cb67e41",
+      "bytes": 148312
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/queries.json": {
+      "sha256": "d3e42f64bc44c5157c10171ed27908f9a295f880c6b3f880a0444679ae3871ca",
+      "bytes": 392145
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl": {
+      "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4",
+      "bytes": 7819822
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/memberships.jsonl": {
+      "sha256": "9889ba79c8fb3e3994d7736d5d97ded98590a470ddf2a2c737a0f592332b62a3",
+      "bytes": 172983
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/prepared_study_04/queue.jsonl": {
+      "sha256": "3a6050b9fcfd6c8fba7cb63f2ed40997d59acf067c29938e950b24e143b091db",
+      "bytes": 5675702
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12186_7b52e3d542b30cc7a7b37c5efad0d4e50dbb80307f85d99f47850d70742701cd.json": {
+      "sha256": "800be8b0a3b3dd240bde1e9ffc0f07d2cbce4c0fd4057fb0266d2c89fcb88540",
+      "bytes": 64745
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/method_015.json": {
+      "sha256": "81237c06ab487ad21c99b8fb31e80ac6739cc4b85b39b302a8cb0d022cc0ade6",
+      "bytes": 334520
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12243_86647c07e17a14e730842b070d9eb5ee11429a15487768a1abbfecefa7d5af09.json": {
+      "sha256": "1ef65c10d791a43719e5ed1a451c53539e8cc5c3188e766fc498575d8e5340ef",
+      "bytes": 95758
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/method_016.json": {
+      "sha256": "2a993f433d6b023092d4b081bf91549f335836f8cea99e1d8f59cbf5f8ebb718",
+      "bytes": 382478
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12101_291c43a524933a9413b7085fce469fb17183664d7420b2cba827ea4f402a771e.json": {
+      "sha256": "c45d874a6ecdcfb9d9009bccd0110b5e834d2f15de306a6de7752ebdd5d0d5fc",
+      "bytes": 96489
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/method_017.json": {
+      "sha256": "d14473e25810c20e0e341b8a6f1da3faa5c456bc6a1164139fe228453e825f4e",
+      "bytes": 384536
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12230_b145c9651d8cf76c78d938aa54a56593697cfc338aeae6a911c09a4766074eaa.json": {
+      "sha256": "314b6a5f7167ea53965f666362a613a7f7f26533a8acd08d961a44831a42b805",
+      "bytes": 115325
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/method_033.json": {
+      "sha256": "9a094aca6f00a68b8d600d6b24d1f9d704500c2f88ccb873ef5e465101383867",
+      "bytes": 391632
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12289_3dc3a03f7508364177c262c268e4ce85c09a60e211697f37a45144df58a669ff.json": {
+      "sha256": "73e78aaf0fad3914a2733b3fe0ea55bcd10e8a70cb98b9adf517e876ef0c0c7f",
+      "bytes": 49183
+    },
+    "/home/chaojin/yzd/ICDE 2027/runs/icde2027/analysis/coat_representation_v5_run/original_protocol.json": {
+      "sha256": "b4495c4d92b9135121f4bf35cc6c8b0360c8d60abd9469c19846c3d0fdcd16ed",
+      "bytes": 8325
+    }
+  },
+  "optimizer_calls": 0,
+  "new_interval_calls": 0,
+  "cpu_affinity": [
+    3
+  ],
+  "rerun_command": "taskset -c 3 .venv/bin/python -B runs/icde2027/analysis/coat_policy_case_v9/analyze_saved_case.py",
+  "fraction_arithmetic": "All identities computed from original endpoints, exact policies and original duals; floats are presentation only."
+}

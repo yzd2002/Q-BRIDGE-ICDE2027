@@ -1,0 +1,4 @@
+item_class,item_count,before_exact,after_exact,before_percent,after_percent,aggregate_mass_change_exact,aggregate_mass_change_pp
+all vests,28,1/300,0/1,0.3333333333333333,0.0,-7/75,-9.333333333333334
+all remaining items,271,1/300,1/300,0.3333333333333333,0.3333333333333333,0/1,0.0
+item0: men/bomber/other/frontpage=yes,1,1/300,29/300,0.3333333333333333,9.666666666666666,7/75,9.333333333333334

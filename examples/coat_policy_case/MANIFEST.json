@@ -1,0 +1,269 @@
+{
+  "schema_version": "qbridge-coat-case-example/1",
+  "scope": "Seven saved optimum certificates for one retrospective policy case and its controls. No optimizer, confidence-interval reconstruction, timing replay, or full-study audit.",
+  "cases": [
+    {
+      "label": "Fusion_Lambda1p5_jacket_S",
+      "task_id": "8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc",
+      "method": "S",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12105_5d4d457c08414aa75e13ee9aee249683abe7a55771c5fb368219ac1f891fca9b.json",
+      "expected_input_sha256": "0f769a14175683fa69a4b18bafb79dd8d372cf05739734d56a80acc07c8a5d80",
+      "expected_capacity": "856572839346458515962389231629/347698450348314330823668761886720",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc.json"
+    },
+    {
+      "label": "Fusion_Lambda1p5_jacket_G",
+      "task_id": "8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc",
+      "method": "G_partition",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12104_ca2443c640faeffd22bce10435d5d3b5d249a1e7989064129a61602340f912f1.json",
+      "expected_input_sha256": "0f769a14175683fa69a4b18bafb79dd8d372cf05739734d56a80acc07c8a5d80",
+      "expected_capacity": "856572839346458515962389231629/347698450348314330823668761886720",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc.json"
+    },
+    {
+      "label": "OBS_full_budget",
+      "task_id": "61b26527a4e15feac70b0f71edb4ee5e47143747ea3cc17932bf1725b6be2972",
+      "method": "S",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12186_7b52e3d542b30cc7a7b37c5efad0d4e50dbb80307f85d99f47850d70742701cd.json",
+      "expected_input_sha256": "0a1dceda541953bedb28f0515154a71af1c0b9f22670e7b05643e6a870a2f475",
+      "expected_capacity": "0/1",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/61b26527a4e15feac70b0f71edb4ee5e47143747ea3cc17932bf1725b6be2972.json"
+    },
+    {
+      "label": "R_group_jacket_full_budget",
+      "task_id": "d1eb0b0c434364fcdbb14f5098ca682b592afdc832990674989fd35e99c1f3b1",
+      "method": "S",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12243_86647c07e17a14e730842b070d9eb5ee11429a15487768a1abbfecefa7d5af09.json",
+      "expected_input_sha256": "1b9d5458bb6cb346a8ef144fe2ebc5a12a6a03ac8a561a45b2204e2e982e0a89",
+      "expected_capacity": "0/1",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/d1eb0b0c434364fcdbb14f5098ca682b592afdc832990674989fd35e99c1f3b1.json"
+    },
+    {
+      "label": "R_projected_jacket_full_budget",
+      "task_id": "b8fd4f4974c150d1eeeea6dae217c23e11cd6c5166db150b1d298ae691d8c9b1",
+      "method": "S",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12101_291c43a524933a9413b7085fce469fb17183664d7420b2cba827ea4f402a771e.json",
+      "expected_input_sha256": "48fe8278ef757636fe5d282737fcc065a099f689ba18db827e5630bd47c01458",
+      "expected_capacity": "0/1",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/b8fd4f4974c150d1eeeea6dae217c23e11cd6c5166db150b1d298ae691d8c9b1.json"
+    },
+    {
+      "label": "Fusion_Lambda2_jacket",
+      "task_id": "9740606138a13f4e01077444f054a23fcc02ac93eaa9137281c5e36e5436f287",
+      "method": "S",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12230_b145c9651d8cf76c78d938aa54a56593697cfc338aeae6a911c09a4766074eaa.json",
+      "expected_input_sha256": "3d7ffdce80d6447ea7de3bdfd1800bd8667a83ff3012392b77eac2c74310a52e",
+      "expected_capacity": "0/1",
+      "certificate_schema": "partition-capacity-v6/1",
+      "input": "examples/coat_policy_case/inputs/9740606138a13f4e01077444f054a23fcc02ac93eaa9137281c5e36e5436f287.json"
+    },
+    {
+      "label": "Fusion_Lambda1p5_full31_parent",
+      "task_id": "61aa9c369f00561cc5818f94ae619b92ac9bc30fc8f3aeb245ca0038295eb590",
+      "method": "G_general",
+      "call": "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12289_3dc3a03f7508364177c262c268e4ce85c09a60e211697f37a45144df58a669ff.json",
+      "expected_input_sha256": "122f26ef123520884691a6e1e27bb0b32d3ceb631c69418b1819353475d266c4",
+      "expected_capacity": "856572839346458515962389231629/347698450348314330823668761886720",
+      "certificate_schema": "family-capacity-certificate/1",
+      "input": "examples/coat_policy_case/inputs/61aa9c369f00561cc5818f94ae619b92ac9bc30fc8f3aeb245ca0038295eb590.json"
+    }
+  ],
+  "files": {
+    "amber/data/processed/coat/coat/user_item_features/item_features.ascii": {
+      "bytes": 20100,
+      "sha256": "edea8217ec5606779b4d3bf819f7591dc63bcd5194d619e8048c2322d07630b1"
+    },
+    "amber/data/processed/coat/coat/user_item_features/item_features_map.txt": {
+      "bytes": 498,
+      "sha256": "2675dfaa38b89a9cbb1997f0cfcd46ed7e0e366dc515d12d95508d1f356e5d25"
+    },
+    "examples/coat_policy_case/inputs/61aa9c369f00561cc5818f94ae619b92ac9bc30fc8f3aeb245ca0038295eb590.json": {
+      "bytes": 110417,
+      "sha256": "9590e1a76e5f49893889979161e9cf711a2176a55cad2728d3eb780bcd5754ad"
+    },
+    "examples/coat_policy_case/inputs/61b26527a4e15feac70b0f71edb4ee5e47143747ea3cc17932bf1725b6be2972.json": {
+      "bytes": 24399,
+      "sha256": "9b8eab9a3c135b14ec337ada80402d8b78223c63576f9010710618122f18fb5c"
+    },
+    "examples/coat_policy_case/inputs/8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc.json": {
+      "bytes": 63459,
+      "sha256": "ce6fd9857f7b0b981a6818a3f5a4f421f73d248716f2db818fc99eafca3d57ed"
+    },
+    "examples/coat_policy_case/inputs/9740606138a13f4e01077444f054a23fcc02ac93eaa9137281c5e36e5436f287.json": {
+      "bytes": 63542,
+      "sha256": "6ee124db173448d78da210b58bec51376f14f38320864ff96845b882537c6f38"
+    },
+    "examples/coat_policy_case/inputs/b8fd4f4974c150d1eeeea6dae217c23e11cd6c5166db150b1d298ae691d8c9b1.json": {
+      "bytes": 45798,
+      "sha256": "2091fc627231e3f966b23263b272c0c9f435e867bc273b901af382749ef0b475"
+    },
+    "examples/coat_policy_case/inputs/d1eb0b0c434364fcdbb14f5098ca682b592afdc832990674989fd35e99c1f3b1.json": {
+      "bytes": 45446,
+      "sha256": "d1fb7c9768089a34df4a5704352a7d6ac912d3778fe3513874524083e67b07f7"
+    },
+    "icde2027/family_lp_v7/verify_general.py": {
+      "bytes": 20269,
+      "sha256": "dc7ac103796a946a4a481a03b5abad4167d9a8fbc559134ceff1de062697cf79"
+    },
+    "icde2027/partition_capacity_v6/verify.py": {
+      "bytes": 15888,
+      "sha256": "f9cd8a9b8f67a8794bd4c35b78064dc480bd5a94c1bdf47bf993f0f34f335fd6"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12101_291c43a524933a9413b7085fce469fb17183664d7420b2cba827ea4f402a771e.json": {
+      "bytes": 96489,
+      "sha256": "c45d874a6ecdcfb9d9009bccd0110b5e834d2f15de306a6de7752ebdd5d0d5fc"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12104_ca2443c640faeffd22bce10435d5d3b5d249a1e7989064129a61602340f912f1.json": {
+      "bytes": 117374,
+      "sha256": "c718c7932d3202d2b7ca5e694f5ed271597b8be43f757089cf8fd60cbe1ea2eb"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12105_5d4d457c08414aa75e13ee9aee249683abe7a55771c5fb368219ac1f891fca9b.json": {
+      "bytes": 115364,
+      "sha256": "f5a27a53478ce2cd17ab009f26fdd25cc710f278efebf37de499ced64274b2e7"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12186_7b52e3d542b30cc7a7b37c5efad0d4e50dbb80307f85d99f47850d70742701cd.json": {
+      "bytes": 64745,
+      "sha256": "800be8b0a3b3dd240bde1e9ffc0f07d2cbce4c0fd4057fb0266d2c89fcb88540"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12230_b145c9651d8cf76c78d938aa54a56593697cfc338aeae6a911c09a4766074eaa.json": {
+      "bytes": 115325,
+      "sha256": "314b6a5f7167ea53965f666362a613a7f7f26533a8acd08d961a44831a42b805"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12243_86647c07e17a14e730842b070d9eb5ee11429a15487768a1abbfecefa7d5af09.json": {
+      "bytes": 95758,
+      "sha256": "1ef65c10d791a43719e5ed1a451c53539e8cc5c3188e766fc498575d8e5340ef"
+    },
+    "runs/icde2027/analysis/verified_family_lp_v7/run_02/calls/12289_3dc3a03f7508364177c262c268e4ce85c09a60e211697f37a45144df58a669ff.json": {
+      "bytes": 49183,
+      "sha256": "73e78aaf0fad3914a2733b3fe0ea55bcd10e8a70cb98b9adf517e876ef0c0c7f"
+    },
+    "assets/coat_policy_case/ANALYSIS.json": {
+      "bytes": 536110,
+      "sha256": "7c08667ad234f0253212266a1a8de5911400e1e3b2dfc7154a9fdcea04528e69"
+    },
+    "assets/coat_policy_case/CASE_NOTE.txt": {
+      "bytes": 2250,
+      "sha256": "9ac1aa3288fdebbfd02edb8a4c16c02717d4cfcbf67049f68fe49d76926f8787"
+    },
+    "assets/coat_policy_case/CASE_PARAGRAPH.txt": {
+      "bytes": 1049,
+      "sha256": "2a35279f1b91c8c31079d98a6e35285499d3a33636874b60681d0ca5263923e2"
+    },
+    "assets/coat_policy_case/SOURCE_MANIFEST.json": {
+      "bytes": 7197,
+      "sha256": "715ab0b90a12aeac7a94d0d1be17d97745bb5978ccacd46d008b8b89a676e04e"
+    },
+    "assets/coat_policy_case/box_dual_terms.csv": {
+      "bytes": 43943,
+      "sha256": "3862908213f03bf311f1290fde04b6f9207496affa2dc11e7852f4d7a69008e1"
+    },
+    "assets/coat_policy_case/compact_guarantee.csv": {
+      "bytes": 366,
+      "sha256": "7dadfa2d31f7a497013ee027567b2b46796cd185629929d66204943dc5cbd128"
+    },
+    "assets/coat_policy_case/matched_controls.csv": {
+      "bytes": 1770,
+      "sha256": "6207d996eb13bc894986b9e005cb5670893e2915209ae86c4e61dfd95538f1b3"
+    },
+    "assets/coat_policy_case/moment_dual_terms.csv": {
+      "bytes": 1609,
+      "sha256": "0766bf7d38e56c7225fc55bd2fd24565c55d35e6b8099961736a2df78c6798a2"
+    },
+    "assets/coat_policy_case/policy_actions.csv": {
+      "bytes": 29816,
+      "sha256": "eb995b2eed12917fe7fd86277b3955b82f62f8d5046f604173ee9e215f443124"
+    },
+    "assets/coat_policy_case/probability_changes.csv": {
+      "bytes": 399,
+      "sha256": "c888a56093378052cbbeba4ab7d82cf5f3e4176839311901e813bd4106c64f04"
+    }
+  },
+  "input_line_provenance": [
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/61aa9c369f00561cc5818f94ae619b92ac9bc30fc8f3aeb245ca0038295eb590.json",
+      "task_id": "61aa9c369f00561cc5818f94ae619b92ac9bc30fc8f3aeb245ca0038295eb590",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 46,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 110417,
+      "sha256": "9590e1a76e5f49893889979161e9cf711a2176a55cad2728d3eb780bcd5754ad"
+    },
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/61b26527a4e15feac70b0f71edb4ee5e47143747ea3cc17932bf1725b6be2972.json",
+      "task_id": "61b26527a4e15feac70b0f71edb4ee5e47143747ea3cc17932bf1725b6be2972",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 47,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 24399,
+      "sha256": "9b8eab9a3c135b14ec337ada80402d8b78223c63576f9010710618122f18fb5c"
+    },
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc.json",
+      "task_id": "8cc608157bcd58e0c9458060ecdf8fd3009070b1cc293084cf1906ead6f6a7dc",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 71,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 63459,
+      "sha256": "ce6fd9857f7b0b981a6818a3f5a4f421f73d248716f2db818fc99eafca3d57ed"
+    },
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/9740606138a13f4e01077444f054a23fcc02ac93eaa9137281c5e36e5436f287.json",
+      "task_id": "9740606138a13f4e01077444f054a23fcc02ac93eaa9137281c5e36e5436f287",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 73,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 63542,
+      "sha256": "6ee124db173448d78da210b58bec51376f14f38320864ff96845b882537c6f38"
+    },
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/b8fd4f4974c150d1eeeea6dae217c23e11cd6c5166db150b1d298ae691d8c9b1.json",
+      "task_id": "b8fd4f4974c150d1eeeea6dae217c23e11cd6c5166db150b1d298ae691d8c9b1",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 92,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 45798,
+      "sha256": "2091fc627231e3f966b23263b272c0c9f435e867bc273b901af382749ef0b475"
+    },
+    {
+      "destination_relative": "examples/coat_policy_case/inputs/d1eb0b0c434364fcdbb14f5098ca682b592afdc832990674989fd35e99c1f3b1.json",
+      "task_id": "d1eb0b0c434364fcdbb14f5098ca682b592afdc832990674989fd35e99c1f3b1",
+      "source_relative": "runs/icde2027/analysis/verified_family_lp_v7/prepared_coat_inputs_01/family_requests.jsonl",
+      "source": {
+        "bytes": 7819822,
+        "sha256": "767c3fd441ff53c298fe632866861c53cd2c24101846a47364a873d92a54a5f4"
+      },
+      "line_number_1_based": 103,
+      "extraction": "Exact original JSONL line bytes including newline; no field or value changes.",
+      "bytes": 45446,
+      "sha256": "d1fb7c9768089a34df4a5704352a7d6ac912d3778fe3513874524083e67b07f7"
+    }
+  ],
+  "positive_certificates_equal_v8_case_certificates": true,
+  "analysis_reference": "assets/coat_policy_case/ANALYSIS.json",
+  "licensing": "Coat data and data-derived artifacts retain CC BY-NC 4.0 attribution; root MIT scope covers enumerated first-party code only."
+}
