@@ -20,6 +20,26 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{salimi2018hypdb}
+\BIBentryALTinterwordspacing
+B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
+\BIBentrySTDinterwordspacing
+
+\bibitem{salimi2017zaliql}
+\BIBentryALTinterwordspacing
+B.~Salimi, C.~Cole, D.~R.~K. Ports, and D.~Suciu, ``{ZaliQL}: Causal inference from observational data at scale,'' \emph{Proceedings of the VLDB Endowment}, vol.~10, no.~12, pp. 1957--1960, 2017. [Online]. Available: \url{https://www.vldb.org/pvldb/vol10/p1957-salimi.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Feng2019UADB}
+\BIBentryALTinterwordspacing
+S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fawkes2025hardness}
+\BIBentryALTinterwordspacing
+J.~Fawkes, M.~O'Riordan, A.~Vlontzos, O.~Corcoll, and C.~M. Gilligan-Lee, ``The hardness of validating observational studies with experimental data,'' in \emph{Proceedings of the 28th International Conference on Artificial Intelligence and Statistics}, ser. Proceedings of Machine Learning Research, vol. 258.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2025, pp. 1819--1827. [Online]. Available: \url{https://proceedings.mlr.press/v258/fawkes25b.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{dorn2025dvds}
 \BIBentryALTinterwordspacing
 J.~Dorn, K.~Guo, and N.~Kallus, ``Doubly-valid/doubly-sharp sensitivity analysis for causal inference with unmeasured confounding,'' \emph{Journal of the American Statistical Association}, vol. 120, no. 549, pp. 331--342, 2025. [Online]. Available: \url{https://doi.org/10.1080/01621459.2024.2335588}
@@ -28,6 +48,16 @@ J.~Dorn, K.~Guo, and N.~Kallus, ``Doubly-valid/doubly-sharp sensitivity analysis
 \bibitem{ishikawa2026convex}
 \BIBentryALTinterwordspacing
 K.~Ishikawa, N.~He, and T.~Kanamori, ``A convex framework for confounding robust inference,'' \emph{Journal of Machine Learning Research}, vol.~27, no.~62, pp. 1--53, 2026. [Online]. Available: \url{https://jmlr.org/papers/v27/23-1434.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{clopper1934binomial}
+\BIBentryALTinterwordspacing
+C.~J. Clopper and E.~S. Pearson, ``The use of confidence or fiducial limits illustrated in the case of the binomial,'' \emph{Biometrika}, vol.~26, no.~4, pp. 404--413, 1934. [Online]. Available: \url{https://doi.org/10.1093/biomet/26.4.404}
+\BIBentrySTDinterwordspacing
+
+\bibitem{maurer2009eb}
+\BIBentryALTinterwordspacing
+A.~Maurer and M.~Pontil, ``Empirical {Bernstein} bounds and sample variance penalization,'' in \emph{Proceedings of the 22nd Annual Conference on Learning Theory}, Montreal, Canada, 2009. [Online]. Available: \url{https://www.cs.mcgill.ca/~colt2009/papers/012.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Berk2013PoSI}
@@ -43,29 +73,14 @@ D.~Bertsimas, V.~Gupta, and N.~Kallus, ``Data-driven robust optimization,'' \emp
 A.~Neumaier and O.~Shcherbina, ``Safe bounds in linear and mixed-integer linear programming,'' \emph{Mathematical Programming}, vol.~99, no.~2, pp. 283--296, 2004. [Online]. Available: \url{https://arnold-neumaier.at/ms/mip.pdf}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Marcucci2021WarmStart}
-\BIBentryALTinterwordspacing
-T.~Marcucci and R.~Tedrake, ``Warm start of mixed-integer programs for model predictive control of hybrid systems,'' \emph{IEEE Transactions on Automatic Control}, vol.~66, no.~6, pp. 2433--2448, 2021. [Online]. Available: \url{https://groups.csail.mit.edu/robotics-center/public_papers/Marcucci19.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{fawkes2025hardness}
-\BIBentryALTinterwordspacing
-J.~Fawkes, M.~O'Riordan, A.~Vlontzos, O.~Corcoll, and C.~M. Gilligan-Lee, ``The hardness of validating observational studies with experimental data,'' in \emph{Proceedings of the 28th International Conference on Artificial Intelligence and Statistics}, ser. Proceedings of Machine Learning Research, vol. 258.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2025, pp. 1819--1827. [Online]. Available: \url{https://proceedings.mlr.press/v258/fawkes25b.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{clopper1934binomial}
-\BIBentryALTinterwordspacing
-C.~J. Clopper and E.~S. Pearson, ``The use of confidence or fiducial limits illustrated in the case of the binomial,'' \emph{Biometrika}, vol.~26, no.~4, pp. 404--413, 1934. [Online]. Available: \url{https://doi.org/10.1093/biomet/26.4.404}
-\BIBentrySTDinterwordspacing
-
-\bibitem{maurer2009eb}
-\BIBentryALTinterwordspacing
-A.~Maurer and M.~Pontil, ``Empirical {Bernstein} bounds and sample variance penalization,'' in \emph{Proceedings of the 22nd Annual Conference on Learning Theory}, Montreal, Canada, 2009. [Online]. Available: \url{https://www.cs.mcgill.ca/~colt2009/papers/012.pdf}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Cheung2017VIPR}
 \BIBentryALTinterwordspacing
 K.~K.~H. Cheung, A.~Gleixner, and D.~E. Steffy, ``Verifying integer programming results,'' in \emph{Integer Programming and Combinatorial Optimization}, ser. Lecture Notes in Computer Science, vol. 10328.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017, pp. 148--160. [Online]. Available: \url{https://arxiv.org/abs/1611.08832}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Marcucci2021WarmStart}
+\BIBentryALTinterwordspacing
+T.~Marcucci and R.~Tedrake, ``Warm start of mixed-integer programs for model predictive control of hybrid systems,'' \emph{IEEE Transactions on Automatic Control}, vol.~66, no.~6, pp. 2433--2448, 2021. [Online]. Available: \url{https://groups.csail.mit.edu/robotics-center/public_papers/Marcucci19.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Kothari2026BendersReuse}
@@ -133,6 +148,21 @@ C.~Gao, S.~Li, W.~Lei, J.~Chen, B.~Li, P.~Jiang, X.~He, J.~Mao, and T.-S. Chua, 
 T.~Schnabel, A.~Swaminathan, A.~Singh, N.~Chandak, and T.~Joachims, ``Recommendations as treatments: Debiasing learning and evaluation,'' in \emph{Proceedings of the 33rd International Conference on Machine Learning}, ser. Proceedings of Machine Learning Research, vol.~48.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2016, pp. 1670--1679. [Online]. Available: \url{https://proceedings.mlr.press/v48/schnabel16.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{salimi2020carl}
+\BIBentryALTinterwordspacing
+B.~Salimi, H.~Parikh, M.~Kayali, L.~Getoor, S.~Roy, and D.~Suciu, ``Causal relational learning,'' in \emph{Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2020, pp. 241--256. [Online]. Available: \url{https://doi.org/10.1145/3318464.3389759}
+\BIBentrySTDinterwordspacing
+
+\bibitem{youngmann2024causumx}
+\BIBentryALTinterwordspacing
+B.~Youngmann, M.~Cafarella, A.~Gilad, and S.~Roy, ``Summarized causal explanations for aggregate views,'' \emph{Proceedings of the ACM on Management of Data}, vol.~2, no.~1, pp. 71:1--71:27, 2024. [Online]. Available: \url{https://doi.org/10.1145/3639328}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Hassanzadeh2026SemanticViews}
+\BIBentryALTinterwordspacing
+O.~Hassanzadeh and D.~Subramanian, ``Semantic views: Certified reuse of {LLM} labels across semantic queries,'' 2026, preprint, version 1, submitted October 8, 2026. [Online]. Available: \url{https://arxiv.org/abs/2610.12768v1}
+\BIBentrySTDinterwordspacing
+
 \bibitem{jiang2024overlap}
 \BIBentryALTinterwordspacing
 K.~Jiang, W.~Hu, X.~Lai, S.~Yang, and X.-H. Zhou, ``Improving sensitivity analysis by synthesizing randomized clinical trials with limited overlap,'' \emph{Statistics in Medicine}, vol.~45, no. 18--19, p. e70637, 2026. [Online]. Available: \url{https://onlinelibrary.wiley.com/doi/10.1002/sim.70637}
@@ -161,36 +191,6 @@ K.~Hess, D.~Frauen, V.~Melnychuk, and S.~Feuerriegel, ``Efficient and sharp off-
 \bibitem{Yamada1998Sharing}
 \BIBentryALTinterwordspacing
 T.~Yamada, M.~Futakawa, and S.~Kataoka, ``Some exact algorithms for the knapsack sharing problem,'' \emph{European Journal of Operational Research}, vol. 106, no.~1, pp. 177--183, 1998. [Online]. Available: \url{https://www.nda.ac.jp/~yamada/paper/98-2.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{salimi2018hypdb}
-\BIBentryALTinterwordspacing
-B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
-\BIBentrySTDinterwordspacing
-
-\bibitem{salimi2017zaliql}
-\BIBentryALTinterwordspacing
-B.~Salimi, C.~Cole, D.~R.~K. Ports, and D.~Suciu, ``{ZaliQL}: Causal inference from observational data at scale,'' \emph{Proceedings of the VLDB Endowment}, vol.~10, no.~12, pp. 1957--1960, 2017. [Online]. Available: \url{https://www.vldb.org/pvldb/vol10/p1957-salimi.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{salimi2020carl}
-\BIBentryALTinterwordspacing
-B.~Salimi, H.~Parikh, M.~Kayali, L.~Getoor, S.~Roy, and D.~Suciu, ``Causal relational learning,'' in \emph{Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2020, pp. 241--256. [Online]. Available: \url{https://doi.org/10.1145/3318464.3389759}
-\BIBentrySTDinterwordspacing
-
-\bibitem{youngmann2024causumx}
-\BIBentryALTinterwordspacing
-B.~Youngmann, M.~Cafarella, A.~Gilad, and S.~Roy, ``Summarized causal explanations for aggregate views,'' \emph{Proceedings of the ACM on Management of Data}, vol.~2, no.~1, pp. 71:1--71:27, 2024. [Online]. Available: \url{https://doi.org/10.1145/3639328}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Feng2019UADB}
-\BIBentryALTinterwordspacing
-S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Hassanzadeh2026SemanticViews}
-\BIBentryALTinterwordspacing
-O.~Hassanzadeh and D.~Subramanian, ``Semantic views: Certified reuse of {LLM} labels across semantic queries,'' 2026, preprint, version 1, submitted October 8, 2026. [Online]. Available: \url{https://arxiv.org/abs/2610.12768v1}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Bartels2023Filters}

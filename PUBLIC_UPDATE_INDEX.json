@@ -1,6 +1,6 @@
 {
   "scope": "Current manuscript/source, reproducible overview drawing, scientific source updates and a small saved-proof case; not the complete expanded experiment archive.",
-  "paper_pdf_sha256": "75460a64144f0153fed063e6cd86eba2347221a21d0a7bc94c0a6ae967d804fd",
+  "paper_pdf_sha256": "f4428475d4bdc7a0dd2daeab951d288b3b7c8b4ffb011ca9e6e626421e03ccec",
   "files": [
     {
       "path": "CODE_LICENSE_SCOPE_UPDATE.json",
@@ -420,17 +420,17 @@
     {
       "path": "paper/Q-BRIDGE_ICDE2027.bbl",
       "bytes": 15123,
-      "sha256": "b74fff862f2f2c10f7fab0774dc2be832482dcf16bbaa5d66bac6e0fd19d6e14"
+      "sha256": "d7564a17d3ebb4e6c3d940dc8c8e8cde50a273b19ee20a1c426fc32321d8c8a6"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.pdf",
-      "bytes": 424685,
-      "sha256": "75460a64144f0153fed063e6cd86eba2347221a21d0a7bc94c0a6ae967d804fd"
+      "bytes": 424976,
+      "sha256": "f4428475d4bdc7a0dd2daeab951d288b3b7c8b4ffb011ca9e6e626421e03ccec"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.tex",
-      "bytes": 34133,
-      "sha256": "4934308d86fc7f591854f88c54ba92537edcc25713123c81218938807e36a398"
+      "bytes": 34225,
+      "sha256": "22afeac7830e5059cc7f8bf2469b7d1dc38d6ac31dbe59d32370e08c76b4ae3f"
     },
     {
       "path": "paper/README.md",

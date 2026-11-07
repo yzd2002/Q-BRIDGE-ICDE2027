@@ -15,16 +15,16 @@ pdfauthor={Zida Yang, Weiqing Zeng, Guquan You, Cong Wang, Jiexin Zheng}}
 \begin{document}
 \maketitle
 \begin{abstract}
-Repeated policy decisions ask whether a candidate guarantees a gain and whether any policy could do better. Q-BRIDGE makes a confidence view---outcome means allowed by observational and randomized logs and declared assumptions---a reusable query object. For disjoint nonnegative groups, a direct three-step construction caps feasible means, allocates within the cap, and recovers an optimal policy with matching lower and upper certificates. An independent checker validates them against the original constraints, without trusting the optimizer or its auxiliary cap. The same view supports adaptive queries and evidence reuse under one coverage event. The construction and a general exact linear program agree on all 2,160 distinct synthetic family requests. Holding information fixed, family optimization resolves 107 undecided cases into 86 above-threshold policies and 21 exclusions; exact reoptimization of the original three policies recovers none of the 86. Coat connects these answers to concrete policy redesign and catalogue-level stopping decisions. Controlled studies measure complete construction, checking and reuse costs, identifying when retained exact arithmetic pays. The interface turns a fixed body of uncertain evidence into independently checkable policy decisions.
+Repeated policy analysis queries the same logs while changing candidate decisions. Q-BRIDGE separates source aggregation from subsequent queries through a materialized confidence view: outcome means allowed by observational and randomized data and declared assumptions. One view supports adaptive queries under one coverage event, without rescanning logs. For disjoint nonnegative groups, a direct three-step construction caps feasible means, allocates within the cap, and recovers an optimal policy with matching lower and upper certificates. An independent checker validates these against the original constraints. Fixed-policy queries reuse constraint weights and exact terms before resorting to a solver. The construction and a general exact linear program agree on all 2,160 distinct synthetic family requests. Holding information fixed, family optimization resolves 107 undecided cases into 86 above-threshold policies and 21 exclusions; exact reoptimization of the original three policies recovers none of the 86. Controlled comparisons isolate lower group-average execution cost from exact-term retention. Coat connects the query interface to concrete policy redesign and catalogue-level stopping.
 \end{abstract}
 \begin{IEEEkeywords}
-policy evaluation, causal data integration, materialized views, sensitivity analysis, verifiable computation
+query processing, uncertain data, materialized views, causal inference, verifiable computation
 \end{IEEEkeywords}
 
 \section{Introduction}
-On a fixed production-log snapshot and a smaller randomized experiment, a recommendation analyst must decide whether to adopt a candidate policy, redesign it, or stop searching for a guaranteed gain. A negative answer for one candidate cannot settle the other two decisions. Unrecorded preferences confound production exposure; experimental information may transfer only for action-group averages.
+On a production-log snapshot and a smaller randomized experiment, a recommendation analyst must decide whether to adopt a policy, redesign it, or stop searching for a guaranteed gain. A policy assigns action probabilities; rejecting one candidate cannot settle the other two decisions. Unrecorded preferences confound production exposure, and experimental information may transfer only for group averages.
 
-A policy assigns action probabilities. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} materializes a \emph{confidence view}: means allowed by the data and fixed confounding and transfer assumptions. Later queries need no log rescan. A fixed-policy query tests one policy throughout the view; a family query asks whether any policy can pass. Our direct construction exploits disjoint groups to recover an optimal policy and an independently checkable proof using original constraints.
+Causal query systems~\cite{salimi2018hypdb,salimi2017zaliql} and uncertainty-aware query processing~\cite{Feng2019UADB} make statistical meaning part of data management. Here the challenge is to preserve joint uncertainty across changing objectives, reuse computation, and return checkable answers. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} materializes interval endpoints and group-moment constraints as a \emph{confidence view}: one joint feasible set of means under fixed source assumptions. Without rescanning logs, queries test a policy, recover the best robust policy, or exclude all above-threshold guarantees. For disjoint groups, a direct construction returns an optimal policy and a proof using original constraints.
 
 \textbf{A running example.} Figure~\ref{fig:example} has one context, four actions and margin $\delta=.001=0.1$\,pp; $m_A$ is success probability under A. The reference is uniform. Q1 uses policy $(.15,.15,.35,.35)$, hence contrast $c=(-.1,-.1,.1,.1)$. Observational information gives the displayed intervals; randomized information transfers only $(m_A+m_C)/2=.65$ and $(m_B+m_D)/2=.70$. Substitution yields
 \[\Delta_1=.27-.2(m_A+m_B)\ge .01.\]
@@ -40,11 +40,11 @@ Q2 reuses Q1's constraint weights to prove $0.6375$\,pp, above the $0.1$\,pp mar
 
 For the family, the group sums fix reference payoff at $.675$, and $m_A\le.6$ forces $m_C\ge.7$. Choosing C guarantees $.025=2.5$\,pp; the feasible vector $(.6,.7,.7,.7)$ gives no policy more than $.7-.675$. Matching bounds prove the optimal robust guarantee (Section~\ref{sec:partition-capacity}).
 
-Building on sensitivity bounds, simultaneous inference, minimax and dual reuse~\cite{dorn2025dvds,ishikawa2026convex,Berk2013PoSI,Bertsimas2018DataRobust,Neumaier2004SafeBounds,Marcucci2021WarmStart}, we contribute:
+Our contributions connect query semantics, construction and execution:
 
-\textbf{A reusable source-to-proof interface (Sections II--III).} Source assumptions and simultaneous intervals map to stored constraints without changing their statistical meaning. One event---all target means lying in the view---supports adaptive policies and margins on that fixed view.
+\textbf{A reusable source-to-query interface (Sections II--III).} Source assumptions and simultaneous intervals map to stored constraints without changing their statistical meaning. One event---all target means lying in the view---supports adaptive policies and margins on that fixed view.
 
-\textbf{Direct construction with an independently checkable proof (Section IV).} Three steps produce a policy lower bound equal to a family upper bound. Recovery uses only original constraints: the checker need not trust the construction's artificial cap. A general exact LP supplies the same output contract and a comparison route.
+\textbf{Direct construction with an independently checkable proof (Section IV).} For disjoint nonnegative moment groups, we prove that the minimum feasible cap preserves the optimum, then recover a policy with matching original-constraint lower and family-upper certificates. A general exact LP supplies the same contract and supports overlaps.
 
 \textbf{Evidence separating choice from execution (Sections V--VI).} All 86 recovered synthetic gains require different policies. Paired studies identify lower group-average cost from exact-term retention across objectives, with answers and solver paths fixed; Coat connects family certificates to concrete policy changes and catalogue queries.
 
@@ -167,8 +167,8 @@ Let $F_c=\arg\min_{m\in\mathcal B_{\alpha/2}}c^\top m$. Then $G=0$ if and only i
 
 Choose box endpoints by the signs of $c$ and check the group rows. A feasible point proves zero constraint gain; if zero coefficients leave multiple minimizers, failure of one point is inconclusive. Section~\ref{sec:information-results} applies this fixed-view diagnostic to actual losses.
 
-\section{Queries with Checkable Answers}\label{sec:execution}
-Two query modes share the view: test one supplied policy (A--C), or find the best policy and rule out further gains (D--E). A \emph{producer} proposes numerical evidence; an independent \emph{receiver} checks it against the caller's view. For a fixed policy, reuse is tried before a persistent LP. True certifies the requested robust gain; false exhibits an allowed case that fails it; unknown means the available evidence cannot decide.
+\section{Query Execution and Verification}\label{sec:execution}
+Execution separates a materialized view, an evidence \emph{producer}, and an independent \emph{receiver}. Fixed-policy queries try reusable bounds before a persistent LP (A--C); family queries find the best robust policy or exclude gains above a threshold (D--E). The receiver checks proposed evidence against the caller's view. True certifies the requested gain; false exhibits an allowed case that fails it; unknown means the evidence cannot decide.
 
 
 
@@ -253,7 +253,7 @@ Structural controls use box endpoints, continuous knapsack for single rows~\cite
 
 
 \section{Evaluation Design}\label{sec:design}
-The studies isolate three changes: data sources in the registered fixed-policy comparison (VI-C), policy choice in retrospective family queries (VI-A), and execution with decisions and evidence fixed (VI-B). Coat connects family decisions to concrete policy changes and an unchanged catalogue (VI-D). These study identities separate the claims. Complete-solver and new Coat timings use an AMD EPYC 7763, Python 3.12.3 and one CPU/native thread.
+The evaluation asks three questions: which decisions complete family queries settle (VI-A), what repeated query execution costs with answers and evidence fixed (VI-B), and what information each source contributes (VI-C). The first is retrospective; the source comparison is registered. Coat tests concrete policy changes and an unchanged query catalogue (VI-D). Complete-solver and new Coat timings use an AMD EPYC 7763, Python 3.12.3 and one CPU/native thread.
 
 \subsection{Fresh worlds and policy design}
 The registered study draws 48 confounded worlds: $(K,L)\in\{(2,4),(8,8),(16,16)\}$, uniform/skewed randomization and group drift $0/.02$, with four worlds per stratum and five inference samples per world. Twelve additional worlds test near-unit sensitivity. A latent binary factor affects exposure and rewards. Metadata $h_a\in[-.5,.5]$ are fixed without inference labels, but their designed positive reward association limits representativeness. Random groups allow individual shifts while controlling group drift; shifts are not optimized for the evaluation objective.
@@ -278,14 +278,14 @@ The primary endpoint compares projected fusion with certification by either full
 
 \input{execution_protocol_v7}
 
-\section{Results and Boundaries}\label{sec:results}
+\section{Experimental Results}\label{sec:results}
 \input{complete_family_figure_v7}
 \input{complete_family_results_v7}
 
 \input{optimized_execution_results_v7}
 \input{historical_execution_context_v7}
 
-\subsection{What limits information from fusion}\label{sec:information-results}
+\subsection{Source information and query guarantees}\label{sec:information-results}
 \begin{table}[t]
 \centering
 \caption{Conservative, lower-budget diagnosis; 240 queries per policy. Finite: the finite optimum fails but the population optimum passes. Pop.: the true effect exceeds $\delta$ but both optima fail. No query is missed solely by numerical optimization.}
@@ -326,17 +326,17 @@ The broader audit includes 6,000 inference views: 60 worlds, five repetitions, t
 \input{coat_workflow_results_v8}
 
 \section{Related Work and Scope}\label{sec:related}
+\textbf{Database queries.} Causal systems adjust aggregates~\cite{salimi2018hypdb}, implement matching~\cite{salimi2017zaliql}, define units~\cite{salimi2020carl} and explain patterns~\cite{youngmann2024causumx}. Other approaches propagate uncertainty bounds~\cite{Feng2019UADB} or certify semantic-view predicates from fresh draws~\cite{Hassanzadeh2026SemanticViews}. Our source-constrained view supports adaptive objectives under one coverage event and whole-family stopping certificates.
+
 Our view combines binary density-ratio and conditional-moment bounds~\cite{dorn2025dvds,ishikawa2026convex}, without latent-model sharpness. Other fusion methods exploit overlap~\cite{jiang2024overlap}, impose experimental moments~\cite{du2026feasible}, or estimate sensitivity frontiers~\cite{lanners2025fusion}. Propensity-odds policy learning~\cite{Kallus2018ConfoundingRobust,Hess2026SharpPolicy} makes different restrictions from our outcome-conditional weights. We add direct partition construction and original-constraint certificate recovery in one query interface.
 \input{family_comparison_v8}
-
-\textbf{Database queries.} Causal systems adjust aggregates~\cite{salimi2018hypdb}, implement matching~\cite{salimi2017zaliql}, define units~\cite{salimi2020carl} and explain patterns~\cite{youngmann2024causumx}. Other approaches propagate uncertainty bounds~\cite{Feng2019UADB} or certify semantic-view predicates from fresh draws~\cite{Hassanzadeh2026SemanticViews}. Our source-constrained view supports adaptive objectives under one coverage event and whole-family stopping certificates.
 
 \textbf{Proofs and scope.} Filtering~\cite{Bartels2023Filters}, assignment caching~\cite{Cadar2008KLEE}, safe bounds and reuse are established; VIPR checks exact optimization derivations~\cite{Cheung2017VIPR}. Unlike IntegriDB~\cite{Zhang2015IntegriDB}, our digests authenticate neither data nor freshness. Scope is binary outcomes, known target weights and trusted source/interval routines; continuous covariates, estimated weights and dependent interactions need extensions.
 
 \textbf{Data ethics.} We reanalyze public benchmarks under their release terms, without recruiting or contacting participants. No institutional ethics review was undertaken or additional consent sought.
 
 \section{Conclusion}
-Q-BRIDGE turns one view into checkable evaluation, redesign and stopping decisions. For disjoint groups, direct construction recovers optimal policies and original-constraint certificates. Broader policy choice recovers guarantees unavailable to tested candidates; retaining exact terms reduces group-average execution cost on the tested streams.
+Q-BRIDGE's materialized confidence view supports repeated, checkable evaluation, redesign and stopping decisions. For disjoint groups, direct construction returns optimal policies and original-constraint certificates. Broader policy choice recovers guarantees unavailable to tested candidates; retaining exact terms reduces group-average execution cost on the tested streams.
 
 \clearpage
 \section*{Acknowledgments and AI Usage Declaration}
