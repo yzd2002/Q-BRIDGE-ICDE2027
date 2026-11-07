@@ -1,69 +1,28 @@
 % Readability revision: the reviewed construction and domain are preserved.
 % Local allocation residual r is renamed xi to distinguish the reuse term.
 \subsection{Certifying a whole policy family}\label{sec:family-capacity}
-We now optimize over policies. Here $\C$ is the fixed view; $w^*,\pi_0^*$ mark exact input probabilities, while $m^*,\pi^*$ will denote returned optimizers. The family $\Pi$
-contains all randomized policies on the available actions. Its \emph{capacity}
-is the largest worst-case improvement attainable by any policy.
-Fix a nonempty compact convex view $\C\subseteq[0,1]^{KL}$,
-exact probability weights $w^*\ge0$, $\sum_xw_x^*=1$, and reference
-$\pi_0^*\in\Pi$. Define
+Testing one policy can miss a better one. The family $\Pi$ contains all randomized policies on the available actions; its \emph{capacity} is the largest worst-case gain. Fix a nonempty compact convex view $\C\subseteq[0,1]^{KL}$, exact probability weights $w\ge0$, $\sum_xw_x=1$, and reference $\pi_0\in\Pi$. Stars will denote returned optimizers. Define
 \begin{align}
  \mathcal R(\C)&=\max_{\pi\in\Pi}\min_{m\in\C}
-   \sum_{x,a}w_x^*(\pi_{xa}-\pi_{0,xa}^*)m_{xa},\label{eq:capacity}\\
- F(m)&=\sum_xw_x^*\left[\max_a m_{xa}
-             -\sum_a\pi_{0,xa}^*m_{xa}\right].\label{eq:family-upper}
+   \sum_{x,a}w_x(\pi_{xa}-\pi_{0,xa})m_{xa},\label{eq:capacity}\\
+ F(m)&=\sum_xw_x\left[\max_a m_{xa}
+             -\sum_a\pi_{0,xa}m_{xa}\right].\label{eq:family-upper}
 \end{align}
-The inner minimum in~\eqref{eq:capacity} gives one policy's worst allowed case; the outer maximum chooses the best such policy. The reference makes $\mathcal R\ge0$. At one allowed $m$, $F(m)$ chooses the best action per context.
-Every checked $m\in\C$ gives $\mathcal R(\C)\le F(m)$: each policy's
-minimum is at most its payoff at this point, whose policy maximum is $F(m)$.
-Thus $U(c)$ evaluates one policy, while $F(m)$ maximizes over policies at that point. The latter bounds the best robust guarantee; $F(m)\le\delta$ excludes all guarantees above $\delta$.
-The witness need not equal the true means; it does not bound actual effects.
+The inner minimum gives one policy's worst case; the outer maximum chooses the best policy. The reference ensures $\mathcal R\ge0$. At one allowed $m$, $F(m)$ chooses the best action per context. It bounds $\mathcal R$ because each policy's minimum cannot exceed its payoff at this point. Thus $U(c)$ bounds one policy's guarantee; $F(m)$ bounds every policy's guarantee. A checked $F(m)\le\delta$ excludes all above-threshold guarantees, not actual effects.
 
-\begin{proposition}[Zero capacity in a fixed view]\label{prop:zero-capacity}
-$\mathcal R(\C)=\min_{m\in\C}F(m)$. If all $w_x^*>0$ and
-$\pi_{0,xa}^*>0$, then $\mathcal R(\C)=0$ exactly when $\C$ contains
-a vector constant across actions within every context.
-\end{proposition}
-\noindent\textit{Proof.} Compact convex domains and a continuous bilinear payoff
-permit minimax exchange~\cite{Sion1958Minimax}; row maximization gives $F$.
-Its nonnegative summands, under strict positivity, vanish exactly at constant
-rows. Compactness attains the minimum.\hspace*{\fill}\nobreakspace$\square$
-
-Without strict positivity, constant points remain sufficient for zero capacity,
-but the converse need not hold.
-
-For nonnegative single-context moment rows, even overlapping ones, form
-\[
- I_x=[\max_a\ell_{xa},\min_a u_{xa}]
-       \cap\!\bigcap_{j:x_j=x}[a_j/\kappa_j,b_j/\kappa_j].
-\]
-Here $\kappa_j=\sum_iT_{ji}>0$; zero rows require $a_j\le0\le b_j$.
-Choose one $v_x\in I_x$ per context, set every $m_{xa}=v_x$, and check the
-original constraints. This \emph{constant-action witness} proves zero capacity
-without optimizing. Under the proposition's positivity conditions,
-an empty intersection proves $\mathcal R>0$, not $\mathcal R>\delta$ for
-positive $\delta$.
-
-Partial evidence can bracket the family without full optimization. The maximum
-of checked lower bounds for any legal policies, together with the reference's
-zero, is $L_{\rm saved}\le\mathcal R$. A nonempty set $M_{\rm saved}$ of checked
-points gives $U_{\rm saved}=\min_{m\in M_{\rm saved}}F(m)\ge\mathcal R$.
-Share them only for identical $\C,w^*,\pi_0^*$.
-Then $L_{\rm saved}>\delta$ certifies existence, $U_{\rm saved}\le\delta$ excludes it,
-and otherwise the family remains unresolved. Equation~\eqref{eq:recovery-decomposition}
-separates certificate slack from restricted policy choice.
+Compact convex domains and a continuous bilinear payoff permit minimax exchange~\cite{Sion1958Minimax}, giving $\mathcal R(\C)=\min_{m\in\C}F(m)$. We therefore seek an allowed mean vector giving the best action as little advantage as possible, and a policy whose lower certificate reaches this upper bound.
 
 \subsection{Exact capacity for partitioned moments}\label{sec:partition-capacity}
-For one context, $F(m)$ is the largest action mean minus the reference payoff. Minimax therefore asks us to minimize $t-p^\top m$, with $m_i\le t$ and reference probabilities $p=\pi_{0,x}^*$. Our construction has two tasks: find the smallest family upper bound, then recover a policy attaining it. For disjoint groups, the first task reduces to capping means and allocating below that cap. The second recovers a proof using the \emph{original} constraints, so the auxiliary cap cannot silently narrow the guarantee. Minimax and continuous allocation are classical ingredients~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}.
+For one context, minimize $t-p^\top m$: the largest action mean minus reference payoff. Here $t$ caps every $m_i$ and $p=\pi_{0,x}$ is the reference distribution. Step 1 finds the smallest feasible cap; Step 2 maximizes reference payoff below it; Step 3 recovers an attaining policy and \emph{original}-constraint proof. Minimax and continuous allocation are classical~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}; the key is to prove that this cap suffices and recover the certificate.
 
 \begin{theorem}[An attaining policy with an original-view certificate]\label{thm:partition-certificate}
 Let $\C$ be a nonempty rational box-and-moment view with
 $0\le\ell\le u\le1$. Suppose every nonzero moment row is nonnegative,
 belongs to one context, and has positive support disjoint from every other
-row. For any rational probability weights $w^*$ and reference policy $\pi_0^*$,
+row. For any rational probability weights $w$ and reference policy $\pi_0$,
 including zero entries, the three-step construction returns
 $m^*\in\C$, $\pi^*\in\Pi$ and nonnegative original-row multipliers
-$\eta_L,\eta_U$ such that, with $c^*_{xa}=w_x^*(\pi^*_{xa}-\pi^*_{0,xa})$,
+$\eta_L,\eta_U$ such that, with $c^*_{xa}=w_x(\pi^*_{xa}-\pi_{0,xa})$,
 \[
  D(c^*;\eta)=c^{*\top}m^*=F(m^*)=\mathcal R(\C).
 \]
@@ -73,17 +32,15 @@ rational-operation counts, excluding coefficient-dependent bit costs,
 encoding and hashing.
 \end{theorem}
 
-The certificate closes the gap between a policy we can achieve and a family bound no policy can exceed:
+The certificate matches an achievable guarantee to the family upper bound:
 $D(c^*;\eta)\le\min_{m\in\C}c^{*\top}m\le\mathcal R\le F(m^*)$.
-Equal checked endpoints prove optimality independently of how the producer found them. Check the domain before construction; reject unsupported rows.
+Equal checked endpoints prove optimality independently of the producer. Reject unsupported rows.
 Zero rows require $a_j\le0\le b_j$ and receive zero multipliers.
 Ties use index order. The following three steps establish the theorem.
 
 \textbf{Step 1: Find the smallest feasible cap.}
 
-Within this algorithm, $p=\pi_{0,x}^*$ is the reference distribution, distinct
-from observed success $p_{xa}$. Write $\ell\le m\le u$ and
-$a_j\le T_jm\le b_j$. Set
+Within the construction, $p=\pi_{0,x}$ is the reference distribution, distinct from observed success $p_{xa}$. A cap is feasible only if the capped upper endpoints can meet every lower group requirement. Define
 \[
  \begin{aligned}
  t_\ell&=\max_i\ell_i,\qquad g_j(t)=\sum_iT_{ji}\min(u_i,t),\\
@@ -91,10 +48,10 @@ $a_j\le T_jm\le b_j$. Set
  h_i&=\min(u_i,t_0).
  \end{aligned}
 \]
-For nonzero rows, $g_j$ is piecewise linear between rational upper-box breakpoints. The largest required root, or $t_\ell$, determines $t_0$; only lower moments force it upward. Nonemptiness gives $T_j\ell\le b_j$. Disjoint groups independently choose mass in $[\max(a_j,T_j\ell),\min(b_j,T_jh)]$, so $\C\cap[\ell,h]$ is nonempty. Every point in this intersection has maximum $t_0$ by minimality; the entire box need not be feasible.
+The maximum group mass $g_j(t)$ is piecewise linear between rational upper-box breakpoints. The largest required root, or $t_\ell$, gives $t_0$. Nonemptiness ensures $T_j\ell\le b_j$. Disjoint groups independently choose mass in $[\max(a_j,T_j\ell),\min(b_j,T_jh)]$, so $\C\cap[\ell,h]$ is nonempty. Every point in this intersection has maximum $t_0$ by minimality; the entire box need not be feasible. Figure~\ref{fig:example}'s group requirements give $t_0=.7$ and $h=(.6,.7,.7,.7)$.
 
 \noindent\textit{Minimum-cap sufficiency.}
-For feasible $m$ with $t=\max_i m_i$, clipping to $v_i=\min(m_i,t_0)$ preserves lower boxes and upper moments. Restore violated lower moments within $[v,h]$ to $a_j\le b_j$. The cap permits these repairs; disjoint supports prevent interference, giving feasible $v'\ge v$. Since $p$ sums to one, $p^\top(m-v)\le t-t_0$, hence
+A larger cap could raise the reference payoff, so feasibility alone is insufficient. For feasible $m$ with $t=\max_i m_i$, clip to $v_i=\min(m_i,t_0)$, preserving lower boxes and upper moments. Restore violated lower moments within $[v,h]$ to $a_j\le b_j$; disjoint supports prevent interference, giving feasible $v'\ge v$. Clipping lowers the maximum by $t-t_0$ and the reference average by at most that amount: $p^\top(m-v)\le t-t_0$. Repairs only raise the average. Hence
 \[
  \max_i v_i'-p^\top v'
  \le t_0-p^\top v
@@ -103,9 +60,9 @@ For feasible $m$ with $t=\max_i m_i$, clipping to $v_i=\min(m_i,t_0)$ preserves 
 Thus maximizing $p^\top m$ within this cap minimizes the original gap.
 
 \textbf{Step 2: Allocate means within the cap.}
-With the largest mean fixed at $t_0$, maximizing reference payoff $p^\top m$ minimizes the family upper bound. These are mean values, not policy probabilities. Increasing $m_i$ by $\epsilon$ costs group mass $T_{ji}\epsilon$ and gains $p_i\epsilon$. Starting at $\ell$, fill each nonzero row in decreasing $p_i/T_{ji}$ order on $T_{ji}>0$, to total mass $\min(b_j,T_jh)$; uncovered coordinates take $h_i$. Thus the added mass is $\min(b_j,T_jh)-T_j\ell$. Nonnegative weights justify filling even zero-ratio coordinates, and the total meets the lower bound.
+With the maximum fixed at $t_0$, increasing the reference payoff reduces the gap. We allocate \emph{means}, not policy probabilities. Raising $m_i$ by $\epsilon$ costs group mass $T_{ji}\epsilon$ and gains $p_i\epsilon$. Starting at $\ell$, fill each nonzero row in decreasing $p_i/T_{ji}$ order on $T_{ji}>0$, to total mass $\min(b_j,T_jh)$; uncovered coordinates take $h_i$. The added mass is $\min(b_j,T_jh)-T_j\ell$. Step 1 ensures the final total $\min(b_j,T_jh)$ meets $a_j$. Nonnegative weights justify filling even zero-ratio coordinates.
 
-The upper price $\lambda_j$ is zero when $b_j\ge T_jh$, including equality. Otherwise, use the largest support ratio if $b_j=T_j\ell$, or the last ratio receiving positive mass, including exact boundary exhaustion. This covers fixed coordinates and zero probabilities. The residual $\xi=p-T^\top\lambda$ is reference payoff after these group charges. Allocation satisfies
+For Step 3, record an upper-row price $\lambda_j$: a charge per unit of group mass used to build the certificate. Use zero when $b_j\ge T_jh$, including equality; the cap already limits the total. Otherwise use the largest support ratio if $b_j=T_j\ell$, or the last ratio receiving positive mass, including exact boundary exhaustion. These rules cover fixed coordinates and zero probabilities. Subtracting the group charges leaves $\xi=p-T^\top\lambda$. Positive residuals fill to $h_i$; negative ones stay at $\ell_i$:
 \[
  \begin{aligned}
  \xi_i>0&\Rightarrow m_i^*=h_i,&
@@ -113,12 +70,13 @@ The upper price $\lambda_j$ is zero when $b_j\ge T_jh$, including equality. Othe
  \lambda_j(b_j-T_jm^*)&=0.
  \end{aligned}
 \]
+Thus a positive row price requires a tight upper constraint. In the example, $m^*=(.6,.7,.7,.7)$ and $\lambda=(0,0)$, giving upper bound $.7-.675=.025$.
+
 \textbf{Step 3: Recover the policy and original-row prices.}
 Steps 1--2 give a family upper bound, not yet a robust policy. B ties for best at $m^*=(.6,.7,.7,.7)$, yet the allowed vector $(.6,.6,.7,.8)$ gives pure B a $-.075$ gain. Step 3 must match the family bound with an original-constraint policy lower bound.
-We need a probability vector supported on maximizers of $m^*$ and prices
-making the original-box bound~\eqref{eq:dual} tight there. The initial policy
-cancels positive residuals at capped coordinates; a tight original constraint
-supplies missing probability mass. Initialize
+Two conditions make~\eqref{eq:dual} equal this upper bound. The policy must sum to one and select only maximum coordinates of $m^*$. With lower prices $\eta_L=\eta$ and upper prices $\eta_U=\lambda$, its coefficient $z=\pi-p+T^\top(\lambda-\eta)$ must attain its original-box minimum at $m^*$: $z_i>0$ requires $m_i^*=\ell_i$, and $z_i<0$ requires $m_i^*=u_i$. Rows with positive prices must also be tight.
+
+Start with a nonnegative vector that enforces these endpoint signs but may have missing probability mass:
 \[
  \widetilde\pi_i=(\xi_i)_+\mathbf1\{u_i\ge t_0\},\qquad
  D_\pi=1-\sum_i\widetilde\pi_i\ge0.
@@ -127,15 +85,15 @@ Here $0\le\widetilde\pi_i\le p_i$, with positive mass only at maximum coordinate
 
 If $t_0=t_\ell$, add $D_\pi$ to a coordinate with $\ell_i=t_0$ and set all
 lower prices $\eta$ to zero; its box coefficient increases at this lower endpoint.
-Otherwise choose the first row attaining its lower bound at $t_0$.
+Otherwise choose the first row whose required root is $t_0$, so it forces the cap.
 Since $T_jh=a_j$, its supported means must equal $h_i$, and zero-price
 priority gives $\lambda_j=0$, even if its upper moment is also tight. Set
 \[
  E=\{i:T_{ji}>0,\ u_i\ge t_0\},\qquad
- s=\sum_{i\in E}T_{ji}>0,
+ \sigma_E=\sum_{i\in E}T_{ji}>0,
 \]
 where positivity follows because otherwise this row would attain its bound
-below $t_0$. Set $\eta_j=D_\pi/s$, with other lower prices zero.
+below $t_0$. Set $\eta_j=D_\pi/\sigma_E$, with other lower prices zero.
 Add $\eta_jT_{ji}$ to
 $\widetilde\pi_i$ on $E$. Updated box coefficients are zero on $E$ and
 $-p_i-\eta_jT_{ji}\le0$ elsewhere in this row, where $m_i^*=h_i=u_i$;
@@ -152,7 +110,7 @@ $(\eta_L,\eta_U)=(\eta,\lambda)$:
                       &=t_0-p^\top m^*.
  \end{aligned}
 \]
-Scale each context's objective and both row-price types by the same $w_x^*$.
+Scale each context's objective and both row-price types by the same $w_x$.
 Concatenation yields original-program lower $=F(m^*)=\mathcal R(\C)$,
 including zero-weight contexts. Such contexts still require a feasible point
 and a legal policy; only their objective and multipliers vanish.
@@ -161,12 +119,24 @@ The receiver checks original constraints, legal policy probabilities,
 multiplier signs and lower/objective/upper equality against the caller's request.
 It trusts neither the artificial cap nor the producer's internal state.\hfill$\square$
 
-\textbf{The running example, step by step.}
-Using Fig.~\ref{fig:example}'s decimal inputs, Step 1 gives $t_0=.7$.
-Step 2 gives $m^*=(.6,.7,.7,.7)$ and $\lambda=(0,0)$.
-Step 3 starts with $(0,.25,.25,.25)$, adds the missing $.25$ to C, and
-returns $\pi^*=(0,.25,.5,.25)$ with $\eta_L=(.5,0)$ and $\eta_U=0$.
+In the example, $(0,.25,.25,.25)$ lacks $.25$. The A/C row forces the cap; within it, only C has $u_i\ge.7$. Thus $\sigma_E=.5$, $\eta_L=(.5,0)$ and $\eta_U=0$. Add $.25$ to C to obtain $\pi^*=(0,.25,.5,.25)$.
 The lower bound $.65(.5)-.6(.5)=.025$ equals the family upper bound
 $.7-.675=.025$. Pure C in Fig.~\ref{fig:example} is another optimal policy.
-This exact decimal illustration explains the construction; measured runs
-check their own represented inputs.
+These decimal teaching inputs differ from represented inputs checked in measured runs.
+
+\textbf{Stopping without the full construction.}
+A constant-action point makes every policy tie with the reference. This offers a cheap stopping certificate, including for overlapping groups.
+\begin{proposition}[Zero capacity]\label{prop:zero-capacity}
+If all $w_x>0$ and $\pi_{0,xa}>0$, then $\mathcal R(\C)=0$ exactly when $\C$ contains a vector constant across actions within each context. Without strict positivity, a constant point is sufficient but need not be necessary.
+\end{proposition}
+\noindent\textit{Proof.} The nonnegative summands of $F$ vanish, under strict positivity, exactly at constant rows. Compactness attains its minimum; the minimax identity gives the result.\hfill$\square$
+
+For nonnegative single-context moment rows, even overlapping ones, form
+\[
+ I_x=[\max_a\ell_{xa},\min_a u_{xa}]
+       \cap\!\bigcap_{j:x_j=x}[a_j/\kappa_j,b_j/\kappa_j].
+\]
+Here $\kappa_j=\sum_iT_{ji}>0$; zero rows require $a_j\le0\le b_j$.
+Choose $v_x\in I_x$, set every $m_{xa}=v_x$, and check the original constraints. Under strict positivity, an empty intersection proves $\mathcal R>0$, but not $\mathcal R>\delta$ for positive $\delta$.
+
+Saved evidence can also bracket the family. The maximum of checked policy lower bounds and the reference's zero is $L_{\rm saved}\le\mathcal R$. A nonempty set $M_{\rm saved}$ of checked points gives $U_{\rm saved}=\min_{m\in M_{\rm saved}}F(m)\ge\mathcal R$. Share only for identical $\C,w,\pi_0$. Then $L_{\rm saved}>\delta$ certifies existence, $U_{\rm saved}\le\delta$ excludes it, and otherwise the family remains unresolved. Equation~\eqref{eq:recovery-decomposition} separates loose certificates from restricted policy choice.

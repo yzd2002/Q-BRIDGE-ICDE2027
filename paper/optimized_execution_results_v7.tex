@@ -1,9 +1,22 @@
 \subsection{The cost of answering repeated policy queries}
 \begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/optimized_v6_compact_factorial.pdf}
-\caption{Retention lowers group-average cost; screening does not. $S$: screening; $P$: cross-query retention. Dots: each round's equal-input geometric-mean cost ratio (below one favors enabling the factor). Lines: five-round range, not confidence intervals. All three input groups and four conditional comparisons appear; interaction and last-first comparisons are archived.}
+\caption{Retention lowers group-average cost; screening does not. $S$: screening; $P$: retention (0 off, 1 on). Each row varies its named switch, fixing the other. Groups: \emph{Original main}, primary; \emph{Engine streams}, geometry; \emph{Source-derived}, generated logs. Dots: each round's equal-input geometric mean of enabled/disabled cost ratios (below one is faster). Lines: five-round range, not confidence intervals. All three groups and four conditional comparisons appear; interaction and last-first comparisons are archived.}
 \label{fig:optimized-factorial}
 \end{figure*}
-All 270,000 quality and timing responses pass the recorded independent exact replay; the four core plans agree on evidence, decisions and native paths. Figure~\ref{fig:optimized-factorial} shows the five optimized rounds. On the three primary streams, retention's joint-cost ratios are $0.735$--$0.748$ without screening and $0.766$--$0.791$ with it. Screening costs $1.103$--$1.138$ and $1.165$--$1.186$ times the corresponding unscreened plans. It also loses in every engine and source-derived group-round mean. Its earlier benefit without retention therefore does not survive optimized arithmetic; only two of the three registered directions hold in every primary round.
+All 270,000 responses pass independent exact replay; core plans match evidence,
+decisions and native paths. Across the five primary rounds
+(Fig.~\ref{fig:optimized-factorial}), retention ratios are
+$0.735$--$0.748$ without screening and $0.766$--$0.791$ with it.
+Screening ratios are $1.103$--$1.138$ without retention and
+$1.165$--$1.186$ with it. Screening also costs more in every geometry and
+source-derived group-round mean. Its earlier benefit without retention
+disappears under optimized arithmetic; two of three registered directions
+hold in every primary round.
 
-The last-first bridge costs $0.833$--$0.882$ times $S_0P_1$ on primary streams, but is slower in one of their 15 input-round pairs. The corresponding slower counts are 66/270 engine and 17/30 source-derived pairs. Retention also has adverse individual cases despite lower group means. These results support retaining reusable exact terms, not default screening or universal speedups; the bridge's changed candidate order is a separate mechanism.
+The last-first bridge costs $0.833$--$0.882$ times $S_0P_1$ on primary streams,
+but is slower in 1/15 primary, 66/270 geometry and 17/30 source-derived
+input-round pairs. Retention also has adverse individual cases despite lower
+group means. These results support retained terms on group averages,
+not default screening or universal speedups. The bridge separately changes
+candidate order.

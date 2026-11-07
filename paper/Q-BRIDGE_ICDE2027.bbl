@@ -68,6 +68,11 @@ R.~Berk, L.~Brown, A.~Buja, K.~Zhang, and L.~Zhao, ``Valid post-selection infere
 \bibitem{Bertsimas2018DataRobust}
 D.~Bertsimas, V.~Gupta, and N.~Kallus, ``Data-driven robust optimization,'' \emph{Mathematical Programming}, vol. 167, no.~2, pp. 235--292, 2018.
 
+\bibitem{Boyd2004Convex}
+\BIBentryALTinterwordspacing
+S.~Boyd and L.~Vandenberghe, \emph{Convex Optimization}.\hskip 1em plus 0.5em minus 0.4em\relax Cambridge University Press, 2004. [Online]. Available: \url{https://web.stanford.edu/~boyd/cvxbook/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Neumaier2004SafeBounds}
 \BIBentryALTinterwordspacing
 A.~Neumaier and O.~Shcherbina, ``Safe bounds in linear and mixed-integer linear programming,'' \emph{Mathematical Programming}, vol.~99, no.~2, pp. 283--296, 2004. [Online]. Available: \url{https://arnold-neumaier.at/ms/mip.pdf}
@@ -77,6 +82,17 @@ A.~Neumaier and O.~Shcherbina, ``Safe bounds in linear and mixed-integer linear 
 \BIBentryALTinterwordspacing
 K.~K.~H. Cheung, A.~Gleixner, and D.~E. Steffy, ``Verifying integer programming results,'' in \emph{Integer Programming and Combinatorial Optimization}, ser. Lecture Notes in Computer Science, vol. 10328.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017, pp. 148--160. [Online]. Available: \url{https://arxiv.org/abs/1611.08832}
 \BIBentrySTDinterwordspacing
+
+\bibitem{Sion1958Minimax}
+\BIBentryALTinterwordspacing
+M.~Sion, ``On general minimax theorems,'' \emph{Pacific Journal of Mathematics}, vol.~8, no.~1, pp. 171--176, 1958. [Online]. Available: \url{https://msp.org/pjm/1958/8-1/pjm-v8-n1-p14-s.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Eiselt1986ContinuousGLB}
+H.~A. Eiselt, ``Continuous maximin knapsack problems with {GLB} constraints,'' \emph{Mathematical Programming}, vol.~36, pp. 114--121, 1986.
+
+\bibitem{Kuno1991ContinuousKnapsack}
+T.~Kuno, H.~Konno, and E.~Zemel, ``A linear-time algorithm for solving continuous maximin knapsack problems,'' \emph{Operations Research Letters}, vol.~10, no.~1, pp. 23--26, 1991.
 
 \bibitem{Marcucci2021WarmStart}
 \BIBentryALTinterwordspacing
@@ -98,14 +114,9 @@ A.~Deza, F.~Badilla, and S.~S. Dey, ``Mixed-integer program sensitivity analysis
 {HiGHS developers}, ``{HiGHS} documentation: Hot start and python interfaces,'' Official software documentation, 2026, accessed 2026-11-04; API cross-checked with HiGHS v1.12.0 source and local HiGHS 1.12.0 and 1.15.1 bindings. [Online]. Available: \url{https://ergo-code.github.io/HiGHS/dev/guide/further/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Boyd2004Convex}
-\BIBentryALTinterwordspacing
-S.~Boyd and L.~Vandenberghe, \emph{Convex Optimization}.\hskip 1em plus 0.5em minus 0.4em\relax Cambridge University Press, 2004. [Online]. Available: \url{https://web.stanford.edu/~boyd/cvxbook/}
-\BIBentrySTDinterwordspacing
-
 \bibitem{HiGHSOptions2026}
 \BIBentryALTinterwordspacing
-{HiGHS developers}, ``{HiGHS} documentation: List of options,'' 2026, official documentation, accessed 2026-11-04; option semantics checked against local HiGHS 1.15.1. [Online]. Available: \url{https://ergo-code.github.io/HiGHS/dev/options/definitions/}
+------, ``{HiGHS} documentation: List of options,'' 2026, official documentation, accessed 2026-11-04; option semantics checked against local HiGHS 1.15.1. [Online]. Available: \url{https://ergo-code.github.io/HiGHS/dev/options/definitions/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{martello1990knapsack}
@@ -117,17 +128,6 @@ S.~Martello and P.~Toth, \emph{Knapsack Problems: Algorithms and Computer Implem
 \BIBentryALTinterwordspacing
 Q.~Huangfu and J.~A.~J. Hall, ``Parallelizing the dual revised simplex method,'' \emph{Mathematical Programming Computation}, vol.~10, no.~1, pp. 119--142, 2018. [Online]. Available: \url{https://doi.org/10.1007/s12532-017-0130-5}
 \BIBentrySTDinterwordspacing
-
-\bibitem{Sion1958Minimax}
-\BIBentryALTinterwordspacing
-M.~Sion, ``On general minimax theorems,'' \emph{Pacific Journal of Mathematics}, vol.~8, no.~1, pp. 171--176, 1958. [Online]. Available: \url{https://msp.org/pjm/1958/8-1/pjm-v8-n1-p14-s.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Eiselt1986ContinuousGLB}
-H.~A. Eiselt, ``Continuous maximin knapsack problems with {GLB} constraints,'' \emph{Mathematical Programming}, vol.~36, pp. 114--121, 1986.
-
-\bibitem{Kuno1991ContinuousKnapsack}
-T.~Kuno, H.~Konno, and E.~Zemel, ``A linear-time algorithm for solving continuous maximin knapsack problems,'' \emph{Operations Research Letters}, vol.~10, no.~1, pp. 23--26, 1991.
 
 \bibitem{SoPlex2026}
 {Zuse Institute Berlin}, ``{SoPlex} 8.1.0,'' \url{https://soplex.zib.de/}, 2026, released September 2026. Accessed November 6, 2026.

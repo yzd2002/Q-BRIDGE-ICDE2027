@@ -1,20 +1,34 @@
-Coat has 290 users, each supplying 24 self-selected and 16 randomized ratings on 300 items~\cite{schnabel2016coat}. With one context ($K=1$), policies sample items for this population, without personalization. Success is rating at least four, not purchase; zero is unobserved. Users, not the 11,600 ratings, are independent. Potential ratings are assumed invariant to within-source order and panel composition; cross-source equality needs an additional assumption.
+Coat tests item selection for one population ($K=1$), without personalization.
+Its 290 users each supply 24 self-selected and 16 randomized ratings on
+300 items~\cite{schnabel2016coat}. Success means rating at least four, not
+purchase; zero rating entries are unobserved. Users, not the 11,600 ratings,
+are independent. Potential ratings are assumed invariant to within-source
+order and panel composition; cross-source equality requires another assumption.
 
-Gender, jacket type and color define three partitions totaling 31 rows; their combined view overlaps.
-The twelve declarations are $\Lambda\in\{1,1.5,2,3\}$ and
-$\rho\in\{0,.02,.05\}$; the primary declaration is $(2,0)$.
-Five binary indicators---front-page placement, men's items, fleece, waterproof
-and black---define fifteen policies $\pi_i\propto t^{h_i}$,
-$t\in\{.5,1.5,2\}$, relative to uniform $1/300$.
-The primary policy doubles front-page weights and renormalizes over all items.
-Only those three front-page contrasts lie outside the moment row space.
+Gender, jacket-type and color partitions total 31 rows and overlap when combined.
+Twelve declarations use $\Lambda\in\{1,1.5,2,3\}$ and $\rho\in\{0,.02,.05\}$;
+primary is $(2,0)$. Fifteen candidates $\pi_i\propto t^{h_i}$,
+$t\in\{.5,1.5,2\}$ use five binary indicators: front-page placement, men's items,
+fleece, waterproof and black. The reference is uniform $1/300$.
+The primary policy doubles front-page weights and renormalizes.
+Only the three front-page contrasts lie outside the moment row space.
 
-The main analysis keeps all ratings and assumes R16 simple random subsets
-independent of potential ratings. The release describes random/uniform
-selection; unavailable collection code prevents verification. A separate
-event-interface control samples one rating per source/user without using its
-value: $q_a=(16/300)/16=1/300$. Its 580 events leave 116 empty O and 124 empty R
-cells; all 900 queries and 15 full-cell controls are unresolved. This diagnoses
-the cost of discarding panel structure.
+Keeping all ratings assumes each user's 16 R items form a simple random subset
+independent of potential ratings. The release says random/uniform; collection
+code is unavailable for verification. A value-independent control retains one
+rating per source/user: $q_a=(16/300)/16=1/300$.
+Its 580 events leave 116 empty O and 124 empty R cells; 900 queries and
+15 full-cell controls yield no positive certificate. This diagnoses the cost
+of discarding panel structure.
 
-O conditional CP uses included users per item; joint CP uses $N=290$. Uniform thinning divides marginal and latent inclusion propensities by 24, preserving their ratio and conditional ratings. Thus full inclusion strengthens consistency without changing $\Lambda$, not just reducing variance. Each active R user averages observed group ratings: under the subset design this is unbiased for their uniform group mean, with activity independent of potential ratings. Conditional on active count, these iid scores lie in $[0,1]$. Equation~\eqref{eq:eb} uses 72--290 users and variance denominator $n_j-1$; item histograms cannot recover that variance. Projected intervals use per-item CP. Exact propagation follows~\eqref{eq:represented}, adding neither users nor transport evidence.
+For O, conditional CP uses included users per item; joint CP uses $N=290$.
+Uniform thinning divides marginal and latent inclusion propensities by 24,
+preserving their ratio and conditional ratings. Full inclusion strengthens
+consistency without changing $\Lambda$, beyond reducing variance.
+Each R user with ratings in a group averages them. Under the subset design,
+this estimates their uniform group mean without bias; activity is independent
+of potential ratings. Conditional on active count, the iid scores lie in $[0,1]$.
+Equation~\eqref{eq:eb} uses 72--290 users; score variance uses denominator
+$n_j-1$ and cannot be recovered from item histograms.
+Projected intervals use per-item CP; exact propagation follows
+\eqref{eq:represented}, adding neither users nor transport evidence.

@@ -1,8 +1,34 @@
 \subsection{Repeated fixed-policy queries}
-The 63 inputs are three primary 1,000-query streams sharing one connected 512-cell view, 54 geometry streams ($d=64,512,2048$; disjoint/mixed/connected rows), and six source-derived streams. The latter use generated logs with 64 actions: one million O and four million R events, with uniform/skewed assignment. Broader streams have 100 queries each. Nearby queries perturb contrasts; unrelated directions preserve legal policies; $\delta=.001$ throughout. Primary streams emphasize reuse: one solve, 999 hits, all true; broader streams permit all three verdicts. These constructed workloads do not estimate online hit rates; source ingestion is excluded.
+The 63 inputs comprise three primary 1,000-query streams on one connected
+512-cell view; 54 geometry streams ($d=64,512,2048$;
+disjoint/mixed/connected rows); and six generated-log streams (64 actions,
+one million O and four million R events, uniform/skewed assignment).
+Broader streams have 100 queries each. Nearby queries perturb contrasts;
+unrelated directions preserve legal policies; $\delta=.001$ throughout.
+Primary streams have one solve and 999 reuse hits, all true; broader streams
+permit all three verdicts. These constructed streams do not estimate online
+hit rates; source ingestion is excluded.
 
-Four plans cross interval screening $S$ with cross-query exact-term retention $P$, sharing native configuration, zero-dual/last-dual/primal order, proof format and receiver. $P=0$ discards exactly the dual constants and residuals retained by $P=1$. Optimized plans equally retain view decoding, primal state and within-request objective/box conversion; sparse residuals skip zeros. The nonfactorial last-first bridge uses $S_0P_1$ arithmetic, checking last before zero while preserving decisions and native opportunities; valid true certificates may differ.
+Four plans cross screening $S$ (deferring exact candidate checks) and retention
+$P$ (saving exact dual constants/residuals across objectives):
+$P=0$ discards precisely the terms retained by $P=1$.
+All share native configuration, zero-dual/last-dual/primal order, proof format
+and receiver, with matching decisions, evidence and native paths.
+Optimized plans retain view decoding, primal state and within-request
+objective/box conversion; sparse residuals skip zeros.
+The separate last-first bridge uses $S_0P_1$ arithmetic but checks last before
+zero, preserving decisions and native opportunities; true certificates may differ.
 
-Joint service includes fresh producer/receiver initialization, view validation, queries, failures, native fallback, serialization and persistent FIFO16 receiver verification; disk I/O, compression, network transfer and separate legacy/Fraction audits are excluded. Core plans must match decisions, evidence and native paths.
+Joint service includes fresh producer/receiver initialization, view validation,
+queries including failures/native fallback, serialization and persistent FIFO16
+verification; it excludes disk I/O, compression, network transfer and separate
+legacy/Fraction audits.
 
-All inputs undergo one quality pass and five timing rounds (45,000/225,000 responses), with fresh arm-streams, one CPU/native thread and input-independent shuffled order. Equal-weight geometric means within each input group/round retain four conditional factor ratios, their log interaction and four bridge ratios. Input ratios, slow cases, absolute costs, receiver shares and prefixes are archived. Registered checks are descriptive: retention helps without screening; screening helps without retention but costs with retention. Five rounds measure machine variation, not independent workloads.
+One quality pass (45,000 responses) and five timing rounds (225,000) use fresh
+arm-streams, one CPU/native thread and input-independent shuffled order.
+Enabled/disabled cost ratios fix the other switch; equal-input geometric means
+per group/round give four conditional ratios. Their log interaction and four
+bridge ratios are retained. Input ratios, slow cases, absolute costs, receiver
+shares and prefixes are archived. Registered descriptive checks ask whether retention helps
+without screening, and screening helps without retention but costs with it.
+Rounds measure machine variation, not independent workloads.

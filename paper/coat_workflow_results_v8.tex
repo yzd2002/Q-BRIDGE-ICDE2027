@@ -1,31 +1,29 @@
 \paragraph{The cost of family preprocessing}
-This experiment tests whether family evidence accelerates the unchanged
-catalogue. A useful policy outside it can coexist with false answers inside it.
-We repeat the 240 queries on two 16-row jacket-type Fusion
-views, $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known
-capacities. Hot-start (Hot), optimized threshold execution (Opt), and Opt with
-partition (Part) or exact-LP (LP) preprocessing share objective caching, checked
-points and a rational receiver. Family certificates add only feasible points;
-a shared constant-action shortcut skips unnecessary family solves.
-Unresolved represented queries permit one producer attempt per objective--margin
-pair and one complete exact fallback per objective; ideal answers reuse this
-evidence without extra solves.
+A redesign outside the catalogue need not certify any catalogue policy.
+We test whether family evidence instead reduces cost for the unchanged
+240 requests, using two 16-row jacket-type Fusion views,
+$(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known capacities.
+Hot-start (Hot), optimized threshold execution (Opt), and Opt with partition
+(Part) or exact-LP (LP) preprocessing share objective caching, checked points
+and a rational receiver. Family certificates add only feasible points;
+a shared constant-action check skips unnecessary family solves.
+Unresolved stored-contrast queries allow one producer attempt per
+objective--margin pair and one complete exact fallback per objective;
+ideal rational policies reuse that evidence without extra solves.
 
 \begin{table}[t]
 \centering
-\caption{Original Coat queries. Time: median seconds over three rounds, including
-startup, family work, external verification and cleanup. Ratio/Opt: paired
-cost range (above one is slower). N/E/F: native/fixed-exact/family calls,
-identical per stream across quality and timing. Both views use $\rho=0$.}
+\caption{Preprocessing the unchanged Coat catalogue. Time: median seconds over three rounds, including startup, family work, external verification and cleanup. Ratio/Opt: paired cost range (above one is slower). N/E/F: native/fixed-policy exact/family calls, identical across quality and timing per stream. Both views use $\rho=0$.}
 \label{tab:coat-workflow}
 \input{coat_workflow_table_v8}
 \end{table}
 
-All 32 streams complete, each with 240 false answers under both semantics.
-On the nonzero-capacity view, Part adds 5.1--7.7\% to Opt's full cost without
-reducing its two native and two exact calls (Table~\ref{tab:coat-workflow});
-LP likewise saves no calls. The zero-capacity control skips family computation.
-Three rotations describe machine variation; execution positions are not fully
-balanced. Different optimal points compare complete preprocessing choices.
+All 32 streams complete with 240 false answers each, for both stored numeric
+contrasts and ideal rational policies.
+At nonzero capacity, Part adds 5.1--7.7\% to Opt's full cost without reducing
+its two native and two exact calls (Table~\ref{tab:coat-workflow});
+LP saves no calls either. At zero capacity, family computation is skipped.
+Three rounds measure machine variation; execution positions are not fully balanced.
+Optimal points differ, so costs compare complete preprocessing choices.
 Family answers enable redesign beyond the catalogue but do not amortize
 preprocessing here.

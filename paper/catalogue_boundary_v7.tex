@@ -1,20 +1,22 @@
 \paragraph{Catalogue queries with ordinary caching}
-For each primary Coat view, combine two of the five indicators:
-$\pi_i\propto t_1^{h_{1i}}t_2^{h_{2i}}$, with
+At primary $(\Lambda,\rho)=(2,0)$, each of five source views receives an extended
+catalogue combining two indicators:
+$\pi_i\propto t_1^{h_{1i}}t_2^{h_{2i}}$,
 $(t_1,t_2)\in\{.5,1,2\}^2\setminus\{(1,1)\}$.
 Ten pairs give 80 policy positions at margins $0,.001,.01$ (0, 0.1, 1\,pp):
-240 requests, 50 distinct objectives and 150 objective--margin pairs.
+240 requests per view, 50 objectives and 150 objective--margin pairs.
 Prepared execution retains exact dual terms; optimized-exact adds sparse
-arithmetic and cached number conversions. Both share full objective caching
-and a persistent receiver. Native hot-start retains a solver basis without
-cross-objective certificate candidates. Quality checks precede three timing rounds.
+arithmetic and cached number conversions. Both fully cache objectives and retain a persistent receiver.
+Native hot-start retains a solver basis without cross-objective certificate candidates.
+Quality checks precede three timing rounds.
 
-Prepared and optimized-exact agree on all 1,200 requests, but cost ratios
-$0.960$, $0.941$, $0.953$ miss the ten-percent target. Optimized-exact is slower
-in 3/15 view-rounds and retains more estimated exact-state payload in every
-view (not isolated RSS). Native hot-start changes 98 false answers to unknown
-and four unknown answers to false; it never reverses a Boolean answer.
-Thus overall service differs; on R projected, decisions agree and native is
-faster in all rounds. None certifies improvement, and neither fusion-only
-information target is supported. The five views have zero capacity, so a
-constant-action witness can already justify stopping.
+Prepared and optimized-exact agree on all 1,200 requests.
+Optimized/prepared cost ratios $0.960$, $0.941$, $0.953$ miss the ten-percent
+target; optimized-exact is slower in 3/15 view-rounds and retains more
+estimated exact-state payload in every view (not isolated RSS).
+Native hot-start changes 98 false answers to unknown and four unknown answers
+to false, never reversing a Boolean answer. Overall service differs;
+on R projected, decisions agree and native is faster in all rounds.
+None certifies improvement; neither fusion-only information target is supported.
+All five primary views have zero capacity, already checkable by a
+constant-action witness.

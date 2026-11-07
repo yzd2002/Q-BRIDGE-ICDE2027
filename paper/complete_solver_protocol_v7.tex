@@ -1,6 +1,6 @@
 % Protocol text only; numerical conclusions require the completed-run audit.
 \subsection{A complete exact solver and the source of recovery}
-SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner2020ExactLP} solves the epigraph LP on identical $(\C,w,\pi_0)$, suppressing exact-input stars:
+SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner2020ExactLP} solves the epigraph LP on identical $(\C,w,\pi_0)$:
 \begin{equation}
  \min_{m\in\C,t}\ \sum_xw_x\bigl(t_x-\pi_{0,x}^{\top}m_x\bigr),
  \qquad m_{xa}\le t_x,\quad t_x\text{ free}.
