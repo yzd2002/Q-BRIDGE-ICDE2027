@@ -4,7 +4,7 @@
 \caption{Retention lowers group-average cost; screening does not. $S$: screening; $P$: retention (0 off, 1 on). Each row varies its named switch, fixing the other. Groups: \emph{Original main}, primary; \emph{Engine streams}, geometry; \emph{Source-derived}, generated logs. Dots: each round's equal-input geometric mean of enabled/disabled cost ratios (below one is faster). Lines: five-round range, not confidence intervals. All three groups and four conditional comparisons appear; interaction and last-first comparisons are archived.}
 \label{fig:optimized-factorial}
 \end{figure*}
-All 270,000 responses pass independent exact replay; core plans match evidence,
+Retention saves the exact group terms that a new query would otherwise recompute; screening first tests whether an exact check can be deferred. All 270,000 responses pass independent exact replay; core plans match evidence,
 decisions and native paths. Across the five primary rounds
 (Fig.~\ref{fig:optimized-factorial}), retention ratios are
 $0.735$--$0.748$ without screening and $0.766$--$0.791$ with it.

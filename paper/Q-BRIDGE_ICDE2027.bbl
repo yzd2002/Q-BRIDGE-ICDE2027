@@ -20,19 +20,19 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{salimi2018hypdb}
+\bibitem{schnabel2016coat}
 \BIBentryALTinterwordspacing
-B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
+T.~Schnabel, A.~Swaminathan, A.~Singh, N.~Chandak, and T.~Joachims, ``Recommendations as treatments: Debiasing learning and evaluation,'' in \emph{Proceedings of the 33rd International Conference on Machine Learning}, ser. Proceedings of Machine Learning Research, vol.~48.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2016, pp. 1670--1679. [Online]. Available: \url{https://proceedings.mlr.press/v48/schnabel16.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{salimi2017zaliql}
+\bibitem{Kallus2018ConfoundingRobust}
 \BIBentryALTinterwordspacing
-B.~Salimi, C.~Cole, D.~R.~K. Ports, and D.~Suciu, ``{ZaliQL}: Causal inference from observational data at scale,'' \emph{Proceedings of the VLDB Endowment}, vol.~10, no.~12, pp. 1957--1960, 2017. [Online]. Available: \url{https://www.vldb.org/pvldb/vol10/p1957-salimi.pdf}
+N.~Kallus and A.~Zhou, ``Confounding-robust policy improvement,'' in \emph{Advances in Neural Information Processing Systems}, vol.~31, 2018. [Online]. Available: \url{https://proceedings.neurips.cc/paper/2018/hash/3a09a524440d44d7f19870070a5ad42f-Abstract.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Feng2019UADB}
+\bibitem{lanners2025fusion}
 \BIBentryALTinterwordspacing
-S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
+Q.~Lanners, C.~Rudin, A.~Volfovsky, and H.~Parikh, ``Data fusion for partial identification of causal effects,'' in \emph{Advances in Neural Information Processing Systems}, vol.~38.\hskip 1em plus 0.5em minus 0.4em\relax Curran Associates, Inc., 2025, pp. 150\,638--150\,702. [Online]. Available: \url{https://proceedings.neurips.cc/paper_files/paper/2025/hash/dd4e79c2228c43954cc074abf2f85a07-Abstract-Conference.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{fawkes2025hardness}
@@ -143,9 +143,14 @@ A.~Gleixner and D.~E. Steffy, ``Linear programming using limited-precision oracl
 C.~Gao, S.~Li, W.~Lei, J.~Chen, B.~Li, P.~Jiang, X.~He, J.~Mao, and T.-S. Chua, ``{KuaiRec}: A fully-observed dataset and insights for evaluating recommender systems,'' in \emph{Proceedings of the 31st ACM International Conference on Information \& Knowledge Management}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2022, pp. 540--550. [Online]. Available: \url{https://kuairec.com/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{schnabel2016coat}
+\bibitem{salimi2018hypdb}
 \BIBentryALTinterwordspacing
-T.~Schnabel, A.~Swaminathan, A.~Singh, N.~Chandak, and T.~Joachims, ``Recommendations as treatments: Debiasing learning and evaluation,'' in \emph{Proceedings of the 33rd International Conference on Machine Learning}, ser. Proceedings of Machine Learning Research, vol.~48.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2016, pp. 1670--1679. [Online]. Available: \url{https://proceedings.mlr.press/v48/schnabel16.html}
+B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
+\BIBentrySTDinterwordspacing
+
+\bibitem{salimi2017zaliql}
+\BIBentryALTinterwordspacing
+B.~Salimi, C.~Cole, D.~R.~K. Ports, and D.~Suciu, ``{ZaliQL}: Causal inference from observational data at scale,'' \emph{Proceedings of the VLDB Endowment}, vol.~10, no.~12, pp. 1957--1960, 2017. [Online]. Available: \url{https://www.vldb.org/pvldb/vol10/p1957-salimi.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{salimi2020carl}
@@ -156,6 +161,11 @@ B.~Salimi, H.~Parikh, M.~Kayali, L.~Getoor, S.~Roy, and D.~Suciu, ``Causal relat
 \bibitem{youngmann2024causumx}
 \BIBentryALTinterwordspacing
 B.~Youngmann, M.~Cafarella, A.~Gilad, and S.~Roy, ``Summarized causal explanations for aggregate views,'' \emph{Proceedings of the ACM on Management of Data}, vol.~2, no.~1, pp. 71:1--71:27, 2024. [Online]. Available: \url{https://doi.org/10.1145/3639328}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Feng2019UADB}
+\BIBentryALTinterwordspacing
+S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Hassanzadeh2026SemanticViews}
@@ -171,16 +181,6 @@ K.~Jiang, W.~Hu, X.~Lai, S.~Yang, and X.-H. Zhou, ``Improving sensitivity analys
 \bibitem{du2026feasible}
 \BIBentryALTinterwordspacing
 Y.~Du, Z.~Zhang, H.~Li, C.~Fang, J.~Xu, Z.~Peng, and J.~Guo, ``Feasible fusion: Constrained joint estimation under structural non-overlap,'' in \emph{Proceedings of the 43rd International Conference on Machine Learning}, ser. Proceedings of Machine Learning Research, vol. 306.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2026, pp. 26\,851--26\,885. [Online]. Available: \url{https://proceedings.mlr.press/v306/du26s.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{lanners2025fusion}
-\BIBentryALTinterwordspacing
-Q.~Lanners, C.~Rudin, A.~Volfovsky, and H.~Parikh, ``Data fusion for partial identification of causal effects,'' in \emph{Advances in Neural Information Processing Systems}, vol.~38.\hskip 1em plus 0.5em minus 0.4em\relax Curran Associates, Inc., 2025, pp. 150\,638--150\,702. [Online]. Available: \url{https://proceedings.neurips.cc/paper_files/paper/2025/hash/dd4e79c2228c43954cc074abf2f85a07-Abstract-Conference.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Kallus2018ConfoundingRobust}
-\BIBentryALTinterwordspacing
-N.~Kallus and A.~Zhou, ``Confounding-robust policy improvement,'' in \emph{Advances in Neural Information Processing Systems}, vol.~31, 2018. [Online]. Available: \url{https://proceedings.neurips.cc/paper/2018/hash/3a09a524440d44d7f19870070a5ad42f-Abstract.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Hess2026SharpPolicy}

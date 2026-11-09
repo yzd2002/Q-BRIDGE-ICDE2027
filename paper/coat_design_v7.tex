@@ -1,34 +1,7 @@
-Coat tests item selection for one population ($K=1$), without personalization.
-Its 290 users each supply 24 self-selected and 16 randomized ratings on
-300 items~\cite{schnabel2016coat}. Success means rating at least four, not
-purchase; zero rating entries are unobserved. Users, not the 11,600 ratings,
-are independent. Potential ratings are assumed invariant to within-source
-order and panel composition; cross-source equality requires another assumption.
+Here a policy chooses among 300 coat items for one user population ($K=1$), without personalization or a ranked list. The Coat dataset provides 24 self-selected and 16 randomly selected item ratings from each of 290 users~\cite{schnabel2016coat}. A success is a rating of at least four, not a purchase; zero entries denote unobserved ratings. Users, not the 11,600 ratings, are treated as independent. Within each source, potential ratings are assumed unaffected by presentation order or the other items in a user's panel.
 
-Gender, jacket-type and color partitions total 31 rows and overlap when combined.
-Twelve declarations use $\Lambda\in\{1,1.5,2,3\}$ and $\rho\in\{0,.02,.05\}$;
-primary is $(2,0)$. Fifteen candidates $\pi_i\propto t^{h_i}$,
-$t\in\{.5,1.5,2\}$ use five binary indicators: front-page placement, men's items,
-fleece, waterproof and black. The reference is uniform $1/300$.
-The primary policy doubles front-page weights and renormalizes.
-Only the three front-page contrasts lie outside the moment row space.
+Group constraints use \emph{item} attributes: gender category, jacket type and color. Their separate partitions total 31 rows and overlap when combined. Twelve assumption settings cross $\Lambda\in\{1,1.5,2,3\}$ with $\rho\in\{0,.02,.05\}$; the primary setting is $(2,0)$. Fifteen candidate policies upweight or downweight front-page, men's, fleece, waterproof or black items: $\pi_i\propto t^{h_i}$ for binary attribute $h_i$ and $t\in\{.5,1.5,2\}$. The reference selects uniformly ($1/300$); the primary candidate doubles front-page item weights, then normalizes. Only the three front-page policies have contrasts outside the span of group rows.
 
-Keeping all ratings assumes each user's 16 R items form a simple random subset
-independent of potential ratings. The release says random/uniform; collection
-code is unavailable for verification. A value-independent control retains one
-rating per source/user: $q_a=(16/300)/16=1/300$.
-Its 580 events leave 116 empty O and 124 empty R cells; 900 queries and
-15 full-cell controls yield no positive certificate. This diagnoses the cost
-of discarding panel structure.
+To use all ratings, we assume each user's 16 R items form a simple random subset independent of potential ratings. The release describes random/uniform selection; collection code is unavailable. A control retains one rating per source/user without looking at its value, giving $q_a=(16/300)/16=1/300$. Its 580 events leave 116 empty O and 124 empty R cells; none of 900 queries or 15 full-cell controls is certified. Discarding the panels loses substantial information.
 
-For O, conditional CP uses included users per item; joint CP uses $N=290$.
-Uniform thinning divides marginal and latent inclusion propensities by 24,
-preserving their ratio and conditional ratings. Full inclusion strengthens
-consistency without changing $\Lambda$, beyond reducing variance.
-Each R user with ratings in a group averages them. Under the subset design,
-this estimates their uniform group mean without bias; activity is independent
-of potential ratings. Conditional on active count, the iid scores lie in $[0,1]$.
-Equation~\eqref{eq:eb} uses 72--290 users; score variance uses denominator
-$n_j-1$ and cannot be recovered from item histograms.
-Projected intervals use per-item CP; exact propagation follows
-\eqref{eq:represented}, adding neither users nor transport evidence.
+Inference accounts for repeated ratings. O intervals count included users per item; joint bounds use $N=290$. Uniform thinning divides inclusion probabilities by 24, preserving their ratio and $\Lambda$, but weakens consistency bounds. For R group scores, each user averages their ratings within a group. Under the subset assumption this is an unbiased group-mean estimate; the 72--290 active-user scores lie in $[0,1]$ and enter~\eqref{eq:eb}. Their sample variance uses $n_j-1$ and requires user-level records. Projected intervals instead use per-item CP and propagate through~\eqref{eq:represented}.

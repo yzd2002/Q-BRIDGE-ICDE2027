@@ -1,15 +1,11 @@
 \paragraph{The cost of family preprocessing}
-A redesign outside the catalogue need not certify any catalogue policy.
-We test whether family evidence instead reduces cost for the unchanged
-240 requests, using two 16-row jacket-type Fusion views,
+Can family preprocessing make the unchanged 240 catalogue queries cheaper? We test two 16-row jacket-type Fusion views,
 $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known capacities.
 Hot-start (Hot), optimized threshold execution (Opt), and Opt with partition
 (Part) or exact-LP (LP) preprocessing share objective caching, checked points
 and a rational receiver. Family certificates add only feasible points;
 a shared constant-action check skips unnecessary family solves.
-Unresolved stored-contrast queries allow one producer attempt per
-objective--margin pair and one complete exact fallback per objective;
-ideal rational policies reuse that evidence without extra solves.
+Stored-contrast and ideal-policy queries share exact fallback evidence.
 
 \begin{table}[t]
 \centering
@@ -18,8 +14,7 @@ ideal rational policies reuse that evidence without extra solves.
 \input{coat_workflow_table_v8}
 \end{table}
 
-All 32 streams complete with 240 false answers each, for both stored numeric
-contrasts and ideal rational policies.
+All 32 streams complete, each with 240 false answers for both stored and ideal rational policies: none of the listed candidates meets the requested guarantee.
 At nonzero capacity, Part adds 5.1--7.7\% to Opt's full cost without reducing
 its two native and two exact calls (Table~\ref{tab:coat-workflow});
 LP saves no calls either. At zero capacity, family computation is skipped.

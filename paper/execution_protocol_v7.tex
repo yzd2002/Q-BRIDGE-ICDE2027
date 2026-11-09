@@ -1,34 +1,6 @@
 \subsection{Repeated fixed-policy queries}
-The 63 inputs comprise three primary 1,000-query streams on one connected
-512-cell view; 54 geometry streams ($d=64,512,2048$;
-disjoint/mixed/connected rows); and six generated-log streams (64 actions,
-one million O and four million R events, uniform/skewed assignment).
-Broader streams have 100 queries each. Nearby queries perturb contrasts;
-unrelated directions preserve legal policies; $\delta=.001$ throughout.
-Primary streams have one solve and 999 reuse hits, all true; broader streams
-permit all three verdicts. These constructed streams do not estimate online
-hit rates; source ingestion is excluded.
+The 63 inputs comprise three primary 1,000-query streams on a 512-cell view; 54 geometry streams varying size ($d=64,512,2048$) and row overlap; and six generated-log streams with 64 actions, one million O and four million R events. The latter two groups contain 100 queries per stream. Queries vary nearby and unrelated policy directions at $\delta=.001$. The primary streams have one solve and 999 reuse hits, all true; other streams include false and unknown answers. These are controlled workloads, not estimates of online hit rates.
 
-Four plans cross screening $S$ (deferring exact candidate checks) and retention
-$P$ (saving exact dual constants/residuals across objectives):
-$P=0$ discards precisely the terms retained by $P=1$.
-All share native configuration, zero-dual/last-dual/primal order, proof format
-and receiver, with matching decisions, evidence and native paths.
-Optimized plans retain view decoding, primal state and within-request
-objective/box conversion; sparse residuals skip zeros.
-The separate last-first bridge uses $S_0P_1$ arithmetic but checks last before
-zero, preserving decisions and native opportunities; true certificates may differ.
+Four plans turn screening $S$ and retention $P$ independently on or off. They use identical solvers, candidate order, certificates and checker; their answers, evidence and solver paths must match. The optimized implementation retains decoded views, feasible points and within-query number conversions, and skips zero coefficients. Thus the retention comparison isolates saving the exact terms in~\eqref{eq:scaled}. A separate ``last-first'' control changes candidate order, so its certificates may differ.
 
-Joint service includes fresh producer/receiver initialization, view validation,
-queries including failures/native fallback, serialization and persistent FIFO16
-verification; it excludes disk I/O, compression, network transfer and separate
-legacy/Fraction audits.
-
-One quality pass (45,000 responses) and five timing rounds (225,000) use fresh
-arm-streams, one CPU/native thread and input-independent shuffled order.
-Enabled/disabled cost ratios fix the other switch; equal-input geometric means
-per group/round give four conditional ratios. Their log interaction and four
-bridge ratios are retained. Input ratios, slow cases, absolute costs, receiver
-shares and prefixes are archived. Registered descriptive checks ask whether retention helps
-without screening, and screening helps without retention but costs with it.
-Rounds measure machine variation, not independent workloads.
+Joint service includes initialization, validation, queries, failures, solver fallback, serialization and checking with a 16-entry bank. It excludes ingestion, disk I/O, compression, network transfer and separate archival audits. A quality pass checks 45,000 responses; five shuffled timing rounds contribute 225,000 more. Each fresh run uses one CPU/native thread. Ratios compare enabled/disabled cost on the same input with the other switch fixed; group summaries give each input equal weight in a geometric mean. Rounds reflect machine variation. Individual costs, slow cases and all four conditional comparisons are archived.

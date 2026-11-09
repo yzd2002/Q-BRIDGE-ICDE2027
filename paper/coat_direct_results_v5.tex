@@ -1,6 +1,2 @@
-% Generated from all 15 independently audited direct controls.
-Under full-cell transport, a separate direct control averages all 16 R ratings
-within each user and applies a one-sided Hoeffding bound ($N=290$).
-The primary estimate is $0.00371$, with lower bound $-0.06452$; none of 15
-fixed queries passes. These per-query bounds neither support adaptive selection
-nor validate transport or a zero effect.
+% Estimator description checked against the saved user-level direct control.
+Under full-cell transport, each user's score is $Z_u=(300/16)\sum_{a\in S_u}c_aY_{ua}$, with random panel $S_u$, binary high-rating outcomes $Y_{ua}$ and policy contrast $c=\pi-\pi_0$. The factor $300/16$ corrects each item's inclusion probability $16/300$. A one-sided Hoeffding bound across 290 users uses score range $[\min(0,300\min c),\max(0,300\max c)]$. The primary estimated gain over uniform is $0.00371$, with lower bound $-0.06452$; none of 15 fixed queries passes. These bounds cover each prespecified query separately.

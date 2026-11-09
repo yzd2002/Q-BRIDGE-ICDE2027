@@ -1,5 +1,5 @@
 \paragraph{Catalogue queries with ordinary caching}
-At primary $(\Lambda,\rho)=(2,0)$, each of five source views receives an extended
+A catalogue is a fixed list of candidate policies; each query tests one listed policy at a requested margin. At primary $(\Lambda,\rho)=(2,0)$, each of five source views receives an extended
 catalogue combining two indicators:
 $\pi_i\propto t_1^{h_{1i}}t_2^{h_{2i}}$,
 $(t_1,t_2)\in\{.5,1,2\}^2\setminus\{(1,1)\}$.
@@ -15,8 +15,5 @@ Optimized/prepared cost ratios $0.960$, $0.941$, $0.953$ miss the ten-percent
 target; optimized-exact is slower in 3/15 view-rounds and retains more
 estimated exact-state payload in every view (not isolated RSS).
 Native hot-start changes 98 false answers to unknown and four unknown answers
-to false, never reversing a Boolean answer. Overall service differs;
-on R projected, decisions agree and native is faster in all rounds.
-None certifies improvement; neither fusion-only information target is supported.
-All five primary views have zero capacity, already checkable by a
-constant-action witness.
+to false, never reversing a Boolean answer. These plans therefore do not settle the same set of queries; on R projected, decisions agree and native is faster in all rounds. None certifies improvement, and neither registered fusion-only information target is supported.
+The constant-action witnesses already establish zero capacity.

@@ -8,9 +8,9 @@ SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner20
 \end{equation}
 Stationarity of free $t_x$ gives $\sum_a\mu_{xa}=w_x$ for its nonnegative epigraph multipliers. Thus $\pi_{xa}=\mu_{xa}/w_x$ is a policy when $w_x>0$; use the reference row when $w_x=0$. Original-row duals and a feasible point complete the partition method's certificate contract. Import/export and checking are exact; neither the construction's answer nor a saved point is supplied.
 
-Two lowest hashes per size cell select 78 unique requests (72 cells, 144 memberships) for three paired rounds in alternating order. Service runs from post-initialization transmission through checked certificates, including construction, verification, serialization and transport; startup, diagnostics and batch totals are separate. Fresh models/workers use one CPU, ten-second service and 8\,GiB address-space limits; all phase limits are archived. Failures retain costs and denominators; ratios require complete pairs. Rounds measure machine variation, not independent samples.
+A value-independent hash rule selects 78 distinct requests for three paired timing rounds, with alternating method order. Each method starts with a fresh model and worker. Service time covers transmission after worker initialization through certificate checking, including serialization; startup/cleanup are reported separately. Limits are one CPU thread, ten seconds per service and 8\,GiB address space. Failures retain their costs and denominators. Repeated rounds measure machine variation, not new datasets.
 
-Exact optima $L_i^*$ for three normalized contrasts separate certificate transfer from policy choice: 7,762 unique $(\C,c)$ requests and 17,280 slots. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$, with zero from the reference. Here $L_{\rm saved}$ is the maximum of zero and saved lower bounds for these same three policies. Then
+To determine whether recovery comes from better bounds or a different policy, we solve the original three policies exactly, obtaining optima $L_i^*$. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$, with zero from the reference. Here $L_{\rm saved}$ is the maximum of zero and saved lower bounds for these same three policies. Then
 \begin{equation}
  \mathcal R-L_{\rm saved}
  =\underbrace{L_3^+-L_{\rm saved}}_{\text{certificate-transfer gap}}
@@ -19,5 +19,4 @@ Exact optima $L_i^*$ for three normalized contrasts separate certificate transfe
 \end{equation}
 Both terms are nonnegative. Saved duals solve their stored objectives, but exact policy normalization can loosen transferred bounds. Missing optima leave the decomposition unknown. The 107-case recovery set and threshold remain unchanged.
 
-\textbf{Natural metadata partitions.}
-Coat gender, jacket type and color each partition 300 items. Separate row families preserve the original 31-row views' exact coefficients, endpoints and confidence allocation. The evaluation includes 144 natural-row subviews, twelve box-only OBS positions, the 60-view grid and one full-cell control: 217 memberships, 125 unique requests. The construction supports 95; the generic LP covers 30 overlapping-row requests too. Subviews relax their parents and cannot increase capacity. Coverage uses each parent's event, without a joint 95\% guarantee over all memberships. A feasible common point may exclude every policy; this is not exclusively a family-optimization benefit.
+\textbf{Coat comparisons.} Item gender, jacket type and color define separate partitions. We also test their combined, overlapping constraints. Subviews of one parent retain its bounds and inherit its joint coverage event. Across distinct parent constructions or assumption declarations, no simultaneous 95\% guarantee is asserted.

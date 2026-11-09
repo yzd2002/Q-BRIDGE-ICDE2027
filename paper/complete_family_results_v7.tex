@@ -1,21 +1,12 @@
 \subsection{What complete family optimization adds}
 \textbf{Broader policy search changes the fixed-view answer.}
-The 240 primary finite Fusion views cover 48 worlds with five inference
-samples each. Saved evidence settles 12 with above-threshold policies and
-121 with zero capacity. Full search resolves the remaining 107 views:
-86 admit new above-threshold policies; 21 have $0<\mathcal R\le\delta$,
-excluding every such guarantee. Positivity alone therefore need not justify
-further search. Overall, 98 views admit above-threshold policies and 142 do not.
+The decision sequence is simple: of 240 primary views, earlier checks already find a qualifying policy in 12 and rule out every qualifying policy in 121 (zero capacity). Full-family search resolves the remaining 107: it finds a different qualifying policy in 86 and rules out the target in 21, whose best guarantee is positive but at most $\delta$. Thus 98 views support the target and 142 do not.
 Exact reoptimization of the original three policies recovers none of the 86:
 their best value, including the reference, is zero in every case.
 Recovered guarantees have median $0.991$\,pp, interquartile range
 $[0.583,1.549]$\,pp and range $[0.105,3.632]$\,pp.
-Only policy choice changes; information and views remain fixed.
 
-Both methods agree on 2,160 unique synthetic requests (5,760 comparison positions).
-Independent checking passes all 12,770/12,770 responses: 4,320 family responses,
-7,762 fixed-policy optima, 220 Coat calls and 468 timing calls, without
-timeout or incomplete call (Fig.~\ref{fig:complete-family}).
+The construction and exact LP agree on all 2,160 distinct synthetic problems. Across family, fixed-policy, Coat and timing checks, all 12,770 responses pass, without timeout or incomplete call. The artifact preserves the full breakdown.
 
 \textbf{Exact answers with dimension-dependent cost.}
 All 234 timing pairs succeed. Across three rounds, construction/SoPlex
@@ -23,8 +14,7 @@ geometric-mean service ratios are $0.808$--$0.835$ at $d=8$,
 $1.066$--$1.129$ at $d=64$, and $1.170$--$1.196$ at $d=256$.
 The construction is slower in 5/78, 55/78 and 54/78 pairs, respectively.
 These compare checked Python rational construction with compiled rational LP.
-Pair costs, certificate sizes, memory observations and failure denominators
-are archived. Table~\ref{tab:family-absolute} gives absolute costs.
+Table~\ref{tab:family-absolute} gives absolute costs; individual costs and memory observations are archived.
 At $d=256$, verification alone takes median 144.3/144.6\,ms (Part/LP);
 certificates occupy about 149.5\,kB.
 \input{absolute_family_cost_v8}
@@ -37,5 +27,4 @@ radius, OBS and Fusion both pass 239 thresholds, but OBS has greater capacity
 in 219 pairs and Fusion in 21. Full- and split-budget views are not nested.
 All 24 comparison cells and exact decompositions remain available.
 Generating means satisfy all 2,880 finite partition views, and every returned
-policy assertion agrees with stored truth. These retrospective checks neither
-establish uniform coverage nor validate source assumptions.
+policy assertion agrees with stored truth.

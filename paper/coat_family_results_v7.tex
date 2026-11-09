@@ -1,8 +1,5 @@
 \textbf{Stopping under the primary declaration.}
-All five primary $\Lambda=2,\rho=0$ views have zero capacity.
-Group Fusion permits all item means to equal $0.2186$ (rounded), tying every
-policy with the reference. This checked constant point justifies stopping
-without full optimization. The stronger full-cell control also has zero capacity.
+All five primary views have zero capacity: group Fusion allows every item to have success probability $0.2186$ (rounded), making every policy tie with the reference. This certifies that the current view cannot support a guaranteed improvement. The stronger full-cell control also has zero capacity.
 
 \textbf{Searching beyond candidates under other declarations.}
 With ideal uniform reference $1/300$, exact family optimization resolves
@@ -11,15 +8,13 @@ and seven $\mathcal R>.001$.
 The seven positive positions are five unique requests: OBS at $\Lambda=1$
 repeats across three tolerances; group Fusion passes at $\Lambda=1$ for all
 three tolerances and at $\Lambda=1.5,\rho=0$.
-The original fifteen candidates certified none. Guarantees remain conditional
-on the stated assumptions, without joint coverage across declarations.
+The original fifteen candidates certified none. Each declaration has its own coverage guarantee.
 
 \textbf{A redesign under stronger assumptions ($\Lambda=1.5,\rho=0$).}
 The jacket-type certificate moves all 28 vests' uniform mass to item 0,
 a men's bomber: its probability rises from $1/300$ to $29/300$;
 vests receive zero and 271 other items retain $1/300$.
-All 15 original and 50 extended catalogue policies retain full support;
-none makes this choice. The contrast is
+All 15 original and 50 extended catalogue policies give every item positive probability. The full family can instead assign zero probability to some items, enabling this redesign. The contrast is
 $(28/300)(m_0-\overline m_{\rm vest})$, where $\overline m_{\rm vest}$ is
 the 28 vests' uniform mean. Its checked lower bound is
 $(28/300)(\ell_0-b_{\rm vest}/\kappa_{\rm vest})$:
@@ -28,14 +23,10 @@ The only nonzero terms, $2.472638$\,pp and $-2.226283$\,pp, sum to
 $0.246355$\,pp in expected high-rating probability over uniform.
 This exceeds $0.1$\,pp and matches the full overlapping view's capacity;
 matched full-budget OBS and both R views have zero capacity.
-This retrospective guarantee assumes confounding no greater than $\Lambda=1.5$
-and no group-mean drift. It neither selects assumptions from data nor measures
-purchase uplift, and does not imply every vest is worse.
 
 Separate gender, jacket-type and color partitions give 144 view memberships:
 10 exceed the threshold, 10 have positive capacity at most the threshold,
 and 124 have zero capacity. Construction and exact LP agree on 95 unique
 supported requests across the full evaluation; LP also resolves 30 overlaps.
 Subview capacity cannot exceed its parent's, as relaxation requires.
-These are dependent views of one dataset, not 144 independent experiments
-or new evidence for sampling assumptions.
+
