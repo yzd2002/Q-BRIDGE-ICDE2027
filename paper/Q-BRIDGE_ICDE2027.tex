@@ -15,36 +15,38 @@ pdfauthor={Zida Yang, Weiqing Zeng, Guquan You, Cong Wang, Jiexin Zheng}}
 \begin{document}
 \maketitle
 \begin{abstract}
-Policy analysis asks whether a candidate guarantees improvement, whether a better policy exists, and when search can stop. Q-BRIDGE answers these queries using a shared confidence view: a set of possible action-success probabilities allowed by observational and randomized data under declared assumptions. Guarantees hold for every vector; adaptive queries share the view without rescanning logs. For disjoint nonnegative groups, we construct a policy whose guaranteed gain matches an upper bound on what any policy can guarantee. Independently checked certificates establish this equality against the original constraints. Repeated fixed-policy queries reuse previous constraint weights and exact arithmetic. The construction and a general exact linear program agree on all 2,160 distinct synthetic family requests. Among 107 undecided primary views, searching the full policy family finds 86 above-threshold policies and rules out such guarantees in 21 cases; exact reoptimization of the original three policies recovers none of the 86. Controlled comparisons isolate lower group-average cost from exact-term retention. Coat illustrates policy redesign and stopping decisions on real data.
+Analysts combine production logs with randomized experiments to choose a policy, a rule for assigning actions, that improves expected outcomes over a reference. Selection bias, finite samples and limited transfer between populations leave action outcomes uncertain. When candidate policies cannot be certified, it is unclear whether another policy has the requested guarantee or the evidence supports none. Our approach separates this evidence limit from candidate choice by treating all policies as queries over one shared set of plausible action-success probabilities. Q-BRIDGE materializes this joint confidence view and returns independently checkable bounds for policy evaluation, redesign and stopping. For disjoint groups with nonnegative weights, a three-step construction finds a policy whose worst-case gain matches an upper bound for the entire family. Certificates establish the match against the original constraints; repeated fixed-policy queries reuse constraint weights and exact arithmetic. The construction agrees with an exact linear program on all 2,160 distinct synthetic family requests. Among 107 undecided primary views, full-family search finds 86 above-threshold policies and excludes such guarantees in 21; exact reoptimization of the original three policies recovers none of the 86. Controlled comparisons show that reusing exact arithmetic results lowers group-average query cost. Coat data illustrate redesign and stopping under declared assumptions.
 \end{abstract}
 \begin{IEEEkeywords}
 query processing, uncertain data, materialized views, causal inference, verifiable computation
 \end{IEEEkeywords}
 
 \section{Introduction}
-A recommendation analyst combines production logs with a smaller randomized experiment. Which items should be recommended more often? A \emph{policy} assigns probabilities to actions; its gain is the expected success increase over a reference.
+A recommendation analyst combines production logs and a smaller randomized experiment to decide which items to recommend. A \emph{policy} assigns action probabilities; its gain compares expected success with a reference.
 
-Action-success probabilities are unknown: production exposure may depend on unrecorded preferences, and experimental information may transfer only for group averages. Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} aggregates a fixed snapshot into individual intervals and group constraints. Together they form a \emph{confidence view}: the allowed mean vectors. The analyst changes policies or required gains while querying this same object. A \emph{robust guarantee} holds throughout the set. Queries test a policy, find the strongest guarantee, or exclude every guarantee above a requested margin. Each answer carries numerical evidence, a \emph{certificate}, checked independently against the view.
+Production exposure may depend on unrecorded preferences, while experimental information may transfer only for group averages. The data therefore permit multiple success probabilities. If a candidate lacks a guarantee, should the analyst try another policy, or can no policy guarantee the requested gain?
 
-Causal systems~\cite{salimi2018hypdb,salimi2017zaliql} and uncertainty-aware queries~\cite{Feng2019UADB} connect statistical meaning to data management. We materialize uncertain evidence once, answer changing policy queries without rescans, and reuse independently checkable computation.
+\textbf{Our insight: separate candidate choice from the evidence limit.} Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.} stores individual intervals and group constraints as one \emph{confidence view}: the allowed mean vectors. A \emph{robust guarantee} holds throughout this set. The same view supports candidate evaluation, optimal policy search and stopping when no guarantee exceeds a requested margin. Each bound carries numerical evidence, a \emph{certificate}, independently checked against the view.
 
-\textbf{One example throughout.} Figure~\ref{fig:example}'s four actions have unknown success probabilities $m_A,\ldots,m_D$. The reference chooses each with probability $1/4$. Observational information gives the intervals; randomized information supplies $(m_A+m_C)/2=.65$ and $(m_B+m_D)/2=.70$. The reference's success probability is thus $(.65+.70)/2=.675$. Since $m_A\le.6$, the first group forces $m_C\ge.7$. Always choosing C guarantees $.7-.675=.025=2.5$\,percentage points (pp). Conversely, the allowed vector $(.6,.7,.7,.7)$ limits every action to $.7$, ruling out a larger guarantee. Matching bounds proves optimality.
+Building on causal systems~\cite{salimi2018hypdb,salimi2017zaliql} and uncertainty-aware queries~\cite{Feng2019UADB}, we materialize evidence once, answer changing policy queries without rescans, and reuse independently checkable computation.
+
+\textbf{One example throughout.} Figure~\ref{fig:example} uses four unknown success probabilities $m_A,\ldots,m_D$ and reference probability $1/4$ per action. Observations give intervals; randomization gives $(m_A+m_C)/2=.65$ and $(m_B+m_D)/2=.70$. The reference's success probability is $(.65+.70)/2=.675$. Since $m_A\le.6$, the first group forces $m_C\ge.7$. Always choosing C guarantees $.7-.675=.025=2.5$\,percentage points (pp). The allowed vector $(.6,.7,.7,.7)$ limits every action to $.7$, ruling out a larger guarantee. Matching bounds proves optimality.
 
 \begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/qbridge_overview.pdf}
-\caption{(a) One set of allowed success probabilities. (b) Q2 reuses a certificate; inconclusive reuse for Q3 triggers a solve. (c) Matching lower and upper bounds certify the optimal guarantee of 2.5\,pp, not the actual effect. Teaching inputs are constructed and rounded; exported proofs use exact represented inputs.}
+\caption{One view, two query paths. (a) Store the allowed success probabilities. (b) Check a proposed policy: Q2 reuses a certificate; inconclusive reuse for Q3 triggers a solve. (c) Search all policies: matching bounds certify the optimal guarantee of 2.5\,pp, not the actual effect. Teaching inputs are constructed and rounded; exported proofs use exact represented inputs.}
 \label{fig:example}
 \end{figure*}
 
 Figure~\ref{fig:example}(b) tests a margin $\delta=.001=0.1$\,pp. Section~\ref{sec:reuse} works through these three policies to explain when saved evidence suffices and when a new solve is needed.
 
-\textbf{A reusable query object (II--III).} Stored constraints combine source assumptions and simultaneous intervals. When they cover the true means, worst-case gains bound actual gains for all policies, including adaptively chosen ones.
+\textbf{One view for changing policies (II--III).} Stored constraints combine source assumptions and simultaneous intervals. When they cover the true means, worst-case gains bound actual gains for all policies, including adaptively chosen ones.
 
-\textbf{An optimal policy with a checkable proof (IV).} For disjoint nonnegative groups, three steps cap action means, allocate below that cap, and recover an attaining policy. We prove that the smallest feasible cap preserves optimality and recover certificates using only original constraints. A general exact LP supplies the same contract for overlaps.
+\textbf{Search beyond the candidates (IV).} For disjoint groups with nonnegative weights, three steps cap action means, allocate below that cap, and recover an attaining policy. We prove that the smallest feasible cap preserves optimality and recover certificates using only original constraints. A general exact LP supplies the same contract for overlaps.
 
-\textbf{Separate evidence for policy choice and execution (V--VI).} All 86 recovered synthetic guarantees require different policies. Retaining exact terms lowers group-average cost with answers and solver paths fixed. Coat connects certificates to redesign and catalogue queries.
+\textbf{Policy benefit and execution cost (V--VI).} All 86 recovered guarantees require different policies. Retaining exact terms lowers group-average cost with answers and solver paths fixed. Coat connects certificates to redesign and catalogue queries.
 
-Table~\ref{tab:query-contract} summarizes the queries.
+Table~\ref{tab:query-contract} summarizes the interface.
 \input{query_contract_v7}
 
 \section{Policy Queries and Their Guarantees}\label{sec:contract}
@@ -166,7 +168,7 @@ Return true for $L>\delta$, false for $U\le\delta$, and unknown otherwise. False
 \end{equation}
 Each term chooses the cheaper endpoint: $\ell_i$ when $z_i\ge0$, $u_i$ otherwise. Thus a checker needs the weights, current objective and view, not a replay of the optimization. Any nonnegative weights give a valid lower bound $L=D(c;\eta)$; better weights tighten it~\cite{Neumaier2004SafeBounds}.
 
-The standard-library checker uses represented coefficients exactly and rounds the final bound downward. Proofs bind objective, threshold and view digest; the caller supplies the trusted view. Nonfinite or failed proposals cannot authorize success. Independent optimization certificates are established~\cite{Cheung2017VIPR}.
+The standard-library checker computes exactly on represented coefficients and rounds the bound downward. Proofs bind objective, threshold and view digest; the caller supplies the trusted view. Nonfinite or failed proposals cannot authorize success. Independent optimization certificates are established~\cite{Cheung2017VIPR}.
 
 \input{family_partition_compact_v8}
 
@@ -206,7 +208,7 @@ The additions and threshold test are exact; a positive stored bound need not cer
 
 
 \section{Evaluation Design}\label{sec:design}
-We isolate three changes. \emph{Policy search} varies policies on a fixed view (VI-A). \emph{Execution} varies reuse while fixing four core plans' answers, evidence and solver paths (VI-B). \emph{Source information} varies construction and confidence allocation for a fixed policy (VI-C). Family analysis is retrospective; the source endpoint is registered. Coat studies redesign and stopping (VI-D). Exact-solver and new Coat timings use an AMD EPYC 7763, Python 3.12.3 and one CPU/native thread.
+Three comparisons isolate policy choice, execution and information: vary policies on a fixed view (VI-A); vary reuse with four core plans' answers, evidence and solver paths fixed (VI-B); vary source construction and confidence allocation for a fixed policy (VI-C). Family analysis is retrospective; the source endpoint is registered. Coat tests redesign and stopping (VI-D). Exact-solver and new Coat timings use an AMD EPYC 7763, Python 3.12.3 and one CPU/native thread.
 
 \subsection{Fresh worlds and policy design}
 A world is a simulated data-generating distribution; each inference replicate is a fresh sample from it. The registered study draws 48 confounded worlds: $(K,L)\in\{(2,4),(8,8),(16,16)\}$, uniform/skewed randomization and group drift $0/.02$, with four worlds per stratum and five inference samples per world. Twelve additional worlds test near-unit sensitivity. A latent binary factor affects exposure and rewards. Metadata $h_a\in[-.5,.5]$ are fixed without inference labels, but their designed positive reward association limits representativeness. Random groups allow individual shifts while controlling group drift; shifts are not optimized for the evaluation objective.
@@ -274,7 +276,7 @@ The broader audit includes 6,000 inference views: 60 worlds, five repetitions, t
 
 
 
-\subsection{Real data: inference over user blocks}\label{sec:coat}
+\subsection{Real data: policy redesign and stopping}\label{sec:coat}
 \input{coat_design_v7}
 
 \begin{table}[t]
