@@ -1,10 +1,10 @@
 \subsection{What complete family optimization adds}
 \textbf{Broader policy search changes the fixed-view answer.}
-The decision sequence is simple: of 240 primary views, earlier checks already find a qualifying policy in 12 and rule out every qualifying policy in 121 (zero capacity). Full-family search resolves the remaining 107: it finds a different qualifying policy in 86 and rules out the target in 21, whose best guarantee is positive but at most $\delta$. Thus 98 views support the target and 142 do not.
+Of 240 primary views, earlier checks find a qualifying policy in 12 and exclude every qualifying policy in 121 (zero capacity). Full-family search resolves the remaining 107: it finds a different qualifying policy in 86 and rules out the target in 21, whose best guarantee is positive but at most $\delta$. Thus 98 views support the target and 142 do not.
 Exact reoptimization of the original three policies recovers none of the 86:
 their best value, including the reference, is zero in every case.
 Recovered guarantees have median $0.991$\,pp, interquartile range
-$[0.583,1.549]$\,pp and range $[0.105,3.632]$\,pp.
+$[0.583,1.549]$\,pp and range $[0.105,3.632]$\,pp. At thresholds $0.5$ and $1.0$\,pp, 71 and 42 of the same 107 views admit a qualifying policy, respectively; the original candidates still support none. This post hoc threshold readout changes no view or outcome. Policy choice explains the matched-view difference; gain magnitudes describe the simulation.
 
 The construction and exact LP agree on all 2,160 distinct synthetic problems. Across family, fixed-policy, Coat and timing checks, all 12,770 responses pass, without timeout or incomplete call.
 

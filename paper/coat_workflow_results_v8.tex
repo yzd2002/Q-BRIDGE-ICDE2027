@@ -1,5 +1,5 @@
 \paragraph{The cost of family preprocessing}
-Can family preprocessing reduce catalogue-query cost? We test two 16-row jacket-type Fusion views,
+We test preprocessing on two 16-row jacket-type Fusion views,
 $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known capacities.
 Table~\ref{tab:coat-workflow} compares Hot, Opt, and Opt with partition
 (Part) or exact-LP (LP) preprocessing. All share objective caching, checked
@@ -19,5 +19,4 @@ At nonzero capacity, Part adds 5.1--7.7\% to Opt's full cost without reducing
 its two native and two exact calls (Table~\ref{tab:coat-workflow});
 LP saves no calls either. At zero capacity, family computation is skipped.
 The three rounds have incompletely balanced execution positions and different optimal points; costs compare complete preprocessing choices.
-Family answers enable redesign beyond the catalogue but do not amortize
-preprocessing here.
+Family answers enable redesign, without amortizing preprocessing here.

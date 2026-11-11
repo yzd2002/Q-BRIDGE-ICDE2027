@@ -35,6 +35,16 @@ N.~Kallus and A.~Zhou, ``Confounding-robust policy improvement,'' in \emph{Advan
 Q.~Lanners, C.~Rudin, A.~Volfovsky, and H.~Parikh, ``Data fusion for partial identification of causal effects,'' in \emph{Advances in Neural Information Processing Systems}, vol.~38.\hskip 1em plus 0.5em minus 0.4em\relax Curran Associates, Inc., 2025, pp. 150\,638--150\,702. [Online]. Available: \url{https://proceedings.neurips.cc/paper_files/paper/2025/hash/dd4e79c2228c43954cc074abf2f85a07-Abstract-Conference.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{salimi2018hypdb}
+\BIBentryALTinterwordspacing
+B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Feng2019UADB}
+\BIBentryALTinterwordspacing
+S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{fawkes2025hardness}
 \BIBentryALTinterwordspacing
 J.~Fawkes, M.~O'Riordan, A.~Vlontzos, O.~Corcoll, and C.~M. Gilligan-Lee, ``The hardness of validating observational studies with experimental data,'' in \emph{Proceedings of the 28th International Conference on Artificial Intelligence and Statistics}, ser. Proceedings of Machine Learning Research, vol. 258.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2025, pp. 1819--1827. [Online]. Available: \url{https://proceedings.mlr.press/v258/fawkes25b.html}
@@ -143,11 +153,6 @@ A.~Gleixner and D.~E. Steffy, ``Linear programming using limited-precision oracl
 C.~Gao, S.~Li, W.~Lei, J.~Chen, B.~Li, P.~Jiang, X.~He, J.~Mao, and T.-S. Chua, ``{KuaiRec}: A fully-observed dataset and insights for evaluating recommender systems,'' in \emph{Proceedings of the 31st ACM International Conference on Information \& Knowledge Management}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2022, pp. 540--550. [Online]. Available: \url{https://kuairec.com/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{salimi2018hypdb}
-\BIBentryALTinterwordspacing
-B.~Salimi, J.~Gehrke, and D.~Suciu, ``Bias in {OLAP} queries: Detection, explanation, and removal,'' in \emph{Proceedings of the 2018 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2018, pp. 1021--1035. [Online]. Available: \url{https://doi.org/10.1145/3183713.3196914}
-\BIBentrySTDinterwordspacing
-
 \bibitem{salimi2017zaliql}
 \BIBentryALTinterwordspacing
 B.~Salimi, C.~Cole, D.~R.~K. Ports, and D.~Suciu, ``{ZaliQL}: Causal inference from observational data at scale,'' \emph{Proceedings of the VLDB Endowment}, vol.~10, no.~12, pp. 1957--1960, 2017. [Online]. Available: \url{https://www.vldb.org/pvldb/vol10/p1957-salimi.pdf}
@@ -161,11 +166,6 @@ B.~Salimi, H.~Parikh, M.~Kayali, L.~Getoor, S.~Roy, and D.~Suciu, ``Causal relat
 \bibitem{youngmann2024causumx}
 \BIBentryALTinterwordspacing
 B.~Youngmann, M.~Cafarella, A.~Gilad, and S.~Roy, ``Summarized causal explanations for aggregate views,'' \emph{Proceedings of the ACM on Management of Data}, vol.~2, no.~1, pp. 71:1--71:27, 2024. [Online]. Available: \url{https://doi.org/10.1145/3639328}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Feng2019UADB}
-\BIBentryALTinterwordspacing
-S.~Feng, A.~Huber, B.~Glavic, and O.~Kennedy, ``Uncertainty annotated databases---a lightweight approach for approximating certain answers,'' in \emph{Proceedings of the 2019 International Conference on Management of Data}.\hskip 1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2019, pp. 1313--1330. [Online]. Available: \url{https://www.cs.uic.edu/~bglavic/dbgroup/assets/pdfpubls/FH19.pdf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Hassanzadeh2026SemanticViews}

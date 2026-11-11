@@ -1,0 +1,2204 @@
+{
+  "scope": "Post hoc threshold readout of existing exact capacities; no new fitting, outcomes, solvers or timing measurements. Thresholds were specified before reading these counts.",
+  "source_sha256": "e670e557d7842c68b7d2c9cdd83a60a9d7cda35e0c62fe68a82a5c74662b0bfb",
+  "primary_group": [
+    "finite",
+    "fusion_projected",
+    "conservative",
+    100
+  ],
+  "query_thresholds_probability": [
+    "0.001",
+    "0.005",
+    "0.01",
+    "0.02"
+  ],
+  "rows": [
+    {
+      "occurrence_id": "00af70b68e890292e6cb2de351b3a5f4959e97b0d42d9b6a0ad6a727cc3db031",
+      "family_task_id": "975b77feffb3fbce9e02d47644cf4930a2ba7ac561312ad50945910a966820d6",
+      "world_id": 21,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "00c056edb8866a0303a12f17ec79c961f1f33a1dc42c2c12d7ad884e797a6d8e",
+      "family_task_id": "8b74ac41450caa405d4ff2e2ab459edf7499895f1d1c1323eccc2768e6298106",
+      "world_id": 17,
+      "rep": 4,
+      "R": "302534973964182625827232372203617/10384593717069654140168285070557184",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "01d690acef5206c6514c5454c472a44e64c680c6d5cf565f379642dd20713f2d",
+      "family_task_id": "d6ab3f82c6c3e8ef83d257b094e7814ca77d83df661a2d691a6a1895b432175c",
+      "world_id": 21,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "02fd26cc2987441b62320a16ffd8f1484e36c36ed43756dc37e2653b692181b5",
+      "family_task_id": "e066055a6d0afd3701fd39b2b5d3d545e97ea4ab26c4b0f7ac3c88d98d1b9740",
+      "world_id": 0,
+      "rep": 4,
+      "R": "30533421500341549847189677908719/649037107316853489595109060116480",
+      "L3_plus": "156671310047132050734034747005058862277834071539/23384026197294448638370279274020925042228063109120",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "03da8a94f98bc1fd1362bfc6a5af02d37af1f60d15d8f9ce49412b1d2e54a85a",
+      "family_task_id": "6606356adb965ae6d6cda9ad7c5b5c93d62b59336e51b7e9b376add5e1a27b70",
+      "world_id": 27,
+      "rep": 0,
+      "R": "583350310249840576463760872839084292066650695690162552376891097/61529831323062613791062711395831885382301493029614765377641775104",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "04315b66f9d70cb348134bc5be87c29185f558b5adacd40dbe2bf272f9454f30",
+      "family_task_id": "e57975c8688f568d3b082f365d1be6878ab95cd882eb64e16ce23dabc11cc96e",
+      "world_id": 11,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "08c2b87f1c017b75986160328ed78e4d9727c19c233cfc6906fd5f9592ef29d2",
+      "family_task_id": "597d37545f4a47826a96587baedd093d6ec9ebfdac5a5cdf7fdbc50ce10abcf7",
+      "world_id": 8,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "096a6dcadf245073aa7e03eee57c2e23cbfd70669aefbb7cde02cc6c9653b2f7",
+      "family_task_id": "531cdd6f71025b11d81f94535f408f4df0f93b2931bca9c632902a638beede0c",
+      "world_id": 12,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "0b672faa37ae538c0e4386204c04eac4b390f7ea02ad0bbb4983d216ba91f249",
+      "family_task_id": "f48f26a2ff9d4248dd5c3a0ec1e593636584c1d56d4f17ec274b7b66f13b95a5",
+      "world_id": 19,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "0b8d57a28649f7763dd90634051cfdada3cea13cec7cfb584945596ab0e69b41",
+      "family_task_id": "e143f625a6f4ac0da6ba3b7346a9acdcf7cd3e804e243a0c65d43b3347672f15",
+      "world_id": 45,
+      "rep": 2,
+      "R": "14617554074748517737938108324913862062070468526113583114912937309974074576710106827933901505745565810910732453487311237407479443919432455361047536080775652191/893518001055928735314575987401426798467393439319570148255167408833141214730934135570563054527252271297709648752251260715260171709005267385716859379092815872000",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "0bd753137bd51ed3172b7d3a4ad69bfd03362ebd4be37fa4204abd83a1e1f633",
+      "family_task_id": "c137a55009f56d7b7cf4e46652586e928456224887c5295a3a3c07eadc7a174d",
+      "world_id": 23,
+      "rep": 3,
+      "R": "2792950729987575531558989999597/1730765619511609284570159232581632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "0c0dbcfcee35056fdd7728d5252500d373bbcd6b041d23615ae968bbd32ca4fb",
+      "family_task_id": "7e01714f765055cd2a06bedb8d4d3fb85c8a40270639e48c6ebb9c117cf8e054",
+      "world_id": 47,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "0f3ba8ac86412144bbbbe343ec6e5e6925b1e9644d35379d376eff0e9f9151b5",
+      "family_task_id": "bbddaadcdbb7d3ab6eba6e34db595b759e18e2cbc445918fe3ed87677e4c7558",
+      "world_id": 0,
+      "rep": 2,
+      "R": "48801920006718979400933491749433/649037107316853489595109060116480",
+      "L3_plus": "282092914519999698628986423221564371420983373619/23384026197294448638370279274020925042228063109120",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "0ff5fb541be492c3518c9915a752dd29d71ad4dea8ce89618c90e219e30beafa",
+      "family_task_id": "f7b4c00d57716126219ab8327141802313d7c5b70b2657460222a6c47ca602f7",
+      "world_id": 24,
+      "rep": 4,
+      "R": "6042136699646273961852432503906967814932228557856608431104710071/426684682199999971083791046645475128947301885888129095954686017536",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "11d4a23d022d01dc2da541c018fe567cb6dc1e3fa9c8f6a67af34f17463e7ddc",
+      "family_task_id": "3487bfe560b39bd238f5ddde98648921c9b975dab703b1864968bc2013ab51f1",
+      "world_id": 31,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "12651a394cf87dd1a854b34309864e3e15733ddc79aefbdfce77ea27b0072c85",
+      "family_task_id": "395f273c26ebd11af2a224842686c69c0b3a87e4b5d94cadaa78ec1dbb74164f",
+      "world_id": 17,
+      "rep": 3,
+      "R": "188600628690493013488477057468655/5192296858534827070084142535278592",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "139e72f8cd64b67062d6cb7156ade8f772a493ef63a3f9be760ac5de03ff93c3",
+      "family_task_id": "b146dc94b718c03be53644566e1a57531c2d436588d7e770dc44c6f8fe44bc93",
+      "world_id": 25,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "177cdf68f529ca6a63e45f42498d971d93fe10cf26c45d241fe5a7c1d3b2fd1c",
+      "family_task_id": "4b598d720eb0007e2e047e9636dbc1291a7a3d41b28b36ceb22c2fa07c183ca6",
+      "world_id": 29,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "18d57af6446e69303caee471fecb30dac9c35fcf765d2862a1b8581108c0c009",
+      "family_task_id": "26cef10162a2e38e6c9cd898e94913723b2071c2892ed54065570fd9ca8d6cfb",
+      "world_id": 18,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "1904bffed861630641a2796b874d92d494ce8bd3bb0941804cab24b96948a008",
+      "family_task_id": "f36e57aeb525dacaf3a401337bfbb631163c0409da9f9f3de356db1c7d11efe4",
+      "world_id": 36,
+      "rep": 1,
+      "R": "956226586201313128027292727637/324518553658426772945052201123840",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "19c989a811ab4f2ec8c40bf1e6a65704b7306538dd2d6b652faa745168d2d97d",
+      "family_task_id": "03c538b635329ebdd16b2b6a784d04086d2ac99825dfcd539e26dbcb7debb2a9",
+      "world_id": 26,
+      "rep": 0,
+      "R": "2360931055542705467972654223634679669955263991880191233862325/89574816562493646301331877365337169284087777435396392326529024",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "1cea70aacc25b2a5cf31051daedf73611943935b00b736405c2f39d79616570b",
+      "family_task_id": "024a21461dbe904f1a263e18beffa5ddfe99a9fe5b1b924e76c4bd5aa7af98a4",
+      "world_id": 42,
+      "rep": 4,
+      "R": "192890766912014708254396699219/4615374985364291437530023626539008",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "1d9a4cfdb49887be5e3a60823170d5aa44d25a6510ae6628d619b1a2856efd98",
+      "family_task_id": "c3bdd0f9985106833e61a8580fb29a1134437bb8dc750d3098fbb4417572ab41",
+      "world_id": 2,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "1ed65bcbd8bc3de0e74a4b38c5a609a6e5dd1457c85999bdf56288fc3cd9d610",
+      "family_task_id": "d21c4a9200428e97e0b50d4a5923d6c7f24951f04c13b1f16adedf9eb1988e53",
+      "world_id": 34,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "231275f9416efb6decebcff89a5910c1588c01305595d4a6ed0573dc625fce3e",
+      "family_task_id": "7d28b146e4d8aba61afdc5a0a32416a38262aab298ef444c240674033c130b5f",
+      "world_id": 10,
+      "rep": 3,
+      "R": "25637973484743233203752147105261707631963748431704975436158923/722410459609082155061295116586075945150848679272266257955553280",
+      "L3_plus": "2104861706306999343827899267481372562811050264065489151802765392178579254070276120285966739443524578030930257/137694557230398828319344903799821655164716628618298912375851965425329933229743460924295503564326829830891896832",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2423eee1aa403862d80b4330c837a62df2f8dc6535f0607625a7206229b50ed4",
+      "family_task_id": "2d3b104a97aaa26d096ac694392bd7447b62c27ba6341cff5265ce9b4c467b67",
+      "world_id": 35,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "25eb60b8de498a0cbe21fdde10e0411d8a428c769edb9c1a377540c0b3d4c590",
+      "family_task_id": "9591333017cfc25538532a5af65e222b7ff0a2756c5128774d78e274ddb2d6b6",
+      "world_id": 22,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "27166116904b2033f6a3feabdeae88b28589312da4c938adcea62ac6977d6670",
+      "family_task_id": "35cd890b4b823e508867e495d385bbe76922e24e04dc991760246179902c6204",
+      "world_id": 43,
+      "rep": 3,
+      "R": "7423200841586267392280564604556997719465501723953849849757886803987680930438273184716835862912752281436867858517494490162287/1326282574248416900628835207788399772728839494805765165336292256786546750633625231191165473616728162644995339930336848406118400",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "2968e3eff1f8fa0f63d5d8947f0f7fe591acd7c1f8caf7b535ef997c1c454168",
+      "family_task_id": "4e8c59410342b4287290871db9cf9b6a996bbc8f364471ac97a08ff2cede854c",
+      "world_id": 32,
+      "rep": 0,
+      "R": "4189220600975428350243476645497/10384593717069655239046594148958208",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "2998254c53b6baef82085ab1ca9a905431ac8ee24ca5603712ccce8d59eb770c",
+      "family_task_id": "22f76cf5b6844535e3c2ce934d859ec078426d491ac7b5aeb401bd4c7cb5e785",
+      "world_id": 46,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2a1c2de9d71f5fb1b9f83343864f73540b355ec567f7a44cd0be3d472b9e733e",
+      "family_task_id": "3cdf1667dd5b669eea106822846c85bbbef95a86dab7ea7ae4e3cf25c3f3891f",
+      "world_id": 7,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2a2ece79e5fffeaa7a9edc33d601f717f0aa8a06eb0300ec0146c2afe909ed72",
+      "family_task_id": "c0ec4c67032d49329f275213a2a91ddba0c6cb4ae66893a9a9dd6d1974215be2",
+      "world_id": 19,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2be51834ad3ac5c75cbcd20560998b7a5f44160aa1cbd44083a81e260a1cd117",
+      "family_task_id": "6d8254b91d8610fc66aa0e305c5ce7d6b9a02f349635e08de548010d7abff138",
+      "world_id": 4,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2c37f0bfd12dac7f876255034206bb5be2c4a75cd344ba7c5a7640997dc7a4a3",
+      "family_task_id": "91a282cbb71efc6b38e502ea9d2847ba1d4d15ceb0d18ea23509331454e5a946",
+      "world_id": 24,
+      "rep": 3,
+      "R": "260493842844528254100793772194476341807505487037/18707220957835553328977100494277215904604289499136",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "2d7c7b1af43f85a726fc9d264f512a95f5be1cd360f0cb8f5770622cc3ce6697",
+      "family_task_id": "c1b763d8ae875c8b8e6cb51904f79ffc13f324c2e7c257fe31fa1b69f9b3e2c7",
+      "world_id": 23,
+      "rep": 0,
+      "R": "1481813162181127067355073915047/1730765619511609284570159232581632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "2dc9fccf24a31552fd04c086c9cb7e3bce7c1937ca819b14201dc36ca2fddeaa",
+      "family_task_id": "ce09eb4af29ff01a2736f58f5c7fb414616a29be96c8e3a93b2d37738952f584",
+      "world_id": 15,
+      "rep": 1,
+      "R": "307765631450834502085606772809284108344252579/6220143641299921395754019887404218936148885504",
+      "L3_plus": "1868696474483509138079277600624441134238213313376435542402093/224104292681194295272737073508765425764181255974199132082405376",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2e633ea2859d63d87ada8d965c7229c0bd81b484f540c8c6a71c526e20cfa59c",
+      "family_task_id": "2d855582ab49521fcc6cbcb7d83e864546d6a3839aa35ca83c81875c627cbd58",
+      "world_id": 8,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "2f1d006d48a38ff4f90e11210512523ec47fadeecda14939bf179790de99294e",
+      "family_task_id": "dafbd6cfd248a32a2d54bf90ec5d08359ba0d5177b9e1ccd8e0eaab916c8e06e",
+      "world_id": 18,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "30ae17a866013359d74a1ecf3cd5a05d2315c29f6b0d9b6b871b9a981ce80901",
+      "family_task_id": "0cee39bd86a085c69b5afd2c52d2cbff0a48c5e39bc1bb5cd06f4ab4b7c37eec",
+      "world_id": 6,
+      "rep": 3,
+      "R": "43940344127796779588886185679/40564819207303347603293943627776",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "31361fbb963105daeda871bdaef21c388e7212df03afad52461d44041832dc34",
+      "family_task_id": "635de0ac9cb9adf420eca7073d18122ecb785c45c95fae5bdd6c7f942ac21f08",
+      "world_id": 7,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "3160b322842c24f45d25fcb0067156d6aaceece6337d40f0428322bf8207192b",
+      "family_task_id": "851d03c29bb52feae3f23f1e69944acfa05d4aa04ae40242257cffa43b06652c",
+      "world_id": 43,
+      "rep": 1,
+      "R": "92628620698004377831951061560752765025844294187898198327747705901111517684129736857078428624692174719793368641/19904317597069340203207050500223669003465908485688963117490164963133725363040730873527135219816331480813849804800",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "31807639b733e03c84b694623c3c8fb27255adb8ab792221cf45d7999566e805",
+      "family_task_id": "0732bf0c8466f1ad6527ee26e69fcc7f0c69cdd5072d71a7d43475ab518cdedb",
+      "world_id": 0,
+      "rep": 0,
+      "R": "15978891477859481650787959550319/324518553658426744797554530058240",
+      "L3_plus": "33118567070488818092755255615543318164795143509/3897337699549074773061713212336820840371343851520",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "321c8437b3bcc72f036b4017b0249c6f6bcf6d8489138932c8041ced1534ed03",
+      "family_task_id": "efda5d73cba056fc5c78e60420212752979ef6df56047a0f15e5862168476683",
+      "world_id": 40,
+      "rep": 0,
+      "R": "1107559340383285526696027899159455753641795683/2227050114028042027237790280980056031169865580544",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "32aa25743f884a047c644a21d359734d06f425d4ee7fd13c494e5aaa9f911ea7",
+      "family_task_id": "1adbe7df8dd0f3215d762ef2fca1163135a1dc8498680824bf7673c778c5001d",
+      "world_id": 37,
+      "rep": 1,
+      "R": "99496322516845429835940187686045/10384593717069653996053096994701312",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "32c2751585c242b3590dca61f8683fa86d58ebeabcd2c45a0d71af0f4e43ab1b",
+      "family_task_id": "0dc1354f38b4e6c307bee99cf80d25eac3394ae9450ba8f126ab7ede10e6a3e8",
+      "world_id": 33,
+      "rep": 1,
+      "R": "108918502356050440606906395974453/20769187434139305758320778813636608",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "33afef0fb4e2a1fe02131eb5246117f2e91ce9b8b11f781a099873aa8e04cec0",
+      "family_task_id": "a157916f7f43f2a11ece5a84d336c6ab6a22ea92f792cddf251cabb12b8e6337",
+      "world_id": 16,
+      "rep": 1,
+      "R": "4998061761399928917837725050145/324518553658426714961206998728704",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "33bb7443a8e57b24cf41cbda36e3e5222ffa2b93f9de99c60043ea1514a1d92b",
+      "family_task_id": "48ac9c295fcd51d49843663db9aee4812f55657861f783388d2f188801d2bccf",
+      "world_id": 21,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "355cc768f1f3248b8a21720b81d94338f16290881b1ef95dcc50cedd6b851412",
+      "family_task_id": "108fc1a8661f2543b8086f5f07fea53a8de20759bf02d20b7ad6d25224640c0a",
+      "world_id": 1,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "3822e14877043d8ee6a2e5cdd04fd62366d9f06f951e43471100ad3066b04cba",
+      "family_task_id": "f28fc41ccc42892e805208bbf1a2dcf71656a4a3ac2b3f898958afabed12c52f",
+      "world_id": 39,
+      "rep": 0,
+      "R": "162686937192348102135733602046433/10384593717069655914586538254532608",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "39170e33bc1c9d248e29977e6d0aec47c45a5badb70088f9a0fcf0f640a8d83d",
+      "family_task_id": "b0dba37ee812553d71f1b0bbef127fd1629d9ec23445b8abcde026fbf83f7f46",
+      "world_id": 9,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "3a0438160663fb823288b8c9b6c3413064bbcb9597aaee6052ec520fdc90cd7c",
+      "family_task_id": "c9ec44f86618c338acc0220503fa43b3b1aff17b549927dfd3c8d1e7e22b8519",
+      "world_id": 10,
+      "rep": 0,
+      "R": "494756795980843802589549174497653174786885153/41806689972546575630854291449535942269534732288",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "3bcb0ccf82c67e540559e3055f0e6cb8ee02fa6d48f89a62308e2790ad01e2ce",
+      "family_task_id": "3aa509ad744292baa4f77f240188ed8f402b0bd332469762835378106ed35664",
+      "world_id": 31,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "3c94e2f19438eea79dbf3e7581d3f694cc0d014b5d6ae5eb4a3b60ffecd151b1",
+      "family_task_id": "36f7e767f7a09fe26fb9eb27b02927ffb712ed4b3bc3ca28d00e857ba28f9884",
+      "world_id": 22,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "3e686daf13c50b81cf9aaa15cf67c87a1a9d1b95c1ad691033354e4ce249bfb1",
+      "family_task_id": "3f42b2f41581a488ebefacf2e556edf7bcad6a847a3fadc9d652dc982cd64b9d",
+      "world_id": 20,
+      "rep": 3,
+      "R": "3067949315026235091511613103193/10384593717069655076917007563620352",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "3fb40c1ac82a420ac444c3fbf37c5671cbe1d397cf4963123d3e54198d92b417",
+      "family_task_id": "26e0446d20117200c885e757eb55d6b255de3a41ffcf141bb9d1515b6f11fc12",
+      "world_id": 13,
+      "rep": 3,
+      "R": "6334728412132655351524867350903635587374883225/603886841839361953566078571740714167814747356889",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "3fca14f25e7896e497975b89498067f6f1403a7b1d0e75e7d65c15f30f7d76cf",
+      "family_task_id": "437effcc3a4f003479f2c0b0f4fdebcf713d7c06ecf4d7b8e9f5af07596a7265",
+      "world_id": 33,
+      "rep": 0,
+      "R": "127767321528575938063815935327/31091597955298361913653860499456",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "44f995348ffefa1dddd9e2aaf54421458ee3c78ed7d62bcf633f52ab615f7df0",
+      "family_task_id": "1251b6db6914aa9fefbfdb04c818ddda207144cb6aa8765b2cfa5db59d0d81f7",
+      "world_id": 9,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "454da9b1e8aff02369180567dd0d1d5cd6a397102541d4936a034fd10ac6a917",
+      "family_task_id": "607097b8d4b8e01c4438807b0398fe92046a64f5a74972a9ff2b561791cfb6bb",
+      "world_id": 6,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "45ec211654cd90305ea24a661fdaeee5a60d284a990f35c925d029c534aae605",
+      "family_task_id": "c74ed87c30ca8908280c624efc7c6a250e217e8ce5f4b19bf9bce8d96065eb2e",
+      "world_id": 11,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4630d85771564a8e12a3120fe58976452f0e75d3d7a4d21a0e861357f678bf1c",
+      "family_task_id": "fd19d85084ca671851903c30ed586434798112f2f210f50834d5dcec8630d6b3",
+      "world_id": 7,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "476d5c828ffd36500e3bd2c3f3c326d7e1b407bb8398c792bc2130e80b5ae3f0",
+      "family_task_id": "18592ba6043ab299f4e54dda9661981061744eda64a22f306b2b443e1bc4dbb2",
+      "world_id": 28,
+      "rep": 4,
+      "R": "4461651104486944345268058257597881100605077085344802090486991672040127147366781299/447614325370373849151514797341382447870027422834479185297216461203502054537500295168",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "48155443874bf1f570edd3994b81f42f99fd6833a66dcb942624c612cd10e1d5",
+      "family_task_id": "3cd43bc24e8f93617e92cfaa5d00fc52be46fed86943cc9f537724d37b819291",
+      "world_id": 19,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "48374b2bc4ebfb9c56ac467799259ba3235777b1a08e2bce7a68300c809dd670",
+      "family_task_id": "ecbbb93f4f54222a79a93484c8f40db08e8f3074cb3f9832c86c26b78c17a061",
+      "world_id": 25,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "49167ab054f032e1bf0a738db7ffdc21bd5a8cc0988de46999e09693d8358e80",
+      "family_task_id": "46b08160cac707485c0d9a6240575071d2442744021e3c2df0b3cea6d9f6e2cb",
+      "world_id": 41,
+      "rep": 1,
+      "R": "268685881399965996423869690619719143538794769/1162724485097427480749312792644883600122102939648",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "49882da9932ca5d157f08a3280ae011fb222472b36386d67047a996d45aa6dcd",
+      "family_task_id": "7046e29d912ae09a035ef74b3c02f6028b3a9036f28cda57d3e821137d95192b",
+      "world_id": 46,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "49ab35886d90a3915ec83ffe22bef00b3ba6f714abe1bcaf842ead607f4b0617",
+      "family_task_id": "e6820c2b439f59b7f95e3413c677b57a8363f81dabe5e76c742f9e3350f03248",
+      "world_id": 25,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4a4e20cbf212d8917bccbd9c94729fdb252a7cf79bcb077471cefe2959261731",
+      "family_task_id": "c7aa6777014a1a796206f115195c2677c60181b8f1dac67c83b47a5bc851b434",
+      "world_id": 42,
+      "rep": 0,
+      "R": "30465666645987925240317239366242882233667881389/113072089537744828252124802806765478835424587677696",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4a69319ff41d90598fde9f4cf0e7e374c00e3a61f4628198c26e6b673fddbd4f",
+      "family_task_id": "e87ca2c90488b9f421bcf2f3ff95d74cd1fdaff6ee13047c63bbb2697d57bea1",
+      "world_id": 31,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4a98829db24971c55eecad57062423fdb958ad0e44e3965c803953d6910a5dc9",
+      "family_task_id": "743aa1497f02db8b1a8a5a0956208df95ef1ed27b8da129ff9244370ab09dffd",
+      "world_id": 14,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4b73ca5e848ff032fc83bda52c33b614946d489a9e7dc1e47ba0400b7c6f04d6",
+      "family_task_id": "d877d4839dc9cf314269aa2c9d65007b6d338a279a6e4e73ad61472570c99057",
+      "world_id": 45,
+      "rep": 1,
+      "R": "832599337417612791963953561847171481492707156663477830190562399923118954987920845483804132306058781643770583835190332508624469789977070574506374585605887947/53666222380441545647322203713636021549185186529720523005621312707425434442725859022176408284628119514399600336035541629870362632976425767768886152689352704000",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4c081ffdc771e067a234256e7b628994df8f43cffe1b9950f9b9eea36f776f01",
+      "family_task_id": "a26c65858b7d8ac0b23bf602b38b9adc36084593626be2a232cef2a914a990fc",
+      "world_id": 13,
+      "rep": 0,
+      "R": "16481917828623562814526412512078895315681240825/603886841839361953566078571740714167814747356889",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4cf334cbf7403ab831bc7a969df4bc468a9af39cdf4bff8372754bb31bf68032",
+      "family_task_id": "c0c4f0608fa221e4942f891e66632fb6f0c9eddcfd2f53be91efbc8ead9ed255",
+      "world_id": 11,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4d22b329eb4c61cb3f833f0efd29b2d0bfc3cdc370a6c369871b73c1f644b4f2",
+      "family_task_id": "d1f18b11ebc99b707b82316816521c26ad86bbde87da6db631692bec6a932132",
+      "world_id": 40,
+      "rep": 1,
+      "R": "4587026925158120522199465338741613298192297097/6681150342084126081713370842940168093509596741632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4d5fd6c67e033b0c5cad695af1623d0cdf49edf87537745c5c932129a15dfc6c",
+      "family_task_id": "a5b9e0aa235e6ba5377770c3b59f57f86e8ede880e72a3b49aaa004120ce56ce",
+      "world_id": 15,
+      "rep": 2,
+      "R": "740986422649013630102388826089135765519424424316345207842153/10944945687854903578357474873117139392608901276225398726721536",
+      "L3_plus": "63444683816702740473153845457932712510679300889497623741215739157266049488767864686316394757/1578594641996759097373000909060712037350908497986267316630533391218926128645350756339373047808",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "4d6ff9b1ef3e56fb85219ecc36d83c90a869366e79eec1d724a8d2c55aa03115",
+      "family_task_id": "769e44d250d5156af11fe96a44e6832629505a9eaebc6b9a9d1006e3668f179e",
+      "world_id": 23,
+      "rep": 1,
+      "R": "736879941361005188944043371941/1730765619511609284570159232581632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4f037b26dd3187c05b46bc99bbfd29051f8382a410e999a6f0bf2e88b6a358f4",
+      "family_task_id": "f8fcf840d46771bfc8060ab3897c9bf5971b5007bd02cdbcf73a0ab5cdd3dc19",
+      "world_id": 4,
+      "rep": 1,
+      "R": "705269871245982517999448309867/162259276829213347628979314491392",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "4f3916a436b80b4fa61a9a4714581d01bc88f229abbdcf49a515f856f6660a8e",
+      "family_task_id": "4d236f0e18649b06f9383e9e14999b40b258704641a154febfbe630298117ecd",
+      "world_id": 43,
+      "rep": 2,
+      "R": "40539519135848204331621307755244166779973564773532693944013872067192729293001577988082938565855405161561985036107735096146917395062760451807/6983672236619870739662222543727774924841171673865785897205729552594613544354239016186416191118997041077738059012272159393226843881139878232064",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "523b366fc2bae99bc7d7137ebc324f3d2953e21059fe78f71b09eb6cfc7f37cb",
+      "family_task_id": "1a0b4524cb7f3ba774dee273937114622e8b60932ac427b9b693e64aa0ccf15f",
+      "world_id": 31,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "52ebba97900e6ea44d2fc601242a108298f764e58a68edebc5f34915aab5f1eb",
+      "family_task_id": "c03a0e8a6bbad8771aad04faadc3a75f83b4eed31eb6c2e40b3b69112dfd2057",
+      "world_id": 3,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "53f8280155279d61097008611d92f6bb2498834efe2d0fad87a4236478214e8f",
+      "family_task_id": "2aa6ad3e670c72f342d90ce5af461c606c715ddf335568330ef13643da3f08b6",
+      "world_id": 8,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "563ff9c3f53d34074669e7aa6991ec940879b2902f8369cb2b394fda6996c701",
+      "family_task_id": "0083d49fdb78099b38a383afe46bab8854ee9b976d8269c479430e510134356e",
+      "world_id": 1,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "58f1f8ab68d118cc91b879277b4cf64e755f7159e9c928721d93af4e2b63a62f",
+      "family_task_id": "0accbcc28aeb8bb24d2b72c448b72c0f674c49e9b4c03e6aee00b03ddd292e3b",
+      "world_id": 41,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "595231c0a73355972bff9987588a646469db59c6a6c80f58aed95e5e663e2ea2",
+      "family_task_id": "453f3c0ec2db7882329f3c9dd07cd3dd656a7f88c1f5422083cea42fe13e2f2e",
+      "world_id": 22,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "5a05a8719257103cd7da44dbb0d06078f486ffd1f2ee624736c610114b9d9c82",
+      "family_task_id": "870bffba9ea2b4f1afd6d81bf50c203805bbf39059e4d93fbe7be6a2bbf42db6",
+      "world_id": 29,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "5a08c06eab67f3862815b45f509b5cf82727d21f16e1fd8827aaa6a5f41a8730",
+      "family_task_id": "7781f1b405b371e7b00b310375bbf1ab6aa8a401bcf65dd729ee49cf755eed0d",
+      "world_id": 23,
+      "rep": 4,
+      "R": "828716055218834689154430926237/1730765619511609284570159232581632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "5a521637fbcc16aa95e282e8c8f10465b67ed99ed7862df86ffc4db97db32d25",
+      "family_task_id": "1bfa619daa886feca3426276aaf4fec8e7a616aa0735f5f3439015f3a56f06e3",
+      "world_id": 41,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "5b7eac40c3705dbd3b5d0d410591f57e889e7744ad986f11fb53c68af01e01f7",
+      "family_task_id": "a3dc787553154f914301d46dcebc7e9bcaf3ffbece277f97a65e701c978c8384",
+      "world_id": 30,
+      "rep": 0,
+      "R": "368635168663648254830907554417796301033954745930134981703517943/49412503846282922880023245845815961672857465718964063709136158720",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "5c6af8de30d1755dfa6122ce3866123c5e353359a471ad8578f994717b92e265",
+      "family_task_id": "d9be91c168ff5d1328f492ed124f3bab2e4a5597a7ecd6a24dbe691172008cf8",
+      "world_id": 5,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "5dd2ed7f9fbb7509afd1840c35a8b9aba510d88105c8f8eed33709785b97bc39",
+      "family_task_id": "cb9acd8b71de07992679c63c5bd6d8650d18f037a29687595fc9a6ec1ac0fe83",
+      "world_id": 15,
+      "rep": 4,
+      "R": "212712451413232507889032826120937316206414783997827630968361/3242946870475526986179992554997670931143378155918636659769344",
+      "L3_plus": "4905832681257864135406668595613164884229225111684977551376610870727811381474881737621009543/115860157210771317134407893716553371319974280689766680148131967239415511495851206020410900480",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "5e90963b31dbd4fb57cccc904bd5f6141e7d3af1211e1e1bff5de00adcdf48dc",
+      "family_task_id": "611aae1bf47f138aa14c9d0f6df3ff21b2e5c60a560aebed813388745602bca1",
+      "world_id": 36,
+      "rep": 2,
+      "R": "285815425121396306475340749427/81129638414606693236263050280960",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "5ff8dbc89780049f9728a709e9870cfedcc78b1a00ee5adc2d21676ecccf8bff",
+      "family_task_id": "73ca8789737ef1b16c7761ef856d58652423a9e03c84d92c68fbd4f79e438a17",
+      "world_id": 5,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "60fadd502da3498ff9a190ce9ecc4e1ad77148d438ff16916dd51a914d825564",
+      "family_task_id": "bb2be6f6b57af9c4e108ffb0a7c9250ce39961f14c0e593cd19270cb8f5f01c7",
+      "world_id": 1,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "62e30dc4138a009d9507a4be51b146b241f264d690cdbd43f994c61d06caa459",
+      "family_task_id": "0e9848848a06eb022d9a04a22cee839540b602cd469f990d030e64e13fc67106",
+      "world_id": 21,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "62e69762a01d4f74f88d3561849db77e55f885db69ab41042dc67bd67df0843f",
+      "family_task_id": "257c223863377d884e583174d1922c99ec45eb9c075c001e1ea505f0c2bb604f",
+      "world_id": 38,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "6386ba23e66f01daff638cd812be8de27361d380dde7499a88338d70a4aca67e",
+      "family_task_id": "6cc652355087f524abb05bccb0e7989dbaf4dba4d4c8ce18c1d65da41009f448",
+      "world_id": 46,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "64798097a900bd1949cd1c3a30805bca538052feed0748efea7a825ab95db751",
+      "family_task_id": "725090fd9171bd75026a5bce2e848ff8f19073c5d5a3e2efa36fa57c3c568cf9",
+      "world_id": 45,
+      "rep": 0,
+      "R": "147949905200570458053731646339006732606783007724492874127497737586230457888348386714431124635674529520141606473219284728280528720054897604634840278478370245/8935180010559287849147888718682817283051422338000817544979809936513575483575504156800253620653649585504675992158011446971428787257296154273661119783644430336",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "6615e3709385e1a92f512d573fa12fffa29537cd990ab91ceb39f19a0fcc7517",
+      "family_task_id": "7824aa030a59b7d04f86e6a4b7a455dc1db0c118e19e8c254d8aa472df2c7bbb",
+      "world_id": 1,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "66f4161b4a0e9d771c90e3db75951213aa8b09753cb3a6f2025db8b8268592fd",
+      "family_task_id": "0608571eac3f6bedf13a6dc90812583961b76ccf8d359bd6fb94b614cca67392",
+      "world_id": 27,
+      "rep": 2,
+      "R": "8071709238020946016343380634410786059554014881629880067635/785460469299716781442283386895321249263448389369061036785664",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "67a990ead798d6b8b35c53cdfdfffd59d6569df89891159c4dcea31248db5310",
+      "family_task_id": "46488fbf1435b678d2b825fa468bd0856dc90f93cb0cf1e7038f4c44bcc437c7",
+      "world_id": 14,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "68acaa6e909c2eb5318a2a8fabafdc77c98c309ffc3a0a8eda28a69c6c7901d9",
+      "family_task_id": "1c1fa8dc2198877efbba6529a3304c0220a51aaea54cc03385075d04563d0c7f",
+      "world_id": 9,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "69e2815e800acb8c133fdac3f38e0ae7478f6c9b95c5f0229bc960f7bc0409ea",
+      "family_task_id": "2081303099ad224ae66129d99a7a7b5ad4bc016be8e58e2c6da5bc13646eccdb",
+      "world_id": 44,
+      "rep": 4,
+      "R": "760952757328160252230663383915766306543700178195377754046377091968934181889620480231700324089373459591781156521/110338458736543242564220611590667189066399852764480119901950135311581881011436888347595438389922067159503454863360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "6ab02e1ddcbd18efcfcc55a62d3dce213f3dcf97a43a79f429704e67870c2658",
+      "family_task_id": "b691e5068b64d5edc3ec4d7583d7524465bf5389b0e00a3b35f51d31a461e9b3",
+      "world_id": 26,
+      "rep": 3,
+      "R": "8567320840639205934658758766993562962042091415083949489761723/403086674531221408355993448144017261778394998459283765469380608",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "6ae46d36cd5ad3f40a64805cd501886b407e1fa80bceeb1e32a528ece341c493",
+      "family_task_id": "3b9b327b5be210ceb44f01a677d39a22e5f90d658d249fe7794a6d41009752ac",
+      "world_id": 39,
+      "rep": 2,
+      "R": "86730395747542364838306306392861/10384593717069655914586538254532608",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "6f46e15dd8ee8d5e3b2e5bf50f7e4a11e117b9d893b572a16d9bcd2d462f2689",
+      "family_task_id": "fd70326383a7a4a971001edbed79f994f8f6428e54e278037bb596d5d70448cf",
+      "world_id": 37,
+      "rep": 2,
+      "R": "51198104153759686578224086983843/5192296858534826998026548497350656",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "70f85cb9ffd1b9a7e7c77662eacb24840ab7ea685c7832b304eee20925b29409",
+      "family_task_id": "604a9fb3b912ef306011e3b1c16274d86451103d10f32ed0831ee73ff74dbdad",
+      "world_id": 2,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "718a637568590d126c78ff2f7c4eea26037af77ec10d56bb31eb2f18467cb473",
+      "family_task_id": "88892763eb21e6d15e6e5900881643409ea526bdc4ac9a80e12baf9b2a0cef0c",
+      "world_id": 21,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "71b8d2e7fb6e5d8928d4c3a66b7fddc8ce03fda98f3f33737fc62dd51744bc16",
+      "family_task_id": "e582d8d9052d070e3b2f3dc2e24f359d192f0646295eb75dbde289dda15f024a",
+      "world_id": 20,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "73081d28faa7e1769266c45e944d97dc6589c587aaa03b49aecff4e3d4d79126",
+      "family_task_id": "0af8e07f9c0696a19095bc6d543c775e5966a0b719434f3791a31372d5e67657",
+      "world_id": 27,
+      "rep": 3,
+      "R": "1086410194389479197762998818689457100900991682624267399151260028927309509971535/74414242083248338880317383438814021362396274581341831947913203189692429150191616",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "7393836302e316bd709b4bc6e5b60a7e097a638d1c18aecb7419e0cc42dbaf57",
+      "family_task_id": "9e6fac021721e4981fffbf88aa560748f17df4e386a594d3f51111ccaa2c680d",
+      "world_id": 9,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "742d81869b4ee5d77ae3bc69dfa60ef5bf1689eac675ab36f671616196b46c5c",
+      "family_task_id": "96a66113cb3c746556c149123aef20127768d8c01a7ab8bda6851e93dd81d7bc",
+      "world_id": 2,
+      "rep": 0,
+      "R": "156396598526092908562842185059/6009602845526420532754768723968",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "74f5457f65f1c210d5e0a928ba78c58aeb7e13dc271aae717c7e3fca2033eb4f",
+      "family_task_id": "0fd7b8c3ac679bb9fdcf3fd38f997dff852e6df368d4bcd57ec2e477c9447f1b",
+      "world_id": 45,
+      "rep": 4,
+      "R": "35964038937759386409050102669877112471435793387154715019476524075011524289500870939193659091585879896399261483940698250979348463044465223832799962759103090433369910740014601992454953498551790782603055977/1906429040552842200583735465462115749028745893847501791860973557645191799043451811734450837954251180152005660739656129207271449776486457892301399091248204322700371199101259353774986463949849022894702592000",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "76ac1451a09e5c923adc50f89dd8de32d984a744358dd1f699c190d62e71bbc2",
+      "family_task_id": "9cc4f4933c7ac24daff1156eea8f1f96e018c8851eb761b58cd595ac1337f582",
+      "world_id": 2,
+      "rep": 1,
+      "R": "15967114572115523906956653547/36057617073158523196528612343808",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "76bac7a6148852f3b7fee0756bda36e6ed85c916f65bd614d90a897116d4b5b3",
+      "family_task_id": "21bff5bda004e808b4243f056d8cf0a76afbb606542e5767874a23c69ca46fe2",
+      "world_id": 36,
+      "rep": 3,
+      "R": "1682336893516661197987424700083/324518553658426772945052201123840",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "777cded245ee1b32f7a494cd3a633638c15c17c4012760c1b9bd004ee7ff24ff",
+      "family_task_id": "d5eb7a77885a2928468f7b938e6ce8dd56099499ce338d842983b054f99e9e82",
+      "world_id": 46,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "7820e68b38177367519d7740111222aca58c37f701f05a4e9910826b5a3fd7d7",
+      "family_task_id": "6728dc30ab7ed11309050baf1ffae8cad4f4cf4885f932e848757d539c4b8c84",
+      "world_id": 17,
+      "rep": 1,
+      "R": "136391553174010430437119176722751/5192296858534827070084142535278592",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "7883e7e3e3d46637947dba6a30ff0f8d30eb8a38c0bed4b59d4ae420733d23fb",
+      "family_task_id": "eeabb555ed84c066d4519bb58d19813bdf68d0db8c31a0ff02cfd42b7f9a1452",
+      "world_id": 16,
+      "rep": 3,
+      "R": "3169566288099185729951211050829/324518553658426714961206998728704",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "78a105007c98441e283cc4876147004ad745ae01d1e7e8375e830f56a9d4fca3",
+      "family_task_id": "632146ae93bf6566385b05eeacc810b266ea2b82d9d4e9fcb7188d481f976a8e",
+      "world_id": 33,
+      "rep": 3,
+      "R": "124942529269088614268526149275589/20769187434139305758320778813636608",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "7918110748797474242cb03db084649351bce1a4eff2f794b9330aa91104c732",
+      "family_task_id": "222ab038eb5588d50496ee1bff08a7ac9835211ca49a90491c431eceee2532ed",
+      "world_id": 14,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "794f864173c46b42aeef2101eaed1e4836d62b0e7bbdc0dfb66dde08e8b63cf2",
+      "family_task_id": "64f312d42496f111faad316370f9de7a9ae185a2a5072d5768410d50417eb6e1",
+      "world_id": 35,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "79f3131d226e07c021af9cec0b5dead328ac94099cd55240f048bf2982226d52",
+      "family_task_id": "0ab70bc577f1d8f62beec2e60ba093c9da5bb72be2582dc300e467eab6a261fa",
+      "world_id": 15,
+      "rep": 3,
+      "R": "892273089667031723328179456847849353253968461/12440287282599842791508039774808437872297771008",
+      "L3_plus": "2168551150856403013640435907728129343659891236972319658157095/99601907858308582588042745226030628955213766437665098868719616",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "7a13a8ee4bfbc0b03b2d5bb085cbd6ac6b80da0aee311f95718d6d72b7d324f4",
+      "family_task_id": "4380c74d63a42b5eab1122f4c3bd83a46b15f1ab0d824d4c7c8e503dee765b06",
+      "world_id": 26,
+      "rep": 2,
+      "R": "201219925266739915406516088185112336628924881591162175472730431/6449386792499542533695895170304276188454319975348540247510089728",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "7f33639bd47d13b3eec0f5b0a28a2480595d8d6324d124338573eb9ab60d7c97",
+      "family_task_id": "ee600b6086f902e54a197d7b31611bd7bfa5efb31f945c542673f9fcc0f2e2c1",
+      "world_id": 44,
+      "rep": 1,
+      "R": "44137045371106556513311901177894187057382742327260715400194244842121675593344796802070777431791/7937412657941676917564131197587338902136177093492254653889501444955539383875461878488240813506560",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "809b2f6d32f2d9dfd53cae73954d6947b714d57d40e4b0c4ff92e0a02bc3f0cc",
+      "family_task_id": "e57f0a531d198aa6cb9e1834c47564a6958ff54625643cd24d009b73a52c2591",
+      "world_id": 3,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "80b9152a6767cd9885e15d659c593e75c3c509e14e409871e0e4b8bdca0553cc",
+      "family_task_id": "72216c35aab5b8817f82ff08701cb3c028903ee91182de6754e0bb0b68c71fc1",
+      "world_id": 35,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "80eefb706af720bb867c77022e365811641b20954a449044fa80b8fb92ff27c3",
+      "family_task_id": "17c2bca7832cfbd637cf43d9d84caf5a088f9e2ffaa15a0246f54b929a76c6ca",
+      "world_id": 37,
+      "rep": 0,
+      "R": "109398232492775601781866511355025/10384593717069653996053096994701312",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "839a4938aa6f2992f38602111cc8e206f9899606659c50718ba323ee48634093",
+      "family_task_id": "aa42c6109cf7f079f497f7932353f62ddd3341b31436f07aec65a0376b614fa6",
+      "world_id": 19,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "842a977b5a8c10929c98dbd0dd39484e74d70900f33a49e4d71b9edd4ed2b752",
+      "family_task_id": "1c45fd16f3c663be6478a583a83167a9da940ce014bc8bc49c2bbd5a9b36bdfd",
+      "world_id": 44,
+      "rep": 2,
+      "R": "18554448180668770602445099190844842641974648243576870120786893249185321983889710997492398737124993687270480414351153593995477637/3055330819834729521754509452179143672566349763005804852741266842642100283949498675653252936452247679144561352189339576560894607360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "8561854fa33f5f741284d1eb09f75a547a8a3cc1e3c39802581ae1f5bd4f9900",
+      "family_task_id": "b687ff8f676c24985b5623423539a79ba0006490bcea572963ffd94535dee40a",
+      "world_id": 42,
+      "rep": 3,
+      "R": "2822435221189579886783013705204259432750479883/18845348256290804708687467134460913139237431279616",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "86c795f57a6bbe4653b316441d95966e87285f2e7b57eafbf96f78ff28ec4a47",
+      "family_task_id": "e4de45338ccb2f814b6c12e83342fb07585e762092940206a58f0307d055801a",
+      "world_id": 9,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "87c891e967ce29510b29e5e1c5a73420a6730935f439d5a807c2309a3a288b82",
+      "family_task_id": "110ed671bb9e6333080312f7faefb31031ee5fae17b8c3c2fcf137eae3713af0",
+      "world_id": 30,
+      "rep": 2,
+      "R": "639782536187111771271518995618677983878019563769581205334337281/98825007692565845760046491691631923345714931437928127418272317440",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "8a7909c401d6f292032c2268977e533e7708f2fc551b55c8a11628bafa1a0d84",
+      "family_task_id": "351fa456a010479e5fe4c9902414228aed181db6bd496a4263345dae648a56a7",
+      "world_id": 18,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "8aa55bf74c06e196f49226a461f63bbe476a0a1b2526f7f0e403b227f05e454c",
+      "family_task_id": "23a92c8ad8f682274be9bfa249aafa6771c98198798a2f70e5b0d2ef559b34b2",
+      "world_id": 35,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "8b6fd80f20ac95f7fbebe801feaf904c5db104d9e164ac5f7469cebaef96533e",
+      "family_task_id": "12b893923afddb672905546a6060d68ed3a44c26dca3cfffc57a3add0657e2bc",
+      "world_id": 31,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "8c86f5513a6eee8d9eaab035a6af35319ef06239aa0b6446cde2c4f2164bec0a",
+      "family_task_id": "265bcb1208522aebda99881fe5fc64d13722eb2c30ac0463cd1701bd09a4da01",
+      "world_id": 5,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "8edded3731f84e61bdc08b291ca6c807b8efc40c5e2af3443398d2ccd828f941",
+      "family_task_id": "e8336d1a235c0e483cbdf0db3cff6c38d4aee246d2fd470a685f38ab13a85324",
+      "world_id": 41,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "90c38dacd5fdd995a1ef43074be2f5243bdaf631dc30ef6fca5c75b100844741",
+      "family_task_id": "dab4fb431677a0bd85b68a2f1f2962f10abba4a60f46634ffe69d048810f6576",
+      "world_id": 27,
+      "rep": 1,
+      "R": "8963639731625592332167467897679837602117437908895853046465163/891736685841487156392213208635244715685528884487170512719446016",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "929dec39184d62b916a7049c90e9a9f416b94e19fb8e6232fa355eef40ef97d4",
+      "family_task_id": "f7eff72382fe77e23543c620e614971a3eba634443276cb3fb9b6c1cce4a0b3b",
+      "world_id": 14,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "93c3f2b032ea06555049ab7857f9ae8b2c5824429bec58bdd9860538825e29f9",
+      "family_task_id": "b5c0ba5a0b79a5d07cc62228d594f70b8f551ac51a2df649b4d55df089e84575",
+      "world_id": 12,
+      "rep": 3,
+      "R": "3993120923793206630351382247911/324518553658426726783156020576256",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "93dff5ad3825a327cf87137b269f4834bcc1ed98706232ed5886ecebc9018927",
+      "family_task_id": "783f2997d0be45a010c89131f13942315e5340b7f8df013e73924273c8062dea",
+      "world_id": 28,
+      "rep": 2,
+      "R": "193056257609440300522597104912779528658982819520825025960639144101/24847586508912270585064832706252299110574398353125588100565914615808",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "962f552de42e9ad2872344d85f947bd6cefb72e6a1e081d7daf3b88020d408fc",
+      "family_task_id": "52686f4e060f135d3ef569e3c9341882f65e2fac36c9f9d4286e5b947c52422e",
+      "world_id": 39,
+      "rep": 1,
+      "R": "552782590409602492538935843227019/41538374868278623658346153018130432",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "97aa80354714ce6ee705a756e1bb15962536cb339e716fa771db7d7ab0fc3604",
+      "family_task_id": "8e0f6a6f84400211e5525918651e85d690d953de83885c64c3d264046eae448c",
+      "world_id": 34,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "993ea12d46a8c8f534fc80076a7fbc729d4c258462adc18ce1e86fd3893180b2",
+      "family_task_id": "fd8282157c29cd29a6985515d351cbe37e11f365a639341590be254ce6c11e74",
+      "world_id": 40,
+      "rep": 2,
+      "R": "4160224076950777174233653274514440848106569444953295683935983/6248775178569200617293187917173662234904606617609998590583767040",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "99c37b35a0b004b5e9f4a28b15bf575ae3232977e04059498000485ffeca23e9",
+      "family_task_id": "a268a521f4cfed78466d8a795ef8186eb71503209ec108886aff73797eef6d89",
+      "world_id": 3,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "9f0ea4e45d8dee22e51f7e17099809ccac880801bf6e7c81ad7fb16d6dba1630",
+      "family_task_id": "f79fef651035ca268b09e9fd15cb243e39b7e405d27c98036b53c27ce3226920",
+      "world_id": 18,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a0341f21ac4b1b3b6e4df8867add10105b2c766db9f1adfb465a2978c7d47698",
+      "family_task_id": "fec52b91a7bcce5e3f8591581bc3237567eab47ba8213fccb0aea5177fce1492",
+      "world_id": 20,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a0554aafce85549aac03412d73e713cccb655a9b87f590dbf85759d6fc5f57c3",
+      "family_task_id": "b4f16cb5c36fdf928d1cb065f6c63e27537a950b0e484de09c48e0bb66df5da2",
+      "world_id": 4,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a08d011d74cedac3f40a2e59a60f2b22227e4351eb679bcde277021a2f415dc8",
+      "family_task_id": "68bf28bcfb79dcbe35427dff4d07b5e7d62d9172e4594b57aeeef705b5029853",
+      "world_id": 38,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a0d36bbde8abcfbbb8a314bac6e80c7b99c4c41d3f0ee5343a3a83b066d0758f",
+      "family_task_id": "60a69a9fe4d1a6fe6a75ee4a92b1e2f1caaf2471c5bf496a206b78d52d85e6d1",
+      "world_id": 15,
+      "rep": 0,
+      "R": "607280064114920390763535246001770096794373126714910263885/11748230981194046508367073525417565428803328889011564445696",
+      "L3_plus": "963971737336863143770085219079972728695812926997015551284698224794047991/94061028745187608169177117219042555320665850190587732049497928673464942592",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a21e27acf5c47d6250e0a2b8f64fb7352561e19b323060dc4f178e203d83d29d",
+      "family_task_id": "bd42165492efa66819685946fe7273f5e8aa1881d4ab6da59020189c6d4737e8",
+      "world_id": 6,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a61b2ee9ddbe600bc3728f9bb7e0a92643ee5e0fe42450549d2655dd9825da13",
+      "family_task_id": "0d1d44c1665246170392b95ca1f11a0256ce31b4ff09e06348f66cf99459cf10",
+      "world_id": 36,
+      "rep": 0,
+      "R": "78827924638975857647994873939/21634570243895118196336813408256",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "a86f924d53ee118f66f0b9c9e18e670066257464e2414bddac18419c60579a61",
+      "family_task_id": "dbc021a51f08739d8217ac325ccad90feb02c0414c9ac24393580d8279a8a21f",
+      "world_id": 24,
+      "rep": 0,
+      "R": "2734101906850689457672516334323771180916936836709/187072209578355533289771004942772159046042894991360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "a8ecfac4cfd791ca11ff50523b88ed3c0813dfff9a7bab0d49108b6bf526c970",
+      "family_task_id": "66b318be21a79a7c0740d621eb40d2eec9b985042f680cd870873cd43a87c1c7",
+      "world_id": 20,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "a96f233c75c87c196ffdfd5b79b3138475b609e609ca2b64306098242528a57a",
+      "family_task_id": "fdf60372352c86a113172d928d34354b50e1f9a63ea19417bf501dbc7b628d4f",
+      "world_id": 43,
+      "rep": 4,
+      "R": "2259453835513775341647660801596707612599718985848510228594347283792956383426947/382198926569254102462327456432240270557918064266116815745968859147791965251174400",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "aa126a8c94f7c03f0c393710591bd305390f1386a7ef08203bff1b0b41ac6787",
+      "family_task_id": "dff45e8049494ab10554219a819933bed35feab4920c75f555091c1c89a14b6f",
+      "world_id": 28,
+      "rep": 3,
+      "R": "102285193301812823388553709251654676522821664770494475379428431807/12423793254456133913214283925135503434322038691316716428089683345408",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "aa4f591983baf4f1541fea18ed5b6c458bf8378998ac9f5cd55ccddb1ec11f37",
+      "family_task_id": "b924ca337992e8792ee76ecc7542b748bbe825862345d535385327967c911107",
+      "world_id": 29,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "aa6986e4ea39a8aa97d30af11cc45a69c9e098a8ddf91efb8c6e48d7b9c38eed",
+      "family_task_id": "3b2a6bc7b0b98dca1385df80997436f77353a765d0081bc132b507f3fbbf9153",
+      "world_id": 0,
+      "rep": 3,
+      "R": "3539953943820752817569520186027/40564819207303343099694316257280",
+      "L3_plus": "72000653766843415953730084848724201245274760941/3897337699549074773061713212336820840371343851520",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ac1c40c5d58b0462a5628be62712f6db5605ac82590b042c5732fb85730c0d1d",
+      "family_task_id": "af26740057a63d1599524c09d55330ceb7cfb9141431f5369f3685d83b42fa32",
+      "world_id": 32,
+      "rep": 2,
+      "R": "1677779008040716974039812694491/5192296858534827619523297074479104",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "ac3dafaba6d346fc863dd1fe96a3e150ff4db5904b2611203e20acc2ebf6b723",
+      "family_task_id": "81fb150ef6d5a478ad954955336f7e6bea976a93ad569a2d19c7f4239c585016",
+      "world_id": 5,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ad2d52a90ceab906e0babd29a1dd69598e98430bd8a8821184fac3f19d9ec086",
+      "family_task_id": "bf5381427e162a4f6d1908e7dc48e29b639abfc1c100a0131aef80d1adec976d",
+      "world_id": 39,
+      "rep": 4,
+      "R": "533278337357793820685591984423335/41538374868278623658346153018130432",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "ad62b90d01d622c01f2137cc964e632af7d9c89e19424779d3b2400475428f05",
+      "family_task_id": "01045f8860c885339e9bc3b1f3b60dd5ef43ed7a0dffc4e1b93ea35f02f4e07e",
+      "world_id": 42,
+      "rep": 1,
+      "R": "3073247353840836856756776379925/20769187434139311468885106319425536",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "ad8af840fd745eab10338d7d8f1ff9fd934c537ada1e7c98659ab5018154291d",
+      "family_task_id": "71809735f58b5227eb07e71c32562663e37a1711e870db01b3d8f1fc4982ac62",
+      "world_id": 23,
+      "rep": 2,
+      "R": "1193196631880482867456253137937/865382809755804642285079616290816",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "ae943fc7de142813bf1385709f98abbb96af8ba41dfdfee2223cdcd922eab664",
+      "family_task_id": "927066a8774c338b1deabb2de3309d4d960cc6a0a703cc669edc78ec2a163337",
+      "world_id": 28,
+      "rep": 0,
+      "R": "104220492892659311306291770687649/10384593717069656049694527075647488",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "afd69f9e5222144419153825768e664b022807829ee66c39219469f858f51dd9",
+      "family_task_id": "108ee35fb3fb9858de18cb780c5008f1a990e2f569503e51c3190f4ead2a84dd",
+      "world_id": 1,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "b027161690290b2e67baca14c09061ffc48ac59196851ed0749fa88f8d41c4f6",
+      "family_task_id": "739728819def7e40e30fa590d93b44832752016e60c1a99bc510a8a7c9b85ed3",
+      "world_id": 8,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "b0acd64758b7086f1ea9d9a6372fde304839d8628ab19c134eca26fcc1440869",
+      "family_task_id": "a972163475e042a9cf59adb9cf6786277eddee6e264c0248796a628ce6257a9a",
+      "world_id": 26,
+      "rep": 1,
+      "R": "51423293722908333205003231484605525675502678906189751443647805/1612346698124885633423973792576069047113579993837135061877522432",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "b2d11271c067837ea96947809c7a73f7c30e5ba78b0e5f0914aaeab6cb48c07f",
+      "family_task_id": "567e7e47d32ac91b8d3ec1c8e39b66b7e8204f1dd4e3ebcc1cdfc11d76e56087",
+      "world_id": 34,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "b371db2ee6d71321d0942deae38446c0f75bb868fdef6e7aa8af92791bb2cbe0",
+      "family_task_id": "498dbfb72fbcf5cb5c48f9afe79363dd67b383e4f7ca9085b0ba5b3c2b6f9561",
+      "world_id": 29,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "b39824d5741c589cd94216f3dc4c0913df3b48a66d9799a8ea736059ffbc885d",
+      "family_task_id": "2942d7e5d485f10d0449e6f97b411986da89150e70f421a53aa92cabe3c7cb6d",
+      "world_id": 37,
+      "rep": 3,
+      "R": "175387774752360921445148243846185/20769187434139307992106193989402624",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "b65b4f55af647d2a7eb04fd0a5ccb7b6471160e077c85871036e227dd7618169",
+      "family_task_id": "b809d1b8e277c412d0a1c2e5cd59cda6a934ef985091ac8be447670c8c176e14",
+      "world_id": 45,
+      "rep": 3,
+      "R": "97183689562593079078709472459645518950225460292160278102172619313538349908224398274918804201328760188159598570921438401143998385970010539593886917046588319177/5492536105377520467350203180045248050008265653602930046266023583181587401651467655627700755844456141495843498787888141092664308768069264825287986501814059008000",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "baad432373f6f5f23bd0a20a7b32dcc46afab72807d9ff3822dc398e5f052b5d",
+      "family_task_id": "57dc11cb2698503c77fae25aa7edf508740f9ee50190808c48318804ffcfb18b",
+      "world_id": 10,
+      "rep": 1,
+      "R": "1951202628276846377660772773536871435793801329/313550174794099317231407185871519567021510492160",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "bad840a43f2d64c6dd552662a3aa9b38b45ab4eb1905baa48f9afcf9da08eee9",
+      "family_task_id": "c91472a73c5e070f9f3203d2e4d34db43ec573ba80131bd349b32fd259d68f8b",
+      "world_id": 42,
+      "rep": 2,
+      "R": "4188379175553438703156300760483/41538374868278622937770212638851072",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "bc4d03989035e1d5f468e8d06d017da23463e8ccd082fe8c21ebd852249d8f2a",
+      "family_task_id": "7969ed5949cbe55f77cc36cc6f057a2397aa6290d4bd55d22f97103c33e2effe",
+      "world_id": 24,
+      "rep": 2,
+      "R": "467841045354008594562625616969963873102717939145/37414441915671106657954200988554431809208578998272",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "bd446ab60956860a5403ca0496b4f348ae1217c3925be98b488955b5cab27cf9",
+      "family_task_id": "1311d4ea52712efe4800bad333b1e6caca63e25d1f40938f9ceadebbf5bdea49",
+      "world_id": 32,
+      "rep": 1,
+      "R": "1028526096029161544117404613353/2596148429267413809761648537239552",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "be250c8fc761a5b52f89fbd10965708a5234ccf058907d56a347920611b38f98",
+      "family_task_id": "0c7ecfceb4c288afe5779286b6a48a589955508a110e8b73c7baa81ff8dbd21e",
+      "world_id": 29,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "bf31e275a756c38dbf7f2680a3831e94cd3a4e89c4ae5cc56ae03d2bc373b689",
+      "family_task_id": "9a0262bdaa4569b05b7dafa026f2155dbc7f7025c1b6d5f414ad9c6135e35fd9",
+      "world_id": 26,
+      "rep": 4,
+      "R": "858590717678393074936849041790852588785251409235040235468180155703160632787519/26864748542237527112372125500703275322327856863426472414983795634360152913608704",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "c02664dc9d676d50c00ddab9b2778f4173335da1a9fb2c078a9b4ecffefa9b2c",
+      "family_task_id": "8f49a34cc27f340317123ae6bbff64c3a8e1424b327f661459092801f245e55b",
+      "world_id": 30,
+      "rep": 4,
+      "R": "581861362896831179775746061691898902739901501791941715776074581/98825007692565845760046491691631923345714931437928127418272317440",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "c16713701b5b26c02bf793ec283dd462dfb155517bbb9af3a012b1f493ca98b9",
+      "family_task_id": "43db7dc2644ae5849fb45065afc3fe47e69c5d2fa6bc1ae18441aecf78dcd94c",
+      "world_id": 11,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "c395defafc49ec013a1ac817390a6f66fba3cd22328be6243e61ffb85b0660ee",
+      "family_task_id": "1c62905ae71775e6ee5c392182880189248dca8a375d29422112aa33e1cbe13c",
+      "world_id": 46,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "c82bbea1c1eed167e67d93f6d3a832b0b194bc3b03ec4685a64c9b88bb62cdae",
+      "family_task_id": "2868d51f1f9e9fa73f46037f8c098d0c6b6b9a3ddd9e7f0472d12bed2b232847",
+      "world_id": 43,
+      "rep": 0,
+      "R": "4357939364925180054858346208671518627459542946608902389770743421621902228362749131025030650855945858480959969141473339520517/584483078733821940790464899895901953586485307680616390397400337731452865192243889420714178455246517654593996145007573703065600",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "c82d6857b6206ff25625e03f41325d1e7e51c1d85768b5f42d019ac7d9c20458",
+      "family_task_id": "df16e389af03c8ae172a135577b5dcc1919e87d69db6f66db43fd3bc5d43ffeb",
+      "world_id": 16,
+      "rep": 0,
+      "R": "2605889552790543324144581332781/324518553658426714961206998728704",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "c88af18902b5ecb3425eba3c21ed9d2838fc509d47f148f1c738eddd3e337127",
+      "family_task_id": "383dc21931e1305da3620230adbdbd9d152ce35bc3f02c858e24bac030b5793d",
+      "world_id": 4,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "c912fbdb21d418be35c4c37fc5484677434f4db7b79c2e8784b314d4ff6be02f",
+      "family_task_id": "e6cca631874bc33833036d7e2e927e51a1d2dcb04eb61bf109d6c1963d6c9388",
+      "world_id": 36,
+      "rep": 4,
+      "R": "66194950360232455465379987857/17079923876759303839213273743360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "caaa77b912b2b8d24ac6e32876930d98bc8c41fc0e96ac8630467e2f9c33989e",
+      "family_task_id": "6accbaea4647cb37359fdb7e8a36189cbd2618ce2f77c385e89a14e73b2ed875",
+      "world_id": 25,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "cb67c18988213dce0072234b8f234b7026e73edd640067390d9b6f74d292d299",
+      "family_task_id": "30cea6dafa366c6d57ed27cfea8bc8f36ba4aa4e8a948b0b7fcfa944d1a290d1",
+      "world_id": 32,
+      "rep": 4,
+      "R": "1034489773914057482367202926525/10384593717069655239046594148958208",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "cba06b5b691581c6f19106f15aa4e0b74ba18c724d28fa79f1a3761201d33672",
+      "family_task_id": "783eb4f0a154318f95dab131082d5cdd335a7be1730df515c1a14283fd24259b",
+      "world_id": 39,
+      "rep": 3,
+      "R": "49009039489056814028387331548089/5192296858534827957293269127266304",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "ccae7c195f7f524a61f085117b2ae25b9b44b7e114f33b3f3df7f8c1f549dac1",
+      "family_task_id": "1e6654ddc542a573f7985c7b4b5124d401d4752c89fc46f6bc1d500cfd71d7b9",
+      "world_id": 18,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "cd3e323763fdfa4119a825009fd49ad1b07259f3b780d44a588f382008bb45e4",
+      "family_task_id": "8711d46752960988053ad909f5433546ea4ade9142b2868cd704a1154c2f243e",
+      "world_id": 40,
+      "rep": 3,
+      "R": "246888040122237394410795474462873775382038797015789640882283/438510538846961446827592134538502612975761867902456041444474880",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "cd824c8bada154d73eb1044132a42512bb331291e656aad4bdbf4e6c37c0c323",
+      "family_task_id": "78b97e48053082c723c62e2c36e0453e73bf07815a8fc54492dcc4437abdb7ad",
+      "world_id": 34,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "cd8aca968150e9808ce6a21035aa305eea95165ab52080f2670320c08587d6b0",
+      "family_task_id": "4631ba78b5b9e37b7113f4db829dc8ac60f1df03ec392953d5b0541f0748cb5c",
+      "world_id": 16,
+      "rep": 4,
+      "R": "3687215878445038366957575339569/324518553658426714961206998728704",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "cde7f269f8dd4f7b032fa1928a4a0e364956d06dcc754c3a482e02ae22f98497",
+      "family_task_id": "5e923594294793d6827ebc4e81c67f6ee4200ca7e62cf97b28a73911bc509156",
+      "world_id": 38,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ceece27233bcd5856771f76220dbccb2185d63e3e5cedfaa920dc57819572e2c",
+      "family_task_id": "6cdb6764927e89cbd2dfc25967e43fd56cf9153a1cb4ba82fa36c50536144940",
+      "world_id": 6,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "d099acaa6326fe1c55626911c64144672c781102cde162d3e13166d560d05e29",
+      "family_task_id": "33b60b06a6f19ee0efda39be5f44f01de0defcfd0f3f214db74f1263b7e46f74",
+      "world_id": 5,
+      "rep": 2,
+      "R": "166590093597135467608799253139/81129638414606681695789005144064",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "d0fbc68863220111e8c10e2de5b9df1ed499ecda7c753b2ae91981e032961eb6",
+      "family_task_id": "84062c243f03bd0bc9ec989f29d13db0bd0b43a0c677de7e04351c4f628fd90d",
+      "world_id": 33,
+      "rep": 2,
+      "R": "228992481038262390349719020555745/41538374868278611516641557627273216",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "d251778ba20318cabd5fa401e66bc90f5284c0543546a4d66484a84eb58e3bfe",
+      "family_task_id": "14277cfe5665f6ef7d669471d1b6b7b2ad25bea0d086127ece59c1ebffc6e738",
+      "world_id": 28,
+      "rep": 1,
+      "R": "1049327977077651697040692990290366409096557635308521500635465700477717828986843707/94131292711756200172432905683185899471072203628539617141170069268056519144588181504",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "d4884fe351e9a3ccaff22e29981b33dc044b3546394329816f7774f65b5b2063",
+      "family_task_id": "b0814c184d28d493e454bb3f2349820e0f48842ac66c292ff1e9eee9149afd9a",
+      "world_id": 33,
+      "rep": 4,
+      "R": "344854614738527306972647966961277/83076749736557223033283115254546432",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "d63396328a81b072f786177e0b9c684ba8d5491f3bafb1c15dc81ceac770dff4",
+      "family_task_id": "f7fcdb35d4f773eba9c19890cff05d962012ed61859b8b9af014d3329271e0c6",
+      "world_id": 13,
+      "rep": 4,
+      "R": "24029493405568188182997810488908741883969016475/1207773683678723907132157143481428335629494713778",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "d810c3cddb8c3235f50717282256c14b3c0238c2194482a619b5b01ea48c1d5c",
+      "family_task_id": "b29499e2f58d50b87ac2a44e1ee270d618d6fde589e16c72ec3b4316cdbe6152",
+      "world_id": 38,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "da9d514757bc18b2b6a2fc5944ffdae905f7d3063f6f80b24a511cb90e5cdbf2",
+      "family_task_id": "6835dc6830693570ed374188a93156025ce78684d670078996875b1d8e031e86",
+      "world_id": 19,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "db318d610172fcd49d9a16f404cfd102ed749ca8dc179b91e1223ef2709c4a21",
+      "family_task_id": "c3d9e4df1ad8bbdf5a22510fb42bab4155bc85fc071e630d5f6de5bc42be8cf4",
+      "world_id": 40,
+      "rep": 4,
+      "R": "722834799140921993265145583045240096123975321/685246188931705239150089317224632624975343255552",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "db4072257a6762bb20b1247a6df4ff11c115bc477a7b794e4a6c5bee4e97472d",
+      "family_task_id": "a46c33d1ec26ee0ddf5670469420fc14bdb9d5008f73571a6742ed26e2b62321",
+      "world_id": 25,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "db98b9674d87a633cc3d53e5d3f67e694a7da19e8803eb23de7ef1e9101f991d",
+      "family_task_id": "12ef3cb291112b4bb013b6ed55ae947f547bad9c61efa2a70df8c101d41043b4",
+      "world_id": 44,
+      "rep": 3,
+      "R": "95371626644105105739659370433564308297571030255480510140416536454657187831555001472702718693139/17462307847471689218641088634692145584699589605682960238556903178902186644526016132674129789714432",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "dda94660d9f9a780735cea016b33b16c0d4ac14a10fb4de425d36ee355f5b90e",
+      "family_task_id": "bc7537b1c97495846f52099e3aa1ab1ce0f9e746023789fe3cf7f0cf3d1852b4",
+      "world_id": 34,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "de113df1a254e291ab35bdfd6742742c2b7c460b3d97464def203583159f1fff",
+      "family_task_id": "b60a5dd8c6f9b1be17f8287331f93cdbf279802c54ff6307e694f88833cf48f5",
+      "world_id": 17,
+      "rep": 2,
+      "R": "139516179925699693622730791443621/5192296858534827070084142535278592",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "df58d765f498358969c7e850a6c8061bb60f041f916ed63c7710d1ea1c16d862",
+      "family_task_id": "439574b58c22fa00739c3e03099bd537e1097ecb672d8c2ba08592715b6fdaf5",
+      "world_id": 22,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e0967879cc5ad2c8e7af11a19f90f9dd0d3e13ce58b21a8ed595e55a3f4292c8",
+      "family_task_id": "7b287c6a1409748dba4af99c1b36705780b97206ff15ff064340e23e7421244e",
+      "world_id": 7,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e16078664d9266db28e37cf5d4de8d394c61c689ec7d13ac4d47c57d5b39b2cf",
+      "family_task_id": "2f04895323cd63a9b01d9cd90f085e53c6f1a17326b1f75f7504bd329427bfe8",
+      "world_id": 10,
+      "rep": 4,
+      "R": "39446002019014663438110020809952182842995727019/1881301048764595903388443115229117402129062952960",
+      "L3_plus": "351237628238834423127862786481787343695381937725666095702964833249159607981374655180388639247878205506023979/70411989492817582663301371261272437300139185088902852919469755047043715856118815245378382504485310708978810880",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e173b277bd4df998e97e5a945fcecd465b27f09d259c465c7051d6f0e0977863",
+      "family_task_id": "7603c1f5fa1a38ba32d254077bc8b499d1f54d8cc1d95291b3b3c3cf7b43df46",
+      "world_id": 7,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e2d16ca462eccdd4ad66df0ab00417084ede1a4779b63ce19f6d212d4b14e4b5",
+      "family_task_id": "7bbadf8b2c5addb27377c7519aecb9d78e877d4a41640f9b28cb4c1b1451fdf1",
+      "world_id": 6,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e43b4cbe232a6092d2ff52d81e987900fe13bb1da6e1f4fdab907a10b77118a4",
+      "family_task_id": "de9a440a19650a911205d2587f0d77a2497c3ce90a14c53c8017b19ddaf943e9",
+      "world_id": 20,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e51cdb35126803972efb5be5ada7fa23b32340f48204e92ebae4f92cd6ab588c",
+      "family_task_id": "f1448f3b7f58b9388f0eb3acb194ad0013e37f9fea36a703f99b067948e7e214",
+      "world_id": 8,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e558eb9743f9822a238afa4e44bc47f9e8ac628417d93feb34f991f208e118c9",
+      "family_task_id": "ee6266a14815d8e21711cbe6505dc9c840a2a4f8e442566e47d0005260ed4aaa",
+      "world_id": 44,
+      "rep": 0,
+      "R": "1263881804616647403296952916204803248264200430277955638270615089923798735564432118536546646363/335813612451378638820020935282541261244222877032364619972248138055811281625500310243733265186816",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "e5b0836b326e8a1b359d4c07bf060ab9600a39cb6881e710d5f6c6c700937135",
+      "family_task_id": "3bbcee9a6531e39f8b44d05d038892b4f4256d96cd6b91df12e85804b4dd69a1",
+      "world_id": 11,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e6f1f10063fc488eb728e6c2aede5cf6256924673fe1e332fe254d7486e8ce08",
+      "family_task_id": "56570f3218f82da98519858e0739c568b9e88bb759d5bddbd2ed447e16615ffb",
+      "world_id": 47,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e71ecd0084d96c8f8530c387332f57a23dc1b50a318507f7a2fc9741173b5e25",
+      "family_task_id": "30aad499035a2123e32cd42b7a06f84c84229cddd04eec38f9f5327e3b89d0f7",
+      "world_id": 16,
+      "rep": 2,
+      "R": "25295866045020058269320417812459/2596148429267413719689655989829632",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "e824f2eb12e86b52b010e78bbe9d83ce7275a4684164dd3d5e5d8d7f991496da",
+      "family_task_id": "cb981be226ae78b39dd329be5de99a7f52aaa14c6d3c49fe0226eb883dfea266",
+      "world_id": 14,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "e8ed791575d9c18646aaa4f5481b9881bbbfba6d5169e97b88c3a5f768664187",
+      "family_task_id": "f0ab1f754dd0a3e17a843aa8cbc1def3b07d0f1f164281f4863c6df0b2256c36",
+      "world_id": 27,
+      "rep": 4,
+      "R": "637929320339212890184513418421206145662706214212359346550038247/61529831323062613791062711395831885382301493029614765377641775104",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "e9f8a4a2bc0d032ce7552f96d15335ed8aeefb59b6085619db7e318c00dd295d",
+      "family_task_id": "6a53127e05f3de32ed2a06d1487dd4653067704836ffa9bf8b6b0340b23e0f26",
+      "world_id": 41,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ea6642ecd12e5070c9afde393c2b4a4e0dcff25d7f1efc1c7b25e8475f2c28fe",
+      "family_task_id": "db018b5fb8abae91d85f580594a1165b5a90c03aed43527655a620573755e1fc",
+      "world_id": 4,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ecb5f75b6018e4a3c26bbb3318d5fbdc1652d96812f5b4044cb35b4c1452977e",
+      "family_task_id": "c69dc89f795d60ad1623c4d193542ec015c47b127d4faa1746cf2ffff0d38de8",
+      "world_id": 12,
+      "rep": 2,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "ed48a37995dea2aac841ab14b2dc760231335dd0f40a83f899d7c8d552fc68c6",
+      "family_task_id": "14f35094008fecedab7bc313a673501b781f2462c679f1a32ce51cd636c9af13",
+      "world_id": 47,
+      "rep": 1,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f0635124066d7439fd3ab6b04ff5080d8e5cb97ef0dd965fca5b6f3be0c21f80",
+      "family_task_id": "8fa9890f1a830b95aad380ab964fb3df5d9546ad71cd2e88e7b2d353591db215",
+      "world_id": 10,
+      "rep": 2,
+      "R": "390047369450842882249118275763416665596726849/25771247243350628813540316646974210988069355520",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f16e6f88b4ce51e359daf3ce920a10b91dba6c80abdd421094f131c50bf3b257",
+      "family_task_id": "5aa83eae6feb10f804e51a76bc26faac01917937a2e6809d93ea41b57a0dcf75",
+      "world_id": 32,
+      "rep": 3,
+      "R": "1716943245100380967494784087471/10384593717069655239046594148958208",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f1e94c661ab9b9faaab21425766facec5fdaedea46bc1c074c35d1be7597e299",
+      "family_task_id": "d95056808218e93dfc368172d7c4643beb93b99b4c42d5e8206fc5f543657a9e",
+      "world_id": 30,
+      "rep": 1,
+      "R": "98816096825918774380289420297416556131816115518448701008471269/24706251923141461440011622922907980836428732859482031854568079360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f20bba8fa2a3c897a4d9a5c9ac744d8637f459a16f7ae219f7dd219107f8facd",
+      "family_task_id": "c6b824f5a02d8fa5399f6d2cdda37860d8f48071f2d796b8bdb0f10ae4d92c86",
+      "world_id": 47,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f31bcdafeeb9fe9a21140d8f41218088110d1f198df4cdae5eb4975ca0c33829",
+      "family_task_id": "d5cc50ceac553d055514b91c514795a8cc1087238a0d9bd481e6fd9dbf1767d6",
+      "world_id": 30,
+      "rep": 3,
+      "R": "581973878916591030855499803609/649037107316853458632861621944320",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f3569ccd07c8368b6b5c0b121478a307cebe9b6d9154d296e38c070f4f342158",
+      "family_task_id": "7b642bd033174d5f91899845d69affe0b8880bc547fd0f79dd68ce3732a2871e",
+      "world_id": 38,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f41d000e771825ed1149878177212c5521adaf9afb973d66618aa8e264e6a135",
+      "family_task_id": "a81d8057554a8dd43ebbaa1170c23eb32d32263e31a3564086e89470be9f7a3b",
+      "world_id": 3,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f663b8179fe2ee6e96293d8208ed1164bb29331f128bbe3f0bc3dc617a506140",
+      "family_task_id": "c3a4176dcb1f48cef1cdbc96452d9c51fb5abff9921314d0234547bc9d80a707",
+      "world_id": 37,
+      "rep": 4,
+      "R": "89822034569276076997018686492629/10384593717069653996053096994701312",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f6b1c31f40354cf8e2b9742be4cd61a81d180d6e4aa06e0f9a67c683fcf8a17b",
+      "family_task_id": "bc7efc7222a4d986ec630f3b1288f309d00eb2901e0d296dff4247320153997b",
+      "world_id": 0,
+      "rep": 1,
+      "R": "10156932212252291793827104426167/162259276829213372398777265029120",
+      "L3_plus": "82573446394718514098857328806333191217929663/7151078347796467473507730664838203376828153856",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f739ff06ed3535cc94f174c1cc9456dea3cb552e5236ba1f02e62675e79088ca",
+      "family_task_id": "6cf45a109a7c242738c687713d84a203acb8052271a9b986f69caa72a878339d",
+      "world_id": 2,
+      "rep": 3,
+      "R": "39551397803906160401997240647/2003200948508806844251589574656",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f7c153c9f5cecc083e2f528519f58a122615fae7f43c3cf807ab5eda7f342686",
+      "family_task_id": "87106cc8893572bac30a8110eae7c5cf6644e289ff8581815803518dfb33a114",
+      "world_id": 12,
+      "rep": 4,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f90216a160a25da8935366f646dfafedc4dba1740246b995251feceb4801b77c",
+      "family_task_id": "40245cfec6d27419f10bafbe219d90d0a1bd4c005c83ce675f6b75d2c28b12c0",
+      "world_id": 3,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "f927f5cfa075089df24e232862ad155c3df579bdfad70cd44de9ca4fca05128d",
+      "family_task_id": "d73a1cafc5b8095b1f2f176523218176bcc40e4f351c99fe5c00ee8b5f016f7d",
+      "world_id": 24,
+      "rep": 1,
+      "R": "2345068467518583714553104206617787348375829109671/187072209578355533289771004942772159046042894991360",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "f97b6e8dd9f42ffa01b7d0f58f05b88e3619570c176cac34cb67784e63364f16",
+      "family_task_id": "ee839f6cef99145f018b2253bba981c34e13092ccdb96c71e112d4afe56c1a99",
+      "world_id": 13,
+      "rep": 1,
+      "R": "9546172448311551212089246345982082968681520800/603886841839361953566078571740714167814747356889",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "fac9d7fc35f93ffebc2593f16a142d83721c6edd4c4b934d8b2ff8d7d7b6b5b0",
+      "family_task_id": "a7ff03f61ba199eac49c0a85c5442179d0419afdce8fa129bb4bf9ae9c6ac5a7",
+      "world_id": 35,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "fb8022b12f98adcee8c0274621c3b827153ab7bf37b823c8488aab2f926540b0",
+      "family_task_id": "d6d2bc97317ddd95dd29fd0fa8c2f7585e71db4c36d554ecae73fa8b8c5d7b6e",
+      "world_id": 13,
+      "rep": 2,
+      "R": "11149341436717480231779895341898837914182198500/603886841839361953566078571740714167814747356889",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "fd9199372b1081960bf5f3e0d5ff38d8aeb3a813c70fe450fcc8e7e6c05ee4c8",
+      "family_task_id": "9e2cf8a786ccef553528d99c06fd1f91c1b374a2984660079d41af4717f02450",
+      "world_id": 47,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "fdabd7abdd29e665f6ffac3b66a662cfa635e018b45c49a282540f4f3999f133",
+      "family_task_id": "5adbccbe66b8b84b36b8c0edc20fefbc2a35754084b1c225a7711f8f30ba8618",
+      "world_id": 17,
+      "rep": 0,
+      "R": "361188623427916084803609921181883/10384593717069654140168285070557184",
+      "L3_plus": "0/1",
+      "primary_107_eligible": true
+    },
+    {
+      "occurrence_id": "fdd7b4d2a7ae45a7437545a7e414d18283c671ef25604d96cc6d3aa4551ac5e9",
+      "family_task_id": "57c436e841d54d685f69c707aee4295d591945c07acece19424425c618eab75c",
+      "world_id": 22,
+      "rep": 3,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    },
+    {
+      "occurrence_id": "fe8e3710be144cc6b2a59f6259c2d45a7d1a12d4b33e9b479d96d3b3fcc7372e",
+      "family_task_id": "7b46929a149d36cdf45b4f31120a8e04c4da2b5da2ba36df5240349096579b4f",
+      "world_id": 12,
+      "rep": 0,
+      "R": "0/1",
+      "L3_plus": "0/1",
+      "primary_107_eligible": false
+    }
+  ],
+  "counts": [
+    {
+      "threshold_pp": 0.1,
+      "all_240_family_above": 98,
+      "original_107_family_above": 86,
+      "original_107_candidates_above": 0
+    },
+    {
+      "threshold_pp": 0.5,
+      "all_240_family_above": 83,
+      "original_107_family_above": 71,
+      "original_107_candidates_above": 0
+    },
+    {
+      "threshold_pp": 1.0,
+      "all_240_family_above": 54,
+      "original_107_family_above": 42,
+      "original_107_candidates_above": 0
+    },
+    {
+      "threshold_pp": 2.0,
+      "all_240_family_above": 24,
+      "original_107_family_above": 12,
+      "original_107_candidates_above": 0
+    }
+  ]
+}
