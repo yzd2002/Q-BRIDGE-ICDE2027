@@ -1,6 +1,10 @@
 % ICDE 2027 Research Track manuscript; evidence and build records accompany the source.
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,amssymb,graphicx,booktabs,array,url}
+\usepackage[table]{xcolor}
+\definecolor{QInk}{HTML}{1D2B42}
+\definecolor{QHeader}{HTML}{F0F3F8}
+\newcommand{\qth}[1]{\textcolor{QInk}{\textbf{#1}}}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
@@ -37,7 +41,7 @@ We develop Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://g
 
 \begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/qbridge_overview.pdf}
-\caption{One view, two query paths. (a) Store the allowed success probabilities. (b) Check a proposed policy: Q2 reuses a certificate; inconclusive reuse for Q3 triggers a solve. (c) Search all policies: matching bounds certify the optimal guarantee of 2.5\,pp. The constructed teaching example uses rounded inputs.}
+\caption{One view, two query paths. (a) Jointly feasible success rates (schematic intersection). (b) Evaluate a proposed policy: Q2 reuses evidence; Q3 needs a new solve. (c) Optimize over all policies: matching bounds establish the best guarantee, 2.5\,pp. This constructed example uses rounded inputs.}
 \label{fig:example}
 \end{figure*}
 

@@ -1,14 +1,18 @@
-\begin{tabular}{lrrrr}
+\begingroup\small
+\renewcommand{\arraystretch}{1.10}\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
-& One policy & \multicolumn{3}{c}{All policies over declarations}\\
+& \qth{One policy} & \multicolumn{3}{c}{\qth{All policies over declarations}}\\
 \cmidrule(lr){2-2}\cmidrule(lr){3-5}
-Construction & \shortstack{Primary\\LCB} & $\mathcal R=0$ & $0<\mathcal R\le\delta$ & $\mathcal R>\delta$\\
+\rowcolor{QHeader}\qth{Construction} & \qth{\shortstack{Primary\\LCB}} & $\mathcal R=0$ & $0<\mathcal R\le\delta$ & $\mathcal R>\delta$\\
 \midrule
 OBS & $-0.03729$ & 9/12 & 0/12 & 3/12\\
 R group & $-0.01502$ & 12/12 & 0/12 & 0/12\\
 R projected & $-0.03402$ & 12/12 & 0/12 & 0/12\\
+\addlinespace[2pt]
 Fusion group & $-0.01193$ & 7/12 & 1/12 & 4/12\\
 Fusion projected & $-0.03132$ & 9/12 & 3/12 & 0/12\\
+\midrule
 R full-cell control & $-0.03077$ & 1/1 & 0/1 & 0/1\\
 \bottomrule
-\end{tabular}
+\end{tabular}\endgroup

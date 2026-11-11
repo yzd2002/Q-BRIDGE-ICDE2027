@@ -1,13 +1,16 @@
 \begin{table*}[t]
-\centering
+\centering\small
+\renewcommand{\arraystretch}{1.12}
 \caption{Three questions over one fixed view. Guarantees concern every allowed mean vector; their failure does not establish a nonpositive actual effect.}
 \label{tab:query-contract}
 \begin{tabular}{@{}p{.29\textwidth}p{.67\textwidth}@{}}
 \toprule
-Question & Answer and independently checked evidence \\
+\rowcolor{QHeader}\qth{Question} & \qth{Answer and independently checked evidence} \\
 \midrule
 Does this policy guarantee gain $>\delta$? & True: a lower bound above $\delta$. False: an allowed counterexample. Unknown: neither established. Reuse or solve for this policy; overlapping groups allowed. \\
+\addlinespace[2pt]
 What is the largest worst-case gain? & Capacity $\mathcal R$ and an attaining policy: its lower bound matches an upper bound for all policies. Our direct construction handles disjoint nonnegative groups; a general exact LP also handles overlaps. \\
+\addlinespace[2pt]
 Can every such guarantee be ruled out? & Yes, if one allowed mean vector limits even the best policy's gain to $\delta$. No full optimization is needed when this witness suffices. \\
 \bottomrule
 \end{tabular}

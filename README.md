@@ -2,7 +2,7 @@
 
 Verifiable policy queries over joint confidence views.
 
-[Manuscript](paper/Q-BRIDGE_ICDE2027.pdf) · [Exact Coat policy case](examples/coat_policy_case/README.md) · [Historical artifact v5.2](https://github.com/yzd2002/Q-BRIDGE-ICDE2027/releases/tag/artifact-v5.2)
+[Manuscript](paper/Q-BRIDGE_ICDE2027.pdf) · [Overleaf project](Overleaf/ICDE2027_Overleaf.zip) · [Exact Coat policy case](examples/coat_policy_case/README.md) · [Historical artifact v5.2](https://github.com/yzd2002/Q-BRIDGE-ICDE2027/releases/tag/artifact-v5.2)
 
 The manuscript distinguishes three questions: what the available information
 certifies, whether a better policy exists outside a tested catalogue, and when
@@ -12,7 +12,7 @@ workload also records the cases where preprocessing does not pay.
 
 ![One confidence view and two query modes](figure_assets/qbridge_overview.png)
 
-The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [Vector figure, editable SVG and reproducible drawing inputs](figure_assets/README.md) are included.
+The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [All three vector figures, editable SVG files and reproducible drawing inputs](figure_assets/README.md) are included. The 2026-11-11 visual edition unifies all figure and table styles while retaining the original measurements. The Overleaf ZIP includes the complete current manuscript source.
 
 **Material availability:** the v5.2 release is the published historical artifact.
 The complete expanded archive for the current manuscript, including the later

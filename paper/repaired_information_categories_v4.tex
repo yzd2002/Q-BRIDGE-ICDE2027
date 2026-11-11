@@ -1,9 +1,11 @@
-\begin{tabular}{lrrrr}
+\begingroup\small
+\renewcommand{\arraystretch}{1.12}\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrr@{}}
 \toprule
-Policy & Cert. & Sampling & Ambiguity & True $\le\delta$\\
+\rowcolor{QHeader}\qth{Policy} & \qth{Cert.} & \qth{Sampling} & \qth{Ambiguity} & \qth{True $\le\delta$}\\
 \midrule
 Metadata & 12 & 33 & 195 & 0\\
 R heuristic & 4 & 43 & 190 & 3\\
 Robust design & 2 & 0 & 0 & 238\\
 \bottomrule
-\end{tabular}
+\end{tabular}\endgroup
