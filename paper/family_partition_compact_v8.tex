@@ -13,10 +13,10 @@ The inner minimum gives one policy's worst case; the outer maximum chooses the b
 Compact convex domains and a continuous bilinear payoff permit minimax exchange~\cite{Sion1958Minimax}, giving $\mathcal R(\C)=\min_{m\in\C}F(m)$. We therefore seek an allowed mean vector giving the best action as little advantage as possible, and a policy whose lower certificate reaches this upper bound.
 
 \subsection{Exact capacity for partitioned moments}\label{sec:partition-capacity}
-The direct algorithm handles nonnegative, disjoint action groups within each context, including ungrouped actions. For each context, we seek compatible means that make the best action only slightly better than the reference. Write this gap as $t-p^\top m$, where $t$ caps every action mean and $p=\pi_{0,x}$ is the reference distribution.
+The direct algorithm handles nonnegative, disjoint action groups within each context, including ungrouped actions. For each context, minimize the best action's advantage over the reference: $t-p^\top m$, where $t$ caps every action mean and $p=\pi_{0,x}$ is the reference distribution.
 
 \begin{samepage}
-\textbf{The algorithm in three passes.} First find the smallest feasible common cap. Next raise the reference payoff as much as possible within that cap, obtaining an upper bound for every policy. Finally recover a policy whose checked lower bound equals it. In the running example, the cap is $.7$, the reference payoff is $.675$, and both bounds are $.025$. The cap is an intermediate device; the final certificate uses only the original constraints. Minimax and allocation are classical~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}; our construction proves that the smallest feasible cap suffices and recovers an original-constraint certificate.
+\textbf{The algorithm in three passes.} The first two passes construct a scenario limiting every policy's guarantee. Find the smallest feasible cap on action means, then raise the reference payoff as much as possible within that cap. The final pass recovers a policy whose checked lower bound attains this ceiling. In the running example, the cap is $.7$, the reference payoff is $.675$, and both bounds are $.025$. The final certificate uses only original constraints. Minimax and allocation are classical~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}; our construction proves that the smallest feasible cap suffices and recovers an original-constraint certificate.
 
 \end{samepage}
 
@@ -37,7 +37,7 @@ rational-operation counts, excluding coefficient-dependent bit costs,
 encoding and hashing.
 \end{theorem}
 
-Matching the policy lower bound and $F(m^*)$ verifies optimality. Unsupported rows are rejected; zero rows require $a_j\le0\le b_j$ and zero multipliers. Ties use index order.
+Matching the bounds verifies optimality. Unsupported rows are rejected; zero rows require $a_j\le0\le b_j$ and zero multipliers. Ties use index order. Apply Steps 1--3 separately within each context; below, $i$ indexes its actions and $j$ its moment rows.
 
 \textbf{Step 1: Find the smallest feasible cap.}
 
@@ -105,7 +105,6 @@ The completed policy sums to one and selects only maxima. The endpoint signs and
 For the example's remaining mass, $\sigma_E=.5$, $\eta_L=(.5,0)$ and $\eta_U=0$, giving $\pi^*=(0,.25,.5,.25)$.
 The lower bound $.65(.5)-.6(.5)=.025$ equals the family upper bound
 $.7-.675=.025$. Pure C in Fig.~\ref{fig:example} is another optimal policy.
-The example uses decimal inputs; measured runs check represented inputs.
 
 \textbf{Stopping without the full construction.}
 Equal action means within each context make all policies tie with the reference, giving a cheap stopping certificate even with overlapping groups.
@@ -124,4 +123,4 @@ For nonnegative single-context moment rows, even overlapping ones, form
 Here $\kappa_j=\sum_iT_{ji}>0$; zero rows require $a_j\le0\le b_j$.
 Choose $v_x\in I_x$, set every $m_{xa}=v_x$, and check the original constraints. Under strict positivity, an empty intersection proves $\mathcal R>0$, but not $\mathcal R>\delta$ for positive $\delta$.
 
-Saved policy lower bounds (including reference zero) and values $F(m)$ at saved feasible points also bracket capacity. They certify existence or exclusion if the corresponding bound crosses $\delta$; otherwise search continues. Reuse requires identical $\C,w,\pi_0$. Section V-C separates loose bounds from restricted policy choice.
+Saved policy lower bounds (including reference zero) and values $F(m)$ at saved feasible points also bracket capacity. They certify existence or exclusion if the corresponding bound crosses $\delta$; otherwise search continues. Reuse requires identical $\C,w,\pi_0$. 

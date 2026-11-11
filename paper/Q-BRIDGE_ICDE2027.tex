@@ -20,9 +20,7 @@ pdfauthor={Zida Yang, Weiqing Zeng, Guquan You, Cong Wang, Jiexin Zheng}}
 \begin{document}
 \maketitle
 \begin{abstract}
-
-
-Recommendation systems often use historical logs and randomized experiments to select policies, rules for assigning items to users, that improve outcomes over a reference. However, observational bias, sampling uncertainty, and limited transfer across populations make policy gains difficult to establish. Evaluating a limited set of candidate policies leaves a decision gap. When none guarantees the desired improvement, it remains unclear whether another policy could meet the target or whether the available evidence rules out such a guarantee for all policies. We treat these decisions as repeated queries over a reusable view of uncertain action outcomes, separating evidence construction from policy choice and query execution. Q-BRIDGE materializes observational intervals and randomized group constraints into a joint confidence view. It supports evaluating individual policies, finding the largest worst-case gain achievable by any policy, and certifying when no policy meets a requested threshold. For disjoint action groups, we develop a three-step algorithm that finds an optimal policy with independently verifiable bounds; exact linear programming handles more general constraints. Our algorithm matches the optimal guarantees computed by exact linear programming across 2,160 synthetic policy optimization problems. In 107 cases where evaluating the original candidate policies leaves the existence of a qualifying policy unresolved, searching the full policy family finds qualifying policies in 86 cases and rules out such guarantees in the remaining 21. Retaining exact certificate terms reduces repeated-query cost. Experiments on the Coat recommendation dataset illustrate how the available evidence can support policy redesign or justify stopping the search.
+Recommendation systems often use historical logs and randomized experiments to choose policies: rules that assign items to users. The goal is to improve expected outcomes over a reference policy. Bias in logs, limited samples and differences between populations make policy gains uncertain. If none of the tested policies guarantees the required gain, should the analyst search for another policy or stop? We address this as a query-processing problem over shared evidence. Q-BRIDGE materializes per-action bounds from logs and group-average bounds from experiments into a joint confidence view. This view represents all action-success probabilities allowed by the data and declared assumptions. It supports checking a policy, finding the largest worst-case gain across all policies, and ruling out above-threshold guarantees for the entire family. For disjoint action groups, a three-step algorithm returns an optimal policy and independently checkable bounds; exact linear programming handles general constraints. The algorithm matches exact linear programming on 2,160 synthetic optimization problems. Among 107 cases left unresolved by the original candidates, full-family search finds qualifying policies in 86 and rules out such guarantees in 21. Retaining exact certificate terms reduces repeated-query cost. On the Coat recommendation dataset, the same framework distinguishes when the evidence supports policy redesign from when searching the unchanged view cannot establish the required guarantee.
 
 \end{abstract}
 \begin{IEEEkeywords}
@@ -36,7 +34,7 @@ Production assignments may reflect unobserved preferences~\cite{Kallus2018Confou
 
 Checking a candidate list leaves a decision gap. If no candidate meets the target, could another policy succeed, or does the available evidence rule out that guarantee for every policy? The answers call for policy redesign or stopping search on the unchanged view.
 
-We develop Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.}, a query framework that separates evidence construction from policy choice and execution. It materializes observational intervals and randomized group constraints into one \emph{confidence view}. A policy is a linear query; its worst-case gain is the guaranteed answer. Q-BRIDGE also finds the largest guarantee over all policies and certifies when none meets a threshold. Each answer carries evidence checked independently against the stored view.
+We develop Q-BRIDGE\footnote{Code and saved certificate examples: \url{https://github.com/yzd2002/Q-BRIDGE-ICDE2027}.}, a query framework that separates evidence construction from policy choice and execution. It materializes observational intervals and randomized group constraints into one \emph{confidence view}. Each policy supplies a linear objective over the stored constraints; changing the policy leaves the materialized evidence unchanged. Its worst-case gain is the guaranteed answer. Q-BRIDGE also finds the largest guarantee over all policies and certifies when none meets a threshold. Each answer carries evidence checked independently against the stored view.
 
 \textbf{The data engineering problem.} Repeated decisions raise two query-processing questions: which evidence remains valid when objectives change, and which work can be shared? Causal query systems address biased aggregates~\cite{salimi2018hypdb}; uncertainty-annotated databases preserve bounds across queries~\cite{Feng2019UADB}. We connect these concerns through one jointly covered view, a whole-family query operator and exact certificate reuse. Adaptive queries reuse these bounds without rescanning events.
 
@@ -54,9 +52,8 @@ Figure~\ref{fig:example} tests a margin $\delta=.001=0.1$\,pp. Section~\ref{sec:
 
 \textbf{Answer beyond a candidate list (IV).} For disjoint nonnegative groups, the smallest feasible cap yields an optimal policy and an original-view certificate. Exact LP handles overlaps.
 
-\textbf{Reuse checked work (IV--VI).} Saved certificate terms answer changing objectives in linear arithmetic work. Controlled comparisons separate policy choice, source information and execution cost.
+\textbf{Reuse checked work (IV--VI).} Saved certificate terms check new policy objectives in linear arithmetic work before resorting to a new solve. Controlled comparisons separate policy choice, source information and execution cost.
 
-Table~\ref{tab:query-contract} summarizes the interface.
 \input{query_contract_v7}
 
 \section{Policy Queries and Their Guarantees}\label{sec:contract}
@@ -74,7 +71,7 @@ Contexts group users; moment groups combine actions within a context. Index cont
 \begin{equation}
  \widehat\C=\{m:\ell\le m\le u,\ a\le Tm\le b\}.\label{eq:view}
 \end{equation}
-Each $m$ is a possible success-rate vector. The bounds hold jointly: in Fig.~\ref{fig:example}, group averages couple the individual rates.
+Each $m$ describes one possible scenario of success rates for all actions and contexts. The view contains the scenarios satisfying every bound together: in Fig.~\ref{fig:example}, group averages couple the individual rates.
 
 The \emph{worst-case gain} is $V(c)=\min_{m\in\widehat\C}c^\top m$. A query tests $V(c)>\delta$, usually $\delta=.001=0.1$\,pp. Under the source assumptions, Section III's construction contains all true target rates together with probability at least $1-\alpha$. Whenever it does, $V(c)$ lower-bounds actual expected gain.
 
@@ -111,7 +108,7 @@ An experiment may support the target population's average rating probability for
 \end{equation}
 Here $\rho_j$ permits source differences in a group mean; zero requires equality. Thus $\Lambda$ controls selection bias, $\rho$ transfer differences, and $\alpha$ sampling error. Two positive-weight action means can shift by $(h,-\nu_1h/\nu_2)$ while preserving their average: group agreement does not establish action-level agreement.
 
-If a policy contrast is a weighted combination of the transferred group averages, those averages determine its gain when known exactly: $c=H^\top v$ implies $c^\top m=v^\top\tau$ at $\rho=0$. Other contrasts may remain uncertain. Assuming every individual item mean transfers ($H=I_d$, $\rho=0$) is stronger; Coat includes this control.
+If a policy contrast is a weighted combination of the transferred group averages, those averages determine its gain when known exactly: $c=H^\top v$ implies $c^\top m=v^\top\tau$ at $\rho=0$. Other contrasts may remain uncertain. Coat's \emph{full-cell control} assumes each item mean transfers ($H=I_d$, $\rho=0$), a stronger declaration.
 
 \section{Building One Confidence View}\label{sec:view}
 Group--action success/failure counts suffice for independent binary events: $O(n_O+n_R)$ aggregation work and $O(d)$ storage, with no later rescan. Repeated observations require user-level variances (Section~\ref{sec:coat}).
@@ -133,7 +130,7 @@ Prespecify one route and allocate $\alpha_R$ to it: average individual-mean inte
  h_j=\sqrt{\frac{2\widehat{\operatorname{Var}}(Z_j)\log(4/\beta_j)}{n_j}}
  +\frac{7B_j\log(4/\beta_j)}{3(n_j-1)}.\label{eq:eb}
 \end{equation}
-Here $\beta_j=\alpha_R/J$, and the sample variance uses $n_j-1$. The terms account for variation and range. The interval is $[\bar Z_j-h_j,\bar Z_j+h_j]\cap[0,1]$: only the expectation interval is clipped, not the scores. Insufficient observations use the full range. The union bound covers overlapping groups sharing events.
+Here $\beta_j=\alpha_R/J$; sample variance uses $n_j-1$. The terms cover variation and range. The interval is $[\bar Z_j-h_j,\bar Z_j+h_j]\cap[0,1]$: only the expectation interval is clipped, not the scores. Insufficient observations use the full range. The union bound covers overlapping groups sharing events.
 
 
 
@@ -157,13 +154,13 @@ Under the source and sampling conditions in Section~\ref{sec:contract}, $P(m^O\i
 \end{theorem}
 \noindent\textit{Proof.} Conditional on independent design information, interval coverage averaged over stratum counts and monotone mapping cover the box at $1-\alpha_O$. Prespecified randomized intervals cover $Hm^R$ at $1-\alpha_R$; transport and outward mapping give target moments. A union bound covers $m^O$ at $1-\alpha$. On that event, minimizing over the view bounds every objective simultaneously, including adaptive choices. Weak duality extends this to checked lower bounds.\hfill$\square$
 
-Reuse retains the statistical design~\cite{Berk2013PoSI,Bertsimas2018DataRobust}. A view identifier binds source-count digests, confidence allocation, assignment design, radius, tolerances and matrix. Changing these inputs invalidates reuse across views; changing only a policy or threshold preserves the shared evidence. The optimizer and checker therefore consume the same materialized object.
+Reuse retains the statistical design~\cite{Berk2013PoSI,Bertsimas2018DataRobust}. A view identifier binds source-count digests, confidence allocation, assignment design, bias bound $\Lambda$, transfer tolerances and matrix. Changing these inputs invalidates reuse across views; changing only a policy or threshold preserves the shared evidence. The optimizer and checker therefore consume the same materialized object.
 
 \section{Query Execution and Verification}\label{sec:execution}
 The query engine returns a numerical answer together with a short, independently checkable proof, called a \emph{certificate}. The optimizer produces it; a separate checker verifies it against the stored view $\C=\widehat\C$. This checks optimization; coverage follows from the source assumptions. We evaluate one policy (A), search all policies (B--C), then reuse proofs (D--E).
 
 \subsection{Checking a proposed policy}
-The checker first verifies a solver-proposed probability vector as a \emph{feasible point}. Otherwise it marks the view \texttt{uncertain}, preventing decisions from contradictory constraints. Failure to find a point does not prove infeasibility, particularly for sets with no interior.
+The checker first verifies that a proposed action-success-rate vector $\widetilde m$ satisfies every stored box and moment constraint. Such a vector is a \emph{feasible point}. Otherwise it marks the view \texttt{uncertain}, preventing decisions from contradictory constraints. Failure to find a point does not prove infeasibility, particularly for sets with no interior.
 
 Together with a lower certificate, a checked feasible point brackets the optimum~\cite[Sec.~5.5.1]{Boyd2004Convex}:
 \begin{equation}
@@ -203,7 +200,7 @@ Q2 has $c=(-.105,-.09,.105,.09)$ and norm $.39$, versus Q1's $.4$. Scaling Q1's 
 \label{sec:threshold}\label{sec:scheduling}
 Before solving a linear program (LP), the engine checks zero-weight bounds, last solver weights and feasible points. A first-in, first-out bank stores at most 16 candidates per enabled kind. Objective caching handles identical policies; the bank handles different ones. Zero-norm old objectives are not stored; a zero new norm uses scale zero. Solver cutoffs require exact checking, and undecided requests resume without a cutoff~\cite{HiGHSOptions2026}.
 
-Two features target arithmetic cost. \emph{Retention} saves exact terms $k,r$ in~\eqref{eq:scaled}. \emph{Screening} uses cheap floating-point intervals to defer candidates that cannot decide the query. Screening never authorizes an answer; overflow triggers exact work. Before a false answer or a solver call, deferred candidates are replayed as needed to preserve the unscreened plan's evidence and solver path. Reuse hits retain the last solver state; zero-weight answers are not counted as reuse. The artifact specifies the replay order and cutoff handling.
+Two features target arithmetic cost. \emph{Retention} saves exact terms $k,r$ in~\eqref{eq:scaled}. \emph{Screening} uses cheap floating-point intervals to defer candidates that cannot decide the query. Screening never authorizes an answer; overflow triggers exact work. Before a false answer or a solver call, deferred candidates are replayed as needed to preserve the unscreened plan's evidence and solver path. Reuse hits retain the last solver state; zero-weight answers are not counted as reuse. 
 
 Structural controls use box endpoints, continuous knapsack for single rows~\cite{martello1990knapsack}, or sparse HiGHS for overlaps~\cite{huangfu2018highs}; only the reconstructed global dual is certified.
 
@@ -223,9 +220,9 @@ A \emph{world} fixes groups, assignment and success probabilities. The registere
 
 Inference uses $2{,}000d$ O events and $100d$ or $1{,}000d$ R events.
 Separate design data ($500d$ O and $100d$ R events) choose three candidates before the inference data are seen. \emph{Metadata} favors actions with higher fixed scores, using probabilities $\operatorname{softmax}(1.5h)$. \emph{R heuristic} favors larger design-experiment success rates, using $\operatorname{softmax}(4\widehat p_x)$ with $\widehat p_{xa}=(S_{xa}+.5)/(N_{xa}+1)$. Softmax normalizes exponentiated scores. \emph{Robust design} selects the largest checked positive lower bound among twelve policy tilts, or keeps the uniform reference if none qualifies. Tilts use linear or alternating scores with slopes $\{-2,-1,-.5,.5,1,2\}$; ties retain the first maximum. Design outcomes never enter inference counts. We compare $\Lambda=2$ with an oracle boundary
-computed from simulator truth and rounded upward. Counts and rules stay fixed; radius can change the design-selected policy.
+computed from simulator truth and rounded upward. Counts and rules stay fixed; changing $\Lambda$ can change the design-selected policy.
 
-Three sources supply constraints: \emph{OBS} uses only logged data; \emph{R} uses only transferred experimental group information; \emph{Fusion} combines both. \emph{Projected} averages action-level intervals; \emph{group} estimates group averages directly (III-B). Each standalone method uses the full failure budget $\alpha$; Fusion splits it between sources. The primary endpoint compares projected Fusion with certification by either full-$\alpha$ OBS or projected R, for the metadata policy, low R budget and $\Lambda=2$. Average paired certification differences within each of 48 independent worlds. Their values lie in $[-1,1]$, so the one-sided $95\%$ Hoeffding lower bound is the mean minus $\sqrt{2\log(20)/48}$. The registered target requires this lower bound to exceed $0.05$, i.e., a five-percentage-point increase in certification frequency. Other settings and the stratified $t$ interval are descriptive. The standalone union counts a case when either source certifies it; it is not a jointly calibrated decision rule.
+Three sources supply constraints: \emph{OBS} uses only logged data; \emph{R} uses only transferred experimental group information; \emph{Fusion} combines both. \emph{Projected} averages action-level intervals; \emph{group} estimates group averages directly (III-B). Each standalone method uses the full failure budget $\alpha$; Fusion splits it between sources. The primary endpoint compares projected Fusion with certification by either full-$\alpha$ OBS or projected R, for the metadata policy, $100d$ R events and $\Lambda=2$. Average paired certification differences within each of 48 independent worlds. Their values lie in $[-1,1]$, so the one-sided $95\%$ Hoeffding lower bound is the mean minus $\sqrt{2\log(20)/48}$. The registered target requires this lower bound to exceed $0.05$, i.e., a five-percentage-point increase in certification frequency. Other settings and the stratified $t$ interval are descriptive. The standalone union counts a case when either source certifies it; it is not a jointly calibrated decision rule.
 
 \input{partition_capacity_protocol_v7}
 \input{complete_solver_protocol_v7}
@@ -248,7 +245,7 @@ Three sources supply constraints: \emph{OBS} uses only logged data; \emph{R} use
 
 Table~\ref{tab:fresh} follows three policies chosen before inference ($48$ worlds $\times5$ samples each); VI-A instead searches for a better policy on each fixed view. All 1,200 inference configurations across 60 worlds complete. For the metadata policy at $100d$ randomized events and $\Lambda=2$, fusion certifies 12/240 versus six for the standalone union (OBS six, R zero): six additions, no losses, certification-rate difference $0.025$ (2.5\,pp). The one-sided Hoeffding lower bound, $-0.3283$, does not meet the required $0.05$ increase; the descriptive $t$ interval is $[-0.0249,0.0749]$. These are changes in certification frequency, not policy gains. All six additions occur in two zero-drift $2\times4$ worlds.
 
-Larger-budget projected fusion certifies 15 metadata, 16 heuristic and two robust-design queries; transfer and radius uncertainty remain.
+With $1{,}000d$ R events, projected Fusion certifies 15 metadata, 16 heuristic and two robust-design queries.
 
 
 \textbf{Why adding a source need not improve the bound.}\label{sec:budget-geometry}

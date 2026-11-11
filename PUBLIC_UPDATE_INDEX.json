@@ -1,6 +1,6 @@
 {
   "scope": "Current manuscript, complete source and Overleaf project, all three editable vector figures and unchanged plotting inputs, plus the documented public scientific subset. The full expanded experiment archive is local.",
-  "paper_pdf_sha256": "168f202ce5a1fac445a978c406e71034b67316c7a8ef0f506db7d02252c9e1e9",
+  "paper_pdf_sha256": "52cdcbd203c7651027aec1999b2df7c5b8ba7c0856ddf21d34b3ec28d94aff24",
   "files": [
     {
       "path": "CODE_LICENSE_SCOPE_UPDATE.json",
@@ -9,18 +9,18 @@
     },
     {
       "path": "Overleaf/ICDE2027_Overleaf.zip",
-      "bytes": 197802,
-      "sha256": "421508c053849dc6e687ec8b39bb7b88887948b9c1e441581960c915ffc00a79"
+      "bytes": 197789,
+      "sha256": "4003863f379b6cc586b9bd4381d01f9894f27ef19aee7667aebf73a17d7875ef"
     },
     {
       "path": "Overleaf/README_Overleaf.txt",
-      "bytes": 727,
-      "sha256": "cdd3ee455ce897dac291d065728f2ac0eb68cd31b83d81d6c3304ac1d9c867c5"
+      "bytes": 817,
+      "sha256": "653ca7d66a72848216330beca8198bd104334d1851239ba3b77e9d742a364d61"
     },
     {
       "path": "README.md",
-      "bytes": 4324,
-      "sha256": "1f05a51c454d490270f9aa17236fac6a8f8e89e642dbf05cc05ed4fb0ded1c49"
+      "bytes": 4420,
+      "sha256": "39f47eae6f1e4fa80267e90180bc20219d13af862bbecccea77c1336dc32f5e7"
     },
     {
       "path": "SCIENCE_UPDATE_MANIFEST.json",
@@ -479,13 +479,13 @@
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.pdf",
-      "bytes": 455614,
-      "sha256": "168f202ce5a1fac445a978c406e71034b67316c7a8ef0f506db7d02252c9e1e9"
+      "bytes": 455580,
+      "sha256": "52cdcbd203c7651027aec1999b2df7c5b8ba7c0856ddf21d34b3ec28d94aff24"
     },
     {
       "path": "paper/Q-BRIDGE_ICDE2027.tex",
-      "bytes": 34913,
-      "sha256": "5e93a5e5839d1ee8aab69d788c320b0e03bb64ca4d8c9abf896262a60408bb04"
+      "bytes": 34830,
+      "sha256": "2aacb9fa4d56eab29f1fcf2eade5d03822644d7fd54b470e9107c7c5e26fc7fb"
     },
     {
       "path": "paper/README.md",
@@ -509,8 +509,8 @@
     },
     {
       "path": "paper/coat_design_v7.tex",
-      "bytes": 2441,
-      "sha256": "ebe0ed83040cdde69163e92efc35075aaf18f29159e87ce39cd50f7a982e1b10"
+      "bytes": 2531,
+      "sha256": "c9d14674d0278fb2c357340d300fcf8896b18e8b06068a88def0ca1405778c52"
     },
     {
       "path": "paper/coat_direct_results_v5.tex",
@@ -549,8 +549,8 @@
     },
     {
       "path": "paper/complete_family_results_v7.tex",
-      "bytes": 2465,
-      "sha256": "3f1a9ba52203b49000f2c539662cde9ffd4191ba19962332c02b648926d63455"
+      "bytes": 2450,
+      "sha256": "1c456c54faf23df5e0e1f058f314d801687a0eef67a196d7b4c5aca4d341c28f"
     },
     {
       "path": "paper/complete_solver_protocol_v7.tex",
@@ -569,8 +569,8 @@
     },
     {
       "path": "paper/family_partition_compact_v8.tex",
-      "bytes": 11247,
-      "sha256": "4957207e11376201dedc7a513a78e680518d5cdfb4d3947ea29134cae8212bd7"
+      "bytes": 11153,
+      "sha256": "c0bc56a200365443a449adb060a6da0acd2c539b6e4ff2d400aaccefe7d9b6c3"
     },
     {
       "path": "paper/figures/optimized_v6_compact_factorial.pdf",
@@ -599,8 +599,8 @@
     },
     {
       "path": "paper/information_diagnostics_v7.tex",
-      "bytes": 1171,
-      "sha256": "0558e3dea473af645016ee11bd83da3de405c71808ec7b44916525ea4d527431"
+      "bytes": 1287,
+      "sha256": "75363d0b5ff832066a55be1e85fd8dc1bb0ebc4cb39c0cbfe0986d9d54e9b591"
     },
     {
       "path": "paper/optimized_execution_results_v7.tex",
@@ -609,8 +609,8 @@
     },
     {
       "path": "paper/partition_capacity_protocol_v7.tex",
-      "bytes": 1070,
-      "sha256": "0f4d9dafa90e82dab82e8d2d0b26feb92d46fb0b9e09597d6edc3c6e1d3ec612"
+      "bytes": 1129,
+      "sha256": "276e331bca36b1e7fe36d06cb1ce47d163ed0f08b1b1299ef5feff98ed356186"
     },
     {
       "path": "paper/query_contract_v7.tex",

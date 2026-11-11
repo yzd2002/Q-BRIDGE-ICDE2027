@@ -58,7 +58,7 @@ extraction. Follow the extracted package's README for its verification and
 reproducibility instructions. This download remains v5.2 and excludes later
 workflow evidence. No reviewer identity or usage tracking is required.
 
-## Final deadline refinement (2026-11-11)
-The final manuscript explains the repeated-query data engineering workload, source-to-decision use of Coat, and sparse-reference handling. The abstract and relevance statement are synchronized. Original measured results, displayed equations, figures and tables remain unchanged.
+## Final manuscript (2026-11-11)
+The abstract introduces the recommendation task, uncertainty, decision gap, method and evidence. The text distinguishes policy probabilities from possible success-rate scenarios, explains the three-step algorithm with local context indices, and separates Coat's full-rating analysis from its one-rating control. Original measurements, displayed equations, figures and tables are unchanged.
 
-The [threshold readout](threshold_sensitivity/README.md) supplies exact saved capacities and a verifier for the added post hoc analysis: among the original 107 unresolved views, 71 and 42 admit a qualifying policy at 0.5 and 1.0 percentage points, respectively. No new outcomes or timing experiments were generated.
+The [threshold readout](threshold_sensitivity/README.md) supplies exact saved capacities and a verifier for the post hoc analysis: among the original 107 unresolved views, 71 and 42 admit a qualifying policy at 0.5 and 1.0 percentage points, respectively. No new outcomes or timing experiments were generated.
