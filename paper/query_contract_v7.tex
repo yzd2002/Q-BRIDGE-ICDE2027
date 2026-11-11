@@ -1,17 +1,17 @@
 \begin{table*}[t]
 \centering\small
-\renewcommand{\arraystretch}{1.12}
-\caption{Three policy questions over one fixed confidence view.}
+\renewcommand{\arraystretch}{1.13}
+\caption{Three policy questions, with a distinct certificate for each answer.}
 \label{tab:query-contract}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{.29\textwidth}p{.67\textwidth}@{}}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{.25\textwidth}p{.40\textwidth}p{.295\textwidth}@{}}
 \toprule
-\qth{Question} & \qth{Answer and independently checked evidence} \\
+\qth{Question} & \qth{What establishes the answer?} & \qth{How it is obtained} \\
 \midrule
-Does this policy guarantee gain $>\delta$? & True: a lower bound above $\delta$. False: an allowed counterexample. Unknown: neither established. Reuse or solve for this policy; overlapping groups allowed. \\
-\addlinespace[2pt]
-What is the largest worst-case gain? & Capacity $\mathcal R$ and an attaining policy: its lower bound matches an upper bound for all policies. Our direct construction handles disjoint nonnegative groups; a general exact LP also handles overlaps. \\
-\addlinespace[2pt]
-Can every such guarantee be ruled out? & Yes, if one allowed mean vector limits even the best policy's gain to $\delta$. No full optimization is needed when this witness suffices. \\
+Does this policy guarantee gain \mbox{$>\delta$}? & Guaranteed: a lower bound above $\delta$. Not guaranteed: an allowed vector with gain at most $\delta$. Undecided: neither established. & Reuse saved evidence or solve for this policy; overlapping groups are allowed. \\
+\addlinespace[3pt]
+What is the best guaranteed gain? & A policy lower bound matches an upper bound for all policies: their common value is capacity $\mathcal R$. & Three-step construction for disjoint nonnegative groups; exact LP for general groups. \\
+\addlinespace[3pt]
+Can every such guarantee be ruled out? & One allowed mean vector limits even the best policy's gain to $\delta$. & Check a saved or newly found vector; full optimization is unnecessary if it suffices. \\
 \bottomrule
 \end{tabular*}
 \end{table*}

@@ -1,11 +1,11 @@
 \begin{table}[t]
 \centering\small
-\renewcommand{\arraystretch}{1.10}\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.14}\setlength{\tabcolsep}{3pt}
 \caption{Absolute cost and proof size of a checked answer.}
 \label{tab:family-absolute}
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}rlrrrr@{}}
 \toprule
-\qth{$d$} & \qth{Method} & \qth{\shortstack{Response\\(ms)}} & \qth{\shortstack{Check\\(\%)}} & \qth{\shortstack{Whole\\(ms)}} & \qth{\shortstack{Proof\\(kB)}} \\
+\qth{$d$} & \qth{Method} & \qth{\shortstack{Answer\\(ms)}} & \qth{\shortstack{Check\\(\%)}} & \qth{\shortstack{Total\\(ms)}} & \qth{\shortstack{Proof\\(kB)}} \\
 \midrule
 8 & Part & 4.66 & 24.4 & 122.2 & 3.47 \\
 8 & LP & 4.99 & 22.1 & 135.2 & 3.47 \\
@@ -19,5 +19,5 @@
 \end{tabular*}\par
 \smallskip
 \parbox{\columnwidth}{\footnotesize\raggedright
-Separate medians over 26 requests $\times$ 3 rounds per method/dimension. $d$: context--action pairs; Part: partition construction; LP: SoPlex. Response: worker readiness through checking; Check: verification time as a percentage of response time; Whole: includes startup/cleanup; kB: 1,000 bytes. Paired ratios: Fig.~\ref{fig:complete-family}(a).}
+Separate medians over 26 requests $\times$ 3 rounds per method/dimension. $d$: context--action pairs; Part: partition construction; LP: SoPlex. Answer: worker readiness through checking; Check: verification as a percentage of answer time; Total: includes startup/cleanup; kB: 1,000 bytes. Paired ratios: Fig.~\ref{fig:complete-family}(b).}
 \end{table}

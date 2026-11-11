@@ -1,21 +1,21 @@
 \begingroup\small
-\renewcommand{\arraystretch}{1.10}\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.14}\setlength{\tabcolsep}{2pt}
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
 \toprule
 & \qth{\shortstack{Fixed policy\\Primary setting}} & \multicolumn{3}{c}{\qth{\shortstack{Full policy family\\Assumption settings}}}\\
 \cmidrule(lr){2-2}\cmidrule(lr){3-5}
-\qth{Construction} & \qth{LCB} & $\mathcal R=0$ & $0<\mathcal R\le\delta$ & $\mathcal R>\delta$\\
+\qth{Construction} & \qth{LCB (pp)} & \qth{Zero} & \qth{Small} & \qth{Qualifies}\\
 \midrule
-OBS & $-0.03729$ & 9/12 & 0/12 & 3/12\\
-R group & $-0.01502$ & 12/12 & 0/12 & 0/12\\
-R projected & $-0.03402$ & 12/12 & 0/12 & 0/12\\
+OBS & $-3.729$ & 9/12 & 0/12 & 3/12\\
+R group & $-1.502$ & 12/12 & 0/12 & 0/12\\
+R projected & $-3.402$ & 12/12 & 0/12 & 0/12\\
 \addlinespace[2pt]
-Fusion group & $-0.01193$ & 7/12 & 1/12 & 4/12\\
-Fusion projected & $-0.03132$ & 9/12 & 3/12 & 0/12\\
+Fusion group & $-1.193$ & 7/12 & 1/12 & 4/12\\
+Fusion projected & $-3.132$ & 9/12 & 3/12 & 0/12\\
 \midrule
-R full-cell control & $-0.03077$ & 1/1 & 0/1 & 0/1\\
+R full-cell control & $-3.077$ & 1/1 & 0/1 & 0/1\\
 \bottomrule
 \end{tabular*}\endgroup\par
 \smallskip
 \parbox{\columnwidth}{\footnotesize\raggedright
-Left: one prespecified policy at $(\Lambda,\rho)=(2,0)$; lower confidence bounds (LCB) in probability units. Right: counts across twelve assumption settings on the same 290 users; full-cell transport is a stronger, one-setting control. All use $\alpha=.05$ and $\delta=.001$ (0.1\,pp).}
+LCB: one fixed policy at primary $(\Lambda,\rho)=(2,0)$, in pp. Family columns: $\mathcal R=0$, $0<\mathcal R\le\delta$, or $\mathcal R>\delta$ across twelve settings on the same 290 users. All five primary capacities are zero. Full-cell transport is a stronger, one-setting control. Here $\alpha=.05$, $\delta=.001$ (0.1\,pp).}

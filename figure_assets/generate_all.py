@@ -11,10 +11,10 @@ from matplotlib.lines import Line2D
 from matplotlib.ticker import FixedLocator, FixedFormatter, NullLocator
 from matplotlib.text import Text
 HERE=Path(__file__).resolve().parent
-INK='#202020'; MUTED='#555555'; BLUE='#2E75B6'; CORAL='#E58A2B'; PURPLE='#41566F'; TEAL='#2E75B6'; GRAY='#8A9299'; RULE='#D5D9DD'
-BP='#F1F6FB'; CP='#FFF5E8'; PP='#F4F6F8'; TP='#F1F6FB'
-ROUNDS=['#A9C9E7','#609ACE','#2668A5','#E58A2B','#68727A'];MARKERS=['o','s','^','D','v']
-plt.rcParams.update({'font.family':'STIXGeneral','font.size':8,'text.color':INK,'axes.labelcolor':INK,'xtick.color':MUTED,'ytick.color':INK,'axes.edgecolor':RULE,'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none','mathtext.fontset':'stix','axes.linewidth':.6})
+INK='#203449'; MUTED='#5E6974'; BLUE='#396EA8'; CORAL='#CF8233'; PURPLE='#52677B'; TEAL='#168A86'; GRAY='#8A9299'; RULE='#D5DEE5'
+BP='#EFF4FA'; CP='#FCF3E7'; PP='#F4F6F8'; TP='#EDF7F5'
+ROUNDS=['#B6D6D4','#55A5A0','#176B69','#CF8233','#68727A'];MARKERS=['o','s','^','D','v']
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'text.color':INK,'axes.labelcolor':INK,'xtick.color':MUTED,'ytick.color':INK,'axes.edgecolor':RULE,'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none','mathtext.fontset':'dejavusans','axes.linewidth':.6})
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 PINS={'factorial_plot_data.json': '0c3ff752f4b73f393b46322fec56e223142da22777fd5e42d00af1bbdaefd38a', 'family_plot_data.json': 'c4abb91246c98f719ba4b5c4b27516321410affe9f6f5c4732aabd1f6f769a7f', 'family_certificate.json': 'de63e22c4dc7ceb3d17a60a5816d2c64f0fdcb875c0a02ca17181979c652be9b', 'query_example.json': 'ecd00a506185b94d286aa556de73132a40490974cc2ddcda044f48c92b3a25cb'}
 def read(n):
@@ -40,65 +40,57 @@ def main_figure(out):
  data=read('query_example.json');family=read('family_certificate.json')['certificate'];gain=100*float(Fraction(family['capacity']))
  assert family['policy']==[['0/1','0/1','1/1','0/1']]
  assert family['policy_dual_lower_bound']==family['common_point_upper_bound']==family['capacity']
- W,H=516,254;fig=plt.figure(figsize=(W/72,224/72),facecolor='white');ax=fig.add_axes([0,0,1,1]);ax.set(xlim=(0,W),ylim=(H,0));ax.axis('off')
- def text(x,y,s,fs=7.6,color=INK,bold=False,ha='left',**kw):return ax.text(x,y,s,fontsize=fs,color=color,fontweight='bold' if bold else 'normal',ha=ha,va='center',**kw)
+ W,H=516,242;fig=plt.figure(figsize=(W/72,H/72),facecolor='white');ax=fig.add_axes([0,0,1,1]);ax.set(xlim=(0,W),ylim=(H,0));ax.axis('off')
+ def text(x,y,s,fs=8,color=INK,bold=False,ha='left',**kw):return ax.text(x,y,s,fontsize=fs,color=color,fontweight='bold' if bold else 'normal',ha=ha,va='center',**kw)
  def line(x1,y1,x2,y2,c=RULE,lw=.7,**kw):ax.plot([x1,x2],[y1,y2],c=c,lw=lw,solid_capstyle='round',**kw)
- def box(x,y,w,h,fc='white',ec=RULE,r=0):ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle=f'round,pad=0,rounding_size=0',facecolor=fc,edgecolor=ec,lw=.65))
- def arrow(x1,y1,x2,y2,c=PURPLE):ax.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',mutation_scale=7,color=c,lw=1,shrinkA=0,shrinkB=0))
- def jacket(x,y,s=1,c=MUTED):
-  pts=[(-3,-4),(-6,-2),(-8,4),(-5,5),(-4,1),(-4,9),(4,9),(4,1),(5,5),(8,4),(6,-2),(3,-4),(1,-2),(-1,-2),(-3,-4)]
-  ax.add_patch(PathPatch(MPath([(x+s*a,y+s*b) for a,b in pts]),fill=False,edgecolor=c,lw=.65,joinstyle='round'))
-  line(x,y-2*s,x,y+9*s,c,.5)
- text(4,9,'Q-BRIDGE',10.5,bold=True);line(72,2,72,16,GRAY,.6);text(81,9,'One shared view. Two policy questions.',9.1)
- text(4,27,'Four jackets A–D  ·  High rating = success  ·  Reference: 25% each',7.4,MUTED)
- # A: input evidence and the shared view.
- box(3,43,118,115,BP);text(11,54,'Observational logs',8.5,BLUE,True);text(11,67,'Bounds on each success rate',6.9,MUTED)
- x0,x1=23,111
- for v in [0,.5,1]:
-  x=x0+(x1-x0)*v;line(x,81,x,134,'#DCE6EF',.5);text(x,143,f'{v:g}',6.9,MUTED,ha='center')
+ def box(x,y,w,h,fc='white',ec=RULE):ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0,rounding_size=3',facecolor=fc,edgecolor=ec,lw=.65))
+ def arrow(x1,y1,x2,y2,c=PURPLE):ax.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',mutation_scale=8,color=c,lw=1.05,shrinkA=0,shrinkB=0))
+ text(0,9,'From uncertain outcomes to a verifiable policy decision',10.2,bold=True)
+ text(0,25,'Four jackets A–D  ·  Success = high rating  ·  Reference = 25% per jacket',8,MUTED)
+ # Source constraints. Explicit values replace tiny axes and ornamental icons.
+ box(0,40,108,94,BP);text(8,52,'Observational logs',8.1,BLUE,True)
+ text(8,66,'Success-rate bounds',7.7,MUTED)
  coords=[]
  for i,(lo,hi) in enumerate(zip(data['view_lo'],data['view_hi'])):
-  y=83+i*16;text(10,y,'ABCD'[i],7.6,bold=True);a=x0+(x1-x0)*lo;b=x0+(x1-x0)*hi
-  line(a,y,b,y,BLUE,2.2);line(a,y-2,a,y+2,BLUE,.8);line(b,y-2,b,y+2,BLUE,.8)
-  text((a+b)/2,y-6.5,f'{lo:.2f}–{hi:.2f}',6.8,BLUE,ha='center');coords.append({'action':'ABCD'[i],'lo':lo,'hi':hi,'line_x':[a,b]})
- text(67,153,'Success probability',6.9,MUTED,ha='center')
- box(3,167,118,72,CP);text(11,178,'Randomized experiments',7.6,CORAL,True);text(11,190,'Transferred group averages',6.8,MUTED)
- text(62,207,r'$(m_A+m_C)/2=0.65$',8.2,ha='center');text(62,225,r'$(m_B+m_D)/2=0.70$',8.2,ha='center')
- # Converge inputs, then fork view; all connectors outside panels.
- line(122,104,129,104,PURPLE,1);line(122,203,129,203,PURPLE,1);line(129,104,129,203,PURPLE,1);arrow(129,151,138,151)
- box(140,43,113,196,PP,'#AEB9C5');text(149,55,'(a) Joint confidence view',7.2,PURPLE,True)
- text(196.5,77,'All compatible',8.4,INK,True,ha='center');text(196.5,89,'success rates',8.4,INK,True,ha='center')
- a=Ellipse((185,139),68,76,angle=-12,fc='#D7E7F6',ec='none');b=Ellipse((208,139),68,76,angle=12,fc='#F8DFC0',ec='none');ax.add_patch(a);ax.add_patch(b)
- inter=Ellipse((208,139),68,76,angle=12,fc='#829DB5',ec='none');inter.set_clip_path(a);ax.add_patch(inter)
- for dx,dy in [(-6,-18),(8,-11),(-10,11),(9,19)]:ax.plot([196.5+dx],[139+dy],marker='o',ms=2.5,color='white')
- text(197,141,r'$\mathcal{C}$',20,'white',ha='center')
- text(196.5,187,'Individual + group',7.2,MUTED,ha='center');text(196.5,198,'constraints hold together',7.0,MUTED,ha='center')
- box(148,216,97,15,'#E7EDF3','none',3);text(196.5,223.5,'Fixed data + assumptions',6.5,PURPLE,ha='center')
- line(253,151,261,151,PURPLE,1);line(261,98,261,199,PURPLE,1);arrow(261,98,270,98);arrow(261,199,270,199)
- # B: fixed-policy queries.
- box(272,43,241,96,'white');text(280,55,'(b) Can this policy guarantee a gain?',8.1,INK,True)
- text(280,69,'Requested gain: 0.100 pp',7.0,MUTED);text(505,69,'Checked lower bound',6.8,MUTED,ha='right')
+  y=81+14*i;text(10,y,'ABCD'[i],8.4,BLUE,True);text(98,y,f'{lo:.2f} – {hi:.2f}',8.4,ha='right')
+  coords.append({'action':'ABCD'[i],'lo':lo,'hi':hi})
+ box(0,144,108,75,CP);text(8,156,'Randomized data',8.1,CORAL,True)
+ text(8,170,'Transferred averages',7.7,MUTED)
+ text(54,187,r'$(m_A+m_C)/2=.65$',8.2,ha='center')
+ text(54,205,r'$(m_B+m_D)/2=.70$',8.2,ha='center')
+ line(109,88,115,88,PURPLE,1);line(109,180,115,180,PURPLE,1);line(115,88,115,180,PURPLE,1);arrow(115,130,122,130)
+ # Actual feasible examples, never a false Cartesian-product picture.
+ box(125,40,139,179,PP);text(134,52,'One shared view',8.7,INK,True)
+ text(134,69,'Keep all rates that satisfy',7.8,MUTED);text(134,81,'both sources together.',7.8,MUTED)
+ text(134,100,'Example allowed scenarios',7.6,INK,True)
+ xs=[143,175,207,239]
+ for x,label in zip(xs,'ABCD'):text(x,115,label,8.1,BLUE,True,ha='center')
+ scenarios=[data['candidate_feasible_mean_vector'],data['fused_worst_case_witness']]
+ for k,vals in enumerate(scenarios):
+  exact=[Fraction(str(v)) for v in vals]
+  assert all(Fraction(str(lo))<=v<=Fraction(str(hi)) for lo,v,hi in zip(data['view_lo'],exact,data['view_hi']))
+  assert (exact[0]+exact[2])/2==Fraction('0.65') and (exact[1]+exact[3])/2==Fraction('0.70')
+  if k==1:box(132,137,125,17,'#E1EAF3','none')
+  for x,v in zip(xs,vals):text(x,129+k*17,f'{v:.2f}',8.3,ha='center')
+ line(134,163,255,163)
+ text(134,177,'Together these imply',7.7,MUTED)
+ text(134,193,r'$m_C\geq 0.70$',9.8,TEAL,True)
+ text(134,209,'Reference mean = 0.675',7.8,INK)
+ line(265,130,274,130,PURPLE,1);line(274,84,274,178,PURPLE,1);arrow(274,84,283,84);arrow(274,178,283,178)
+ # Fixed policies and whole-family optimization branch independently.
+ box(286,40,230,87,'white');text(294,52,'Check a proposed policy',8.7,INK,True)
+ text(294,67,'Lower bounds; target > 0.100 pp (IV-D)',7.6,MUTED)
  for i,q in enumerate(data['queries']):
-  y=85+i*18;c=[BLUE,TEAL,CORAL][i];fill=[BP,TP,CP][i]
-  text(282,y,q['query'],8.2,INK,True);arrow(300,y,308,y,MUTED)
-  box(312,y-7,110,14,fill,'none',3);text(367,y,['Solve + check','Reuse + check','New solve + check'][i],7.6,c,True,ha='center');arrow(427,y,438,y,MUTED)
-  text(502,y,f'{100*q["returned_bound"]:+.3f} pp',9.1,TEAL,True,ha='right')
- text(367,132,'Q3: saved proof inconclusive → solve',6.6,MUTED,ha='center')
- # C: family capacity; no dependency on preceding Q3.
- box(272,149,241,90,TP,'#B9D0E5');text(280,161,'(c) What is the best possible guarantee?',7.8,INK,True)
- text(280,174,'Disjoint groups: cap means → allocate → recover policy',6.7,MUTED)
- text(301,188,'Always C',7.3,TEAL,True,ha='center')
- for i in range(4):
-  x=281+12*i;h=15 if i==2 else 0
-  if h:ax.add_patch(Rectangle((x,211-h),7,h,fc=TEAL,ec='none'))
-  else:line(x,211,x+7,211,GRAY,.8)
-  text(x+3.5,218,'ABCD'[i],6.8,MUTED,ha='center')
- text(366,190,'Policy lower bound',6.9,ha='center');text(465,190,'Family upper bound',6.9,ha='center')
- text(366,208,f'{gain:.3f} pp',13.1,TEAL,True,ha='center');text(416,208,'=',14,TEAL,True,ha='center');text(465,208,f'{gain:.3f} pp',13.1,TEAL,True,ha='center')
- text(416,225,'Optimal robust guarantee',8.0,TEAL,True,ha='center')
- text(4,249,'Constructed example · pp = percentage points',6.9,MUTED)
- text(513,249,'One allowed vector: (0.60, 0.70, 0.70, 0.70)',6.9,MUTED,ha='right')
- return save(fig,out,'qbridge_overview',{'intervals':coords,'queries':[{k:q[k] for k in ['query','returned_bound','executed_route']} for q in data['queries']],'family_bound_pp':gain,'view_icon':'Schematic set intersection, not a quantitative projection','view_forks_independently':True})
+  y=84+16*i;text(294,y,q['query'],8.1,bold=True)
+  text(319,y,['Solve + check','Reuse + check','New solve + check'][i],8.0,TEAL if i==1 else INK)
+  text(507,y,f'{100*q["returned_bound"]:+.3f} pp',8.6,TEAL,True,ha='right')
+ box(286,139,230,80,TP,'#C3DDDA');text(294,152,'Find the best guaranteed gain',8.6,INK,True)
+ text(344,170,'Always C guarantees',7.8,ha='center');text(462,170,'No larger guarantee',7.8,ha='center')
+ text(344,190,f'{gain:.3f} pp',13.4,TEAL,True,ha='center');text(403,190,'=',13,TEAL,True,ha='center');text(462,190,f'{gain:.3f} pp',13.4,TEAL,True,ha='center')
+ text(401,210,'Matching checked bounds prove optimality',7.6,TEAL,ha='center')
+ text(3,231,'Constructed example · pp = percentage points',7.5,MUTED)
+ text(513,231,'Every answer carries an independently checked proof',7.5,MUTED,ha='right')
+ return save(fig,out,'qbridge_overview',{'intervals':coords,'queries':[{k:q[k] for k in ['query','returned_bound','executed_route']} for q in data['queries']],'family_bound_pp':gain,'feasible_scenarios':scenarios,'scenario_check':'Exact decimal fractions satisfy individual and group constraints; illustrative, not exhaustive.','view_forks_independently':True})
 
 def base_axes(ax):
  for s in ['top','right','left']:ax.spines[s].set_visible(False)
@@ -106,70 +98,85 @@ def base_axes(ax):
  ax.xaxis.set_minor_locator(NullLocator());ax.set_axisbelow(True)
 
 def family_figure(out):
- d=read('family_plot_data.json');W,H=516,181;fig=plt.figure(figsize=(W/72,H/72),facecolor='white')
- fig.text(.015,.965,'(a) Cost of an independently checked answer',fontsize=10,weight='bold',va='top')
- fig.text(.565,.965,'(b) What full-family search adds',fontsize=10,weight='bold',va='top')
- fig.text(.015,.862,'78 requests × 3 timing rounds = 234 paired measurements',fontsize=7.8,color=MUTED)
- fig.text(.565,.862,'107 views unresolved by the initial checks',fontsize=8.1,color=MUTED)
- ax=fig.add_axes([.09,.285,.43,.49]);ax.set_xscale('log');ax.set_xlim(d['geometry']['x_limits']);ax.set_ylim(2.5,-.5)
- ax.axhspan(.5,1.5,color='#F6F7F9',zorder=0);ax.grid(axis='x',color=RULE,lw=.45)
- ax.axvline(1,color='#555555',lw=.85,ls=(0,(3,2)));plotted=[]
+ d=read('family_plot_data.json');W,H=516,187;fig=plt.figure(figsize=(W/72,H/72),facecolor='white')
+ # Lead with the scientific result; use a count-scaled bar plus direct labels.
+ fig.text(.005,.96,'(a) Search beyond the initial policies',fontsize=9.5,weight='bold',va='top')
+ fig.text(.005,.842,'107 unresolved views → 107 decisions',fontsize=8.2,color=MUTED)
+ ax=fig.add_axes([.005,.48,.425,.22]);ax.set(xlim=(0,107),ylim=(0,1));ax.axis('off')
+ vals=[p['count'] for p in d['recovery_categories']];assert vals==[0,86,21,0]
+ for left,n,color,txtcol in [(0,86,TEAL,'white'),(86,21,CORAL,'white')]:
+  ax.barh(.5,n,left=left,height=.85,color=color,edgecolor='white',linewidth=.8)
+  ax.text(left+n/2,.5,str(n),fontsize=20,weight='bold',color=txtcol,ha='center',va='center')
+ fig.text(.005,.765,'Same evidence; unchanged target',fontsize=8.2,color=MUTED)
+ fig.text(.005,.405,'86 views: a different policy meets the target',fontsize=8,color=TEAL)
+ fig.text(.005,.31,'21 views: no policy can guarantee the target',fontsize=8,color=CORAL)
+ fig.add_artist(Line2D([.005,.43],[.255,.255],transform=fig.transFigure,color=RULE,lw=.7))
+ fig.text(.005,.19,'Original policies: 0 / 107 qualify after exact solve',fontsize=7.6,color=MUTED)
+ fig.text(.005,.095,'Incomplete recovery decompositions: 0',fontsize=7.6,color=MUTED)
+ fig.text(.005,.012,'Target = worst-case gain > 0.1 percentage points',fontsize=7.6,color=MUTED)
+ # The comparison preserves every x value; round lanes reduce overplotting.
+ fig.text(.49,.96,'(b) Cost of a checked answer',fontsize=9.5,weight='bold',va='top')
+ fig.text(.49,.842,'78 requests × 3 rounds = 234 paired timings',fontsize=8.2,color=MUTED)
+ ax2=fig.add_axes([.56,.24,.425,.49]);ax2.set_xscale('log');ax2.set_xlim(d['geometry']['x_limits']);ax2.set_ylim(2.5,-.5)
+ ax2.axhspan(.5,1.5,color='#F4F6F8',zorder=0);ax2.grid(axis='x',color=RULE,lw=.5)
+ ax2.axvline(1,color=PURPLE,lw=.8,ls=(0,(3,2)));plotted=[]
  for rnd in [1,2,3]:
   ps=[p for p in d['points'] if p['round']==rnd]
-  artist=ax.scatter([p['plot_x'] for p in ps],[p['plot_y'] for p in ps],s=16,color=ROUNDS[rnd-1],marker=MARKERS[rnd-1],alpha=.93,edgecolors='white',lw=.25,zorder=3)
+  artist=ax2.scatter([p['plot_x'] for p in ps],[p['plot_y'] for p in ps],s=13,color=ROUNDS[rnd-1],marker=MARKERS[rnd-1],alpha=.95,edgecolors='white',lw=.28,zorder=3)
   for p,xy in zip(ps,artist.get_offsets()):assert float(xy[0])==p['plot_x'] and float(xy[1])==p['plot_y']
   plotted+=ps
- ax.set_yticks([0,1,2],[r'$d=8$',r'$d=64$',r'$d=256$'],fontsize=8.7)
- ax.xaxis.set_major_locator(FixedLocator([.5,1,2]));ax.xaxis.set_major_formatter(FixedFormatter(['0.5','1','2']));base_axes(ax)
- ax.set_xlabel('Partition / exact LP response time',fontsize=9,labelpad=4)
- handles=[Line2D([],[],marker=MARKERS[i],color=ROUNDS[i],linestyle='none',markersize=4.1,label=f'Round {i+1}') for i in range(3)]
- fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.297,.025),ncol=3,frameon=False,fontsize=8,handletextpad=.35,columnspacing=1.25)
- fig.text(.015,.008,'Below 1: partition is faster.  d = context–action pairs.',fontsize=7.8,color=MUTED)
- # A count-preserving stacked bar exposes the complete partition of 107 views.
- vals=[p['count'] for p in d['recovery_categories']];assert vals==[0,86,21,0]
- ax2=fig.add_axes([.565,.365,.42,.30]);ax2.set(xlim=(0,107),ylim=(0,1));ax2.axis('off')
- ax2.barh(.52,86,height=.45,color=BLUE,edgecolor=INK,lw=.55)
- ax2.barh(.52,21,left=86,height=.45,color=CORAL,edgecolor=INK,lw=.55)
- ax2.text(43,.52,'86',fontsize=17.5,color='white',weight='bold',ha='center',va='center')
- ax2.text(96.5,.52,'21',fontsize=17.5,color=INK,weight='bold',ha='center',va='center')
- ax2.text(43,.02,'New qualifying policy',fontsize=8.6,color=BLUE,weight='bold',ha='center',va='center')
- ax2.text(96.5,-.09,'No such\nguarantee',fontsize=7.9,color='#A85D16',ha='center',va='center',linespacing=1.05)
- fig.text(.565,.735,'Guaranteed gain above the requested threshold',fontsize=8.1,style='italic',color=MUTED)
- for y,label,value in [(.20,'Original candidates qualify',0),(.09,'Decomposition unknown',0)]:
-  fig.text(.575,y,label,fontsize=8.1,color=MUTED)
-  fig.text(.975,y,str(value),ha='right',fontsize=10,weight='bold')
- fig.add_artist(Line2D([.565,.985],[.28,.28],transform=fig.transFigure,color=RULE,lw=.6))
+ ax2.set_yticks([0,1,2],['8','64','256'],fontsize=8.6);ax2.set_ylabel('Context–action pairs',fontsize=7.6,labelpad=4)
+ ax2.xaxis.set_major_locator(FixedLocator([.5,1,2]));ax2.xaxis.set_major_formatter(FixedFormatter(['0.5','1','2']));base_axes(ax2)
+ fig.text(.56,.765,'← Partition faster',fontsize=7.5,color=TEAL)
+ fig.text(.985,.765,'LP faster →',fontsize=7.5,color=MUTED,ha='right')
+ ax2.set_xlabel('Partition / exact LP time (log scale)',fontsize=8.1,labelpad=4)
+ handles=[Line2D([],[],marker=MARKERS[i],color=ROUNDS[i],linestyle='none',markersize=4,label=f'Round {i+1}') for i in range(3)]
+ fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.765,-.013),ncol=3,frameon=False,fontsize=7.7,handletextpad=.3,columnspacing=1.)
  assert len(plotted)==234
- return save(fig,out,'verified_family_v7_main',{'points':plotted,'recovery_categories':d['recovery_categories'],'failure_denominators':d['failure_denominators'],'all_points_exact':True,'count_bar_segments':[86,21],'zero_categories_displayed_as_text':True})
+ return save(fig,out,'verified_family_v7_main',{'points':plotted,'recovery_categories':d['recovery_categories'],'failure_denominators':d['failure_denominators'],'all_points_exact':True,'count_bar_segments':[86,21],'zero_categories_displayed_as_text':True,'panel_order':['family_recovery','checked_cost']})
 
 def factorial_figure(out):
- d=read('factorial_plot_data.json');W,H=516,180;fig,axes=plt.subplots(1,3,figsize=(W/72,H/72),sharex=True,sharey=True)
- fig.subplots_adjust(left=.21,right=.985,bottom=.24,top=.72,wspace=.20)
- groups=[('original_main','(a) Repeated-query streams',3),('threshold_engine','(b) Geometry streams',54),('source_derived','(c) Generated-log streams',6)]
+ d=read('factorial_plot_data.json');W,H=516,193;fig=plt.figure(figsize=(W/72,H/72),facecolor='white')
+ # Table-like row labels remove repetition; shared axes make costs comparable.
+ groups=[('original_main','(a) Primary streams','3 inputs · 1,000 queries each'),('threshold_engine','(b) Geometry streams','54 inputs · 100 queries each'),('source_derived','(c) Generated-log streams','6 inputs · 100 queries each')]
  vals=[r['geometric_mean'] for r in d['records']];lo,hi=min(vals),max(vals);pad=.065*(math.log(hi)-math.log(lo));limits=(math.exp(math.log(lo)-pad),math.exp(math.log(hi)+pad));plotted=[]
- labels=['Screening\nretention off','Screening\nretention on','Retention\nscreening off','Retention\nscreening on']
- for ax,(group,title,n) in zip(axes,groups):
-  ax.set_xscale('log');ax.set_xlim(limits);ax.set_ylim(3.55,-.55)
-  ax.grid(axis='x',color=RULE,lw=.45);ax.axvline(1,color='#555555',ls=(0,(3,2)),lw=.8);ax.axhline(1.5,color='#B8BEC4',lw=.65)
-  ax.set_title(f'{title}\n{n} fixed inputs',fontsize=8.9,pad=9)
-  ax.set_yticks(range(4),labels,fontsize=8.5,linespacing=1.0)
-  ax.xaxis.set_major_locator(FixedLocator([.8,1,1.2]));ax.xaxis.set_major_formatter(FixedFormatter(['0.8','1','1.2']));base_axes(ax)
+ lefts=[.285,.525,.765];width=.215;bottom=.24;height=.49
+ fig.text(.007,.94,'Feature tested',fontsize=8.1,weight='bold');fig.text(.177,.94,'Other',fontsize=8.1,weight='bold',ha='center')
+ fig.text(.177,.878,'feature',fontsize=7.6,color=MUTED,ha='center')
+ fig.text(.177,.824,'state',fontsize=7.6,color=MUTED,ha='center')
+ # Data rows map the original y=0..3 to the same screen positions.
+ def fy(y):return bottom+height*(3.55-y)/4.1
+ for y in [0,1,2,3]:
+  c=CORAL if y<2 else TEAL
+  fig.text(.177,fy(y),'off' if y%2==0 else 'on',fontsize=8.3,ha='center',va='center',color=c)
+ for mid,label,desc,c in [(.5,'Screening','defer candidates',CORAL),(2.5,'Retention','save exact terms',TEAL)]:
+  fig.text(.007,fy(mid)+.022,label,fontsize=8.8,weight='bold',color=c,va='center')
+  fig.text(.007,fy(mid)-.04,desc,fontsize=7.5,color=MUTED,va='center')
+ for y in [-.52,1.5,3.52]:fig.add_artist(Line2D([.005,.98],[fy(y),fy(y)],transform=fig.transFigure,color=RULE,lw=.55,zorder=0))
+ for left,(group,title,desc) in zip(lefts,groups):
+  ax=fig.add_axes([left,bottom,width,height]);ax.set_xscale('log');ax.set_xlim(limits);ax.set_ylim(3.55,-.55)
+  ax.set_facecolor('none');ax.grid(axis='x',color=RULE,lw=.4);ax.axvline(1,color=PURPLE,ls=(0,(3,2)),lw=.85)
+  fig.text(left+width/2,.94,title,fontsize=8.2,weight='bold',ha='center')
+  fig.text(left+width/2,.879,desc,fontsize=7.5,color=MUTED,ha='center')
+  fig.text(left+.005,.785,'← Faster',fontsize=7.5,color=TEAL)
+  fig.text(left+width-.005,.785,'Slower →',fontsize=7.5,color=MUTED,ha='right')
+  ax.set_yticks([]);ax.xaxis.set_major_locator(FixedLocator([.8,1,1.2]));ax.xaxis.set_major_formatter(FixedFormatter(['0.8','1','1.2']));base_axes(ax)
+  ax.spines['bottom'].set_visible(False)
   for row in d['ranges']:
    if row['group']!=group:continue
-   y=row['row'];color=CORAL if y<2 else BLUE
-   ax.hlines(y,row['observed_min'],row['observed_max'],color=color,lw=1.3,alpha=.65,zorder=2)
+   y=row['row'];color=CORAL if y<2 else TEAL
+   ax.hlines(y,row['observed_min'],row['observed_max'],color=color,lw=1.7,alpha=.48,zorder=2)
    for rnd,value in enumerate(row['round_values']):
-    yy=y+(rnd-2)*.105
-    artist=ax.scatter([value],[yy],color=color,marker=MARKERS[rnd],s=24,edgecolors='white',lw=.4,zorder=3)
+    yy=y+(rnd-2)*.11
+    artist=ax.scatter([value],[yy],color=color,marker=MARKERS[rnd],s=17,edgecolors='white',lw=.35,zorder=3)
     assert float(artist.get_offsets()[0][0])==value
     plotted.append({'group':group,'row':y,'round':rnd,'value':value})
-  for k,label in enumerate(ax.get_yticklabels()):label.set_color('#B56B20' if k<2 else BLUE)
- handles=[Line2D([],[],marker=MARKERS[i],color='#626B73',linestyle='none',markersize=4.0,label=f'Round {i+1}') for i in range(5)]
- fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.595,1.0),ncol=5,frameon=False,fontsize=8.2,handletextpad=.35,columnspacing=1.25)
- fig.text(.59,.09,'Query cost with the named feature on / off',ha='center',fontsize=9.2)
- fig.text(.015,.01,'Below 1: faster.  Points: geometric means. Lines: observed ranges over five rounds.',fontsize=7.9,color=MUTED)
+ fig.text(.635,.128,'Query cost: feature on / off (log scale)',ha='center',fontsize=8.7,weight='bold')
+ handles=[Line2D([],[],marker=MARKERS[i],color='#68757F',linestyle='none',markersize=3.7,label=f'R{i+1}') for i in range(5)]
+ fig.legend(handles=handles,loc='lower left',bbox_to_anchor=(.0,-.012),ncol=5,frameon=False,fontsize=7.5,handletextpad=.25,columnspacing=.65)
+ fig.text(.985,.016,'Points: geometric means · Lines: round ranges',ha='right',fontsize=7.6,color=MUTED)
  assert len(plotted)==60
- return save(fig,out,'optimized_v6_compact_factorial',{'points':plotted,'source_records':d['records'],'ranges':d['ranges'],'all_points_exact':True,'common_log_limits':list(limits),'color_meaning':'orange: screening; blue: retention','round_identity':'marker shape'})
+ return save(fig,out,'optimized_v6_compact_factorial',{'points':plotted,'source_records':d['records'],'ranges':d['ranges'],'all_points_exact':True,'common_log_limits':list(limits),'color_meaning':'orange: screening; teal: retention','round_identity':'marker shape; R1–R5 denote rounds 1–5'})
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--out',required=True,type=Path);a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True)

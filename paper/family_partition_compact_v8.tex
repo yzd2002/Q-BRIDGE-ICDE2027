@@ -1,19 +1,24 @@
 % Readability revision: the reviewed construction and domain are preserved.
 % Local allocation residual r is renamed xi to distinguish the reuse term.
 \subsection{Certifying a whole policy family}\label{sec:family-capacity}
-Testing one policy can miss a better one. The family $\Pi$ contains all randomized policies on the available actions; its \emph{capacity} is the largest worst-case gain. Fix a nonempty compact convex view $\C\subseteq[0,1]^{KL}$, exact probability weights $w\ge0$, $\sum_xw_x=1$, and reference $\pi_0\in\Pi$. Stars will denote returned optimizers. Define
+Testing one policy can miss a better one. The family $\Pi$ contains all randomized policies on the available actions; its \emph{capacity} is the largest worst-case gain. Fix a nonempty compact convex view $\C\subseteq[0,1]^{KL}$, exact probability weights $w\ge0$, $\sum_xw_x=1$, and reference $\pi_0\in\Pi$. Stars denote returned optimizers. Define
 \begin{align}
  \mathcal R(\C)&=\max_{\pi\in\Pi}\min_{m\in\C}
    \sum_{x,a}w_x(\pi_{xa}-\pi_{0,xa})m_{xa},\label{eq:capacity}\\
  F(m)&=\sum_xw_x\left[\max_a m_{xa}
              -\sum_a\pi_{0,xa}m_{xa}\right].\label{eq:family-upper}
 \end{align}
-The inner minimum gives one policy's worst case; the outer maximum chooses the best policy. The reference ensures $\mathcal R\ge0$. At one allowed $m$, $F(m)$ chooses the best action per context. It bounds $\mathcal R$ because each policy's minimum cannot exceed its payoff at this point. Thus $U(c)$ bounds one policy's guarantee; $F(m)$ bounds every policy's guarantee. A checked $F(m)\le\delta$ excludes all above-threshold guarantees, not actual effects.
+The inner minimum gives one policy's worst case; the outer maximum chooses the best policy. The reference ensures $\mathcal R\ge0$. At any allowed $m$, choosing the best action per context gives $F(m)$, which upper-bounds each policy's worst-case gain. Thus $U(c)$ bounds one policy's guarantee; $F(m)$ bounds every policy's guarantee. A checked $F(m)\le\delta$ excludes all above-threshold guarantees, not actual effects.
 
 Compact convex domains and a continuous bilinear payoff permit minimax exchange~\cite{Sion1958Minimax}, giving $\mathcal R(\C)=\min_{m\in\C}F(m)$. We therefore seek an allowed mean vector giving the best action as little advantage as possible, and a policy whose lower certificate reaches this upper bound.
 
 \subsection{Exact capacity for partitioned moments}\label{sec:partition-capacity}
-The direct algorithm applies when each action belongs to at most one nonzero group constraint; actions may also be ungrouped. Groups cannot cross user contexts, and their weights must be nonnegative. We solve each context separately. Minimize $t-p^\top m$: the largest action mean minus reference payoff. Here $t$ caps every $m_i$ and $p=\pi_{0,x}$ is the reference distribution. Steps 1--2 find allowed rates that limit every policy's guarantee; Step 3 finds a policy whose gain is at least this limit in every allowed scenario. Minimax and allocation are classical~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}; our construction proves that the smallest feasible cap suffices and recovers an original-constraint certificate.
+The direct algorithm handles nonnegative, disjoint action groups within each context, including ungrouped actions. For each context, we seek compatible means that make the best action only slightly better than the reference. Write this gap as $t-p^\top m$, where $t$ caps every action mean and $p=\pi_{0,x}$ is the reference distribution.
+
+\begin{samepage}
+\textbf{The algorithm in three passes.} First find the smallest feasible common cap. Next raise the reference payoff as much as possible within that cap, obtaining an upper bound for every policy. Finally recover a policy whose checked lower bound equals it. In the running example, the cap is $.7$, the reference payoff is $.675$, and both bounds are $.025$. The cap is an intermediate device; the final certificate uses only the original constraints. Minimax and allocation are classical~\cite{Eiselt1986ContinuousGLB,Kuno1991ContinuousKnapsack}; our construction proves that the smallest feasible cap suffices and recovers an original-constraint certificate.
+
+\end{samepage}
 
 \begin{theorem}[An attaining policy with an original-view certificate]\label{thm:partition-certificate}
 Let $\C$ be a nonempty rational box-and-moment view with
@@ -27,16 +32,16 @@ $\eta_L,\eta_U$ such that, with $c^*_{xa}=w_x(\pi^*_{xa}-\pi_{0,xa})$,
  D(c^*;\eta)=c^{*\top}m^*=F(m^*)=\mathcal R(\C).
 \]
 The dense implementation uses $O(dJ+d^2)$ exact arithmetic/comparison
-operations; the independent receiver uses $O(dJ+d)$. These are unit-cost
+operations; the independent checker uses $O(dJ+d)$. These are unit-cost
 rational-operation counts, excluding coefficient-dependent bit costs,
 encoding and hashing.
 \end{theorem}
 
-A policy lower bound cannot exceed capacity, and $F(m^*)$ cannot fall below it. Matching them proves optimality independently of the optimizer. Unsupported rows are rejected; zero rows require $a_j\le0\le b_j$ and receive zero multipliers. Ties use index order.
+Matching the policy lower bound and $F(m^*)$ verifies optimality. Unsupported rows are rejected; zero rows require $a_j\le0\le b_j$ and zero multipliers. Ties use index order.
 
 \textbf{Step 1: Find the smallest feasible cap.}
 
-Here $p=\pi_{0,x}$ denotes reference probabilities, not logged success rates. The cap must leave enough total success probability to meet each group's lower bound. Define
+The cap must leave enough success probability to meet each group's lower bound. Define
 \[
  \begin{aligned}
  t_\ell&=\max_i\ell_i,\qquad g_j(t)=\sum_iT_{ji}\min(u_i,t),\\
@@ -100,10 +105,10 @@ The completed policy sums to one and selects only maxima. The endpoint signs and
 For the example's remaining mass, $\sigma_E=.5$, $\eta_L=(.5,0)$ and $\eta_U=0$, giving $\pi^*=(0,.25,.5,.25)$.
 The lower bound $.65(.5)-.6(.5)=.025$ equals the family upper bound
 $.7-.675=.025$. Pure C in Fig.~\ref{fig:example} is another optimal policy.
-These decimal teaching inputs differ from represented inputs checked in measured runs.
+The example uses decimal inputs; measured runs check represented inputs.
 
 \textbf{Stopping without the full construction.}
-An allowed vector with equal action-success probabilities within each context makes every policy tie with the reference. This offers a cheap stopping certificate, including for overlapping groups.
+Equal action means within each context make all policies tie with the reference, giving a cheap stopping certificate even with overlapping groups.
 \begin{proposition}[Zero capacity]\label{prop:zero-capacity}
 If all $w_x>0$ and $\pi_{0,xa}>0$, then $\mathcal R(\C)=0$ exactly when $\C$ contains a vector constant across actions within each context. Without strict positivity, a constant point is sufficient but need not be necessary.
 \end{proposition}

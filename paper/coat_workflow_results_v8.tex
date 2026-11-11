@@ -3,7 +3,7 @@ Can family preprocessing reduce catalogue-query cost? We test two 16-row jacket-
 $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known capacities.
 Table~\ref{tab:coat-workflow} compares Hot, Opt, and Opt with partition
 (Part) or exact-LP (LP) preprocessing. All share objective caching, checked
-points and a rational receiver. Family certificates add only feasible points;
+points and an exact checker. Family certificates add only feasible points;
 a shared constant-action check skips unnecessary family solves.
 Stored-contrast and ideal-policy queries share exact fallback evidence.
 
@@ -14,7 +14,7 @@ Stored-contrast and ideal-policy queries share exact fallback evidence.
 \input{coat_workflow_table_v8}
 \end{table}
 
-All 32 streams complete, each with 240 false answers for both stored and ideal rational policies: none of the listed candidates meets the requested guarantee.
+All 32 stream executions (two views, four plans, one quality pass plus three timing rounds) complete. Each returns 240 false answers under both stored and ideal policies: no listed candidate meets the guarantee.
 At nonzero capacity, Part adds 5.1--7.7\% to Opt's full cost without reducing
 its two native and two exact calls (Table~\ref{tab:coat-workflow});
 LP saves no calls either. At zero capacity, family computation is skipped.

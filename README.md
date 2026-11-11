@@ -12,7 +12,7 @@ workload also records the cases where preprocessing does not pay.
 
 ![One confidence view and two query modes](figure_assets/qbridge_overview.png)
 
-The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [All three vector figures, editable SVG files and reproducible drawing inputs](figure_assets/README.md) are included. The 2026-11-11 visual and readability edition uses consistent serif typography, a blue/orange palette, grouped tables and explicit experimental units. All original measurements and displayed equations are retained. The Overleaf ZIP includes the complete current manuscript source.
+The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [All three vector figures, editable SVG files and reproducible drawing inputs](figure_assets/README.md) are included. The final 2026-11-11 readability edition reorganizes all three vector figures and five tables: concrete feasible scenarios, result-first family recovery, aligned feature comparisons, and grouped table headers. Figures use consistent sans-serif labels and navy/teal/orange colors. The text introduces the three-step algorithm before its derivation and distinguishes experimental units. Original measurements and displayed equations are retained; Table IV converts probability bounds to percentage points exactly. The Overleaf ZIP includes the complete current manuscript source.
 
 **Material availability:** the v5.2 release is the published historical artifact.
 The complete expanded archive for the current manuscript, including the later
@@ -21,7 +21,7 @@ published as a downloadable release. The repository contains the current manuscr
 
 ## Experimental figures
 
-![Checked timing and full-family recovery](figure_assets/verified_family_v7_main.png)
+![Full-family recovery and checked timing](figure_assets/verified_family_v7_main.png)
 
 ![Screening and retention across three stream families](figure_assets/optimized_v6_compact_factorial.png)
 

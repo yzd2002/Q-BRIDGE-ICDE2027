@@ -8,7 +8,7 @@ SoPlex 8.1.0 in rational mode~\cite{SoPlex2026,Gleixner2016Refinement,Gleixner20
 \end{equation}
 Stationarity of free $t_x$ gives $\sum_a\mu_{xa}=w_x$ for its nonnegative epigraph multipliers. Thus $\pi_{xa}=\mu_{xa}/w_x$ is a policy when $w_x>0$; use the reference row when $w_x=0$. Original-row duals and a feasible point complete the partition method's certificate contract. Import/export and checking are exact; neither the construction's answer nor a saved point is supplied.
 
-A value-independent hash rule selects 78 distinct requests for three paired timing rounds, with alternating method order. Each method starts with a fresh model and worker. Service time covers transmission after worker initialization through certificate checking, including serialization; startup/cleanup are reported separately. Limits are one CPU thread, ten seconds per service and 8\,GiB address space. Failures retain their costs and denominators. Repeated rounds measure machine variation, not new datasets.
+A value-independent hash selects 78 requests for three paired rounds, alternating method order with fresh models and workers. Service time covers transmission after worker initialization through certificate checking, including serialization; startup/cleanup are reported separately. Limits are one CPU thread, ten seconds per service and 8\,GiB address space. Failures retain their costs and denominators. Repeated rounds measure machine variation, not new datasets.
 
 To determine whether recovery comes from better bounds or a different policy, we solve the original three policies exactly, obtaining optima $L_i^*$. Set $L_3^+=\max(0,L_1^*,L_2^*,L_3^*)$, with zero from the reference. Here $L_{\rm saved}$ is the maximum of zero and saved lower bounds for these same three policies. Then
 \begin{equation}
@@ -17,6 +17,6 @@ To determine whether recovery comes from better bounds or a different policy, we
  +\underbrace{\mathcal R-L_3^+}_{\text{three-policy restriction}}.
  \label{eq:recovery-decomposition}
 \end{equation}
-Both terms are nonnegative. Saved duals solve their stored objectives, but exact policy normalization can loosen transferred bounds. Missing optima leave the decomposition unknown. The 107-case recovery set and threshold remain unchanged.
+Both terms are nonnegative. Exact policy normalization can loosen saved bounds; missing optima leave the decomposition unknown. The recovery set and threshold stay fixed.
 
 \textbf{Coat comparisons.} Item gender, jacket type and color define separate partitions. We also test their combined, overlapping constraints. Subviews of one parent retain its bounds and inherit its joint coverage event. Across distinct parent constructions or assumption declarations, no simultaneous 95\% guarantee is asserted.

@@ -1,16 +1,16 @@
 \begingroup\small
-\renewcommand{\arraystretch}{1.10}\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.14}\setlength{\tabcolsep}{3pt}
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrr@{}}
 \toprule
 \qth{Plan} & \qth{\shortstack{Full-stream\\time (s)}} & \qth{\shortstack{Cost relative\\to Opt}} & \qth{\shortstack{Solver calls\\N/E/F}} \\
 \midrule
-\multicolumn{4}{@{}l}{\textit{Positive-capacity view: $\Lambda=1.5$}}\\
+\rowcolor{QHead}\multicolumn{4}{@{}l}{\qth{Positive capacity}\quad $\Lambda=1.5$}\\
 Hot & 6.800 & 0.974--1.009 & 2/2/0 \\
 Opt & 6.934 & 1.000 & 2/2/0 \\
 Opt+Part & 7.312 & 1.051--1.077 & 2/2/1 \\
 Opt+LP & 7.276 & 1.042--1.079 & 2/2/1 \\
 \midrule
-\multicolumn{4}{@{}l}{\textit{Zero-capacity view: $\Lambda=2$}}\\
+\rowcolor{QHead}\multicolumn{4}{@{}l}{\qth{Zero capacity}\quad $\Lambda=2$}\\
 Hot & 6.329 & 0.985--0.998 & 1/1/0 \\
 Opt & 6.390 & 1.000 & 1/1/0 \\
 Opt+Part & 6.431 & 0.999--1.024 & 1/1/0 \\
