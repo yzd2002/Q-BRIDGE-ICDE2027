@@ -1,11 +1,14 @@
 \begingroup\small
-\renewcommand{\arraystretch}{1.12}\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}lrrrr@{}}
+\renewcommand{\arraystretch}{1.10}\setlength{\tabcolsep}{2.5pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lrrrr@{}}
 \toprule
-\rowcolor{QHeader}\qth{Policy} & \qth{Cert.} & \qth{Sampling} & \qth{Ambiguity} & \qth{True $\le\delta$}\\
+\qth{Policy} & \qth{Certified} & \qth{\shortstack{Sampling-\\limited}} & \qth{\shortstack{Ambiguity-\\limited}} & \qth{\shortstack{True gain\\$\le\delta$}}\\
 \midrule
 Metadata & 12 & 33 & 195 & 0\\
 R heuristic & 4 & 43 & 190 & 3\\
 Robust design & 2 & 0 & 0 & 238\\
 \bottomrule
-\end{tabular}\endgroup
+\end{tabular*}\endgroup\par
+\smallskip
+\parbox{\columnwidth}{\footnotesize\raggedright
+240 queries per policy with $100d$ randomized events, $\Lambda=2$, and $\delta=.001$ (0.1\,pp). Sampling-limited: exact population statistics would suffice. Ambiguity-limited: even those statistics do not suffice despite true gain $>\delta$. ``Robust design'' selects one candidate before inference; it is not full-family optimization. No case is missed solely by optimization.}

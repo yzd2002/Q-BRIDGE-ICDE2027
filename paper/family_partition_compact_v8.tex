@@ -58,7 +58,7 @@ Thus maximizing $p^\top m$ within this cap minimizes the original gap.
 \textbf{Step 2: Allocate means within the cap.}
 With the maximum fixed at $t_0$, increasing the reference payoff reduces the gap. We allocate \emph{means}, not policy probabilities. Raising $m_i$ by $\epsilon$ costs group mass $T_{ji}\epsilon$ and gains $p_i\epsilon$. Starting at $\ell$, fill each nonzero row in decreasing $p_i/T_{ji}$ order on $T_{ji}>0$, to total mass $\min(b_j,T_jh)$; uncovered coordinates take $h_i$. The added mass is $\min(b_j,T_jh)-T_j\ell$. Step 1 ensures the final total $\min(b_j,T_jh)$ meets $a_j$. Nonnegative weights justify filling even zero-ratio coordinates.
 
-To build the proof, record a charge $\lambda_j$ per unit of group mass. These are mathematical proof weights, not monetary prices. Use zero when $b_j\ge T_jh$, including equality; the cap already limits the total. Otherwise use the largest support ratio if $b_j=T_j\ell$, or the last ratio receiving positive mass, including exact boundary exhaustion. After subtracting the charges, $\xi=p-T^\top\lambda$ measures the remaining reference-payoff gain from raising each mean. Its sign explains the endpoint choice:
+To build the certificate, record an upper-constraint multiplier $\lambda_j$ per unit of group mass. Use zero when $b_j\ge T_jh$, including equality; the cap already limits the total. Otherwise use the largest support ratio if $b_j=T_j\ell$, or the last ratio receiving positive mass, including exact boundary exhaustion. After subtracting these multiplier terms, $\xi=p-T^\top\lambda$ measures the remaining reference-payoff gain from raising each mean. Its sign explains the endpoint choice:
 \[
  \begin{aligned}
  \xi_i>0&\Rightarrow m_i^*=h_i,&
@@ -66,10 +66,10 @@ To build the proof, record a charge $\lambda_j$ per unit of group mass. These ar
  \lambda_j(b_j-T_jm^*)&=0.
  \end{aligned}
 \]
-A positive charge requires a tight upper bound. The example gives $m^*=(.6,.7,.7,.7)$, $\lambda=(0,0)$ and family upper bound $.025$.
+A positive multiplier requires a tight upper bound. The example gives $m^*=(.6,.7,.7,.7)$, $\lambda=(0,0)$ and family upper bound $.025$.
 
-\textbf{Step 3: Recover the policy and original-row prices.}
-Choosing a best action at $m^*$ alone is unsafe: B ties for best there, but allowed rates $(.6,.6,.7,.8)$ give pure B gain $-.075$. We must replace the artificial cap by a policy and original-row proof weights. Let $\eta,\lambda$ be lower- and upper-row proof weights. For equality in~\eqref{eq:dual}, the policy must select only maxima of $m^*$, priced rows must be tight, and $z=\pi-p+T^\top(\lambda-\eta)$ must satisfy $z_i>0\Rightarrow m_i^*=\ell_i$ and $z_i<0\Rightarrow m_i^*=u_i$.
+\textbf{Step 3: Recover the policy and certificate.}
+Choosing a best action at $m^*$ alone is unsafe: B ties for best there, but allowed rates $(.6,.6,.7,.8)$ give pure B gain $-.075$. We must replace the artificial cap by a policy and original-constraint multipliers. Write the lower and upper multipliers as $\eta_L=\eta$ and $\eta_U=\lambda$. For equality in~\eqref{eq:dual}, the policy must select only maxima of $m^*$, rows with positive multipliers must be tight, and $z=\pi-p+T^\top(\lambda-\eta)$ must satisfy $z_i>0\Rightarrow m_i^*=\ell_i$ and $z_i<0\Rightarrow m_i^*=u_i$.
 
 Start by canceling positive residuals at actions that can reach the cap; any missing probability will be supplied by a constraint that forces the cap:
 \[
@@ -79,23 +79,23 @@ Start by canceling positive residuals at actions that can reach the cap; any mis
 Here $(\xi_i)_+=\max(\xi_i,0)$. Since $0\le\widetilde\pi_i\le p_i$, the deficit $D_\pi$ is nonnegative. Initial coefficients $\widetilde\pi_i-\xi_i$ already have the required endpoint signs. In the example, initialization gives $(0,.25,.25,.25)$: the remaining $.25$ will go to C, the only action in the cap-forcing A/C group that can reach $.7$.
 
 If $t_0=t_\ell$, add $D_\pi$ to a coordinate with $\ell_i=t_0$ and set all
-lower prices $\eta$ to zero; its box coefficient increases at this lower endpoint.
+lower multipliers $\eta$ to zero; its box coefficient increases at this lower endpoint.
 Otherwise choose the first row whose required root is $t_0$, so it forces the cap.
-Since $T_jh=a_j$, its supported means must equal $h_i$, and zero-price
-priority gives $\lambda_j=0$, even if its upper moment is also tight. Set
+Since $T_jh=a_j$, its supported means must equal $h_i$, and the zero-multiplier
+choice in Step 2 gives $\lambda_j=0$, even if its upper moment is also tight. Set
 \[
  E=\{i:T_{ji}>0,\ u_i\ge t_0\},\qquad
  \sigma_E=\sum_{i\in E}T_{ji}>0,
 \]
 where positivity follows because otherwise this row would attain its bound
-below $t_0$. Set $\eta_j=D_\pi/\sigma_E$, with other lower prices zero.
+below $t_0$. Set $\eta_j=D_\pi/\sigma_E$, with other lower multipliers zero.
 Add $\eta_jT_{ji}$ to
 $\widetilde\pi_i$ on $E$. Updated box coefficients are zero on $E$ and
 $-p_i-\eta_jT_{ji}\le0$ elsewhere in this row, where $m_i^*=h_i=u_i$;
 other coefficients are unchanged. The non-strict $u_i\ge t_0$ includes
 roots at breakpoints.
 
-The completed policy sums to one and selects only maxima. The endpoint signs and tight priced rows make $D(\pi-p;(\eta,\lambda))=(\pi-p)^\top m^*=t_0-p^\top m^*$. Multiplying each context's objective and both price types by $w_x$ and concatenating gives the theorem. Zero-weight contexts still need feasible means and legal policies. The checker validates original constraints, probabilities, weight signs and matching bounds; it never trusts the artificial cap.\hfill$\square$
+The completed policy sums to one and selects only maxima. The endpoint signs and tight rows with positive multipliers make $D(\pi-p;(\eta,\lambda))=(\pi-p)^\top m^*=t_0-p^\top m^*$. Multiplying each context's objective and both multiplier types by $w_x$ and concatenating gives the theorem. Zero-weight contexts still need feasible means and legal policies. The checker validates original constraints, probabilities, weight signs and matching bounds; it never trusts the artificial cap.\hfill$\square$
 
 For the example's remaining mass, $\sigma_E=.5$, $\eta_L=(.5,0)$ and $\eta_U=0$, giving $\pi^*=(0,.25,.5,.25)$.
 The lower bound $.65(.5)-.6(.5)=.025$ equals the family upper bound

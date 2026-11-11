@@ -1,15 +1,15 @@
 \paragraph{The cost of family preprocessing}
-Can family preprocessing make the unchanged 240 catalogue queries cheaper? We test two 16-row jacket-type Fusion views,
+Can family preprocessing reduce catalogue-query cost? We test two 16-row jacket-type Fusion views,
 $(\Lambda,\rho)=(1.5,0)$ and $(2,0)$, selected retrospectively with known capacities.
-Hot-start (Hot), optimized threshold execution (Opt), and Opt with partition
-(Part) or exact-LP (LP) preprocessing share objective caching, checked points
-and a rational receiver. Family certificates add only feasible points;
+Table~\ref{tab:coat-workflow} compares Hot, Opt, and Opt with partition
+(Part) or exact-LP (LP) preprocessing. All share objective caching, checked
+points and a rational receiver. Family certificates add only feasible points;
 a shared constant-action check skips unnecessary family solves.
 Stored-contrast and ideal-policy queries share exact fallback evidence.
 
 \begin{table}[t]
 \centering
-\caption{Preprocessing the unchanged Coat catalogue. Time: median seconds over three rounds, including startup, family work, external verification and cleanup. Ratio/Opt: paired cost range (above one is slower). N/E/F: native/fixed-policy exact/family calls, identical across quality and timing per stream. Both views use $\rho=0$.}
+\caption{Preprocessing the unchanged 240-query Coat catalogue.}
 \label{tab:coat-workflow}
 \input{coat_workflow_table_v8}
 \end{table}
@@ -18,7 +18,6 @@ All 32 streams complete, each with 240 false answers for both stored and ideal r
 At nonzero capacity, Part adds 5.1--7.7\% to Opt's full cost without reducing
 its two native and two exact calls (Table~\ref{tab:coat-workflow});
 LP saves no calls either. At zero capacity, family computation is skipped.
-Three rounds measure machine variation; execution positions are not fully balanced.
-Optimal points differ, so costs compare complete preprocessing choices.
+The three rounds have incompletely balanced execution positions and different optimal points; costs compare complete preprocessing choices.
 Family answers enable redesign beyond the catalogue but do not amortize
 preprocessing here.

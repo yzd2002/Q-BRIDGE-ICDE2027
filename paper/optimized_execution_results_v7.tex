@@ -1,7 +1,7 @@
 \subsection{The cost of answering repeated policy queries}
 \begin{figure*}[t]
 \centering\includegraphics[width=\textwidth]{figures/optimized_v6_compact_factorial.pdf}
-\caption{Retention lowers group-average cost; screening does not. $S$: screening; $P$: retention (0 off, 1 on). Each row toggles its named factor while fixing the other. Panels contain primary inputs, geometry streams, and source-derived logs. Each dot is an equal-input geometric mean of enabled/disabled cost ratios in one timing round; below one is faster. Lines span five rounds, not confidence intervals. Interaction and last-first comparisons are archived.}
+\caption{Retention lowers group-average cost; screening does not. Fixed inputs are (a) three 1,000-query primary streams, (b) 54 geometry streams and (c) six generated-log streams, each of the latter two containing 100 queries. Rows toggle one feature, fixing the other. Points: equal-input geometric means of on/off cost ratios. Lines: five-round ranges, not confidence intervals. Below one is faster.}
 \label{fig:optimized-factorial}
 \end{figure*}
 Retention saves the exact group terms that a new query would otherwise recompute; screening first tests whether an exact check can be deferred. All 270,000 responses pass independent exact replay; core plans match evidence,
@@ -17,6 +17,4 @@ hold in every primary round.
 The last-first bridge costs $0.833$--$0.882$ times $S_0P_1$ on primary streams,
 but is slower in 1/15 primary, 66/270 geometry and 17/30 source-derived
 input-round pairs. Retention also has adverse individual cases despite lower
-group means. These results support retained terms on group averages,
-not default screening or universal speedups. The bridge separately changes
-candidate order.
+group means. Thus retention lowers group-average cost without guaranteeing an individual speedup. Candidate order changes only in the bridge.

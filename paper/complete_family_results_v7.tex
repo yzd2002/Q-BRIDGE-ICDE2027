@@ -6,15 +6,15 @@ their best value, including the reference, is zero in every case.
 Recovered guarantees have median $0.991$\,pp, interquartile range
 $[0.583,1.549]$\,pp and range $[0.105,3.632]$\,pp.
 
-The construction and exact LP agree on all 2,160 distinct synthetic problems. Across family, fixed-policy, Coat and timing checks, all 12,770 responses pass, without timeout or incomplete call. The artifact preserves the full breakdown.
+The construction and exact LP agree on all 2,160 distinct synthetic problems. Across family, fixed-policy, Coat and timing checks, all 12,770 responses pass, without timeout or incomplete call.
 
 \textbf{Exact answers with dimension-dependent cost.}
-All 234 timing pairs succeed. Across three rounds, construction/SoPlex
+Across three rounds, construction/SoPlex
 geometric-mean service ratios are $0.808$--$0.835$ at $d=8$,
 $1.066$--$1.129$ at $d=64$, and $1.170$--$1.196$ at $d=256$.
 The construction is slower in 5/78, 55/78 and 54/78 pairs, respectively.
 These compare checked Python rational construction with compiled rational LP.
-Table~\ref{tab:family-absolute} gives absolute costs; individual costs and memory observations are archived.
+Table~\ref{tab:family-absolute} gives absolute costs.
 At $d=256$, verification alone takes median 144.3/144.6\,ms (Part/LP);
 certificates occupy about 149.5\,kB.
 \input{absolute_family_cost_v8}
@@ -24,7 +24,6 @@ At the larger R budget with conservative radius, projected R passes 223/240
 thresholds versus Fusion's 218/240; R has greater capacity in 128 pairs,
 Fusion in 100, with 12 ties. At the smaller R budget with oracle-boundary
 radius, OBS and Fusion both pass 239 thresholds, but OBS has greater capacity
-in 219 pairs and Fusion in 21. Full- and split-budget views are not nested.
-All 24 comparison cells and exact decompositions remain available.
+in 219 pairs and Fusion in 21. Fusion protects both sources within the same total error budget, so its component intervals can be wider; VI-C separates this cost from the gain due to added constraints.
 Generating means satisfy all 2,880 finite partition views, and every returned
 policy assertion agrees with stored truth.

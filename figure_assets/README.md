@@ -1,6 +1,6 @@
 # Q-BRIDGE publication figures
 
-All three manuscript figures use one visual system: navy typography, restrained blue/coral/purple/teal colors, thin rules, direct labels, and distinct timing-round markers. PDF and SVG contain vector paths and text. PNG files are 360-dpi previews; the manuscript includes the vector PDFs at 516-point width.
+All three manuscript figures use one visual system: serif typography, restrained blue/orange colors, white backgrounds, thin rules, direct labels, and distinct timing-round markers. PDF and SVG contain vector paths and text. PNG files are 360-dpi previews; the manuscript includes the vector PDFs at 516-point width.
 
 | Figure | Files | Meaning |
 |---|---|---|
@@ -10,7 +10,7 @@ All three manuscript figures use one visual system: navy typography, restrained 
 
 The first figure is a constructed teaching example. Its set intersection is schematic; its interval bars use the exact displayed endpoints. The policy bar selects C with probability one, relative to a uniform reference over A/B/C/D. Matching policy and family bounds establish the best robust guarantee of 2.5 percentage points, not an observed treatment effect. The two query branches independently read the same fixed view. All numerical inputs and original experiment measurements are unchanged.
 
-The experiment plots retain every original point, logarithmic horizontal axes, explicit ratio-one reference lines and timing-round shapes. Ranges show observed machine variation, not statistical confidence intervals. Figures 2 and 3 share the same color/marker mapping for timing rounds.
+The experiment plots retain every original point, logarithmic horizontal axes, explicit ratio-one reference lines and timing-round shapes. Ranges show observed machine variation, not statistical confidence intervals. Timing-round shapes agree across Figures 2 and 3. Figure 2 uses three blue shades for the rounds; Figure 3 uses orange for screening and blue for retention, with round identity encoded by shape. Figure 2 shows the complete 86/21 split in a count-proportional bar and keeps both zero-count categories explicitly labeled.
 
 ## Regenerate
 
@@ -36,4 +36,4 @@ The layout is original. Actual figures and tables from the following primary pap
 - ICML 2026 Outstanding Paper, *The Flexibility Trap*: [official award announcement](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/), [paper](https://arxiv.org/pdf/2601.15165), Figures 1–2 and Table 1.
 - NeurIPS 2026 Oral, *Generative Modeling via Drifting*: [authors' project page](https://lambertae.github.io/projects/drifting/), [paper](https://arxiv.org/pdf/2602.04770), Figures 1/3/4 and Table 1. Oral status is reported by the authors; no award is asserted.
 
-Venue/status sources were checked on 2026-11-11. These references inform presentation, not the scientific claims of Q-BRIDGE.
+The five tables share black text, full-column alignment, grouped headers and booktabs rules. Short captions are followed by nearby definitions of units, denominators and experimental scope. Venue/status sources were checked on 2026-11-11. These references inform presentation, not the scientific claims of Q-BRIDGE.

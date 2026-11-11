@@ -12,12 +12,20 @@ workload also records the cases where preprocessing does not pay.
 
 ![One confidence view and two query modes](figure_assets/qbridge_overview.png)
 
-The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [All three vector figures, editable SVG files and reproducible drawing inputs](figure_assets/README.md) are included. The 2026-11-11 visual edition unifies all figure and table styles while retaining the original measurements. The Overleaf ZIP includes the complete current manuscript source.
+The overview is a constructed four-action illustration. Its two branches distinguish checking one policy from certifying the best robust guarantee across a family. [All three vector figures, editable SVG files and reproducible drawing inputs](figure_assets/README.md) are included. The 2026-11-11 visual and readability edition uses consistent serif typography, a blue/orange palette, grouped tables and explicit experimental units. All original measurements and displayed equations are retained. The Overleaf ZIP includes the complete current manuscript source.
 
 **Material availability:** the v5.2 release is the published historical artifact.
 The complete expanded archive for the current manuscript, including the later
 family, execution and Coat workflow studies, is prepared locally but is not yet
 published as a downloadable release. The repository contains the current manuscript and source, updated scientific code, and a runnable Coat case checking seven saved certificates against six independent requests. See [the source update index](SCIENCE_UPDATE_MANIFEST.json). This subset does not replace the complete archive or reproduce all measured timings.
+
+## Experimental figures
+
+![Checked timing and full-family recovery](figure_assets/verified_family_v7_main.png)
+
+![Screening and retention across three stream families](figure_assets/optimized_v6_compact_factorial.png)
+
+All timing points and observed ranges are preserved. See the paper captions for the request counts, units and interpretation.
 
 ## Check one saved proof
 

@@ -2,8 +2,7 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,amssymb,graphicx,booktabs,array,url}
 \usepackage[table]{xcolor}
-\definecolor{QInk}{HTML}{1D2B42}
-\definecolor{QHeader}{HTML}{F0F3F8}
+\definecolor{QInk}{HTML}{202020}
 \newcommand{\qth}[1]{\textcolor{QInk}{\textbf{#1}}}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}
@@ -67,7 +66,7 @@ Policy $\pi_{xa}$ is the probability of taking action $a$ in context $x$; $\pi_0
 \end{equation}
 Thus $c_{xa}=w_x(\pi_{xa}-\pi_{0,xa})$ records where action probability increases or decreases. Each policy row and $w$ sums to one; both are caller-specified.
 
-Flatten the context--action pairs into $i=1,\ldots,d$. The view stores individual bounds $\ell,u$ and $J$ weighted-group bounds $a,b$ with weight matrix $T$:
+A context groups users; a moment group combines actions within one context. Flatten the context--action pairs into $i=1,\ldots,d$. The view stores individual bounds $\ell,u$ and $J$ group bounds $a,b$. Each row of $T$ forms a weighted sum of action-success probabilities:
 \begin{equation}
  \widehat\C=\{m:\ell\le m\le u,\ a\le Tm\le b\}.\label{eq:view}
 \end{equation}
@@ -239,11 +238,11 @@ These three candidates are not the unrestricted family search. We compare three 
 \subsection{Source information and query guarantees}\label{sec:information-results}
 \begin{table}[t]
 \centering
-\caption{Fixed-policy outcomes under projected Fusion: 240 lower-budget queries per policy at $\Lambda=2$. Sampling: exact population statistics would suffice. Ambiguity: even those statistics do not suffice, although the true gain exceeds $\delta$. No case is missed solely by optimization.}
+\caption{Fixed-policy outcomes under projected Fusion.}
 \label{tab:fresh}\input{repaired_information_categories_v4}
 \end{table}
 
-Table~\ref{tab:fresh} decomposes projected Fusion's outcomes for each design-selected policy (240 cases each: $48$ worlds $\times5$ samples). Each row separates certified queries, insufficient samples, remaining ambiguity even with exact population statistics, and true gains at or below the target. In contrast, VI-A keeps the data fixed and changes the policy. All 60 worlds and 1,200 inference configurations complete. For the metadata policy at $100d$ randomized events and $\Lambda=2$, fusion certifies 12/240 versus six for the standalone union (OBS six, R zero): six additions, no losses, certification-rate difference $0.025$ (2.5\,pp). The one-sided Hoeffding lower bound, $-0.3283$, does not meet the required $0.05$ increase; the descriptive $t$ interval is $[-0.0249,0.0749]$. These are changes in certification frequency, not policy gains. All six additions occur in two zero-drift $2\times4$ worlds.
+Table~\ref{tab:fresh} follows three policies chosen before inference ($48$ worlds $\times5$ samples each); VI-A instead searches for a better policy on each fixed view. All 60 worlds and 1,200 inference configurations complete. For the metadata policy at $100d$ randomized events and $\Lambda=2$, fusion certifies 12/240 versus six for the standalone union (OBS six, R zero): six additions, no losses, certification-rate difference $0.025$ (2.5\,pp). The one-sided Hoeffding lower bound, $-0.3283$, does not meet the required $0.05$ increase; the descriptive $t$ interval is $[-0.0249,0.0749]$. These are changes in certification frequency, not policy gains. All six additions occur in two zero-drift $2\times4$ worlds.
 
 Larger-budget projected fusion certifies 15 metadata queries, 16 heuristic queries and two robust-design selections. More randomized traffic does not resolve transfer or radius uncertainty.
 
@@ -277,7 +276,7 @@ A broader 6,000-view coverage audit records 14 misses, all outside the 2,880-vie
 
 \begin{table}[t]
 \centering
-\caption{Coat: primary fixed-query lower confidence bounds (LCB; probability units; $\Lambda=2$, $\rho=0$, $\alpha=.05$; 290 users) and family counts summing to twelve declarations. Positive family answers occur outside the primary declaration. Full-cell transport is a stronger control.}
+\caption{Coat: one policy versus the full policy family.}
 \label{tab:coat-blocks}\input{coat_table_v7}
 \end{table}
 
@@ -297,12 +296,12 @@ A broader 6,000-view coverage audit records 14 misses, all outside the 2,880-vie
 Our view combines binary density-ratio and conditional-moment relaxations~\cite{dorn2025dvds,ishikawa2026convex}. Other fusion methods exploit overlap~\cite{jiang2024overlap}, impose experimental moments~\cite{du2026feasible}, or estimate sensitivity frontiers~\cite{lanners2025fusion}. Propensity-odds policy learning~\cite{Kallus2018ConfoundingRobust,Hess2026SharpPolicy} makes different restrictions from our outcome-conditional weights.
 \input{family_comparison_v8}
 
-\textbf{Proofs and scope.} Filtering~\cite{Bartels2023Filters}, assignment caching~\cite{Cadar2008KLEE}, safe bounds and reuse are established; VIPR checks exact optimization derivations~\cite{Cheung2017VIPR}. IntegriDB authenticates database results~\cite{Zhang2015IntegriDB}; our digests bind certificates to a view. We study binary outcomes and known target weights, conditional on the stated source assumptions and interval routines.
+\textbf{Proofs and scope.} Filtering~\cite{Bartels2023Filters}, assignment caching~\cite{Cadar2008KLEE}, bounds and reuse are established; VIPR checks exact optimization proofs~\cite{Cheung2017VIPR}. IntegriDB authenticates results~\cite{Zhang2015IntegriDB}; our digests bind certificates to a view. Our guarantees cover binary outcomes and known target weights under the stated source assumptions and intervals.
 
 \textbf{Data ethics.} We reanalyze public benchmarks under their release terms, without recruiting or contacting participants. No institutional ethics review was undertaken or additional consent sought.
 
 \section{Conclusion}
-Q-BRIDGE turns policy selection into verifiable queries over one shared confidence view. Full-family optimization returns a policy with the requested worst-case gain or certifies that the view cannot support one. Retaining exact arithmetic results lowers group-average cost for repeated queries on the tested streams.
+Q-BRIDGE answers verifiable policy queries over a shared confidence view. Full-family optimization finds a qualifying policy or rules out the requested guarantee. Retaining exact terms lowers group-average cost for repeated queries on the tested streams.
 
 \clearpage
 \section*{Acknowledgments and AI Usage Declaration}
